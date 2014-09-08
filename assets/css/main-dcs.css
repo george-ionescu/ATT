@@ -1,0 +1,36 @@
+.dropdown-menu {
+    padding:0;
+    -webkit-border-radius:0;
+    -moz-border-radius:0;
+    border-radius:0;
+}
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+    background-color: #5DD4FF;
+    background-image: -webkit-linear-gradient(top, #5DD4FF 0%, #5DD4FF 100%);
+    background-image: linear-gradient(to bottom, #5DD4FF 0%, #5DD4FF 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff428bca', endColorstr='#ff5DD4FF', GradientType=0);
+}
+
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.custom_form input[type="password"] {
+    height: 30px;
+    color: #000 !important;
+    font-style: normal;
+}
+
+
+.has-error .help-block, .has-error .control-label, .has-error .radio, .has-error .checkbox, .has-error .radio-inline, .has-error .checkbox-inline {
+    color: #FFFFFF;
+    font-size: 11px;
+    font-family: tahoma;
+}
+
+.infoBox > img {
+    display:none;
+}
