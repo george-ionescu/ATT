@@ -5,10 +5,50 @@
 	<div style="text-align: center;margin-top:10px;"><img class="img-responsive" src="images/paris_big.png" alt="" /></div>
 	<br />
 	
-	<h1 class="pull-left" style="color:#000; font-size:30px;">Great time in Paris</h1>
-	<button id="submit_button_trip" type="button" class="btn btn-big pull-right">select trip</button>
-	<div class="clearfix"></div>
+	<h1 class="pull-left" style="color:#000; font-size:30px; margin-bottom:10px;">Great time in Paris</h1>
+
 	
+	<a href="javascript:toggleAvailability();" class="search_options availab pull-right"><i class="fa fa-plus-circle"></i>check availability</a>
+	
+	<table id="availability_table" class="flight_detail_table recap availab" style="display:none;">
+    				<tr>
+    					<td colspan="4" class="title">July 2014</td>
+    				</tr>
+    				<tr class="border">
+    					<td>29 Iu</td>
+    					<td>7 nights</td>
+    					<td>11:55 <strong>Bucharest</strong><br /><em>AEGEAN AIRLINES</em></td>
+    					<td>WOW SANTORINI - REDUCERE 199 euro<br/>camera plecari / luna iulie</td>
+    					<td>from <br /> <strong>1.999,82</strong> EUR</td>
+    				</tr>
+    				<tr class="border">
+    					<td>29 Iu</td>
+    					<td>7 nights</td>
+    					<td>11:55 <strong>Bucharest</strong><br /><em>AEGEAN AIRLINES</em></td>
+    					<td>WOW SANTORINI - REDUCERE 199 euro<br/>camera plecari / luna iulie</td>
+    					<td>from <br /> <strong>1.999,82</strong> EUR</td>
+    				</tr>
+    				
+    				<tr>
+    					<td colspan="4" class="title">August 2014</td>
+    				</tr>
+    				<tr class="border">
+    					<td>29 Iu</td>
+    					<td>7 nights</td>
+    					<td>11:55 <strong>Bucharest</strong><br /><em>AEGEAN AIRLINES</em></td>
+    					<td>WOW SANTORINI - REDUCERE 199 euro<br/>camera plecari / luna iulie</td>
+    					<td>from <br /> <strong>1.999,82</strong> EUR</td>
+    				</tr>
+    				<tr class="border">
+    					<td>29 Iu</td>
+    					<td>7 nights</td>
+    					<td>11:55 <strong>Bucharest</strong><br /><em>AEGEAN AIRLINES</em></td>
+    					<td>WOW SANTORINI - REDUCERE 199 euro<br/>camera plecari / luna iulie</td>
+    					<td>from <br /> <strong>1.999,82</strong> EUR</td>
+    				</tr>
+    			</table>
+	
+	<div class="clearfix"></div>
 	<p>Lorem Ipsum is simply dummy text of the printing and typesetting
 		industry. Lorem Ipsum has been the industry's standard dummy text ever
 		since the 1500s, when an unknown printer took a galley of type and
@@ -21,16 +61,27 @@
 </div>
 
 <script>
-	$(function(){
-		$('#submit_button_trip').click(function(event){
-			event.preventDefault();
+	function toggleAvailability(){
+		$('#availability_table').toggle();
+		if (!$('#availability_table').is(':visible')){
+			$('.search_options .fa').removeClass('fa-minus-circle').addClass('fa-plus-circle');
+			$('.search_options').removeClass('active');
+		} else {
+			$('.search_options .fa').removeClass('fa-plus-circle').addClass('fa-minus-circle');
+			$('.search_options').addClass('active');
+		}
+		
+		updateAllScrolls();
+	}
 
-			$(this).html('please wait');
+	$(function(){
+		$('#availability_table tr').click(function(event){
+			event.preventDefault();
 
 			var oldSlide = $('#column1');
 			var newSlide = $('#column1');
-			var url = 'include/elements/sort_trip.php';
-			var class_bootstrap = 'col-md-3';
+			var url = 'include/elements/hotel_result.php?type=5';
+    		var class_bootstrap = 'col-md-3 hotel nopadding';
 			
 			if (oldSlide && newSlide && url != '#'){
 				closeAllSlidesAndOpen2(oldSlide, newSlide, url, class_bootstrap);

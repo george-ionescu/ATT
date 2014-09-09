@@ -27,20 +27,22 @@
 				</div>
 				<div class="clearfix"></div>
 			</div>
+			
+			<h1 class="pull-right second-title">Filter Hotels</h1>
+			
 			<div class="row_form">
-				<div class="col-md-12 short_padding">
+				<div class="col-md-10 short_padding">
 					<input type="text" class="form-control italic" placeholder="search by hotel name"> 
+				</div>
+				<div class="col-md-2 short_padding">
+					<button style="width:100%;" class="pull-right btn btn-default book" type="submit">ok</button>
 				</div>
 			</div>
 			<div class="row_form">
 				<div class="col-md-12 short_padding">
 					<label class="control-label input_label col-sm-6" for="inputSuccess3">&nbsp;&nbsp;&nbsp;hotel stars</label>
 					<div class="col-sm-6 no_padding_left_right">
-						<div id="stars">
-							<a href="#" class="selected">3 <img src="images/star_line.png" alt="" /></a>
-							<a href="#" class="selected">4 <img src="images/star.png" alt="" /></a>
-							<a href="#">5 <img src="images/star.png" alt="" /></a>
-						</div>
+						<?php include 'include/stars.php'; ?>
 					</div>
 				</div>
 			</div>
@@ -52,35 +54,22 @@
 			
 			<div id="search_options" style="display:none;">
 	        	<div class="row_form">
-		        	<div class="col-md-12 short_padding pull-left">
-		        		<div class="options_list">
-							<span class="title">Hotel Facilities</span>
-						</div>
-		        	</div>
 		        	<div class="col-md-6 short_padding pull-left">
 						<div class="options_list">
+							<span class="title">Hotel Facilities</span>
 							<label class="radio-inline"> <input type="checkbox" id="inlineCheckbox1" name="gr1" value="option1" checked><span class="check"></span> Direct flight</label> 
 							<label class="radio-inline"> <input type="checkbox" id="inlineCheckbox2" name="gr1" value="option2"><span class="check"></span> 1 stop</label> 
 							<label class="radio-inline"> <input type="checkbox" id="inlineCheckbox3" name="gr1" value="option3"><span class="check"></span> 2 stops</label> 
 							<label class="radio-inline"> <input type="checkbox" id="inlineCheckbox2" name="gr1" value="option2"><span class="check"></span> 1 stop</label> 
 							<label class="radio-inline"> <input type="checkbox" id="inlineCheckbox3" name="gr1" value="option3"><span class="check"></span> 2 stops</label> 
-						</div> 	
-					</div>
-					<div class="col-md-6 short_padding pull-left">	
-						<div class="options_list">
 							<label class="radio-inline"> <input type="checkbox" id="inlineCheckbox1" name="gr2" value="option1" checked><span class="check"></span> Economy</label> 
 							<label class="radio-inline"> <input type="checkbox" id="inlineCheckbox2" name="gr2" value="option2"><span class="check"></span> Business</label> 
 							<label class="radio-inline"> <input type="checkbox" id="inlineCheckbox3" name="gr2" value="option3"><span class="check"></span> First class</label> 
 							<label class="radio-inline"> <input type="checkbox" id="inlineCheckbox2" name="gr2" value="option2"><span class="check"></span> Business</label> 
 							<label class="radio-inline"> <input type="checkbox" id="inlineCheckbox3" name="gr2" value="option3"><span class="check"></span> First class</label> 
-						</div> 
+						</div> 	
 					</div>
-				</div>
-				<div class="clearfix"></div>
-	        	
-	        	<br />
-	        	<div class="row_form">
-	        		<div class="col-md-12 short_padding pull-left">
+					<div class="col-md-6 short_padding pull-left">
 			        	<div class="options_list pull-left">
 							<span class="title">Points of Interest</span>
 							<label class="radio-inline"> <input type="checkbox" id="inlineCheckbox1" name="gr3" value="option1" checked><span class="check"></span> Air Canada</label> 

@@ -58,8 +58,18 @@
     				</tr>
     			</table>
     			
-    			<br />
-    			<a id="but1" class="active" href="javascript:showOption(1);">Terms and conditions</a> | <a id="but2" href="javascript:showOption(2);">Ticket price policies</a> | <a id="but3" href="javascript:showOption(3);">Baggage policies</a>
+    			<br /><br />
+    			<div style="text-align: center">
+    					<button id="book_button" type="button" class="btn btn-default">book</button>
+    				</div>
+    			
+    			<br /><br />
+    			<a id="but1" class="active" href="javascript:showOption2(1);">Terms and conditions</a> | 
+    			<a id="but2" href="javascript:showOption2(2);">Ticket price policies</a>
+    			<?php if (1==2) { ?>
+    				<a id="but3" href="javascript:showOption2(3);">Baggage policies</a>
+    			<?php } ?>
+    			
     			<br /><br />
 	    		
 	    			<p id="option1">
@@ -91,13 +101,20 @@
 	    		
 		    			
 	  <script>
-		function showOption(nr){
+		function showOption2(nr){
 			for (i=1; i<=3; i++){
 				$('#option' + i).hide();
 				$('#but' + i).removeClass('active');
 			}
 			$('#option' + nr).show();
 			$('#but' + nr).addClass('active');
+
+			if ($('#option' + nr).find('.text-complete').is(":visible")){
+				$('#option' + nr).find('.more').show();
+				$('#option' + nr).find('.less').hide();
+				$('#option' + nr).find('.text-complete').hide();
+				updateAllScrolls();
+			} 
 		}
 	 </script>    				
 

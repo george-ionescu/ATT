@@ -26,14 +26,16 @@
 							</a>
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-md-12 nopadding">
-							<a id="but3" class="slide button_big pull-right" column-close="column2" column-open="column2" href="include/pages/weekend/flights_hotels_week.php">
-								<span class="sidebar">Flights & Hotels</span>
-								<img class="img-responsive col-xs-12" src="images/tab.jpg" alt="" />
-							</a>
+					<?php if (1==2) { ?>
+						<div class="row">
+							<div class="col-md-12 nopadding">
+								<a id="but3" class="slide button_big pull-right" column-close="column2" column-open="column2" href="include/pages/weekend/flights_hotels_week.php">
+									<span class="sidebar">Flights & Hotels</span>
+									<img class="img-responsive col-xs-12" src="images/tab.jpg" alt="" />
+								</a>
+							</div>
 						</div>
-					</div>
+					<?php } ?>
 				</div>
 		    </div>
 		    

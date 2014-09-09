@@ -16,7 +16,7 @@
 	        <div class="col-md-12 short_padding">
 				<span class="custom-dropdown">
 				    <select>
-				        <option>Option 1</option>
+				        <option>zero month</option>
 				        <option>Option 2</option>  
 				        <option>Option 3</option>
 				        <option>Option 4</option>
@@ -29,7 +29,7 @@
 	        <div class="col-md-6 short_padding pull-left">
 				<span class="custom-dropdown">
 				    <select>
-				        <option>Option 1</option>
+				        <option>departure day</option>
 				        <option>Option 2</option>  
 				        <option>Option 3</option>
 				        <option>Option 4</option>
@@ -40,7 +40,7 @@
 			<div class="col-md-6 short_padding pull-left">
 				<span class="custom-dropdown">
 				    <select>
-				        <option>Option 1</option>
+				        <option>no of nights</option>
 				        <option>Option 2</option>  
 				        <option>Option 3</option>
 				        <option>Option 4</option>

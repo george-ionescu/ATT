@@ -15,6 +15,26 @@
    When document is ready, do
    ========================================================================== */
    
+	function loadSupersized(){
+		$.supersized({
+			
+			// Functionality
+			slide_interval          :   5000,		// Length between transitions
+			transition              :   1, 			// 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
+			transition_speed		:	1000,		// Speed of transition
+			slide_has_link			: 	0,			// disable link on slide
+			next_prev_thumb			:	false,		//disable next/prev buttons
+													   
+			// Components							
+			slide_links				:	'blank',	// Individual links for each slide (Options: false, 'num', 'name', 'blank')
+			slides 					:  	[			// Slideshow Images
+												{image : 'backgrounds/background_1.jpg', title : 'london', subtitle : 'from 300 euro', url : 'http://www.google.ro/'},
+												{image : 'backgrounds/background_2.jpg', title : 'paris', subtitle : 'from 400 euro', url : 'http://www.yahoo.ro/'},
+										]
+			
+		});
+	}
+	
 	$(document).ready(function(){
 		$('.main_logo').click(function(){
 			window.location = 'book_assisted.php';
@@ -22,24 +42,14 @@
 		
 		//Supersized - full screen background
 		if(typeof $.fn.supersized != 'undefined'){
-			
-			$.supersized({
-				
-				// Functionality
-				slide_interval          :   5000,		// Length between transitions
-				transition              :   1, 			// 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
-				transition_speed		:	1000,		// Speed of transition
-				slide_has_link			: 	0,			// disable link on slide
-				next_prev_thumb			:	false,		//disable next/prev buttons
-														   
-				// Components							
-				slide_links				:	'blank',	// Individual links for each slide (Options: false, 'num', 'name', 'blank')
-				slides 					:  	[			// Slideshow Images
-													{image : 'backgrounds/background_1.jpg', title : 'london', subtitle : 'from 300 euro', url : 'http://www.google.ro/'},
-													{image : 'backgrounds/background_2.jpg', title : 'paris', subtitle : 'from 400 euro', url : 'http://www.yahoo.ro/'},
-											]
-				
-			});
+			 var newWindowWidth = $(window).width();
+		    if (newWindowWidth < 480){
+		        $("#supersized").remove();
+		    } else {
+		        var loadSupersizedDiv = jQuery('<div id="supersized"></div>').appendTo(document.body);
+
+		        loadSupersized();
+		    }
 		}
 		
 		//  gMap
@@ -141,6 +151,7 @@
 	            }
 		};
         $(".column_content").mCustomScrollbar(scrollOptions);
+        //$(".column_content").mCustomScrollbar('disable');
         
         
         $("#price_slider").rangeSlider({
@@ -176,6 +187,7 @@
 		
 		$( "#amountUp" ).css('margin-left', ($( "#amountUp" ).width() / 2 + 8) * -1);
 		$( "#amountDown" ).css('margin-left', ($( "#amountDown" ).width() / 2 + 12) * -1);*/
+        
     });
 	
 	
@@ -192,10 +204,17 @@
 	   When the window is resized, do
 	   ========================================================================== */
 	   	
-	$(window).resize(function () {
-								   
-			
-	});	
+	
+	$(window).resize(function() {
+	    var newWindowWidth = $(window).width();
+	    if (newWindowWidth < 480){
+	        $("#supersized").remove();
+	    } else if ($("#supersized").length == 0 && newWindowWidth > 480) {
+	        var loadSupersizedDiv = jQuery('<div id="supersized"></div>').appendTo(document.body);
+
+	        loadSupersized();
+	    }
+	});
 
 })(window.jQuery);
 

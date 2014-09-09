@@ -32,7 +32,7 @@
 	<div class="col-md-3 short_padding">
 		<span class="custom-dropdown">
 		    <select>
-		        <option>Option 1</option>
+		        <option>Country</option>
 		        <option>Option 2</option>  
 		        <option>Option 3</option>
 		        <option>Option 4</option>

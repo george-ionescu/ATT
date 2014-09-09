@@ -39,6 +39,8 @@
 				<div class="clearfix"></div>
 			</div>
 			
+			<h1 class="pull-right second-title">Filter Flights</h1>
+			
 			<br />
 			<div class="row_form">
 				<div class="col-md-6 short_padding pull-left">
@@ -49,14 +51,16 @@
 						<label class="radio-inline"> <input type="radio" id="inlineCheckbox3" name="gr1" value="option3"><span class="check"></span> 2 stops</label> 
 					</div> 	
 				</div>
-				<div class="col-md-6 short_padding pull-left">	
-					<div class="options_list">
-						<span class="title">Ticket class</span>
-						<label class="radio-inline"> <input type="radio" id="inlineCheckbox1" name="gr2" value="option1" checked><span class="check"></span> Economy</label> 
-						<label class="radio-inline"> <input type="radio" id="inlineCheckbox2" name="gr2" value="option2"><span class="check"></span> Business</label> 
-						<label class="radio-inline"> <input type="radio" id="inlineCheckbox3" name="gr2" value="option3"><span class="check"></span> First class</label> 
-					</div> 
-				</div>
+				<?php if (1==2) { ?>
+					<div class="col-md-6 short_padding pull-left">	
+						<div class="options_list">
+							<span class="title">Ticket class</span>
+							<label class="radio-inline"> <input type="radio" id="inlineCheckbox1" name="gr2" value="option1" checked><span class="check"></span> Economy</label> 
+							<label class="radio-inline"> <input type="radio" id="inlineCheckbox2" name="gr2" value="option2"><span class="check"></span> Business</label> 
+							<label class="radio-inline"> <input type="radio" id="inlineCheckbox3" name="gr2" value="option3"><span class="check"></span> First class</label> 
+						</div> 
+					</div>
+				<?php } ?>
 				<div class="clearfix"></div>
 			</div>		
 			<div class="clearfix"></div>

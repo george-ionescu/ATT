@@ -1,12 +1,12 @@
 <br />
-<a href="javascript:toggleSearchOptions();" class="search_options pull-right"><i class="fa fa-plus-circle"></i>search options</a>
+<a href="javascript:toggleSearchOptions();" class="search_options pull-right"><i class="fa fa-plus-circle"></i>more options</a>
 <div class="clearfix"></div>
 
 <div id="search_options" style="display:none;">
 	<div class="row_form">
 		<span class="custom-dropdown">
 		    <select>
-		        <option>Option 1</option>
+		        <option>ticket class</option>
 		        <option>Option 2</option>  
 		        <option>Option 3</option>
 		        <option>Option 4</option>
@@ -20,7 +20,7 @@
 	<div class="row_form">
 		<span class="custom-dropdown">
 		    <select>
-		        <option>Option 1</option>
+		        <option>airline</option>
 		        <option>Option 2</option>  
 		        <option>Option 3</option>
 		        <option>Option 4</option>

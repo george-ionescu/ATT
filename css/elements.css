@@ -240,6 +240,9 @@ input[placeholder], [placeholder], *[placeholder] {
  padding: 15px 12px !important;
 	border:none;
 }
+.btn:active, .btn.active {
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5);
+}
 
 .form-group.short_margin_bottom{
 	margin-bottom:5px !important;
@@ -297,11 +300,35 @@ input[placeholder], [placeholder], *[placeholder] {
 
 /*-----------------------------------------------------------------------------------*/
 
+.navbar{
+	z-index:9999;
+	margin-bottom:0;
+	display:none;
+}
+.navbar-nav{
+	margin-top:0;
+}
 .navbar-toggle{
-	color:#fff;
-	font-size:30px;
-	border:2px solid #fff;
-	text-align:center;
+	margin-top:30px;
+}
+.navbar-default .navbar-toggle{
+	border:none;
+}
+.navbar-default .navbar-toggle .icon-bar{
+	background-color:#fff;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus{
+	background-color:#5dd4ff;
+}
+.navbar-toggle .icon-bar{
+	width:50px;
+	height:4px;
+	border-radius:2px;
+	margin-bottom:8px;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
+	background-color:#fff;
+	color:#000;
 }
 
 .fa {
@@ -324,23 +351,25 @@ input[placeholder], [placeholder], *[placeholder] {
 	font-size: 14px;
 }
 
-.nav-pills > li > a{
+.main_nav > li > a{
+	-webkit-transition: color 200ms ease-in-out;
+    -moz-transition: color 200ms ease-in-out;
+    -o-transition: color 200ms ease-in-out;
+    transition: color 200ms ease-in-out;
+	text-decoration:none;
+}
+.main_nav > li > a span{
 	-webkit-transition: color 200ms ease-in-out;
     -moz-transition: color 200ms ease-in-out;
     -o-transition: color 200ms ease-in-out;
     transition: color 200ms ease-in-out;
 }
-.nav-pills > li > a span{
-	-webkit-transition: color 200ms ease-in-out;
-    -moz-transition: color 200ms ease-in-out;
-    -o-transition: color 200ms ease-in-out;
-    transition: color 200ms ease-in-out;
-}
-.nav-pills > li > a:hover, .nav-pills > li > a:focus{
+.main_nav > li > a:hover, .main_nav > li > a:focus{
 	background:none;
 	color: #5dd4ff;
+	text-decoration:none;
 }
-.nav-pills > li > a:hover span.blue, .nav-pills > li > a:focus span.blue{
+.main_nav > li > a:hover span.blue, .main_nav > li > a:focus span.blue{
 	color:#fff;
 }
 

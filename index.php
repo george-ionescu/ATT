@@ -2,7 +2,7 @@
 
 <div class="container-fluid full_height">
 	<div class="row full_height">
-		<div class="col-md-9 full_height">
+		<div class="col-md-9 col-sm-6 col-xs-6 full_height">
 			<div class="main_logo">
 				<div class="pull-left" style="margin-top:15px;">
 					<h1>GET YOUR VACATION <br /><span class="blue">PLANNED WITH</span></h1>
@@ -19,13 +19,10 @@
 			</div>
 		</div>
 		
-		<div class="col-md-3 full_height">
-			<nav class="navbar full_height" role="navigation">
-				<button class='navbar-toggle' data-target='.navbar-header-collapse' data-toggle='collapse' type='button'>
-					<span class='sr-only'>Schimba navigarea</span> <i class="fa fa-bars"></i>
-				</button>
-				<div class='collapse navbar-collapse navbar-header-collapse full_height'>
-					<ul class="nav nav-pills nav-stacked navbar-left main_nav">
+		<div class="col-md-3 col-sm-6 col-xs-6 full_height">
+			<nav class="full_height">
+				<div class='full_height'>
+					<ul class="main_nav">
 						<li>
 							<a href="book_directly.php">DECIDED? <br /><span class="blue">BOOK DIRECTLY!</span></a>
 						</li>

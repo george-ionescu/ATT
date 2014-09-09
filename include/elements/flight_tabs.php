@@ -1,4 +1,4 @@
-<h1 class="pull-right">Your selcted flight from Bucharest to Antigua</h1>
+<h1 id="titleSection" class="pull-right">Your selected flight from Bucharest to Antigua</h1>
     	<div class="clearfix"></div>
     	
     	<div class="column_content padding_column_content full_height">       
@@ -12,16 +12,12 @@
 			        
     				<div class="clearfix"></div>
     				<br />
-    				<div style="text-align: center">
-    					<button id="book_button" type="button" class="btn btn-default">book</button>
-    				</div>
-    				<br /><br />
     			</div>
     		</div>
     		<div id="tab2" style="display: none;">	
     			<form class="form-horizontal custom_form maro_background" role="form" method="post" action="/">
 			    	<br />
-			    	<?php include 'include/flight_result_table.php'; ?>
+			    	<?php include 'include/flight_result_table_select.php'; ?>
 				    <div class="clearfix"></div>
 		    	</form>
 			</div>
@@ -31,6 +27,27 @@
         
         
 <script>
+	function preload(){
+		$('#tab1').hide();
+		$('#tab2').show();
+		$('#sort_type_1').hide();
+		$('#sort_type_2').show();
+		$('#titleSection').html('300 results from Bucharest to Antigua');
+
+		$('#main_preloader').hide();
+		$('#column1').removeClass('column_disabled');
+		$('#column2').removeClass('column_disabled');
+		$('.column_disabled2').remove();
+
+		$("#price_slider").rangeSlider("destroy");
+		$("#price_slider").rangeSlider({
+	    	arrows:false,
+	    	formatter:function(val){
+	    		return  parseInt(val) + " €";
+	    	}
+	    });
+	}
+	
 	$(function(){
 		$('.flight_detail_tab').click(function(){
 			if ($(this).hasClass('tab1')){
@@ -38,12 +55,14 @@
 				$('#tab2').hide();
 				$('#sort_type_1').show();
 				$('#sort_type_2').hide();
+				$('#titleSection').html('Your selected flight from Bucharest to Antigua');
 			}
 			if ($(this).hasClass('tab2')){
-				$('#tab1').hide();
-				$('#tab2').show();
-				$('#sort_type_1').hide();
-				$('#sort_type_2').show();
+				$('#main_preloader').show();
+				$('#column1').addClass('column_disabled').prepend("<div class='column_disabled2'></div>");
+				$('#column2').addClass('column_disabled').prepend("<div class='column_disabled2'></div>");
+
+				setTimeout(preload, 3000);
 			}
 
 			$('.flight_detail_tab').removeClass('active');

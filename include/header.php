@@ -45,6 +45,8 @@ if (preg_match('/(?i)Windows/', $_SERVER['HTTP_USER_AGENT']) && preg_match('/(?i
 		
 		<link rel="stylesheet" type="text/css" media="screen" href="css/slider.css" />
 		
+		<link rel="stylesheet" type="text/css" media="screen" href="css/jquery.fancybox.css?v=2.1.4" />
+		
 		<!-- /// Template CSS ////////  -->
 		<link rel="stylesheet" type="text/css" media="screen" href="css/preloader.css" />
 		<link rel="stylesheet" type="text/css" media="screen" href="css/elements.css" />
@@ -59,3 +61,51 @@ if (preg_match('/(?i)Windows/', $_SERVER['HTTP_USER_AGENT']) && preg_match('/(?i
 	<noscript>
     	<p class="javascriptrequired">You seem to have Javascript disabled. this website needs javascript in order to function properly.</p>
     </noscript>
+    
+    <div id="main_preloader" class="preloader_container main">
+		<div class="windows8">
+			<div class="wBall" id="wBall_1">
+				<div class="wInnerBall"></div>
+			</div>
+			<div class="wBall" id="wBall_2">
+				<div class="wInnerBall"></div>
+			</div>
+			<div class="wBall" id="wBall_3">
+				<div class="wInnerBall"></div>
+			</div>
+			<div class="wBall" id="wBall_4">
+				<div class="wInnerBall"></div>
+			</div>
+			<div class="wBall" id="wBall_5">
+				<div class="wInnerBall"></div>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+    
+    <div role="navigation" class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button data-target=".navbar-collapse" data-toggle="collapse"
+					class="navbar-toggle collapsed" type="button">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a href="/" style="width:68px;display:block;margin:0 auto;margin-top:5px;margin-bottom:5px;"><img src="images/logo_small.png" alt="logo alice" /></a>
+			</div>
+			<div class="navbar-collapse collapse" style="height: 1px;">
+				<ul class="nav navbar-nav">
+					<li><a href="book_directly.php">Book Directly</a></li>
+					<li><a href="book_assisted.php">Book Assisted</a></li>
+					<li><a href="weekend.php">Escape for a Weekend</a></li>
+					<li><a href="add_ons.php">Trip add-ons</a></li>
+					<li><a href="top_picks.php">Alice's top Picks</a></li>
+					<li><a href="#">Trips in Romania</a></li>
+					<li><a href="alice-stories.php">Alice's Stories</a></li>
+					<li><a href="alice-friends.php">Alice's Friends</a></li>
+					<li><a href="who-is-alice.php">Who is Alice</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>

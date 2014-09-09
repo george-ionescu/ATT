@@ -4,7 +4,7 @@
 <div class="column_content padding_column_content full_height text_align_left" style="margin-top: 5px;">
 	<form class="form-horizontal custom_form" role="form" method="post" action="page1_2_2.php">
 		<?php for ($i=1; $i<=3; $i++) { ?>
-			<div id="option<?php echo $i; ?>">
+			<div id="room_info<?php echo $i; ?>">
 				<p class="flight_title first">1st room</p>
 				<div class="row_form">
 					<div class="col-md-12 short_padding">
@@ -31,9 +31,9 @@
 				<div class="clearfix"></div>
 				
 				<div style="margin-top: 5px;">
-					<a class="slide" column-close="column4" column-open="column4" href="include/elements/hotel_policy.php"><i class="fa fa-plus-circle"></i>room policy</a>
+					<a class="slide hotel_policy" column-close="column4" column-open="column4" href="include/elements/hotel_policy.php"><i class="fa fa-plus-circle"></i>room policy</a>
 				&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
-					<a class="slide" column-close="column4" column-open="column4" href="include/elements/hotel_info.php"><i class="fa fa-plus-circle"></i>hotel info</a>
+					<a class="slide hotel_info" column-close="column4" column-open="column4" href="include/elements/hotel_info.php"><i class="fa fa-plus-circle"></i>hotel info</a>
 				</div>
 				<hr />
 			</div>
@@ -80,5 +80,25 @@ $(document).ready(function(){
 			closeAllSlidesAndOpen(oldSlide, newSlide, url, class_bootstrap);
 		}
 	});
+
+
+
+
+	function openNext(){
+		var oldSlide = $('#column4');
+		var newSlide = $('#column4');
+		var url = 'include/elements/hotel_info.php';
+
+		var class_bootstrap = 'col-md-3 nopadding';
+		
+		if (oldSlide && newSlide && url != '#'){
+			changeSlide(oldSlide, newSlide, url, class_bootstrap);
+			updateAllScrolls();
+
+			$('#room_info1').find('.hotel_info').addClass('active').find('.fa').removeClass('fa-plus-circle').addClass('fa-minus-circle');
+		}
+	}
+
+	setTimeout(openNext, 400);
 });
 </script>

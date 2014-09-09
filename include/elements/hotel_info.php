@@ -20,11 +20,17 @@
 		more recently with desktop publishing software like Aldus PageMaker
 		including versions of Lorem Ipsum.</p>
 		
-	<h1 class="pull-right" style="margin-right: 0px;">Hotel Photos</h1>
+	<h1 class="pull-right second-title">Hotel Photos</h1>
 	<div class="clearfix"></div>
 	
-	<div style="text-align: center;">
-		<img src="images/hotel_photos.png" alt="" />
+	<div id="photo_container" style="text-align: center;">
+		<?php for ($i=1; $i<=6; $i++) { ?>
+			<div class="box">
+				<a href="images/hotels/<?php echo $i; ?>.jpg" rel="group">
+					<img src="images/hotels/thumbs/<?php echo $i; ?>.jpg" alt="" />
+				</a>
+			</div> 
+		<?php } ?>
 	</div>
 	
 	<div class="pull-right">
@@ -35,6 +41,20 @@
 
 
 <script>
+	$(function(){
+		var $container = $('#photo_container');
+	
+		$container.imagesLoaded( function(){
+		  $container.masonry({
+		    itemSelector : '.box'
+		  });
+		});
+
+		$(".box a").fancybox({
+			'titleShow'     : false
+		});
+	});
+
 	function closeCustom(){
 		$('a.slide').removeClass('active');
 		$('a.slide .fa').removeClass('fa-minus-circle').addClass('fa-plus-circle');

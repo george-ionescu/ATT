@@ -11,7 +11,16 @@
     			<table class="flight_detail_table">
     				<tr>
     					<td></td>
-    					<td colspan="5" class="title">depart 18 feb 2014</td>
+    					<td colspan="5" class="title">depart 18 feb 2015</td>
+    				</tr>
+    				
+    				<tr class="normal disable">
+    					<td style="padding-top:22px;"><label class="radio-inline"><input type="radio" id="inlineCheckbox1" name="fl11" value="option1" disabled><span class="check"></span>	 </label></td>
+    					<td><span class="departure_time">09:30</span><br />OTP Bucharest</td>
+    					<td class="airplane"><img src="images/airplane_icon.png" alt="" /> 3h 25m</td>
+    					<td><span class="departure_time">09:30</span><br />OTP Bucharest</td>
+    					<td>American Airlines - Flight 6358 | economy<br/>2 stops | terminal shift | stop overnight</td>
+    					<td style="padding-top:22px;"><a href="javascript:showDetail22('depart<?php echo $i; ?><?php echo $j; ?>');" class="pull-left"><i class="fa fa-plus-circle"></i>details</a></td>
     				</tr>
     				
     				<?php for ($j=1; $j<=2; $j++) { ?>
@@ -19,7 +28,7 @@
 	    					<td style="padding-top:22px;"><label class="radio-inline"><input type="radio" id="inlineCheckbox1" name="fl11" value="option1" checked><span class="check"></span>	 </label></td>
 	    					<td><span class="departure_time">09:30</span><br />OTP Bucharest</td>
 	    					<td class="airplane"><img src="images/airplane_icon.png" alt="" /> 3h 25m</td>
-	    					<td><span class="departure_time">09:30</span><br />OTP Bucharest</td>
+	    					<td><span class="departure_time">22:30</span><br />OTP Bucharest</td>
 	    					<td>American Airlines - Flight 6358 | economy<br/>2 stops | terminal shift | stop overnight</td>
 	    					<td style="padding-top:22px;"><a href="javascript:showDetail22('depart<?php echo $i; ?><?php echo $j; ?>');" class="pull-left"><i class="fa fa-plus-circle"></i>details</a></td>
 	    				</tr>
@@ -30,25 +39,25 @@
 				    				<tr>
 				    					<td><span class="departure_time">09:30</span><br />OTP Bucharest</td>
 				    					<td class="airplane"><img src="images/airplane_icon.png" alt="" /> 3h 25m</td>
-				    					<td><span class="departure_time">09:30</span><br />OTP Bucharest</td>
+				    					<td><span class="departure_time">10:30</span><br />OTP Bucharest</td>
 				    					<td>American Airlines - Flight 6358 | economy<br/>2 stops | terminal shift | stop overnight</td>
 				    				</tr>
 				    				<tr>
 				    					<td colspan="4"><p class="horizontal_line_black"><span>Stop in LHR London 2h 00m</span></p></td>
 				    				</tr>
 				    				<tr>
-				    					<td><span class="departure_time">09:30</span><br />OTP Bucharest</td>
+				    					<td><span class="departure_time">10:30</span><br />OTP Bucharest</td>
 				    					<td class="airplane"><img src="images/airplane_icon.png" alt="" /> 3h 25m</td>
-				    					<td><span class="departure_time">09:30</span><br />OTP Bucharest</td>
+				    					<td><span class="departure_time">16:30</span><br />OTP Bucharest</td>
 				    					<td>American Airlines - Flight 6358 | economy<br/>2 stops | terminal shift | stop overnight</td>
 				    				</tr>
 				    				<tr>
 				    					<td colspan="4"><p class="horizontal_line_black"><span>Stop in LHR London 2h 00m</span></p></td>
 				    				</tr>
 				    				<tr>
-				    					<td><span class="departure_time">09:30</span><br />OTP Bucharest</td>
+				    					<td><span class="departure_time">16:30</span><br />OTP Bucharest</td>
 				    					<td class="airplane"><img src="images/airplane_icon.png" alt="" /> 3h 25m</td>
-				    					<td><span class="departure_time">09:30</span><br />OTP Bucharest</td>
+				    					<td><span class="departure_time">22:30</span><br />OTP Bucharest</td>
 				    					<td>American Airlines - Flight 6358 | economy<br/>2 stops | terminal shift | stop overnight</td>
 				    				</tr>
 				    			</table>

@@ -31,7 +31,6 @@ function backTo(poz){
 	var url = $('#column' + poz).find('h1').attr('breadcrumb-href');
 	var class_bootstrap = 'col-md-3';
 	
-	alert(url);
 	if (oldSlide && newSlide && url != '#'){
 		closeAllSlidesAndOpen(oldSlide, newSlide, url, class_bootstrap);
 	}
@@ -353,14 +352,6 @@ function callFormEvents(){
 	    });
 	}
 	
-	//slider
-	$("#slider").rangeSlider({
-    	arrows:false,
-    	formatter:function(val){
-    		return  parseInt(val) + " €";
-    	}
-    });
-	
 	//trigger resize event gmap
 	if ($('#google-map').length){
 		map = $("#google-map").gmap3('get');
@@ -387,7 +378,7 @@ function callFormEvents(){
 	});
 	
 	//create calendars
-	$(".datepicker").datepicker({
+	/*$(".datepicker").datepicker({
  	    dateFormat: 'dd M yy',
  	    changeMonth: true,
         changeYear: true,
@@ -401,7 +392,46 @@ function callFormEvents(){
         }
     });
 	//hide all calendars
-    $(".datepicker").hide();
+    $(".datepicker").hide();*/
+    
+    
+	
+
+    
+    $( "#datepicker_from" ).datepicker({
+    	dateFormat: 'dd M yy',
+		changeMonth: true,
+	    changeYear: true,
+	    onSelect: function(dateText){
+	        $(this).hide();
+	        //write value in box
+	        var tmpData = dateText.split(" ");
+	        $(this).parent().find('.day').html(tmpData[0]);
+	        $(this).parent().find('.month').html(tmpData[1]);
+	        $(this).parent().find('.year').html(tmpData[2]);
+	        //
+	        $( "#datepicker_to" ).datepicker( "option", "minDate", dateText );
+	    }
+    });
+    $( "#datepicker_to" ).datepicker({
+    	dateFormat: 'dd M yy',
+		changeMonth: true,
+	    changeYear: true,
+	    onSelect: function(dateText){
+	        $(this).hide();
+	        //write value in box
+	        var tmpData = dateText.split(" ");
+	        $(this).parent().find('.day').html(tmpData[0]);
+	        $(this).parent().find('.month').html(tmpData[1]);
+	        $(this).parent().find('.year').html(tmpData[2]);
+	        //
+	        //$( "#datepicker_from" ).datepicker( "option", "maxDate", dateText );
+	    }
+    });
+    $("#datepicker_to").hide();
+    $("#datepicker_from").hide();
+    
+    
 	
 	//counter up/down
     $('.counterUp').unbind();
@@ -516,8 +546,8 @@ function animationDone(){
 		event.stopPropagation();
 		
 		if (!$(this).hasClass('active') || $(this).hasClass('assisted')){
-			$('a.slide').removeClass('active');
-			$(this).addClass('active');
+			$('a.slide').removeClass('active').find('.fa').removeClass('fa-minus-circle').addClass('fa-plus-circle');
+			$(this).addClass('active').find('.fa').removeClass('fa-plus-circle').addClass('fa-minus-circle');
 			
 			$('a.slide').parent().parent().removeClass('active');
 			$(this).parent().parent().addClass('active');
@@ -580,6 +610,14 @@ function animationDone(){
 			var oldSlide = $('#column3');
 			var newSlide = $('#column3');
 			var class_bootstrap = 'col-md-3';
+			
+			if ($(this).hasClass('type5')){
+				oldSlide = $('#column2');
+				newSlide = $('#column2');
+				class_bootstrap = 'col-md-3';
+				
+				url = 'include/elements/rooms_and_rates_top.php'; 
+			}
 			
 			if (oldSlide && newSlide && url != '#'){
 				changeSlide(oldSlide, newSlide, url, class_bootstrap);

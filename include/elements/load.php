@@ -23,10 +23,6 @@
 	</div>
 	<div class="clearfix"></div>
 	
-	<div class="pull-right">
-		<a href="javascript:closeSlideById('column3');"><i class="fa fa-times-circle-o"></i>cancel</a>
-	</div>
-	<div class="clearfix"></div>
 	
 	
 	
@@ -51,8 +47,17 @@
 	
 	
 <script>
+	$(function(){
+		$('#column1').addClass('column_disabled').prepend("<div class='column_disabled2'></div>");
+		$('#column2').addClass('column_disabled').prepend("<div class='column_disabled2'></div>");
+	});
+	
 	$('#demo').click(function(event){
 		event.preventDefault();
+
+		$('#column1').removeClass('column_disabled');
+		$('#column2').removeClass('column_disabled');
+		$('.column_disabled2').remove();
 	
 		var oldSlide = $('#column1');
 		var newSlide = $('#column1');

@@ -24,7 +24,7 @@
 								<div class="custom_input_slide">
 									<p class="box_title">depart</p>
 									<div class="custom_input_slide_content">
-										<div class="datepicker"></div>
+										<div id="datepicker_from" class="datepicker"></div>
 										<div class="pull-left">
 											<span class="day number_big pull-left">01</span>
 											<div class="number_small pull-left">
@@ -43,7 +43,7 @@
 								<div class="custom_input_slide">
 									<p class="box_title">return</p>
 									<div class="custom_input_slide_content">
-										<div class="datepicker"></div>
+										<div id="datepicker_to" class="datepicker"></div>
 										<div class="pull-left">
 											<span class="day number_big pull-left">01</span>
 											<div class="number_small pull-left">
@@ -96,7 +96,7 @@
 						<div class="row_form">
 							<span class="custom-dropdown">
 							    <select>
-							        <option>Option 1</option>
+							        <option>nationality</option>
 							        <option>Option 2</option>  
 							        <option>Option 3</option>
 							        <option>Option 4</option>

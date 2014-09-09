@@ -3,6 +3,7 @@
 //type = 2 -> with flight 
 //type = 3 -> with compare
 //type = 4 -> with flight and compare
+//type = 5 -> top picks
 ?>
 
 <h1 class="pull-right">999 hotel results</h1>
@@ -31,7 +32,7 @@
 								<img src="images/star_white.png" alt="" style="margin-top: -10px;" /> 
 								<img src="images/star_white.png" alt="" style="margin-top: -10px;" />
 								<p class="price_p">
-									<span class="price">254 euro</span><br />per package
+									<span class="price">254 euro</span><br />total price
 								</p>
 							</td>
 						</tr>

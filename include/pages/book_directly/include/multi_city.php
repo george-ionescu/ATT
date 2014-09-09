@@ -12,26 +12,26 @@
 		<p class="flight_title"><?php echo $countArray[$i-1]; ?> flight</p>
 		
 		<div class="form-group has-success has-feedback">
-			<label class="control-label input_label col-sm-3 no_padding_left_right" for="inputSuccess3">&nbsp;&nbsp;&nbsp;from:</label>
-			<div class="col-sm-9 no_padding_left_right">
+			<label class="control-label input_label col-sm-3 col-xs-3 no_padding_left_right" for="inputSuccess3">&nbsp;&nbsp;&nbsp;from:</label>
+			<div class="col-sm-9 col-xs-9 no_padding_left_right">
 				<input type="text" class="autocomplete_input form-control" id="inputSuccess3" placeholder="city/airport name"> 
 				<span class="glyphicon glyphicon-map-marker form-control-feedback"></span>
 			</div>
 		</div>
 		<div class="form-group has-error has-feedback">
-			<label class="control-label input_label col-sm-3 no_padding_left_right" for="inputSuccess3">&nbsp;&nbsp;&nbsp;to:</label>
-			<div class="col-sm-9 no_padding_left_right">
+			<label class="control-label input_label col-sm-3 col-xs-3 no_padding_left_right" for="inputSuccess3">&nbsp;&nbsp;&nbsp;to:</label>
+			<div class="col-sm-9 col-xs-9 no_padding_left_right">
 				<input type="text" class="autocomplete_input form-control" id="inputSuccess3" placeholder="city/airport name"> 
 				<span class="glyphicon glyphicon-map-marker form-control-feedback"></span>
 			</div>
 		</div>
 		
 		<div class="row_form">
-			<div class="col-md-6 short_padding pull-left">
+			<div class="col-md-6 col-xs-6 short_padding pull-left">
 				<div class="custom_input_slide">
 					<p class="box_title">depart</p>
 					<div class="custom_input_slide_content">
-						<div class="datepicker"></div>
+						<div id="datepicker_from" class="datepicker"></div>
 						<div class="pull-left">
 							<span class="day number_big pull-left">01</span>
 							<div class="number_small pull-left">
@@ -46,7 +46,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-6 short_padding pull-left">
+			<div class="col-md-6 col-xs-6 short_padding pull-left">
 				<div class="custom_input_slide" style="background: none;padding:0;">
 					<p style="color: #fff;margin-bottom:5px;text-align:right;">flight time</p>
 					<div style="margin-bottom: 5px;">
@@ -81,7 +81,7 @@
 
 <br />
 <div class="row_form">
-	<div class="col-md-6 short_padding pull-left">
+	<div class="col-md-6 col-xs-6 short_padding pull-left">
 		<div class="custom_input_slide">
 			<p class="box_title">adults</p>
 			<div class="custom_input_slide_content center">
@@ -95,7 +95,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-md-6 short_padding pull-left">
+	<div class="col-md-6 col-xs-6 short_padding pull-left">
 		<div class="custom_input_slide">
 			<p class="box_title pull-left">children</p>
 			<a href="javascript:toggleChildrenDetail();" class="detail_button pull-right"><i class="fa fa-plus-circle"></i>info</a>

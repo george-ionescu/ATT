@@ -7,9 +7,11 @@
 		<div style="height:40px; margin-top:3px;">
 			<table class="full_width">
 				<tr>
-					<td style="text-align:left;"><label class="radio-inline" style="float:none;"> round trip &nbsp;&nbsp;<input type="radio" id="tripType1" name="gr" value="option1" checked><span class="check"></span> </label></td>
-					<td style="text-align:center;"><label class="radio-inline" style="float:none;"> one way &nbsp;&nbsp;<input type="radio" id="tripType2" name="gr" value="option2"><span class="check"></span> </label></td>
-					<td style="text-align:right;"><label class="radio-inline" style="float:none;"> multi city &nbsp;&nbsp;<input type="radio" id="tripType3" name="gr" value="option3"><span class="check"></span> </label></td>
+					<td style="text-align:left; width: 120px;"><label class="radio-inline" style="float:none;"> round trip &nbsp;&nbsp;<input type="radio" id="tripType1" name="gr" value="option1" checked><span class="check"></span> </label></td>
+					<td style="text-align:left;"><label class="radio-inline" style="float:none;"> one way &nbsp;&nbsp;<input type="radio" id="tripType2" name="gr" value="option2"><span class="check"></span> </label></td>
+					<?php if (1 == 2) { ?>
+						<td style="text-align:right;"><label class="radio-inline" style="float:none;"> multi city &nbsp;&nbsp;<input type="radio" id="tripType3" name="gr" value="option3"><span class="check"></span> </label></td>
+					<?php } ?>
 				</tr>
 			</table>
 		</div>
@@ -28,7 +30,7 @@
 		<?php include $_SERVER['DOCUMENT_ROOT'] . '/include/elements/search_options_flight.php'; ?>
 		
 		<div class="clearfix"></div>
-		<button id="submit_button" type="submit" class="btn btn-default proceed_button">proceed</button>
+		<button id="submit_button" type="submit" data-loading-text="please wait" class="btn btn-default proceed_button">proceed</button>
 	</form>
 </div>
 

@@ -13,7 +13,7 @@
 				        <p class="pull-left">Please choose a month</p>
 				        <div class="custom_input_slide_content pull-left" style="margin-top: 0;">
 							<a href="javascript:prevMonth();" class="arrow_left pull-left"><i class="fa fa-caret-left"></i></a>
-							<span id="month_name" class="pull-left"></span>
+							<span id="month_name" class="pull-left" style="width:130px;"></span>
 							<a href="javascript:nextMonth();" class="arrow_right pull-left"><i class="fa fa-caret-right"></i></a>
 							<div class="clearfix"></div>
 						</div>

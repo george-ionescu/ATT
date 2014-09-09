@@ -11,7 +11,7 @@
 		<div class="custom_input_slide">
 			<p class="box_title">check in</p>
 			<div class="custom_input_slide_content">
-				<div class="datepicker"></div>
+				<div id="datepicker_from" class="datepicker"></div>
 				<div class="pull-left">
 					<span class="day number_big pull-left">01</span>
 					<div class="number_small pull-left">
@@ -30,7 +30,7 @@
 		<div class="custom_input_slide">
 			<p class="box_title">check out</p>
 			<div class="custom_input_slide_content">
-				<div class="datepicker"></div>
+				<div id="datepicker_to" class="datepicker"></div>
 				<div class="pull-left">
 					<span class="day number_big pull-left">01</span>
 					<div class="number_small pull-left">

@@ -2,17 +2,19 @@
 	<div class="footer navbar-fixed-bottom">
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-md-6">
+				<div class="col-md-6 col-sm-6 col-xs-12">
 					<a href="who-is-alice.php"><i class="fa fa-envelope"></i>Contact</a>
 					&nbsp;&nbsp;&nbsp;&nbsp;
 					<a href="javascript:showCreateAccountPopUp();"><i class="fa fa-user"></i>Register</a> | <a href="javascript:showRegisterPopUp();">Sign in</a> | <a href="my_account.php">My account</a>
 				</div>
-				<div class="col-md-6">
-					<div class="pull-right">
-						<a href="alice-stories.php">Alice’s Stories</a> |
-						<a href="alice-friends.php">Alice’s Friends</a> |
-						<a href="who-is-alice.php">Who is Alice</a>
-						&nbsp;&nbsp;
+				<div class="col-md-6 col-sm-6 col-xs-12">
+					<div class="footer-right">
+						<div class="hide_on_mobile">
+							<a href="alice-stories.php">Alice’s Stories</a> |
+							<a href="alice-friends.php">Alice’s Friends</a> |
+							<a href="who-is-alice.php">Who is Alice</a>
+							&nbsp;&nbsp;
+						</div>
 						<a href=""><img src="images/pinterest_icon.jpg" alt="pinterest icon" /></a>
 						<a href=""><img src="images/facebook_icon.jpg" alt="pinterest icon" /></a>
 						<a href=""><img src="images/youtube_icon.jpg" alt="pinterest icon" /></a>
@@ -45,9 +47,6 @@
 <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
 <script type="text/javascript" src="js/gmap3.min.js"></script>
 
-<!-- /// Cycle ////////  -->
-<script type="text/javascript" src="js/jquery.cycle2.js"></script>
-
 <?php if (!$isWindows) { ?>
 	<script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
 	<script type="text/javascript" src="js/jquery.mCustomScrollbar.min.js"></script>
@@ -59,9 +58,9 @@
 <script type="text/javascript" src="js/supersized.3.2.7.js"></script>
 <script type="text/javascript" src="js/supersized.shutter.js"></script>
 
+<script type="text/javascript" src="js/jquery.masonry.min.js"></script>
 
-<script type="text/javascript" src="js/readmore.min.js"></script>
-
+<script type="text/javascript" src="js/jquery.fancybox.js?v=2.1.4"></script>
 
 <!-- /// Custom scripts ////////  -->
 <script type="text/javascript" src="js/plugins.js"></script>
