@@ -12,7 +12,7 @@
 				<div class="custom_input_slide_content center">
 					<a href="#" class="counterDown arrow_left pull-left"><i class="fa fa-caret-left"></i></a>
 					<div class="pull-left">
-						<span id="counterAdult" class="counterValue number_big pull-left" minvalue="1" maxvalue="9">01</span>
+						<span id="counterAdult" class="counterValue number_big pull-left" minvalue="1" maxvalue="5">01</span>
 						<div class="clearfix"></div>
 					</div>
 					<a href="#" class="counterUp arrow_right pull-left"><i class="fa fa-caret-right"></i></a>
@@ -29,7 +29,7 @@
 				<div class="custom_input_slide_content children center">
 					<a href="#" class="counterDown arrow_left pull-left"><i class="fa fa-caret-left"></i></a>
 					<div class="pull-left">
-						<span id="counterChildren" class="counterValue number_big pull-left">01</span>
+						<span id="counterChildren" class="counterValue number_big pull-left" minvalue="0" maxvalue="2">01</span>
 						<div class="clearfix"></div>
 					</div>
 					<a href="#" class="counterUp arrow_right pull-left"><i class="fa fa-caret-right"></i></a>

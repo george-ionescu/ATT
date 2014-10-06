@@ -485,42 +485,80 @@ function callFormEvents(){
 		}
 		maxValue = parseInt($(this).parent().find('.counterValue').attr('maxvalue')) || 8;
 		
-		//maximum 9 persons
-		nrAdult = parseInt($('#counterAdult').html());
-		nrChildren = parseInt($('#counterChildren').html());
-		
-		if (poz < maxValue && (nrAdult+nrChildren < maxPerson)){
-			poz++;
-			if (poz<10){
-				pozString = "0" + poz;
-			} else {
-				pozString = poz;
-			} 
-			$(this).parent().find('.counterValue').html(pozString);
-			
-			//special case for children
-			if ($(this).parent().hasClass('children')){
-				for (i=1; i<=poz; i++){
-					$(this).parent().parent().parent().parent().parent().find('.age' + i).show();
-				}
-				for (i=poz+1; i<=8; i++){
-					$(this).parent().parent().parent().parent().parent().find('.age' + i).hide();
+		if (isHotel){
+			if (poz < maxValue){
+				poz++;
+				if (poz<10){
+					pozString = "0" + poz;
+				} else {
+					pozString = poz;
+				} 
+				$(this).parent().find('.counterValue').html(pozString);
+				
+				//special case for children
+				if ($(this).parent().hasClass('children')){
+					for (i=1; i<=poz; i++){
+						$(this).parent().parent().parent().parent().parent().find('.age' + i).show();
+					}
+					for (i=poz+1; i<=8; i++){
+						$(this).parent().parent().parent().parent().parent().find('.age' + i).hide();
+					}
+					
+					if (poz == 0){
+						$(this).parent().parent().find('.detail_button').hide();
+					} else {
+						$(this).parent().parent().find('.detail_button').show();
+					}
 				}
 				
-				if (poz == 0){
-					$(this).parent().parent().find('.detail_button').hide();
-				} else {
-					$(this).parent().parent().find('.detail_button').show();
+				//special case for room
+				if ($(this).parent().hasClass('room')){
+					for (i=1; i<=poz; i++){
+						$('#room' + i).show();
+					}
+					for (i=poz+1; i<=5; i++){
+						$('#room' + i).hide();
+					}
 				}
 			}
+		} else {
+			//maximum 9 persons
+			nrAdult = parseInt($('#counterAdult').html());
+			nrChildren = parseInt($('#counterChildren').html());
 			
-			//special case for room
-			if ($(this).parent().hasClass('room')){
-				for (i=1; i<=poz; i++){
-					$('#room' + i).show();
+			if (poz < maxValue && (nrAdult+nrChildren < maxPerson)){
+				poz++;
+				if (poz<10){
+					pozString = "0" + poz;
+				} else {
+					pozString = poz;
+				} 
+				$(this).parent().find('.counterValue').html(pozString);
+				
+				//special case for children
+				if ($(this).parent().hasClass('children')){
+					for (i=1; i<=poz; i++){
+						$(this).parent().parent().parent().parent().parent().find('.age' + i).show();
+					}
+					for (i=poz+1; i<=8; i++){
+						$(this).parent().parent().parent().parent().parent().find('.age' + i).hide();
+					}
+					
+					if (poz == 0){
+						$(this).parent().parent().find('.detail_button').hide();
+					} else {
+						$(this).parent().parent().find('.detail_button').show();
+					}
 				}
-				for (i=poz+1; i<=5; i++){
-					$('#room' + i).hide();
+				
+				//special case for room
+				if ($(this).parent().hasClass('room')){
+					for (i=1; i<=poz; i++){
+						$('#room' + i).show();
+					}
+					for (i=poz+1; i<=5; i++){
+						$('#room' + i).hide();
+					}
 				}
 			}
 		}

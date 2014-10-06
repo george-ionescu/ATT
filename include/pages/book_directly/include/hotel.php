@@ -57,7 +57,7 @@
 		<div class="custom_input_slide_content rooms small pull-right room">
 			<a href="#" class="counterDown arrow_left pull-left"><i class="fa fa-caret-left"></i></a>
 			<div class="pull-left">
-				<span class="counterValue number_big pull-left">01</span>
+				<span class="counterValue number_big pull-left" minvalue="1" maxvalue="5">01</span>
 				<div class="clearfix"></div>
 			</div>
 			<a href="#" class="counterUp arrow_right pull-left"><i class="fa fa-caret-right"></i></a>
