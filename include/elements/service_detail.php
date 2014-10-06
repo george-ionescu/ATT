@@ -1,4 +1,7 @@
-<h1 class="pull-right">Activity Details</h1>
+<div style="position:relative;">
+	<a class="hide_on_desktop close_button_mobile" href="javascript:closePage();" class="pull-left"><i class="fa fa-angle-left"></i> close</a> 
+	<h1 class="pull-right">Activity Details</h1>
+</div>
 <div class="clearfix"></div>
 
 <div class="column_content nopadding full_height">
@@ -19,10 +22,10 @@
 			
 			<?php for ($i=1; $i<=2; $i++) { ?>
 				<div id="activity<?php echo $i; ?>">
-					<p class="flight_title">1st <span class="black">Combo Ticket includes: Upper Belvedere, Lower Belvedere, Orangery, Privy Garden, </span></p>
+					<p class="flight_title">1st <span class="black white_on_mobile">Combo Ticket includes: Upper Belvedere, Lower Belvedere, Orangery, Privy Garden, </span></p>
 					
 					<div class="row_form">
-						<div class="col-md-6 short_padding text_align_left">
+						<div class="col-md-6 col-xs-6 short_padding text_align_left">
 							<span class="custom-dropdown">
 							    <select>
 							        <option>Duration</option>
@@ -35,7 +38,7 @@
 							<div class="clearfix"></div>
 						</div>
 						
-						<div class="col-md-6 short_padding text_align_left">
+						<div class="col-md-6 col-xs-6 short_padding text_align_left">
 							<span class="custom-dropdown">
 							    <select>
 							        <option>Date</option>
@@ -75,5 +78,16 @@
 			changeSlide(oldSlide, newSlide, url, class_bootstrap);
 		}
 	});
+
+	function closePage(){
+		url = 'include/elements/service_result.php';
+		$.get(url, function( data ) {
+			hidePreloader();
+			$('#column2').show();
+			$('#column2').html(data);
+			
+			closeSlideById('column3');
+		});
+	}
 		
 </script>

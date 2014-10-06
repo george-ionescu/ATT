@@ -60,10 +60,10 @@
 					    </select>
 					</span>
 				</div>
-				<div class="col-md-3 col-xs-2 short_padding">
+				<div class="col-md-3 col-xs-3 short_padding">
 					<input type="text" class="form-control italic" id="inputSuccess3" placeholder="ID number"> 
 				</div>
-				<div class="col-md-3 col-xs-2 short_padding">
+				<div class="col-md-3 col-xs-3 short_padding">
 					<span class="custom-dropdown">
 					    <select>
 					        <option>Issue source</option>
@@ -97,10 +97,10 @@
         <p class="flight_title">2nd adult</p>
         <form class="form-horizontal custom_form" role="form" method="post" action="/">
 			<div class="row_form">
-				<div class="col-md-2 short_padding">
+				<div class="col-md-2 col-xs-2 short_padding">
 					<span class="custom-dropdown">
 					    <select>
-					        <option>Option 1</option>
+					        <option>Title</option>
 					        <option>Option 2</option>  
 					        <option>Option 3</option>
 					        <option>Option 4</option>
@@ -108,16 +108,16 @@
 					    </select>
 					</span>
 				</div>
-				<div class="col-md-3 short_padding">
+				<div class="col-md-3 col-xs-3 short_padding">
 					<input type="text" class="form-control italic" id="inputSuccess3" placeholder="First name"> 
 				</div>
-				<div class="col-md-3 short_padding">
+				<div class="col-md-3 col-xs-3 short_padding">
 					<input type="text" class="form-control italic" id="inputSuccess3" placeholder="Last name"> 
 				</div>
-				<div class="col-md-4 short_padding">
-					<label class="control-label input_label col-sm-6" for="inputSuccess3">&nbsp;&nbsp;&nbsp;Birth Date</label>
-					<div class="col-sm-6 no_padding_left_right">
-						<input type="text" class="form-control italic no_padding_left_right" id="calendar3" placeholder="day | mm | year"> 
+				<div class="col-md-4 col-xs-4 short_padding">
+					<label class="control-label input_label col-sm-6 col-xs-6" for="inputSuccess3">&nbsp;&nbsp;&nbsp;Birth Date</label>
+					<div class="col-sm-6 col-xs-6 no_padding_left_right">
+						<input type="text" class="form-control italic no_padding_left_right" id="calendar1" placeholder="day | mm | year"> 
 					</div>
 				</div>
 			</div>
@@ -133,10 +133,10 @@
 					    </select>
 					</span>
 				</div>
-				<div class="col-md-3 col-xs-2 short_padding">
+				<div class="col-md-3 col-xs-3 short_padding">
 					<input type="text" class="form-control italic" id="inputSuccess3" placeholder="ID number"> 
 				</div>
-				<div class="col-md-3 col-xs-2 short_padding">
+				<div class="col-md-3 col-xs-3 short_padding">
 					<span class="custom-dropdown">
 					    <select>
 					        <option>Issue source</option>
@@ -154,12 +154,23 @@
 					</div>
 				</div>
 			</div>
+			<div class="row_form">
+				<div class="col-md-5 col-xs-5 short_padding">
+					<input type="text" class="form-control italic" id="inputSuccess3" placeholder="E-mail"> 
+				</div>
+				<div class="col-md-3 col-xs-3 short_padding">
+					<input type="text" class="form-control italic" id="inputSuccess3" placeholder="Phone *"> 
+				</div>
+				<div class="col-md-4 col-xs-4 short_padding">
+					<p class="italic" style="color:#fff;padding-top:7px;">* Only for emergencies</p>
+				</div>
+			</div>
         </form>
         
         <p class="flight_title">Special request</p>
         <form class="form-horizontal custom_form" role="form" method="post" action="/">
         	<div class="row_form">
-        		<div class="col-md-12 short_padding">
+        		<div class="col-md-12 col-xs-12 short_padding">
         			<textarea class="form-control" rows="" cols=""></textarea>
         		</div>
         	</div>
@@ -168,7 +179,7 @@
         
         <div class="clearfix"></div>
 		 <br />
-    			<div style="text-align: center">
+    			<div style="text-align: center;">
     				<button id="submit_button2" type="button" class="btn btn-default">proceed</button>
     			</div>
     		</div>
@@ -176,6 +187,25 @@
     		
     		
     		<script>
+    					var breadcrump = [
+  		    				{
+  		    					title: 'Trip info',
+  		    					oldSlide: 'column1',
+  		    					newSlide: 'column1',
+  		    					class_bootstrap: 'col-md-3',
+  		    					url: 'include/pages/book_directly/flights.php'
+  		    				},
+  		    				{
+  		    					title: 'Change Flight',
+  		    					oldSlide: 'column1',
+  		    					newSlide: 'column1',
+  		    					class_bootstrap: 'col-md-3',
+  		    					url: 'include/elements/sort_flight.php'
+  		    				}
+  		    			];
+  		    			createBreadcrump(breadcrump);
+
+    		
 	    		$(window).load(function(){
 	    			//init calendars fo reserve form
 	    			for (i=1; i<=4; i++){

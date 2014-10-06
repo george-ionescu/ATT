@@ -42,8 +42,8 @@
 		
 		//Supersized - full screen background
 		if(typeof $.fn.supersized != 'undefined'){
-			 var newWindowWidth = $(window).width();
-		    if (newWindowWidth < 480){
+			var newWindowWidth = $(window).width();
+		    if (newWindowWidth < 1024){
 		        $("#supersized").remove();
 		    } else {
 		        var loadSupersizedDiv = jQuery('<div id="supersized"></div>').appendTo(document.body);
@@ -150,43 +150,31 @@
 	                }
 	            }
 		};
-        $(".column_content").mCustomScrollbar(scrollOptions);
-        //$(".column_content").mCustomScrollbar('disable');
+        
+		if ($(window).width() >= 1024){
+			$(".column_content").mCustomScrollbar(scrollOptions);
+		}
         
         
-        $("#price_slider").rangeSlider({
+        /*$("#price_slider").rangeSlider({
         	arrows:false,
         	formatter:function(val){
         		return  parseInt(val) + " €";
         	}
-        });
-        
-        
-        /*$( "#slider-range" ).slider({
-			range: true,
-			min: 0,
-			max: 500,
-			values: [ 75, 300 ],
-			slide: function( event, ui ) {
-			  $( "#amountUp" ).html( ui.values[ 0 ] + "$");
-			  $( "#amountDown" ).html( ui.values[ 1 ]  + "$");
-			  
-			  $( "#amountUp" ).css('left', $( "#slider-range" ).find('.ui-slider-handle').css('left'));
-			  $( "#amountDown" ).css('left', $( "#slider-range" ).find('.ui-slider-handle').next().css('left'));
-			  
-			  $( "#amountUp" ).css('margin-left', ($( "#amountUp" ).width() / 2 + 8) * -1);
-			  $( "#amountDown" ).css('margin-left', ($( "#amountDown" ).width() / 2 + 12) * -1);
-			  
-			}
-        });
-        $( "#amountUp" ).html( $( "#slider-range" ).slider( "values", 0 ) + "$" );
-        $( "#amountDown" ).html( $( "#slider-range" ).slider( "values", 1 ) + "$" );
-        
-        $( "#amountUp" ).css('left', $( "#slider-range" ).find('.ui-slider-handle').css('left'));
-		$( "#amountDown" ).css('left', $( "#slider-range" ).find('.ui-slider-handle').next().css('left'));
+        });*/
 		
-		$( "#amountUp" ).css('margin-left', ($( "#amountUp" ).width() / 2 + 8) * -1);
-		$( "#amountDown" ).css('margin-left', ($( "#amountDown" ).width() / 2 + 12) * -1);*/
+		 $( "#slider-range" ).slider({
+			 range: true,
+			 min: 0,
+			 max: 500,
+			 values: [ 75, 300 ],
+			 slide: function( event, ui ) {
+				 $( "#amountUp" ).html( $( "#slider-range" ).slider( "values", 0 ) + " $" );
+				 $( "#amountDown" ).html( $( "#slider-range" ).slider( "values", 1 ) + " $" );
+			 }
+		 });
+		 $( "#amountUp" ).html( $( "#slider-range" ).slider( "values", 0 ) + " $" );
+		 $( "#amountDown" ).html( $( "#slider-range" ).slider( "values", 1 ) + " $" );
         
     });
 	
@@ -207,9 +195,9 @@
 	
 	$(window).resize(function() {
 	    var newWindowWidth = $(window).width();
-	    if (newWindowWidth < 480){
+	    if (newWindowWidth < 1024){
 	        $("#supersized").remove();
-	    } else if ($("#supersized").length == 0 && newWindowWidth > 480) {
+	    } else if ($("#supersized").length == 0 && newWindowWidth > 1024) {
 	        var loadSupersizedDiv = jQuery('<div id="supersized"></div>').appendTo(document.body);
 
 	        loadSupersized();

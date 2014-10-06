@@ -12,7 +12,7 @@ select::-ms-expand {
 	margin-right:0px !important;
 }
 .column_disabled .column_content{
-	opacity:0.5;
+	opacity:1;
 }
 
 .box{
@@ -217,6 +217,21 @@ select::-ms-expand {
 	padding-top: 70px;
 	padding-bottom: 30px;
 	overflow:hidden;
+}
+
+#sort_wrapper {
+	color: #fff;
+}
+#sort_wrapper h1 {
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 300;
+	font-size: 22px;
+	color: #fff;
+	text-shadow: none;
+	text-align: right;
+	margin-right: 15px;
+	margin-bottom:15px;
+	margin-top:20px;
 }
 
 #column1 {
@@ -520,7 +535,6 @@ select::-ms-expand {
 a.button_big{
 	display:block;
 	padding:15px;
-	padding-left:0px;
 	position:relative;
 	opacity:0.7;
 	
@@ -545,7 +559,7 @@ a.button_big.account_sidebar.active{
 
 a.button_big span.sidebar{
 	position:absolute;
-	left:30px;
+	left:45px;
 	bottom:15px;
 	font-size:30px;
 	color:#fff;
@@ -641,8 +655,9 @@ table.flight_detail_table .departure_time{
 	font-size:16px;
 }
 table td.airplane{
-	padding-top:12px  !important;
+	padding-top:17px  !important;
 	width:90px;
+	text-align:center;
 }
 table.flight_detail_table tr td.title{
 	color:#fff;
@@ -830,7 +845,7 @@ a.flight_detail_tab:hover, a.flight_detail_tab.active{
 }
 .assisted .custom_input_slide_content{
 	margin:0px;
-	width:180px;
+	width:185px;
 }
 .assisted .custom_input_slide_content span{
 	color:#5dd4ff;
@@ -882,7 +897,7 @@ a.search_options.availab.active{
 	background-color:#718181;
 }
 
-#month_name {text-transform:uppercase;}
+#month_name {text-transform:uppercase;margin-top:4px;}
 
 /*-----------------------------------------------------------------------------------*/
 
@@ -934,6 +949,11 @@ p.month{
 	
 	.number_big {font-size:22px;}
 	
+	.has-feedback .form-control {
+	    padding-right: 32px !important;
+		padding-left: 10px !important;
+	}
+	
 	.main_nav {margin-top:-330px;}
 	.main_nav a, #slidecaption, #slide_subtitle {
 		font-size:22px !important;
@@ -944,7 +964,7 @@ p.month{
 		line-height:22px;
 	}
 	
-	
+	.custom_input_slide_content .fa{font-size:25px;}
 	
 	.custom_form .radio-inline, .custom_form .checkbox-inline{
 		font-size:12px;
@@ -957,7 +977,7 @@ p.month{
 	}
 	
 	p.month{
-		line-height: 18px;
+		line-height: 14px;
 	}
 	
 	
@@ -1049,6 +1069,8 @@ p.month{
 	
 	.assisted .custom_input_slide_content .arrow_left, .custom_input_slide_content .arrow_right {margin-top:4px !important;}
 	
+	.custom_input_slide_content .number_small{ margin-top:9px; }
+	.custom_input_slide_content .arrow_right{ margin-left:0 !important; }
 	
 	.price_p .price {font-size:22px;}
 	
@@ -1065,7 +1087,18 @@ p.month{
 
 
 .hide_on_mobile{display:inline;}
+.hide_on_desktop{display:none;}
+.white_on_mobile {color:inherit;}
+
 #supersized_controls, #supersized-loader{display:block;}
+
+.close_button_mobile{
+	position: absolute; 
+	top:23px; 
+	left:10px;
+	font-size:18px !important;
+	text-decoration:none;
+}
 
 
 /* Large desktop */
@@ -1088,7 +1121,7 @@ p.month{
 
 /* Alice rule */
 @media (max-width: 991px) {
-	html, body, .padding_content{overflow:auto;}
+	html, body{overflow-y:auto;}
 	
 	#supersized_controls, #supersized-loader{display:none;}
 
@@ -1099,26 +1132,37 @@ p.month{
 	.breadcrumb_container{display:none;}
 	
 	.hide_on_mobile{display:none;}
+	.hide_on_desktop{display:block;}
+	.white_on_mobile {color:#fff !important;}
 	
 	.header{display:none;}
+	.footer{display:none;}
 	.navbar{display:block;}
-	.padding_content{padding-top:0;}
+	.padding_content{padding-top:0; overflow:inherit;}
 	.padding_column_content{padding-bottom:30px;}
+	.full_height {height:auto;}
 	
 	.children_detail p{color:#fff !important;}
 	
-	#column1{display:block;background-color:#242529;position:absolute; top:80px; left:0; z-index:9990; width:100%;}
+	#column1{display:block;background-color:#242529; position:absolute; top:0; left:0; z-index:9990; width:100%; height:auto; border:none;}
 	#column1 h1{background-color:#57585c; width:100%;padding:5px;padding-right:15px;margin-right:0; margin-top:16px;}
 	
-	
-	#column2{display:none;background-color:#242529;position:absolute; top:80px; left:0; z-index:9991; width:100%;}
+	#column2{display:none;background-color:#242529; position:absolute; top:0; left:0; z-index:9991; width:100%; height:auto; border:none;}
 	#column2 h1{background-color:#57585c; width:100%;padding:5px;padding-right:15px;margin-right:0; margin-top:16px;}
 	
-	#column3{display:none;background-color:#242529;position:absolute; top:80px; left:0; z-index:9992; width:100%;}
+	#column3{display:none;background-color:#242529; position:absolute; top:0; left:0; z-index:9992; width:100%; height:auto; border:none;}
 	#column3 h1{background-color:#57585c; width:100%;padding:5px;padding-right:15px;margin-right:0; margin-top:16px;}
 	#column3 p{color:#fff;}
 	
-	#column4{display:none;background-color:#242529;position:absolute; top:80px; left:0; z-index:9993; width:100%;}
+	#column4{display:none;background-color:#242529; position:absolute; top:0; left:0; z-index:9993; width:100%; height:auto; border:none;}
 	#column4 h1{background-color:#57585c; width:100%;padding:5px;padding-right:15px;margin-right:0; margin-top:16px;}
 	#column4 p{color:#fff;}
+	
+	.custom_input_slide p{color:#000 !important;}
+	
+	.assisted .custom_input_slide_content {width:190px;}
+	#month_name{margin-top:8px;}
+	
+	.navbar-home a {font-size:20px !important; padding-top:15px !important; padding-bottom:15px !important;}
+	.navbar-fixed-top, .navbar-fixed-bottom {position:relative;}
 }

@@ -26,6 +26,7 @@
 			</div>
 		</div>
 	</div>
+	<div class="clearfix"></div>
 </footer>
 
 <!-- /// jQuery ////////  -->
@@ -41,7 +42,7 @@
 <script type="text/javascript" src="js/jquery.validate.min.js"></script>
 <script type="text/javascript" src="js/jquery.viewport.js"></script>
 
-<script type="text/javascript" src="js/jQAllRangeSliders-min.js"></script>
+<!-- <script type="text/javascript" src="js/jQAllRangeSliders-min.js"></script> -->
 
 <!-- /// Google Maps ////////  -->
 <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
@@ -63,9 +64,9 @@
 <script type="text/javascript" src="js/jquery.fancybox.js?v=2.1.4"></script>
 
 <!-- /// Custom scripts ////////  -->
-<script type="text/javascript" src="js/plugins.js"></script>
-<script type="text/javascript" src="js/scripts.js"></script>
-<script type="text/javascript" src="js/core.js"></script>
+<script type="text/javascript" src="js/plugins.js?v=<?php echo time(); ?>"></script>
+<script type="text/javascript" src="js/scripts.js?v=<?php echo time(); ?>"></script>
+<script type="text/javascript" src="js/core.js?v=<?php echo time(); ?>"></script>
 
 </body>
 </html>

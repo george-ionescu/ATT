@@ -53,6 +53,7 @@
 					</div>
 				</div>
 			</div>
+			<div class="clearfix"></div>
 		</div>
 
 		<div class="col-md-3 nopadding" id="column2"></div>
@@ -109,8 +110,10 @@
 			<div id="google-map" class="map"></div>
 		</div>
 	</div>
+	<div class="clearfix"></div>
 </div>
 </content>
+
 
 <?php include 'include/slideshow.php'; ?>
 

@@ -1829,6 +1829,7 @@ select[multiple].input-lg {
 }
 .has-feedback .form-control {
   padding-right: 42.5px;
+	padding-left: 5px;
 }
 .has-feedback .form-control-feedback {
   position: absolute;
@@ -3657,7 +3658,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-collapse {
-  max-height: 340px;
   padding-right: 15px;
   padding-left: 15px;
   overflow-x: visible;

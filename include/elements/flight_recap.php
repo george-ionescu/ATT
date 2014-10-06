@@ -16,6 +16,26 @@
 
     			
 <script>
+				var breadcrump = [
+    				{
+    					title: 'Trip info',
+    					oldSlide: 'column1',
+    					newSlide: 'column1',
+    					class_bootstrap: 'col-md-3',
+    					url: 'include/pages/book_directly/flights.php'
+    				},
+    				{
+    					title: 'Change Flight',
+    					oldSlide: 'column1',
+    					newSlide: 'column1',
+    					class_bootstrap: 'col-md-3',
+    					url: 'include/elements/sort_flight.php'
+    				}
+    			];
+    			createBreadcrump(breadcrump);
+    			
+
+
 	$(function(){
 		activateMoreLess();
 	});
@@ -41,4 +61,5 @@
 			closeAllSlidesAndOpen(oldSlide, newSlide, url, class_bootstrap);
 		}
 	});
+	
 </script>

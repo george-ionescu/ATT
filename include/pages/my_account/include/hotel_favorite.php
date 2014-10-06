@@ -1,5 +1,5 @@
 <div class="row_form">
-	<div class="col-md-6 short_padding pull-left">
+	<div class="col-md-6 col-xs-6 short_padding pull-left">
 		<div class="custom_input_slide">
 			<p class="box_title">check in</p>
 			<div class="custom_input_slide_content">
@@ -18,7 +18,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-md-6 short_padding pull-left">
+	<div class="col-md-6 col-xs-6 short_padding pull-left">
 		<div class="custom_input_slide">
 			<p class="box_title">check out</p>
 			<div class="custom_input_slide_content">

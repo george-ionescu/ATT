@@ -137,5 +137,5 @@
 	    		}
 	    	}
 	
-	    	setTimeout(openNext, 400);
+	    	t = setTimeout(openNext, 400);
         </script>

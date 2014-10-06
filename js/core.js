@@ -12,30 +12,29 @@ var activeCalendarContainer;
 var hotelObject;
 var hotelContainer;
 
-function createBreadcrump(){
+function createBreadcrump(bread){
 	var brd = '<li><a href="/">Home</a></li>';
 	
-	for (i=1; i<=4; i++){
-		if ($('#column' + i).is(':visible') && $('#column' + i).find('h1').attr('breadcrumb')){
-			brd += '<li><a href="javascript:backTo('+i+');">' + $('#column' + i).find('h1').attr('breadcrumb') + '</a></li>';
-		}
+	for (i = 0; i < bread.length; i++) {
+		var oldSlide = bread[i]['oldSlide'];
+		var newSlide = bread[i]['newSlide'];
+		var url = bread[i]['url'];
+		var class_bootstrap = bread[i]['class_bootstrap'];
+		
+		brd += '<li><a href="javascript:backTo(\''+oldSlide+'\',\''+newSlide+'\',\''+url+'\',\''+class_bootstrap+'\');">' + bread[i]['title'] + '</a></li>';
 	}
 	
 	$('#breadcrumb').html(brd);
 }
 
-function backTo(poz){
+function backTo(oldSlide, newSlide, url, class_bootstrap){
 	
-	var oldSlide = $('#column1');
-	var newSlide = $('#column1');
-	var url = $('#column' + poz).find('h1').attr('breadcrumb-href');
-	var class_bootstrap = 'col-md-3';
+	var oldSlideObj = $('#' + oldSlide);
+	var newSlideObj = $('#' + newSlide);
 	
-	if (oldSlide && newSlide && url != '#'){
-		closeAllSlidesAndOpen(oldSlide, newSlide, url, class_bootstrap);
+	if (oldSlideObj && newSlideObj && url != '#'){
+		closeAllSlidesAndOpen(oldSlideObj, newSlideObj, url, class_bootstrap);
 	}
-	
-	createBreadcrump();
 }
 
 function activateMoreLess(){
@@ -85,6 +84,18 @@ function closeMarkers(){
 
 function openSlide(newSlide, url, class_bootstrap){
 	showPreloader();
+	var newWindowWidth = $(window).width();
+	var slideId = newSlide.attr('id');
+	slideId = parseInt(slideId.replace('column', ''));
+	
+	if (newWindowWidth < 1024){
+		class_bootstrap = "col-md-3";
+	}
+	
+	for (i=1; i<slideId; i++){
+		$('#column' + i).addClass('column_disabled').prepend("<div class='column_disabled2'></div>");
+	}
+	
 	if (url){
 		$.get(url, function( data ) {
 			hidePreloader();
@@ -93,33 +104,61 @@ function openSlide(newSlide, url, class_bootstrap){
 				class_bootstrap += ' nopadding';
 				newSlide.removeClass().addClass(class_bootstrap);
 			}
-			newSlide.html(data);
-			callFormEvents();
 			
-			newSlide.show('slide', {
-				direction : 'left',
-				complete: function() {
-					var scrollOptions = {
-						scrollInertia: 0,
-						autoHideScrollbar : true,
-						updateOnContentResize : true,
-						horizontalScroll:false,
-						autoScrollOnFocus: false,
-						mouseWheelPixels: 50,
-						advanced:{
-			                autoScrollOnFocus: false,
-			            },
-			            callbacks:{
-			                whileScrolling: function(){
-			                	columnScrollAction();
-			                }
-			            }
-					};
-					newSlide.find(".column_content").mCustomScrollbar(scrollOptions);
-					
-					animationDone();
-				}
-			}, 500);
+			//for mobile version, if it's a sort column, move it to header
+			var routeData = url.split("?")[0];
+			console.log(routeData);
+			if ((routeData.indexOf("sort") > -1 || routeData.indexOf("trip_info") > -1) && newWindowWidth < 1024){
+				$('#sort_button').show();
+				$('#sort_wrapper').html(data);
+				clearInterval(t);
+				openNext();
+			} else {
+				newSlide.html(data);
+				callFormEvents();
+				
+				newSlide.show('slide', {
+					direction : 'left',
+					complete: function() {
+						var scrollOptions = {
+							scrollInertia: 0,
+							autoHideScrollbar : true,
+							updateOnContentResize : true,
+							horizontalScroll:false,
+							autoScrollOnFocus: false,
+							mouseWheelPixels: 50,
+							advanced:{
+				                autoScrollOnFocus: false,
+				            },
+				            callbacks:{
+				                whileScrolling: function(){
+				                	columnScrollAction();
+				                }
+				            }
+						};
+						if (newWindowWidth < 1024){
+							console.log('disable scroll');
+							newSlide.find(".column_content").mCustomScrollbar('disable');
+						} else {
+							newSlide.find(".column_content").mCustomScrollbar(scrollOptions);
+						}
+						
+						//hide previous columns on mobile
+						if (newWindowWidth < 1024){
+							for (i=1; i<slideId; i++){
+								$('#column' + i).hide();
+							}
+						}
+						
+						for (i=1; i<slideId; i++){
+							$('#column' + i).removeClass('column_disabled');
+						}
+						$('.column_disabled2').remove();
+						
+						animationDone();
+					}
+				}, 200);
+			}
 		});
 	} else {
 		hidePreloader();
@@ -147,13 +186,22 @@ function openSlide(newSlide, url, class_bootstrap){
 		                }
 		            }
 				};
-				newSlide.find(".column_content").mCustomScrollbar(scrollOptions);
+				if (newWindowWidth < 1024){
+					console.log('disable scroll');
+					newSlide.find(".column_content").mCustomScrollbar('disable');
+				} else {
+					newSlide.find(".column_content").mCustomScrollbar(scrollOptions);
+				}
+				
+				for (i=1; i<slideId; i++){
+					$('#column' + i).removeClass('column_disabled');
+				}
+				$('.column_disabled2').remove();
 				
 				callFormEvents();
 			}
-		}, 500);
+		}, 200);
 	}
-	createBreadcrump();
 }
 
 function closeSlideById(id){
@@ -162,7 +210,7 @@ function closeSlideById(id){
 		complete: function() {
 			//complete close
         }
-	}, 500);
+	}, 200);
 	
 	if (id == 'column3x'){
 		$('.hotel_detail').removeClass('active');
@@ -170,6 +218,7 @@ function closeSlideById(id){
 		$('.compare').removeClass('active');
 		$('.flight').removeClass('active');
 	}
+	animationDone();
 }
 
 function closeAllSlidesAndOpen(oldSlide, newSlide, url, class_bootstrap){
@@ -224,10 +273,18 @@ function closeAllSlidesAndOpen2(oldSlide, newSlide, url, class_bootstrap){
 
 
 function updateAllScrolls(){
-	$("#column1 .column_content").mCustomScrollbar("update");
-	$("#column2 .column_content").mCustomScrollbar("update");
-	$("#column3 .column_content").mCustomScrollbar("update");
-	$("#column4 .column_content").mCustomScrollbar("update");
+	if ($(window).width() < 1024){
+		console.log('disable all scrolls');
+		$("#column1 .column_content").mCustomScrollbar('disable');
+		$("#column2 .column_content").mCustomScrollbar('disable');
+		$("#column3 .column_content").mCustomScrollbar('disable');
+		$("#column4 .column_content").mCustomScrollbar('disable');
+	} else {
+		$("#column1 .column_content").mCustomScrollbar("update");
+		$("#column2 .column_content").mCustomScrollbar("update");
+		$("#column3 .column_content").mCustomScrollbar("update");
+		$("#column4 .column_content").mCustomScrollbar("update");
+	}
 }
 
 function resetSlides(){
@@ -251,7 +308,7 @@ function changeSlide(oldSlide, newSlide, url, class_bootstrap){
 		complete: function() {
 			openSlide(newSlide, url, class_bootstrap);
         }
-	}, 500);
+	}, 200);
 }
 
 function toggleSearchOptions(){
@@ -377,27 +434,7 @@ function callFormEvents(){
 		$(this).find(".datepicker").show();
 	});
 	
-	//create calendars
-	/*$(".datepicker").datepicker({
- 	    dateFormat: 'dd M yy',
- 	    changeMonth: true,
-        changeYear: true,
-        onSelect: function(dateText){
-            $(this).hide();
-            //write value in box
-            var tmpData = dateText.split(" ");
-            $(this).parent().find('.day').html(tmpData[0]);
-            $(this).parent().find('.month').html(tmpData[1]);
-            $(this).parent().find('.year').html(tmpData[2]);
-        }
-    });
-	//hide all calendars
-    $(".datepicker").hide();*/
-    
-    
-	
-
-    
+    //datepicker
     $( "#datepicker_from" ).datepicker({
     	dateFormat: 'dd M yy',
 		changeMonth: true,
@@ -440,7 +477,19 @@ function callFormEvents(){
 		event.stopPropagation();
 		
 		poz = parseInt($(this).parent().find('.counterValue').html());
-		if (poz < 5){
+		isHotel = $(this).parent().parent().parent().parent().hasClass('hotel_form');
+		if (isHotel){
+			maxPerson = 5;
+		} else {
+			maxPerson = 9;
+		}
+		maxValue = parseInt($(this).parent().find('.counterValue').attr('maxvalue')) || 8;
+		
+		//maximum 9 persons
+		nrAdult = parseInt($('#counterAdult').html());
+		nrChildren = parseInt($('#counterChildren').html());
+		
+		if (poz < maxValue && (nrAdult+nrChildren < maxPerson)){
 			poz++;
 			if (poz<10){
 				pozString = "0" + poz;
@@ -454,7 +503,7 @@ function callFormEvents(){
 				for (i=1; i<=poz; i++){
 					$(this).parent().parent().parent().parent().parent().find('.age' + i).show();
 				}
-				for (i=poz+1; i<=5; i++){
+				for (i=poz+1; i<=8; i++){
 					$(this).parent().parent().parent().parent().parent().find('.age' + i).hide();
 				}
 				
@@ -483,7 +532,9 @@ function callFormEvents(){
 		event.stopPropagation();
 		
 		poz = parseInt($(this).parent().find('.counterValue').html());
-		if (poz > 0){
+		minValue = parseInt($(this).parent().find('.counterValue').attr('minvalue')) || 0;
+		
+		if (poz > minValue){
 			poz--;
 			if (poz<10){
 				pozString = "0" + poz;
@@ -497,7 +548,7 @@ function callFormEvents(){
 				for (i=1; i<=poz; i++){
 					$(this).parent().parent().parent().parent().parent().find('.age' + i).show();
 				}
-				for (i=poz+1; i<=5; i++){
+				for (i=poz+1; i<=8; i++){
 					$(this).parent().parent().parent().parent().parent().find('.age' + i).hide();
 				}
 				
@@ -532,12 +583,25 @@ function callFormEvents(){
 function animationDone(){
 	callFormEvents();
 	
-	$("#price_slider").rangeSlider({
+	/*$("#price_slider").rangeSlider({
     	arrows:false,
     	formatter:function(val){
     		return  parseInt(val) + " €";
     	}
-    });
+    });*/
+	
+	$( "#slider-range" ).slider({
+		 range: true,
+		 min: 0,
+		 max: 500,
+		 values: [ 75, 300 ],
+		 slide: function( event, ui ) {
+			 $( "#amountUp" ).html( $( "#slider-range" ).slider( "values", 0 ) + " $" );
+			 $( "#amountDown" ).html( $( "#slider-range" ).slider( "values", 1 ) + " $" );
+		 }
+	});
+	$( "#amountUp" ).html( $( "#slider-range" ).slider( "values", 0 ) + " $" );
+	$( "#amountDown" ).html( $( "#slider-range" ).slider( "values", 1 ) + " $" );   
 	
 	//open/close column
 	$('a.slide').unbind();
@@ -546,11 +610,13 @@ function animationDone(){
 		event.stopPropagation();
 		
 		if (!$(this).hasClass('active') || $(this).hasClass('assisted')){
-			$('a.slide').removeClass('active').find('.fa').removeClass('fa-minus-circle').addClass('fa-plus-circle');
-			$(this).addClass('active').find('.fa').removeClass('fa-plus-circle').addClass('fa-minus-circle');
+			if ($(window).width() >= 1024){	
+				$('a.slide').removeClass('active').find('.fa').removeClass('fa-minus-circle').addClass('fa-plus-circle');
+				$(this).addClass('active').find('.fa').removeClass('fa-plus-circle').addClass('fa-minus-circle');
 			
-			$('a.slide').parent().parent().removeClass('active');
-			$(this).parent().parent().addClass('active');
+				$('a.slide').parent().parent().removeClass('active');
+				$(this).parent().parent().addClass('active');
+			}
 			
 			if ($(this).hasClass('assisted')){
 				$(this).find('.button_after_big_info').removeClass('active');
@@ -563,7 +629,6 @@ function animationDone(){
 			var class_bootstrap = ($(this).attr('column-class')) ? $(this).attr('column-class') : 'col-md-3';
 			
 			if (oldSlide && newSlide && url != '#'){
-				createBreadcrump();
 				changeSlide(oldSlide, newSlide, url, class_bootstrap);
 			}
 		}
@@ -584,32 +649,34 @@ function animationDone(){
 			$('.hotel_detail').removeClass('active');
 			$(this).addClass('active');
 			
+			$('#column3').hide();
+			$('#column4').hide();
 			$('#column3x').hide();
 			$('#column3gmap').hide();
 			
 			var url = '';
 			if ($(this).hasClass('type1')){
-				url = 'include/elements/rooms_and_rates.php?page=signin'; 
+				url = 'include/elements/rooms_and_rates.php?page=signin&type=1'; 
 			}
 			if ($(this).hasClass('type2')){
-				url = 'include/elements/rooms_and_rates.php?page=flight_tabs'; 
+				url = 'include/elements/rooms_and_rates.php?page=flight_tabs&type=2'; 
 			}
 			if ($(this).hasClass('type3')){
-				url = 'include/elements/rooms_and_rates.php?page=signin'; 
+				url = 'include/elements/rooms_and_rates.php?page=signin&type=3'; 
 			}
 			if ($(this).hasClass('type4')){
-				url = 'include/elements/rooms_and_rates.php?page=flight_tabs'; 
+				url = 'include/elements/rooms_and_rates.php?page=flight_tabs&type=4'; 
 			}
 			if ($(this).hasClass('service')){
-				url = 'include/elements/service_detail.php'; 
+				url = 'include/elements/service_detail.php?type=service'; 
 			}
 			if ($(this).hasClass('recent')){
-				url = 'include/elements/load.php?page=sort_hotel';
+				url = 'include/elements/load.php?page=sort_hotel?type=recent';
 			}
 			
 			var oldSlide = $('#column3');
 			var newSlide = $('#column3');
-			var class_bootstrap = 'col-md-3';
+			var class_bootstrap = 'col-md-3 noborder';
 			
 			if ($(this).hasClass('type5')){
 				oldSlide = $('#column2');
@@ -764,9 +831,3 @@ $(window).resize(function() {
 	}
 });
 
-$(document).bind(
-      'touchmove',
-          function(e) {
-            e.preventDefault();
-          }
-);

@@ -6,6 +6,7 @@
 		    	<?php include 'include/flight_result_table.php'; ?>
 			    <div class="clearfix"></div>
 	    	</form>
+	    	<div class="clearfix"></div>
 	    </div>
         <div class="clearfix"></div>
         

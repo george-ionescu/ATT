@@ -5,15 +5,15 @@
 	<form id="flights_form" class="form-horizontal custom_form" role="form" method="post" action="/">
 		
 		<div class="form-group has-success has-feedback">
-			<label class="control-label input_label col-sm-3 no_padding_left_right" for="inputSuccess3">&nbsp;&nbsp;&nbsp;destination:</label>
-			<div class="col-sm-9 no_padding_left_right">
+			<label class="control-label input_label col-sm-3 col-xs-3 no_padding_left_right" for="inputSuccess3">&nbsp;&nbsp;&nbsp;destination:</label>
+			<div class="col-sm-9 col-xs-9 no_padding_left_right">
 				<input type="text" class="autocomplete_input form-control" id="inputSuccess3" placeholder="city"> 
 				<span class="glyphicon glyphicon-map-marker form-control-feedback"></span>
 			</div>
 		</div>
 		
 		<div class="row_form">
-	        <div class="col-md-12 short_padding">
+	        <div class="col-md-12 col-xs-12 short_padding">
 				<span class="custom-dropdown">
 				    <select>
 				        <option>zero month</option>
@@ -26,7 +26,7 @@
 			</div>
 		</div>
 		<div class="row_form">
-	        <div class="col-md-6 short_padding pull-left">
+	        <div class="col-md-6 col-xs-6 short_padding pull-left">
 				<span class="custom-dropdown">
 				    <select>
 				        <option>departure day</option>
@@ -37,7 +37,7 @@
 				    </select>
 				</span>
 			</div>
-			<div class="col-md-6 short_padding pull-left">
+			<div class="col-md-6 col-xs-6 short_padding pull-left">
 				<span class="custom-dropdown">
 				    <select>
 				        <option>no of nights</option>

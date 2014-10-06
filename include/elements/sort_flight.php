@@ -1,10 +1,10 @@
-<h1 class="pull-right" breadcrumb="Trip info" breadcrumb-href="include/pages/book_directly/flights.php">Sort Flights</h1>
+<h1 class="pull-right">Sort Flights</h1>
 		        <div class="clearfix"></div>
 		        
 		        <div class="column_content padding_column_content full_height">
 			        <form id="flights_form" class="form-horizontal custom_form" role="form" method="post" action="/">
 			        	<div class="row_form">
-        		<div class="col-md-6 short_padding pull-left">
+        		<div class="col-md-6 col-xs-6 short_padding pull-left">
 					<span class="custom-dropdown">
 					    <select>
 					        <option>Option 1</option>
@@ -15,7 +15,7 @@
 					    </select>
 					</span>
 				</div>
-				<div class="col-md-6 short_padding pull-left">
+				<div class="col-md-6 col-xs-6 short_padding pull-left">
 					<span class="custom-dropdown">
 					    <select>
 					        <option>Option 1</option>
@@ -33,7 +33,7 @@
 			
 			<br />
 			<div class="row_form">
-				<div class="col-md-6 short_padding pull-left">
+				<div class="col-md-6 col-xs-6 short_padding pull-left">
 					<div class="options_list">
 						<span class="title">Stops</span>
 						<label class="radio-inline"> <input type="radio" id="inlineCheckbox1" name="gr1" value="option1" checked><span class="check"></span> Direct flight</label> 
@@ -42,7 +42,7 @@
 					</div> 	
 				</div>
 				<?php if (1==2) { ?>
-					<div class="col-md-6 short_padding pull-left">	
+					<div class="col-md-6 col-xs-6 short_padding pull-left">	
 						<div class="options_list">
 							<span class="title">Ticket class</span>
 							<label class="radio-inline"> <input type="radio" id="inlineCheckbox1" name="gr2" value="option1" checked><span class="check"></span> Economy</label> 
@@ -58,7 +58,7 @@
 			<?php include 'include/slider.php'; ?>
 			
 			<div class="row_form">
-				<div class="col-md-6 short_padding pull-left">
+				<div class="col-md-6 col-xs-6 short_padding pull-left">
 					<div class="options_list">
 						<span class="title">Airports</span>
 						<label class="radio-inline"> <input type="checkbox" id="inlineCheckbox1" name="gr3" value="option1" checked><span class="check"></span> Paris</label> 
@@ -66,7 +66,7 @@
 						<label class="radio-inline"> <input type="checkbox" id="inlineCheckbox3" name="gr3" value="option3"><span class="check"></span> Praga</label> 
 					</div> 	
 				</div>
-				<div class="col-md-6 short_padding pull-left">	
+				<div class="col-md-6 col-xs-6 short_padding pull-left">	
 					<div class="options_list">
 						<span class="title">Airlines</span>
 						<label class="radio-inline"> <input type="checkbox" id="inlineCheckbox1" name="gr3" value="option1" checked><span class="check"></span> Air Canada</label> 
@@ -85,7 +85,21 @@
 		        
 		        
 		        
-        <script>            
+        <script>     
+			var breadcrump = [
+				{
+					title: 'Trip info',
+					oldSlide: 'column1',
+					newSlide: 'column1',
+					class_bootstrap: 'col-md-3',
+					url: 'include/pages/book_directly/flights.php'
+				}
+			];
+			createBreadcrump(breadcrump);
+
+
+			
+               
 	        function openNext(){
 	    		var oldSlide = $('#column2');
 	    		var newSlide = $('#column2');
@@ -97,5 +111,6 @@
 	    		}
 	    	}
 	
-	    	setTimeout(openNext, 400);
+	    	t = setTimeout(openNext, 400);
+
         </script>

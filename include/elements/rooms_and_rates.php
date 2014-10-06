@@ -1,4 +1,7 @@
-<h1 class="pull-right">Rooms & Rates</h1>
+<div style="position:relative;">
+	<a class="hide_on_desktop close_button_mobile" href="javascript:closePage();" class="pull-left"><i class="fa fa-angle-left"></i> close</a> 
+	<h1 class="pull-right">Rooms & Rates</h1>
+</div>
 <div class="clearfix"></div>
 
 <div class="column_content padding_column_content full_height text_align_left" style="margin-top: 5px;">
@@ -31,9 +34,9 @@
 				<div class="clearfix"></div>
 				
 				<div style="margin-top: 5px;">
-					<a class="slide hotel_policy" column-close="column4" column-open="column4" href="include/elements/hotel_policy.php"><i class="fa fa-plus-circle"></i>room policy</a>
+					<a class="slide hotel_policy" column-close="column4" column-open="column4" href="include/elements/hotel_policy.php?type=<?php echo $_GET['type']; ?>"><i class="fa fa-plus-circle"></i>room policy</a>
 				&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
-					<a class="slide hotel_info" column-close="column4" column-open="column4" href="include/elements/hotel_info.php"><i class="fa fa-plus-circle"></i>hotel info</a>
+					<a class="slide hotel_info" column-close="column4" column-open="column4" href="include/elements/hotel_info.php?type=<?php echo $_GET['type']; ?>"><i class="fa fa-plus-circle"></i>hotel info</a>
 				</div>
 				<hr />
 			</div>
@@ -42,6 +45,17 @@
 </div>
 
 <script>
+function closePage(){
+	url = 'include/elements/hotel_result.php?type=<?php echo $_GET['type']; ?>';
+	$.get(url, function( data ) {
+		hidePreloader();
+		$('#column2').show();
+		$('#column2').html(data);
+		
+		closeSlideById('column3');
+	});
+}
+
 $(document).ready(function(){
 	$('a.slide').click(function(event){
 		event.preventDefault();
@@ -99,6 +113,8 @@ $(document).ready(function(){
 		}
 	}
 
-	setTimeout(openNext, 400);
+	if ($(window).width() >= 1024){
+		setTimeout(openNext, 400);
+	}
 });
 </script>

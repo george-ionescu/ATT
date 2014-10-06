@@ -3,7 +3,7 @@
 	<div class="column_content padding_column_content full_height">
 			        <form id="flights_form" class="form-horizontal custom_form" role="form" method="post" action="/">	        
 		<div class="row_form">
-				<div class="col-md-12 short_padding">
+				<div class="col-md-12 col-xs-12 short_padding">
 					<input type="text" class="form-control italic" placeholder="search by name"> 
 				</div>
 			</div>
@@ -43,5 +43,5 @@
 	    		}
 	    	}
 	
-	    	setTimeout(openNext, 400);
+	    	t = setTimeout(openNext, 400);
         </script>

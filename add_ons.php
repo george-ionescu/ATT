@@ -5,7 +5,7 @@
 <content>
 	<div class="container-fluid full_height padding_content">
 		<div class="row full_height">
-			<div class="col-md-3 nopadding" id="column1">
+			<div class="col-md-3 col-xs-3 nopadding" id="column1">
 				<h1 class="pull-right">Trip Add-ons</h1>
 		        <div class="clearfix"></div>
 		        
@@ -13,14 +13,14 @@
 			        <form id="flights_form" class="form-horizontal custom_form" role="form" method="post" action="/">
 		
 						<div class="form-group has-success has-feedback">
-							<label class="control-label input_label col-sm-3 no_padding_left_right" for="inputSuccess3">&nbsp;&nbsp;&nbsp;city:</label>
-							<div class="col-sm-9 no_padding_left_right">
+							<label class="control-label input_label col-sm-3 col-xs-3 no_padding_left_right" for="inputSuccess3">&nbsp;&nbsp;&nbsp;city:</label>
+							<div class="col-sm-9 col-xs-9 no_padding_left_right">
 								<input type="text" class="autocomplete_input form-control" id="inputSuccess3" placeholder="name"> 
 							</div>
 						</div>
 						
 						<div class="row_form">
-							<div class="col-md-6 short_padding pull-left">
+							<div class="col-md-6 col-xs-6 short_padding pull-left">
 								<div class="custom_input_slide">
 									<p class="box_title">depart</p>
 									<div class="custom_input_slide_content">
@@ -39,7 +39,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-md-6 short_padding pull-left">
+							<div class="col-md-6 col-xs-6 short_padding pull-left">
 								<div class="custom_input_slide">
 									<p class="box_title">return</p>
 									<div class="custom_input_slide_content">

@@ -286,11 +286,20 @@
 		    
 	 	},
 	 	
-	 	
 	 	/* After Slide Transition
 		----------------------------*/
 	 	afterAnimation : function(){
 	 		if (api.options.progress_bar && !vars.is_paused) theme.progressBar();	//  Start progress bar
+	 		
+	 		var ratio = $(window).width()/$(window).height();
+ 			/*$('#supersized .activeslide img').animate({
+                'width': ($(window).width() + 100*ratio) + 'px',
+                'height': ($(window).height() + 100*ratio) + 'px',
+                'top':'-50px',
+                'left':'-50px'
+            }, 5000, function() {
+                // Animation complete.
+            });*/
 	 	},
 	 	
 	 	

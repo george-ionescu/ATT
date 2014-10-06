@@ -24,20 +24,20 @@
 		        
 		        <form class="form-horizontal custom_form" role="form" method="post" action="/">
 		        	<div class="row_form">
-						<div class="col-md-4">
+						<div class="col-md-4 col-xs-12">
 							<label class="radio-inline"> Online Payment &nbsp;&nbsp;<input type="radio" id="payType1" name="pay" value="option1" checked><span class="check"></span> </label> 
 							<div class="clearfix"></div>
-							<p class="nopadding">Reprimique scripserit sea no. Et mea alii fastidii, usu et error debitis repudiare. Ut his vide appellantur, dicat nonumes eligendi an nec. Nulla nemore </p>
+							<p class="nopadding white_on_mobile">Reprimique scripserit sea no. Et mea alii fastidii, usu et error debitis repudiare. Ut his vide appellantur, dicat nonumes eligendi an nec. Nulla nemore </p>
 						</div>
-						<div class="col-md-4">
+						<div class="col-md-4 col-xs-12">
 							<label class="radio-inline"> Bank Transfer &nbsp;&nbsp;<input type="radio" id="payType2" name="pay" value="option2"><span class="check"></span> </label> 
 							<div class="clearfix"></div>
-							<p class="nopadding">Reprimique scripserit sea no. Et mea alii fastidii, usu et error debitis repudiare. Ut his vide appellantur, dicat nonumes eligendi an nec. Nulla nemore </p>
+							<p class="nopadding white_on_mobile">Reprimique scripserit sea no. Et mea alii fastidii, usu et error debitis repudiare. Ut his vide appellantur, dicat nonumes eligendi an nec. Nulla nemore </p>
 						</div>
-						<div class="col-md-4">
+						<div class="col-md-4 col-xs-12">
 							<label class="radio-inline"> Cash Payment &nbsp;&nbsp;<input type="radio" id="payType2" name="pay" value="option2"><span class="check"></span> </label> 
 							<div class="clearfix"></div>
-							<p class="nopadding">Reprimique scripserit sea no. Et mea alii fastidii, usu et error debitis repudiare. Ut his vide appellantur, dicat nonumes eligendi an nec. Nulla nemore </p>
+							<p class="nopadding white_on_mobile">Reprimique scripserit sea no. Et mea alii fastidii, usu et error debitis repudiare. Ut his vide appellantur, dicat nonumes eligendi an nec. Nulla nemore </p>
 						</div>
 					
 					</div>
@@ -48,7 +48,7 @@
 		        <h1 class="pull-right" style="margin-right: 0;">Complete your Booking</h1>
 		        <div class="clearfix"></div>
 		        
-				<p id="option1">
+				<p id="option1" class="white_on_mobile">
 					Terms and conditions. Fusce posuere sollicitudin justo. Curabitur pulvinar neque quis ligula convallis, vitae vulputate erat lacinia 
 					<span class="text-complete">
 						Fusce posuere sollicitudin justo. Curabitur pulvinar neque quis ligula convallis, vitae vulputate erat lacinia
@@ -68,6 +68,34 @@
 	    		
 	    		
 	    		<script>
+	    						var breadcrump = [
+	    		    				{
+	    		    					title: 'Trip info',
+	    		    					oldSlide: 'column1',
+	    		    					newSlide: 'column1',
+	    		    					class_bootstrap: 'col-md-3',
+	    		    					url: 'include/pages/book_directly/flights.php'
+	    		    				},
+	    		    				{
+	    		    					title: 'Change Flight',
+	    		    					oldSlide: 'column1',
+	    		    					newSlide: 'column1',
+	    		    					class_bootstrap: 'col-md-3',
+	    		    					url: 'include/elements/sort_flight.php'
+	    		    				},
+	    		    				{
+	    		    					title: 'Change Traveller Info',
+	    		    					oldSlide: 'column1',
+	    		    					newSlide: 'column1',
+	    		    					class_bootstrap: 'col-md-3',
+	    		    					url: 'include/elements/trip_info.php?page=signin'
+	    		    				}
+	    		    			];
+	    		    			createBreadcrump(breadcrump);
+
+
+
+	    		
 	    		$(function(){
 	    			$('#invType1').click(function(){
 	    				$('#personal_invoice').show();

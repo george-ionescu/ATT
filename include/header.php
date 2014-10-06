@@ -31,8 +31,8 @@ if (preg_match('/(?i)Windows/', $_SERVER['HTTP_USER_AGENT']) && preg_match('/(?i
 		<link rel="stylesheet" type="text/css" media="screen" href="css/fontawesome/font-awesome.min.css" />
 		
 		<!-- /// Bootstrap ////////  -->
-		<link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css" />
-		<link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap-theme.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css?v=<?php echo time(); ?>" />
+		<link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap-theme.css?v=<?php echo time(); ?>" />
 		
 		<!-- /// jQuery UI ////////  -->
 		<link rel="stylesheet" type="text/css" media="screen" href="css/ui-custom/jquery-ui-1.10.4.css" />
@@ -43,14 +43,14 @@ if (preg_match('/(?i)Windows/', $_SERVER['HTTP_USER_AGENT']) && preg_match('/(?i
 		
 		<link rel="stylesheet" type="text/css" media="screen" href="css/jquery.mCustomScrollbar.css" />
 		
-		<link rel="stylesheet" type="text/css" media="screen" href="css/slider.css" />
+		<!-- <link rel="stylesheet" type="text/css" media="screen" href="css/slider.css" /> -->
 		
 		<link rel="stylesheet" type="text/css" media="screen" href="css/jquery.fancybox.css?v=2.1.4" />
 		
 		<!-- /// Template CSS ////////  -->
 		<link rel="stylesheet" type="text/css" media="screen" href="css/preloader.css" />
-		<link rel="stylesheet" type="text/css" media="screen" href="css/elements.css" />
-		<link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="css/elements.css?v=<?php echo time(); ?>" />
+		<link rel="stylesheet" type="text/css" media="screen" href="css/styles.css?v=<?php echo time(); ?>" />
 		
 		<!-- /// Supersized ////////  -->
 		<script type="text/javascript" src="js/modernizr.custom.js"></script>
@@ -82,30 +82,37 @@ if (preg_match('/(?i)Windows/', $_SERVER['HTTP_USER_AGENT']) && preg_match('/(?i
 		</div>
 		<div class="clearfix"></div>
 	</div>
+	<div id="main_overlay" style="display:none; position:absolute; width:100%; height:100%; left:0; top:0; background-color: #000; opacity:0.7; z-index:9999999;"></div>
     
     <div role="navigation" class="navbar navbar-default">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<button data-target=".navbar-collapse" data-toggle="collapse"
-					class="navbar-toggle collapsed" type="button">
-					<span class="sr-only">Toggle navigation</span> <span
-						class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
-				</button>
+				<img id="sort_button" data-target=".navbar-collapse2" data-toggle="collapse" style="width:40px;display:block;margin:0 auto;margin-top:25px;margin-left:30px;float:left;cursor:pointer;display:none;" src="images/filters.png" alt="filters alice" />
+				<?php if ($_SERVER['PHP_SELF'] != '/index.php') { ?>
+					<button data-target=".navbar-collapse" data-toggle="collapse"
+						class="navbar-toggle collapsed" type="button">
+						<span class="sr-only">Toggle navigation</span> <span
+							class="icon-bar"></span> <span class="icon-bar"></span> <span
+							class="icon-bar"></span>
+					</button>
+				<?php } ?>
 				<a href="/" style="width:68px;display:block;margin:0 auto;margin-top:5px;margin-bottom:5px;"><img src="images/logo_small.png" alt="logo alice" /></a>
 			</div>
-			<div class="navbar-collapse collapse" style="height: 1px;">
-				<ul class="nav navbar-nav">
-					<li><a href="book_directly.php">Book Directly</a></li>
-					<li><a href="book_assisted.php">Book Assisted</a></li>
-					<li><a href="weekend.php">Escape for a Weekend</a></li>
-					<li><a href="add_ons.php">Trip add-ons</a></li>
-					<li><a href="top_picks.php">Alice's top Picks</a></li>
-					<li><a href="#">Trips in Romania</a></li>
-					<li><a href="alice-stories.php">Alice's Stories</a></li>
-					<li><a href="alice-friends.php">Alice's Friends</a></li>
-					<li><a href="who-is-alice.php">Who is Alice</a></li>
-				</ul>
-			</div>
+			<?php if ($_SERVER['PHP_SELF'] != '/index.php') { ?>
+				<div class="navbar-collapse collapse" style="height: 1px;">
+					<ul class="nav navbar-nav">
+						<li><a href="book_directly.php">Book Directly</a></li>
+						<li><a href="book_assisted.php">Book Assisted</a></li>
+						<li><a href="weekend.php">Escape for a Weekend</a></li>
+						<li><a href="add_ons.php">Trip add-ons</a></li>
+						<li><a href="top_picks.php">Alice's top Picks</a></li>
+						<li><a href="#">Trips in Romania</a></li>
+						<li><a href="alice-stories.php">Alice's Stories</a></li>
+						<li><a href="alice-friends.php">Alice's Friends</a></li>
+						<li><a href="who-is-alice.php">Who is Alice</a></li>
+					</ul>
+				</div>
+			<?php } ?>
+			<div id="sort_wrapper" class="navbar-collapse2 collapse" style="height: 1px;"></div>
 		</div>
 	</div>

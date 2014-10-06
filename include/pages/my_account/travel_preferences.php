@@ -5,23 +5,19 @@
 	<form id="flights_form" class="form-horizontal custom_form" role="form" method="post" action="/">
 		
 		<div class="row_form">
-			<div class="col-md-12 short_padding">
+			<div class="col-md-12 col-xs-12 short_padding">
 				<div class="options_list">
 					<span class="title">Hotel star rating</span>
 				</div>
-				<label class="control-label input_label col-sm-6" for="inputSuccess3">&nbsp;&nbsp;&nbsp;hotel stars</label>
-				<div class="col-sm-6 no_padding_left_right">
-					<div id="stars">
-						<a href="#" class="selected">3 <img src="images/star_line.png" alt="" /></a>
-						<a href="#" class="selected">4 <img src="images/star.png" alt="" /></a>
-						<a href="#">5 <img src="images/star.png" alt="" /></a>
-					</div>
+				<label class="control-label input_label col-sm-6 col-xs-6" for="inputSuccess3">&nbsp;&nbsp;&nbsp;hotel stars</label>
+				<div class="col-sm-6 col-xs-6 no_padding_left_right">
+					<?php include $_SERVER['DOCUMENT_ROOT'] . '/include/elements/include/stars.php'; ?>
 				</div>
 			</div>
 		</div>
 		<br /><br />
 		<div class="row_form">
-        	<div class="col-md-6 short_padding pull-left">
+        	<div class="col-md-6 col-xs-6 short_padding pull-left">
 				<div class="options_list">
 					<span class="title">Hotel Facilities</span>
 					<label class="radio-inline"> <input type="checkbox" id="inlineCheckbox1" name="gr1" value="option1" checked><span class="check"></span> Direct flight</label> 
@@ -35,7 +31,7 @@
 		<div class="clearfix"></div>
 		
 		<br />
-		<div class="col-md-12 short_padding" style="padding-left: 0; padding-right: 0;">
+		<div class="col-md-12 col-xs-12 short_padding" style="padding-left: 0; padding-right: 0;">
 			<div class="options_list">
 				<span class="title">Hotel brand</span>
 			</div>
@@ -71,7 +67,7 @@
 		
 		<br />
 		<div class="row_form">
-        	<div class="col-md-6 short_padding pull-left">
+        	<div class="col-md-6 col-xs-6 short_padding pull-left">
 				<div class="options_list">
 					<span class="title">Flight Ticket Class</span>
 					<label class="radio-inline"> <input type="checkbox" id="inlineCheckbox1" name="gr1" value="option1" checked><span class="check"></span> Direct flight</label> 
@@ -83,7 +79,7 @@
 		<div class="clearfix"></div>
 		
 		<br />
-		<div class="col-md-12 short_padding" style="padding-left: 0; padding-right: 0;">
+		<div class="col-md-12 col-xs-12 short_padding" style="padding-left: 0; padding-right: 0;">
 			<div class="options_list">
 				<span class="title">Airlines</span>
 			</div>
@@ -119,7 +115,7 @@
 		
 		<br />
 		<div class="row_form">
-        	<div class="col-md-6 short_padding pull-left">
+        	<div class="col-md-6 col-xs-6 short_padding pull-left">
 				<div class="options_list">
 					<span class="title">Experience</span>
 					<label class="radio-inline"> <input type="checkbox" id="inlineCheckbox1" name="gr1" value="option1" checked><span class="check"></span> Direct flight</label> 
@@ -127,7 +123,7 @@
 					<label class="radio-inline"> <input type="checkbox" id="inlineCheckbox3" name="gr1" value="option3"><span class="check"></span> 2 stops</label> 
 				</div> 	
 			</div>
-			<div class="col-md-6 short_padding pull-left">	
+			<div class="col-md-6 col-xs-6 short_padding pull-left">	
 				<div class="options_list">
 					<span class="title">&nbsp;</span>
 					<label class="radio-inline"> <input type="checkbox" id="inlineCheckbox1" name="gr2" value="option1" checked><span class="check"></span> Economy</label> 
@@ -176,7 +172,7 @@
 		
 		<br />
 		<div class="row_form">
-        	<div class="col-md-6 short_padding pull-left">
+        	<div class="col-md-6 col-xs-6 short_padding pull-left">
 				<div class="options_list">
 					<span class="title">Travel Season</span>
 					<label class="radio-inline"> <input type="checkbox" id="inlineCheckbox1" name="gr1" value="option1" checked><span class="check"></span> Direct flight</label> 

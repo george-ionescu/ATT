@@ -22,10 +22,12 @@
 								<div style="position: relative; display: block; margin-right: 15px;">
 									<span class="room_detail">room details</span> 
 									<div class="clearfix"></div>
-									<img class="img-responsive col-xs-12 nopadding" src="images/hotel_icon.jpeg" alt="" style="max-height: 110px;" />
+									<div style="display: block; max-height:110px; overflow:hidden;">
+										<img class="img-responsive col-xs-12 nopadding" src="images/backendtbs.cloudapp.net.jpg" alt="" />
+									</div>
 								</div>
 							</td>
-							<td style="vertical-align: top; width:45%;">
+							<td style="vertical-align: top;">
 								<img src="images/star_white.png" alt="" style="margin-top: -10px;" /> 
 								<img src="images/star_white.png" alt="" style="margin-top: -10px;" /> 
 								<img src="images/star_white.png" alt="" style="margin-top: -10px;" />

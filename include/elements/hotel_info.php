@@ -1,13 +1,14 @@
-<h1 class="pull-right">Hotel Info</h1>
+<div style="position:relative;">
+	<a class="hide_on_desktop close_button_mobile" href="javascript:closePage();" class="pull-left"><i class="fa fa-angle-left"></i> close</a> 
+	<h1 class="pull-right">Hotel Info</h1>
+</div>
 <div class="clearfix"></div>
 
 <div class="column_content padding_column_content full_height">
 	<p>
-		<strong>Adress:</strong> 22 Park Lane, London, W1K 1BE<br />
-		<br />
-		<strong>Phone:</strong> +44 20 7493 8000<br />
-		<br />
-		<strong>E-mail:</strong> office@hilton.co.uk
+		Adress: 22 Park Lane, London, W1K 1BE<br />
+		Phone: +44 20 7493 8000<br />
+		E-mail: office@hilton.co.uk
 	</p>
 	<br />
 	<p style="text-align: justify;">Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -33,7 +34,7 @@
 		<?php } ?>
 	</div>
 	
-	<div class="pull-right">
+	<div class="hide_on_mobile pull-right">
 		<a href="javascript:closeCustom();"><i class="fa fa-times-circle-o"></i>close</a>
 	</div>
 	<div class="clearfix"></div>
@@ -59,5 +60,16 @@
 		$('a.slide').removeClass('active');
 		$('a.slide .fa').removeClass('fa-minus-circle').addClass('fa-plus-circle');
 		closeSlideById('column4');
+	}
+
+	function closePage(){
+		url = 'include/elements/rooms_and_rates.php?page=signin&type=<?php echo $_GET['type']; ?>';
+		$.get(url, function( data ) {
+			hidePreloader();
+			$('#column3').show();
+			$('#column3').html(data);
+			
+			closeSlideById('column4');
+		});
 	}
 </script>

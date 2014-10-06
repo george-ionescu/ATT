@@ -1,4 +1,7 @@
-<h1 class="pull-right">Room Policy</h1>
+<div style="position:relative;">
+	<a class="hide_on_desktop close_button_mobile" href="javascript:closePage();" class="pull-left"><i class="fa fa-angle-left"></i> close</a> 
+	<h1 class="pull-right">Room Policy</h1>
+</div>
 <div class="clearfix"></div>
 
 <div class="column_content padding_column_content full_height">
@@ -22,3 +25,16 @@
 	Online cancellation<br />
 	will be blocked after 21-Nov-2013 00:00.</p>
 </div>
+
+<script>
+	function closePage(){
+		url = 'include/elements/rooms_and_rates.php?page=signin&type=<?php echo $_GET['type']; ?>';
+		$.get(url, function( data ) {
+			hidePreloader();
+			$('#column3').show();
+			$('#column3').html(data);
+			
+			closeSlideById('column4');
+		});
+	}
+</script>

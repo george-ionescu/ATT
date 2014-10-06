@@ -1,20 +1,20 @@
 <div class="form-group has-success has-feedback">
-	<label class="control-label input_label col-sm-3 no_padding_left_right" for="inputSuccess3">&nbsp;&nbsp;&nbsp;from:</label>
-	<div class="col-sm-9 no_padding_left_right">
+	<label class="control-label input_label col-sm-3 col-xs-3 no_padding_left_right" for="inputSuccess3">&nbsp;&nbsp;&nbsp;from:</label>
+	<div class="col-sm-9 col-xs-9 no_padding_left_right">
 		<input type="text" class="autocomplete_input form-control" id="inputSuccess3" placeholder="city/airport name"> 
 		<span class="glyphicon glyphicon-map-marker form-control-feedback"></span>
 	</div>
 </div>
 <div class="form-group has-error has-feedback">
-	<label class="control-label input_label col-sm-3 no_padding_left_right" for="inputSuccess3">&nbsp;&nbsp;&nbsp;to:</label>
-	<div class="col-sm-9 no_padding_left_right">
+	<label class="control-label input_label col-sm-3 col-xs-3 no_padding_left_right" for="inputSuccess3">&nbsp;&nbsp;&nbsp;to:</label>
+	<div class="col-sm-9 col-xs-9 no_padding_left_right">
 		<input type="text" class="autocomplete_input form-control" id="inputSuccess3" placeholder="city/airport name"> 
 		<span class="glyphicon glyphicon-map-marker form-control-feedback"></span>
 	</div>
 </div>
 
 <div class="row_form">
-	<div class="col-md-6 short_padding pull-left">
+	<div class="col-md-6 col-xs-6 short_padding pull-left">
 		<div class="custom_input_slide">
 			<p class="box_title">check in</p>
 			<div class="custom_input_slide_content">
@@ -33,7 +33,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-md-6 short_padding pull-left">
+	<div class="col-md-6 col-xs-6 short_padding pull-left">
 		<div class="custom_input_slide">
 			<p class="box_title">check out</p>
 			<div class="custom_input_slide_content">

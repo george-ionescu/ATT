@@ -112,6 +112,8 @@ input[placeholder], [placeholder], *[placeholder] {
 
 #slider-range {
 	margin-top:50px;
+	margin-left:0.6em;
+	margin-right:0.6em;
 }
 
 .tooltips{
@@ -129,6 +131,7 @@ input[placeholder], [placeholder], *[placeholder] {
   padding-right:10px;
 	top:-40px;
 }
+/*
 .tooltips span:after {
   content: '';
   position: absolute;
@@ -139,6 +142,14 @@ input[placeholder], [placeholder], *[placeholder] {
   border-top: 8px solid #FFFFFF;
   border-right: 8px solid transparent;
   border-left: 8px solid transparent;
+}
+*/
+
+#amountUp{
+	left:0;	
+}
+#amountDown{
+	right:0;	
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -163,6 +174,8 @@ input[placeholder], [placeholder], *[placeholder] {
 
 .full_height {
 	height: 100%;
+	position:relative;
+	display:block;
 }
 
 .full_width{
@@ -515,6 +528,7 @@ input[placeholder], [placeholder], *[placeholder] {
 	font-weight: 300;
 	font-size:18px;
 	display:block;
+	margin-bottom:6px;
 }
 .custom_form .options_list .radio-inline + .radio-inline, .checkbox-inline + .checkbox-inline{
 	margin-left:0;
@@ -530,9 +544,6 @@ input[placeholder], [placeholder], *[placeholder] {
 }
 .custom_form .ui-slider-horizontal .ui-slider-range.ui-widget-header{
 	background-color:#000;
-}
-.custom_form .ui-slider-handle{
-	display:none !important;
 }
 .custom_form .proceed_button{
 	margin-top:20px;
@@ -580,14 +591,14 @@ input[placeholder], [placeholder], *[placeholder] {
 }
 
 .custom_input_slide_content{
-	width:120px;
+	width:125px;
 	display:block;
 	margin:0 auto;
 	margin-top:7px;
 }
 
 .custom_input_slide_content.center{
-	width:100px;
+	width:105px;
 	margin:0 auto;
 	margin-top:7px;
 }
@@ -597,15 +608,15 @@ input[placeholder], [placeholder], *[placeholder] {
 	margin-top:-6px !important;
 }
 .custom_input_slide_content .fa{
-	font-size:25px;
+	font-size:30px;
 	color: #000;
 	margin:0;
 	padding:5px;
 }
 
 .custom_input_slide_content .number_big{
-	font-size:42px;
-	line-height:42px;
+	font-size:44px;
+	line-height:47px;
 	font-weight: 400;
 	color: #000;
 }
@@ -619,7 +630,7 @@ input[placeholder], [placeholder], *[placeholder] {
 	font-weight: 400;
 	color: #000;
 	text-align:left;
-	margin-top:4px;
+	margin-top:5px;
 }
 .custom_input_slide_content .number_small p{
 	margin:0;
@@ -662,7 +673,7 @@ input[placeholder], [placeholder], *[placeholder] {
   color: #000;
   font-size: inherit;
   padding: .37em;
-  padding-right: 2em;	
+  padding-right: 5em;	
   border: 0;
   margin: 0;
   text-indent: 0.01px;
@@ -750,7 +761,7 @@ font-family: FontAwesome;
 }
 
 .custom_form .radio-inline, .custom_form .checkbox-inline.long_white{
-	margin-bottom:4px;
+	margin-bottom:6px;
 }
 .check.border{
 	border: 1px solid #000;
@@ -844,4 +855,13 @@ font-family: FontAwesome;
 	font-family: 'Ubuntu', sans-serif;
 	font-weight: 300;
 	font-size:22px;
+}
+
+
+
+
+
+
+.options_list{
+	width:100%;display:block;
 }
