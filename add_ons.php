@@ -62,51 +62,44 @@
 						<div class="clearfix"></div>
 						
 						<div class="row_form">
-							<div class="custom_input_slide small">
-								<p class="box_title pull-left">adults</p>
-								<div class="custom_input_slide_content children small pull-right">
-									<a href="#" class="counterDown arrow_left pull-left"><i class="fa fa-caret-left"></i></a>
-									<div class="pull-left">
-										<span class="counterValue number_big pull-left">01</span>
+							<div class="col-md-6 col-xs-6 short_padding pull-left">
+								<div class="custom_input_slide">
+									<p class="box_title">adults</p>
+									<div class="custom_input_slide_content center">
+										<a href="#" class="counterDown arrow_left pull-left"><i class="fa fa-caret-left"></i></a>
+										<div class="pull-left">
+											<span id="counterAdult" class="counterValue number_big pull-left" minvalue="1" maxvalue="9">01</span>
+											<div class="clearfix"></div>
+										</div>
+										<a href="#" class="counterUp arrow_right pull-left"><i class="fa fa-caret-right"></i></a>
 										<div class="clearfix"></div>
 									</div>
-									<a href="#" class="counterUp arrow_right pull-left"><i class="fa fa-caret-right"></i></a>
+								</div>
+							</div>
+							<div class="col-md-6 col-xs-6 short_padding pull-left">
+								<div class="custom_input_slide">
+									<p class="box_title pull-left">children</p>
 									<div class="clearfix"></div>
+									
+									<div class="custom_input_slide_content children center">
+										<a href="#" class="counterDown arrow_left pull-left"><i class="fa fa-caret-left"></i></a>
+										<div class="pull-left">
+											<span id="counterChildren" class="counterValue number_big pull-left">01</span>
+											<div class="clearfix"></div>
+										</div>
+										<a href="#" class="counterUp arrow_right pull-left"><i class="fa fa-caret-right"></i></a>
+										<div class="clearfix"></div>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="clearfix"></div>
 						
-						<div class="row_form">
-							<div class="custom_input_slide small">
-								<p class="box_title pull-left">children</p>
-								<div class="custom_input_slide_content children small pull-right">
-									<a href="#" class="counterDown arrow_left pull-left"><i class="fa fa-caret-left"></i></a>
-									<div class="pull-left">
-										<span class="counterValue number_big pull-left">01</span>
-										<div class="clearfix"></div>
-									</div>
-									<a href="#" class="counterUp arrow_right pull-left"><i class="fa fa-caret-right"></i></a>
-									<div class="clearfix"></div>
-								</div>
-							</div>
-						</div>
-						<div class="clearfix"></div>
-						
-						<div class="row_form">
-							<span class="custom-dropdown">
-							    <select>
-							        <option>nationality</option>
-							        <option>Option 2</option>  
-							        <option>Option 3</option>
-							        <option>Option 4</option>
-							        <option>Option 5</option>
-							    </select>
-							</span>
-						</div>
-						
+						<?php include $_SERVER['DOCUMENT_ROOT'] . '/include/elements/include/child_ages.php'; ?>
 						
 						<div class="clearfix"></div>
+						
+						
+						
 						<br />
 						<button id="submit_button" type="submit" class="btn btn-default">proceed</button>
 					</form>

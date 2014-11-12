@@ -35,17 +35,9 @@
 		$('#titleSection').html('300 results from Bucharest to Antigua');
 
 		$('#main_preloader').hide();
-		$('#column1').removeClass('column_disabled');
-		$('#column2').removeClass('column_disabled');
+		$('#column1').removeClass('column_disabled_opacity');
+		$('#column2').removeClass('column_disabled_opacity');
 		$('.column_disabled2').remove();
-
-		$("#price_slider").rangeSlider("destroy");
-		$("#price_slider").rangeSlider({
-	    	arrows:false,
-	    	formatter:function(val){
-	    		return  parseInt(val) + " €";
-	    	}
-	    });
 	}
 	
 	$(function(){
@@ -59,8 +51,8 @@
 			}
 			if ($(this).hasClass('tab2')){
 				$('#main_preloader').show();
-				$('#column1').addClass('column_disabled').prepend("<div class='column_disabled2'></div>");
-				$('#column2').addClass('column_disabled').prepend("<div class='column_disabled2'></div>");
+				$('#column1').addClass('column_disabled_opacity').prepend("<div class='column_disabled2'></div>");
+				$('#column2').addClass('column_disabled_opacity').prepend("<div class='column_disabled2'></div>");
 
 				setTimeout(preload, 3000);
 			}

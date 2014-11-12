@@ -6,7 +6,7 @@
 		<?php for ($i=1; $i<=5; $i++) { ?>
 			<div class="row">
 				<div id="hotel<?php echo $i; ?>" class="hotel_detail favorite">
-					<p>Radisson Blu Edwardian Berkshire 1</p>
+					<p class="title">Radisson Blu Edwardian Berkshire 1</p>
 			
 					<table>
 						<tr>

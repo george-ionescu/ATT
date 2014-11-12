@@ -48,10 +48,4 @@
 	<div class="col-md-3 col-xs-3 short_padding">
 		<input type="text" class="form-control italic" id="inputSuccess3" placeholder="Bank Account"> 
 	</div>
-	<div class="col-md-3 col-xs-3 short_padding">
-		<input type="text" class="form-control italic" id="inputSuccess3" placeholder="Phone"> 
-	</div>
-	<div class="col-md-3 col-xs-3 short_padding">
-		<input type="text" class="form-control italic" id="inputSuccess3" placeholder="Email"> 
-	</div>
 </div>

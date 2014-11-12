@@ -2,7 +2,7 @@
 
 <div role="navigation" class="navbar navbar-default navbar-home">
 	<div class="container-fluid">
-		<div class="navbar-collapse collapse in" style="height: auto; max-height:900px;">
+		<div class="navbar-collapse collapse in">
 			<ul class="nav navbar-nav">
 				<li><a href="book_directly.php">Book Directly</a></li>
 				<li><a href="book_assisted.php">Book Assisted</a></li>

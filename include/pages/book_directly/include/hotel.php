@@ -1,4 +1,4 @@
-<div class="form-group has-success has-feedback">
+<div class="form-group has-feedback">
 		<label class="control-label input_label col-sm-3 col-xs-3 no_padding_left_right" for="inputSuccess3">&nbsp;&nbsp;&nbsp;city:</label>
 		<div class="col-sm-9 col-xs-9 no_padding_left_right">
 			<input type="text" class="autocomplete_input form-control" id="inputSuccess3" placeholder="city name"> 

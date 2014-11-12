@@ -6,7 +6,7 @@
         	<div class="row_form">
         		<div class="col-md-3 col-xs-3 short_padding">
         			<div class="form-group">
-        				<label>Username</label> | &nbsp;<a href=""><i class="fa fa-pencil-square-o"></i>edit</a>
+        				<label>Display name</label> | &nbsp;<a href=""><i class="fa fa-pencil-square-o"></i>edit</a>
         				<input type="text" class="form-control italic" id="inputSuccess3" placeholder="" value="Gabriel">
         			</div> 
         		</div>
@@ -122,12 +122,11 @@
 			</div>
 			<div class="row_form">
 				<div class="col-md-5 col-xs-5 short_padding">
-					<input type="text" class="form-control italic" id="inputSuccess3" placeholder="E-mail"> 
-				</div>
-				<div class="col-md-3 col-xs-3 short_padding">
 					<input type="text" class="form-control italic" id="inputSuccess3" placeholder="Phone *"> 
 				</div>
-				<div class="col-md-4 col-xs-4 short_padding"></div>
+				<div class="col-md-4 col-xs-4 short_padding">
+					<p class="italic" style="color:#fff;padding-top:7px;">* Only for emergencies</p>
+				</div>
 			</div>
 		        
 		      
@@ -142,7 +141,7 @@
         				<label>Language</label>
         				<span class="custom-dropdown">
 						    <select>
-						        <option>Option 1</option>
+						        <option>English</option>
 						        <option>Option 2</option>  
 						        <option>Option 3</option>
 						        <option>Option 4</option>
@@ -156,7 +155,7 @@
         				<label>Currency</label>
         				<span class="custom-dropdown">
 						    <select>
-						        <option>Option 1</option>
+						        <option>Euro1</option>
 						        <option>Option 2</option>  
 						        <option>Option 3</option>
 						        <option>Option 4</option>
@@ -170,7 +169,7 @@
         				<label>Newsletter</label>
         				<span class="custom-dropdown">
 						    <select>
-						        <option>Option 1</option>
+						        <option>No</option>
 						        <option>Option 2</option>  
 						        <option>Option 3</option>
 						        <option>Option 4</option>
@@ -312,10 +311,6 @@
 		        
 		        
 		        <div class="clearfix"></div>
-		        <br />
-    			<div style="text-align: center">
-    				<button type="button" class="btn btn-default">proceed</button>
-    			</div>
     			<br /><br />
 		</form>
 </div>		

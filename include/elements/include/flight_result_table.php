@@ -68,7 +68,7 @@
 										</tr>
 										<tr>
 											<td colspan="4"><p class="horizontal_line_black">
-													<span>Stop overnight in Warsaw WAW </span>
+													<span>2h 30m Stop overnight in Warsaw WAW</span>
 												</p></td>
 										</tr>
 										<tr>
@@ -145,7 +145,7 @@
 										</tr>
 										<tr>
 											<td colspan="4"><p class="horizontal_line_black">
-													<span>Stop overnight in Warsaw WAW </span>
+													<span>2h 30m Stop overnight in Warsaw WAW</span>
 												</p></td>
 										</tr>
 										<tr>
@@ -255,7 +255,7 @@
 										</tr>
 										<tr>
 											<td colspan="4"><p class="horizontal_line_black">
-													<span>Stop overnight in Warsaw WAW </span>
+													<span>2h 30m Stop overnight in Warsaw WAW</span>
 												</p></td>
 										</tr>
 										<tr>

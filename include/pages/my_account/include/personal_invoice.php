@@ -41,14 +41,3 @@
 		</span>
 	</div>
 </div>
-<div class="row_form">
-	<div class="col-md-5 col-xs-5 short_padding">
-		<input type="text" class="form-control italic" id="inputSuccess3" placeholder="E-mail"> 
-	</div>
-	<div class="col-md-3 col-xs-3 short_padding">
-		<input type="text" class="form-control italic" id="inputSuccess3" placeholder="Phone *"> 
-	</div>
-	<div class="col-md-4 col-xs-4 short_padding">
-		<p class="italic" style="color:#fff;padding-top:7px;">* Only for emergencies</p>
-	</div>
-</div>

@@ -32,8 +32,11 @@
 				
 				<div style="margin-top: 5px;">
 					<a class="slide" column-close="column4" column-open="column4" href="include/elements/hotel_policy.php"><i class="fa fa-plus-circle"></i>room policy</a>
-				&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp;&nbsp;
+				<?php if (1==2){?>
+					|&nbsp;&nbsp;&nbsp;&nbsp;
 					<a class="slide" column-close="column4" column-open="column4" href="include/elements/hotel_info.php"><i class="fa fa-plus-circle"></i>hotel info</a>
+				<?php } ?>
 				</div>
 				<hr />
 			</div>

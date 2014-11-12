@@ -25,10 +25,10 @@
 					<p class="flight_title">1st <span class="black white_on_mobile">Combo Ticket includes: Upper Belvedere, Lower Belvedere, Orangery, Privy Garden, </span></p>
 					
 					<div class="row_form">
-						<div class="col-md-6 col-xs-6 short_padding text_align_left">
+						<div class="col-md-12 col-xs-12 short_padding text_align_left">
 							<span class="custom-dropdown">
 							    <select>
-							        <option>Duration</option>
+							        <option>activity option</option>
 							        <option>Option 2</option>  
 							        <option>Option 3</option>
 							        <option>Option 4</option>
@@ -37,11 +37,12 @@
 							</span>
 							<div class="clearfix"></div>
 						</div>
-						
-						<div class="col-md-6 col-xs-6 short_padding text_align_left">
+					</div>
+					<div class="row_form">
+						<div class="col-md-12 col-xs-12 short_padding text_align_left">
 							<span class="custom-dropdown">
 							    <select>
-							        <option>Date</option>
+							        <option>operating date</option>
 							        <option>Option 2</option>  
 							        <option>Option 3</option>
 							        <option>Option 4</option>

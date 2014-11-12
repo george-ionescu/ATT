@@ -407,6 +407,7 @@ function callFormEvents(){
 	 	    changeMonth: true,
 	        changeYear: true,
 	    });
+		$("#calendar"+i).datepicker('setDate', new Date());
 	}
 	
 	//trigger resize event gmap
@@ -435,7 +436,7 @@ function callFormEvents(){
 	});
 	
     //datepicker
-    $( "#datepicker_from" ).datepicker({
+	$( "#datepicker_single" ).datepicker({
     	dateFormat: 'dd M yy',
 		changeMonth: true,
 	    changeYear: true,
@@ -450,6 +451,23 @@ function callFormEvents(){
 	        $( "#datepicker_to" ).datepicker( "option", "minDate", dateText );
 	    }
     });
+    $( "#datepicker_from" ).datepicker('setDate', new Date());
+	$( "#datepicker_from" ).datepicker({
+    	dateFormat: 'dd M yy',
+		changeMonth: true,
+	    changeYear: true,
+	    onSelect: function(dateText){
+	        $(this).hide();
+	        //write value in box
+	        var tmpData = dateText.split(" ");
+	        $(this).parent().find('.day').html(tmpData[0]);
+	        $(this).parent().find('.month').html(tmpData[1]);
+	        $(this).parent().find('.year').html(tmpData[2]);
+	        //
+	        $( "#datepicker_to" ).datepicker( "option", "minDate", dateText );
+	    }
+    });
+    $( "#datepicker_from" ).datepicker('setDate', new Date());
     $( "#datepicker_to" ).datepicker({
     	dateFormat: 'dd M yy',
 		changeMonth: true,
@@ -465,6 +483,8 @@ function callFormEvents(){
 	        //$( "#datepicker_from" ).datepicker( "option", "maxDate", dateText );
 	    }
     });
+    $( "#datepicker_to" ).datepicker('setDate', new Date());
+    $("#datepicker_single").hide();
     $("#datepicker_to").hide();
     $("#datepicker_from").hide();
     
@@ -669,6 +689,9 @@ function animationDone(){
 			if (oldSlide && newSlide && url != '#'){
 				changeSlide(oldSlide, newSlide, url, class_bootstrap);
 			}
+		} else {
+			$(this).removeClass('active').find('.fa').removeClass('fa-minus-circle').addClass('fa-plus-circle');;
+			closeSlideById('column4');
 		}
 	});
 	

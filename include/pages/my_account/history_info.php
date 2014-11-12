@@ -14,5 +14,7 @@ Chip cubicle, 1 adult<br />
 <p style="text-align: center;"><strong style="color: #fff;">Total price: 2332 euro</strong></p>
 
 <br />
-<a href="">request invoice</a> | <a href=""><i class="fa fa-times-circle-o"></i>remove from history</a>
+<a href="">request invoice</a> | <a href="">request travel vouchers</a>
+<br />
+<a href=""><i class="fa fa-times-circle-o"></i>remove from history</a>
 </div>		

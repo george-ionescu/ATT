@@ -123,8 +123,12 @@
 	    		var newSlide = $('#column2');
 	    		var url = 'include/elements/<?php echo $_GET['page']; ?>.php';
 
+	    		<?php if ($_GET['from'] == 'extra_service') { ?>
+	    			url += '?from=extra_service';
+	    		<?php } ?>
+
 	    		var class_bootstrap = 'col-md-3 nopadding';
-	    		if (url == 'include/elements/signin.php'){
+	    		if (url == 'include/elements/signin.php' || url == 'include/elements/signin.php?from=extra_service'){
 	    			class_bootstrap = 'col-md-6 flight flight_detail nopadding';
 	    		}
 	    		if (url == 'include/elements/flight_tabs.php'){

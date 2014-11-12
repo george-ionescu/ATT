@@ -21,7 +21,7 @@
         <h1 class="pull-right" style="margin-right: 0;">Traveller Information</h1>
         <div class="clearfix"></div>
         
-        <p class="flight_title first">1st adult</p>
+        <p class="flight_title first">Room one - 1st adult</p>
         <form class="form-horizontal custom_form" role="form" method="post" action="/">
 			<div class="row_form">
 				<div class="col-md-2 col-xs-2 short_padding">
@@ -94,7 +94,7 @@
 			</div>
         </form>
         
-        <p class="flight_title">2nd adult</p>
+        <p class="flight_title">Room one - 2nd adult</p>
         <form class="form-horizontal custom_form" role="form" method="post" action="/">
 			<div class="row_form">
 				<div class="col-md-2 col-xs-2 short_padding">
@@ -220,10 +220,17 @@
 	    		$('#submit_button2').click(function(event){
 	    			event.preventDefault();
 
-	    			var oldSlide = $('#column2');
-	    			var newSlide = $('#column2');
-	    			var url = 'include/elements/billing.php';
-	    			var class_bootstrap = 'col-md-6';
+	    			<?php if ($_GET['from'] == 'extra_service') { ?>
+		    			var oldSlide = $('#column4');
+		    			var newSlide = $('#column4');
+		    			var url = 'include/elements/passanger_association.php';
+		    			var class_bootstrap = 'col-md-3';
+		    		<?php } else { ?>
+			    		var oldSlide = $('#column2');
+		    			var newSlide = $('#column2');
+		    			var url = 'include/elements/billing.php';
+		    			var class_bootstrap = 'col-md-6';
+		    		<?php } ?>
 	    			
 	    			if (oldSlide && newSlide && url != '#'){
 	    				changeSlide(oldSlide, newSlide, url, class_bootstrap);

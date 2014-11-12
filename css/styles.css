@@ -14,6 +14,9 @@ select::-ms-expand {
 .column_disabled .column_content{
 	opacity:1;
 }
+.column_disabled_opacity .column_content{
+	opacity:0.5;
+}
 
 .box{
 	margin:2px;
@@ -505,6 +508,9 @@ select::-ms-expand {
 .hotel_detail p{
 	color:#fff !important;
 }
+.hotel_detail p.title{
+	font-size:16px;
+}
 .hotel_detail a{
 	color:#fff;
 	text-decoration:none;
@@ -567,8 +573,16 @@ a.button_big span.sidebar{
 }
 a.button_big span.subtitle{
 	position:absolute;
-	left:30px;
+	left:45px;
 	bottom:15px;
+	font-size:16px;
+	color:#fff;
+	z-index:99;
+}
+a.button_big span.subtitle2{
+	position:absolute;
+	left:45px;
+	bottom:35px;
 	font-size:16px;
 	color:#fff;
 	z-index:99;
@@ -583,7 +597,7 @@ span.subtitle .big{
 }
 
 a.button_big.account_overview span.sidebar{
-	bottom:30px;
+	bottom:50px;
 }
 a.button_big.assisted{
 	padding-bottom:30px;
@@ -654,11 +668,6 @@ table.flight_detail_table{
 table.flight_detail_table .departure_time{
 	font-size:16px;
 }
-table td.airplane{
-	padding-top:17px  !important;
-	width:90px;
-	text-align:center;
-}
 table.flight_detail_table tr td.title{
 	color:#fff;
 	font-size:18px;
@@ -694,6 +703,15 @@ table.flight_detail_table tr.noborder td{
 }
 table.flight_detail_table label{
 	padding-right:5px;
+}
+
+table td.airplane{
+	padding-top:17px  !important;
+	text-align:center;
+}
+table.flight_detail_table.recap td.airplane{
+	padding-top:6px  !important;
+	text-align:center;
 }
 
 table.flight_detail_table.availab{
@@ -935,12 +953,16 @@ p.month{
 }
 
 
-
+.service_image{
+	max-width: 110px; 
+	max-height: 110px;
+}
 
 @media (max-width: 1150px) {
 	body {font-size:12px !important;}	
 	
 	p, a{font-size:12px !important; line-height:20px;}
+	.service_image{max-width: 80px; max-height: 80px;}
 	
 	.main_logo h1 { font-size:39px !important;}
 	.main_logo {width:747px;}
@@ -1084,6 +1106,7 @@ p.month{
 		bottom:20px;
 	}
 }
+
 
 
 .hide_on_mobile{display:inline;}
