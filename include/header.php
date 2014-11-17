@@ -24,9 +24,6 @@ if (preg_match('/(?i)Windows/', $_SERVER['HTTP_USER_AGENT']) && preg_match('/(?i
 		<link href='http://fonts.googleapis.com/css?family=Oswald:700,400' rel='stylesheet' type='text/css' />
 		<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400' rel='stylesheet' type='text/css' />
 		
-		<!-- /// Cross-browser CSS3 animations ////////  -->
-    	<link rel="stylesheet" type="text/css" media="screen" href="css/animate/animate.min.css" />
-		
 		<!-- /// FontAwesome 4.3 Icons ////////  -->
 		<link rel="stylesheet" type="text/css" media="screen" href="css/fontawesome/font-awesome.min.css" />
 		
@@ -37,15 +34,15 @@ if (preg_match('/(?i)Windows/', $_SERVER['HTTP_USER_AGENT']) && preg_match('/(?i
 		<!-- /// jQuery UI ////////  -->
 		<link rel="stylesheet" type="text/css" media="screen" href="css/ui-custom/jquery-ui-1.10.4.css" />
 		
-		<!-- /// Supersized CSS ////////  -->
-		<link rel="stylesheet" type="text/css" media="screen" href="css/supersized/supersized.css"  />
-		<link rel="stylesheet" type="text/css" media="screen" href="css/supersized/supersized.shutter.css" />
-		
 		<link rel="stylesheet" type="text/css" media="screen" href="css/jquery.mCustomScrollbar.css" />
 		
 		<!-- <link rel="stylesheet" type="text/css" media="screen" href="css/slider.css" /> -->
 		
 		<link rel="stylesheet" type="text/css" media="screen" href="css/jquery.fancybox.css?v=2.1.4" />
+		
+		<!-- /// Vegas & Supersized CSS ////////  -->
+		<link rel="stylesheet" type="text/css" media="screen" href="css/supersized/supersized.shutter.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="css/jquery.vegas.min.css"  />
 		
 		<!-- /// Template CSS ////////  -->
 		<link rel="stylesheet" type="text/css" media="screen" href="css/preloader.css" />

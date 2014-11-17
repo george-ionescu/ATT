@@ -1,3 +1,21 @@
+function test(){
+	var slideArray = [
+          // Slideshow Images
+  		{src : 'backgrounds/background_3.jpg', fade: 1000, title : 'rome', subtitle : 'from 300 euro', url : 'http://www.google.ro/'},
+  		{src : 'backgrounds/background_4.jpg', fade: 1000, title : 'prague', subtitle : 'from 400 euro', url : 'http://www.yahoo.ro/'},
+    ]
+	          
+	$.vegas('destroy');
+	loadBackgroundSlideshow(slideArray);
+}
+
+
+
+
+
+
+
+
 //autocomplete
 var availableTags = [
          "Paris",

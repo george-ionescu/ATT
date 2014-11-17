@@ -5,7 +5,10 @@
 				<div class="col-md-6 col-sm-6 col-xs-12">
 					<a href="who-is-alice.php"><i class="fa fa-envelope"></i>Contact</a>
 					&nbsp;&nbsp;&nbsp;&nbsp;
-					<a href="javascript:showCreateAccountPopUp();"><i class="fa fa-user"></i>Register</a> | <a href="javascript:showRegisterPopUp();">Sign in</a> | <a href="my_account.php">My account</a>
+					<a href="javascript:showCreateAccountPopUp();"><i class="fa fa-user"></i>Register</a> | 
+					<a href="javascript:showRegisterPopUp();">Sign in</a> | 
+					<a href="my_account.php">My account</a> | 
+					<a href="javascript:test();">Reload Vegas</a>
 				</div>
 				<div class="col-md-6 col-sm-6 col-xs-12">
 					<div class="footer-right">
@@ -55,9 +58,8 @@
 	<script type="text/javascript" src="js/jquery.mCustomScrollbar.concat.min.js"></script>
 <?php } ?>
 
-<!-- /// Supersized ////////  -->
-<script type="text/javascript" src="js/supersized.3.2.7.js"></script>
-<script type="text/javascript" src="js/supersized.shutter.js"></script>
+<!-- /// Vegas ////////  -->
+<script type="text/javascript" src="js/jquery.vegas.js"></script>
 
 <script type="text/javascript" src="js/jquery.masonry.min.js"></script>
 
