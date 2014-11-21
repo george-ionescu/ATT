@@ -79,6 +79,11 @@ function loadBackgroundSlideshow(slideArray){
 
 		// Gmap Defaults
 		$map.gmap3({
+			defaults:{ 
+	            classes:{
+	              Marker:MarkerWithLabel
+	            }
+	        },
 		    map:{
 		        options:{
 		            center:[46.578498,2.457275],
@@ -93,11 +98,21 @@ function loadBackgroundSlideshow(slideArray){
 		        marker:{
 		            values:[{
 		                address:val.address,
-		                options:{icon: "images/gmap_pin.png"},
+		                options:{
+		            		icon: "images/gmap_pin.png",
+		                    labelContent: "",
+		                    labelAnchor: new google.maps.Point(13, 73),
+		                    labelClass: "labels",
+		                    labelStyle: {opacity: 1},
+		                    labelContent: "PARIS<br /><span>and 20 more</span>"
+		                },
 		                events: {
 		                    click: function(marker, event, context) {
 
 		                        gmap_clear_markers();
+								
+								//Change the marker icon
+								marker.setIcon('images/gmap_pin_sel.png');
 		                        
 		                         $map.gmap3({
 		                            map:{
@@ -111,9 +126,9 @@ function loadBackgroundSlideshow(slideArray){
 		                            overlay:{
 		                                address:val.address,
 		                                options:{
-		                                    content:  '<div class="infobox"><table><tr><td><img src="images/gmap_img.png" /></td> <td class="text"><h1>adasd</h1><p>'+val.content+'</p>'+selectBut+closeBut+'</td></tr></table></div>',
+		                                    content:  '<div class="infobox"><table><tr><td><img src="images/gmap_img.png" style="height:131px;" /></td> <td class="text"><h1>adasd</h1><p>'+val.content+'</p>'+selectBut+closeBut+'</td></tr></table></div>',
 		                                    offset:{
-		                                        y:-150,
+		                                        y:-160,
 		                                        x:-135
 		                                    }
 		                                }
@@ -126,8 +141,6 @@ function loadBackgroundSlideshow(slideArray){
 		    });
 		});
 		
-		
-
 		// Function Clear Markers
 		function gmap_clear_markers() {
 		    $('.infobox').each(function() {

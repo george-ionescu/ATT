@@ -7,7 +7,7 @@
 		<div class="row full_height">
 			<div class="col-md-4 full_height assisted nopadding" id="column1">
 		        
-		        <div class="column_content padding_content full_height container-fluid">
+		        <div class="column_content padding_content full_height container-fluid" style="padding-top:40px;">
 			        <form class="form-horizontal custom_form" role="form" method="post" action="page2_1.php">
 				        <br />
 				        <p>Please choose a month</p>
@@ -29,7 +29,7 @@
 									<label class="radio-inline"> <input type="checkbox" id="inlineCheckbox3" name="gr1" value="option3"><span class="check"></span> Winter Sports</label> 
 									<label class="radio-inline"> <input type="checkbox" id="inlineCheckbox1" name="gr1" value="option1" checked><span class="check"></span> Wind Sports</label> 
 									<label class="radio-inline"> <input type="checkbox" id="inlineCheckbox3" name="gr2" value="option3"><span class="check"></span> Casino Games</label>
-																		<label class="radio-inline"> <input type="checkbox" id="inlineCheckbox2" name="gr2" value="option2"><span class="check"></span> Scuba & Snorkeling</label> 
+													<label class="radio-inline"> <input type="checkbox" id="inlineCheckbox2" name="gr2" value="option2"><span class="check"></span> Scuba & Snorkeling</label> 
 									
 								</div> 	
 							</div>
@@ -47,10 +47,10 @@
 							</div>
 							<div class="col-md-4 short_padding pull-left">	
 								<div class="options_list">
-									<label class="radio-inline"> <input type="checkbox" id="inlineCheckbox1" name="gr2" value="option1" checked><span class="check"></span> Party & Nightlife</label>
-									<label class="radio-inline"> <input type="checkbox" id="inlineCheckbox3" name="gr2" value="option3"><span class="check"></span> Sightseeing & Local Culture</label>
-									<label class="radio-inline"> <input type="checkbox" id="inlineCheckbox1" name="gr2" value="option1" checked><span class="check"></span> Peace & Quiet Retreats</label> 
-									<label class="radio-inline"> <input type="checkbox" id="inlineCheckbox3" name="gr2" value="option3"><span class="check"></span> Climbing, Trekking, Mountain Biking</label>
+									<label class="radio-inline"> <input type="checkbox" id="inlineCheckbox1" name="gr2" value="option1" checked><span class="check"></span> <span>Party & Nightlife</span></label>
+									<label class="radio-inline"> <input type="checkbox" id="inlineCheckbox3" name="gr2" value="option3"><span class="check"></span> <span>Sightseeing & Local Culture</span></label>
+									<label class="radio-inline"> <input type="checkbox" id="inlineCheckbox1" name="gr2" value="option1" checked><span class="check"></span> <span>Peace & Quiet Retreats</span></label> 
+									<label class="radio-inline"> <input type="checkbox" id="inlineCheckbox3" name="gr2" value="option3"><span class="check"></span> <span>Climbing, Trekking, Mountain Biking</span></label>
 									
 								</div> 
 							</div>
