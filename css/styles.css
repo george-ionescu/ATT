@@ -841,7 +841,7 @@ a.flight_detail_tab:hover, a.flight_detail_tab.active{
 	height:30px;
 	background-color:#fff;
 	text-align:right;
-	padding-top:4px;
+	padding-top:8px;
 }
 #stars a{
 	text-decoration:none !important;
@@ -1108,7 +1108,7 @@ p.month{
 		margin-top:7px !important;
 	}
 	
-	.assisted .custom_input_slide_content {width:150px;}
+	.assisted .custom_input_slide_content {width:175px;}
 	.assisted p {font-size:18px !important;}
 	.assisted .custom_input_slide_content span {font-size:18px !important;}
 	.assisted .custom_form .radio-inline, .assisted .custom_form .checkbox-inline {font-size:14px !important;}
@@ -1129,6 +1129,10 @@ p.month{
 	}
 	a.button_big span.subtitle{
 		bottom:20px;
+	}
+	
+	.horizontal_line span {
+		font-size:12px;
 	}
 }
 

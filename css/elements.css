@@ -645,10 +645,10 @@ input[placeholder], [placeholder], *[placeholder] {
 	margin-left:5px !important;
 }
 .custom_input_slide_content.small .arrow_left{
-	margin-top:-2px !important;
+	margin-top:-4px !important;
 }
 .custom_input_slide_content.small .arrow_right{
-	margin-top:-2px !important;
+	margin-top:-4px !important;
 }
 
 
@@ -685,6 +685,10 @@ input[placeholder], [placeholder], *[placeholder] {
 	width: 125%;
 	height:30px;
 }
+
+
+
+
 .custom-dropdown.black{
 	border:1px solid #000;
 }
@@ -733,6 +737,15 @@ font-family: FontAwesome;
 
 .custom-dropdown::after {
   color: #000;
+}
+
+
+.custom-dropdown.triple_date select{
+	padding: 0;
+	width: 135%;
+}
+.custom-dropdown.triple_date::after {
+	font-size: 16px;
 }
 /* End Custom dropdown */
 

@@ -44,7 +44,33 @@
 				<div class="col-md-4 col-xs-4 short_padding">
 					<label class="control-label input_label col-sm-6 col-xs-6" for="inputSuccess3">&nbsp;&nbsp;&nbsp;Birth Date</label>
 					<div class="col-sm-6 col-xs-6 no_padding_left_right">
-						<input type="text" class="form-control italic no_padding_left_right" id="calendar1" placeholder="day | mm | year"> 
+						<div class="col-sm-4 col-xs-4 no_padding_left_right">
+							<span class="custom-dropdown triple_date">
+							    <select>
+							        <option>day</option>
+							        <option>1</option>  
+							        <option>2</option>
+							    </select>
+							</span>
+						</div>
+						<div class="col-sm-4 col-xs-4 no_padding_left_right">
+							<span class="custom-dropdown triple_date">
+							    <select>
+							        <option>mm</option>
+							        <option>yan</option>  
+							        <option>fab</option>
+							    </select>
+							</span>
+						</div>
+						<div class="col-sm-4 col-xs-4 no_padding_left_right">
+							<span class="custom-dropdown triple_date">
+							    <select>
+							        <option>year</option>
+							        <option>2014</option>  
+							        <option>2015</option>
+							    </select>
+							</span>
+						</div>
 					</div>
 				</div>
 			</div>
