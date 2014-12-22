@@ -7,17 +7,10 @@
 			<div class="row">
 				<div class="bubble_speach_container">
 					<div class="bubble_speach">
-						<div class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-pause-on-hover="true" data-cycle-speed="1000" data-cycle-slides="> div">
-			                <div>
-			                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-			                </div>
-			                <div style="display: none;">
-			                    jQuery is a fast, concise, JavaScript Library that simplifies how you traverse 
-			                </div>
-			                <div style="display: none;">
-			                    The jQuery Cycle Plugin is a lightweight slideshow plugin. Its implementation 
-			                </div>
-			            </div>
+						<ul class="marquee">
+							<li>jQuery1 marquee is the best <b>marquee</b> plugin in the world</li>
+							<li>jQuery2 marquee is the best <b>marquee</b> plugin in the world</li>
+						</ul>
 		            </div>
 	            </div>
 			</div>

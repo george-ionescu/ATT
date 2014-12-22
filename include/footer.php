@@ -66,6 +66,8 @@
 
 <script type="text/javascript" src="js/jquery.fancybox.js?v=2.1.4"></script>
 
+<script type="text/javascript" src="js/jquery.marquee.min.js"></script>
+
 
 
 <!-- /// Custom scripts ////////  -->

@@ -40,6 +40,16 @@ select::-ms-expand {
 	margin:2px;
 }
 
+.marquee {
+  height: 21px;
+  overflow: hidden;
+  list-style-type: none;
+}
+.marquee li {
+	float:left;
+	margin-right:100px;
+}
+
 .column_disabled2{
 	display:block;
 	width:100%;
@@ -1112,9 +1122,10 @@ p.month{
 	.assisted p {font-size:18px !important;}
 	.assisted .custom_input_slide_content span {font-size:18px !important;}
 	.assisted .custom_form .radio-inline, .assisted .custom_form .checkbox-inline {font-size:14px !important;}
-	.custom_input_slide_content .arrow_left, .custom_input_slide_content .arrow_right {margin-top:4px !important;}
+	.custom_input_slide_content .arrow_left, .custom_input_slide_content .arrow_right {margin-top:8px !important;}
 	
-	.assisted .custom_input_slide_content .arrow_left, .custom_input_slide_content .arrow_right {margin-top:4px !important;}
+	.assisted .custom_input_slide_content .arrow_left, .assisted .custom_input_slide_content .arrow_right {margin-top:0px !important;}
+	.assisted #month_name {width:100px !important;}
 	
 	.custom_input_slide_content .number_small{ margin-top:9px; }
 	.custom_input_slide_content .arrow_right{ margin-left:0 !important; }
