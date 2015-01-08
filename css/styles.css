@@ -7,6 +7,20 @@ select::-ms-expand {
     display: none;
 }
 
+.column_content{
+	overflow-x:hidden;
+	overflow-y:scroll;
+	margin-right: -18px !important;
+}
+
+#column1, #column2, #column3, #column4, #column3x, #column3gmap{
+	overflow:hidden; 
+}
+
+
+.1column_content::-webkit-scrollbar { width: 0 !important }
+.1column_content { -ms-overflow-style: none; }
+
 .labels.selected {
 	color:#5dd4ff;
 }
@@ -295,7 +309,7 @@ select::-ms-expand {
 
 #column2 {
 	color: #fff;
-	background-color: #B8A57B;
+	background-color: #868686;
 	text-align: center;
 	height: 100%;
 	display: none;
@@ -319,8 +333,8 @@ select::-ms-expand {
 
 #column3 {
 	color: #fff;
-	background-color: #B8A57B;
-	border-left: 1px solid #958051;
+	background-color: #868686;
+	border-left: 1px solid #555555;
 	text-align: center;
 	height: 100%;
 	display: none;
@@ -335,7 +349,7 @@ select::-ms-expand {
 }
 #column3gmap {
 	color: #fff;
-	background-color: #B8A57B;
+	background-color: #868686;
 	text-align: center;
 	height: 100%;
 	display: none;
@@ -358,13 +372,13 @@ select::-ms-expand {
 #column3 hr{
 	color:#000;
 	margin-top:5px;
-	border-color:#958051;
+	border-color:#555555;
 }
 
 #column4 {
 	color: #fff;
-	background-color: #B8A57B;
-	border-left: 1px solid #958051;
+	background-color: #868686;
+	border-left: 1px solid #555555;
 	text-align: center;
 	height: 100%;
 	display: none;
@@ -421,28 +435,28 @@ select::-ms-expand {
 
 #column2.flight {
 	color: #000;
-	background-color: #B8A57B;
+	background-color: #868686;
 	text-align:left;
 	height: 100%;
 	display: block;
 }
 #column2.hotel {
 	color: #fff;
-	background-color: #718181;
+	background-color: #38393d;
 	text-align: center;
 	height: 100%;
 	display: block;
 }
 #column2.trip {
 	color: #fff;
-	background-color: #718181;
+	background-color: #38393d;
 	text-align: center;
 	height: 100%;
 	display: block;
 }
 #column2.account {
 	text-align: left;
-	background-color: #718181;
+	background-color: #38393d;
 }
 
 #column3.col-md-6 {
@@ -456,11 +470,11 @@ select::-ms-expand {
 	width:100%; 
 	height:185px; 
 	top:0; 
-	background-color:#B8A57B;
+	background-color:#868686;
 	text-align:left;
 }
 #compare_content .box{
-	border-left:1px solid #958051;
+	border-left:1px solid #555555;
 	width: 160px;
 	height: 100%;
 	padding: 10px;
@@ -485,7 +499,7 @@ select::-ms-expand {
 	width:100%; 
 	height:auto; 
 	top:0; 
-	background-color:#B8A57B;
+	background-color:#868686;
 	text-align:left;
 	padding:10px 20px 10px 20px;
 }
@@ -513,7 +527,7 @@ select::-ms-expand {
 	text-align:left;
 	color:#fff;
 	width:100%;
-	border-bottom:1px solid #5e6c6c;
+	border-bottom:1px solid #868686;
 	margin-left:15px;
 	padding-right:25px;
 }
@@ -537,7 +551,7 @@ select::-ms-expand {
 	z-index:999;
 }
 .hotel_detail.active, .hotel_detail:hover{
-	background-color:#b8a57b;
+	background-color:#868686;
 	cursor:pointer;
 }
 .hotel_detail p{
@@ -588,14 +602,14 @@ a.button_big:hover{
 }
 a.button_big.active{
 	opacity:1;
-	background-color:#b8a57b;
+	background-color:#868686;
 }
 
 a.button_big.account_sidebar:hover{
-	background-color:#718181;
+	background-color:#38393d;
 }
 a.button_big.account_sidebar.active{
-	background-color:#718181;
+	background-color:#38393d;
 }
 
 a.button_big span.sidebar{
@@ -657,7 +671,7 @@ span.button_after_big_info.active{
 .flight_detail_wrapper{
 	font-family: 'Ubuntu', sans-serif;
 	font-weight: 300;
-	background-color: #B8A57B;
+	background-color: #868686;
 	padding:10px;
 	text-align:left;
 }
@@ -731,7 +745,7 @@ table.flight_detail_table td.vbottom{
 	vertical-align:bottom;
 }
 table.flight_detail_table tr.normal td:not(:first-child){
-	border-bottom:1px solid #877245;
+	border-bottom:1px solid #555;
 }
 table.flight_detail_table tr.noborder td{
 	border:none !important;
@@ -751,7 +765,7 @@ table.flight_detail_table.recap td.airplane{
 
 table.flight_detail_table.availab{
 	text-align:left;
-	background-color:#718181;
+	background-color:#fff;
 	margin-bottom:20px;
 }
 table.flight_detail_table.availab td:first-child{
@@ -775,10 +789,10 @@ table.flight_detail_table tr.expand{
 	display:none;
 }
 table.flight_detail_table tr.expand td:last-child{
-	background-color: #718181;
+	background-color: #fff;
 }
 table.flight_detail_table.expanded_table td{
-	background-color: #718181;
+	background-color: #fff;
 	padding:10px;
 }
 table.flight_detail_table tr.expand a{
@@ -799,7 +813,7 @@ a.flight_detail_tab:hover .title, a.flight_detail_tab.active .title{
 	color:#fff;
 }
 a.flight_detail_tab:hover, a.flight_detail_tab.active{
-	background-color: #B8A57B;
+	background-color: #868686;
 	color:#000;
 	text-decoration:none;
 }
@@ -826,8 +840,8 @@ a.flight_detail_tab:hover, a.flight_detail_tab.active{
 	margin-right:10px;
 }
 .menu_column li.active, .menu_column li:hover{
-	background-color: #B8A57B;
-	border-bottom:1px solid #B8A57B;
+	background-color: #868686;
+	border-bottom:1px solid #868686;
 	cursor:pointer;
 }
 .menu_column li:last-child.active, .menu_column li:last-child:hover{
@@ -842,8 +856,8 @@ a.flight_detail_tab:hover, a.flight_detail_tab.active{
 }
 
 .menu_column.hotel li.active, .menu_column.hotel li:hover{
-	background-color: #718181;
-	border-bottom:1px solid #718181;
+	background-color: #38393d;
+	border-bottom:1px solid #38393d;
 }
 
 #stars{
@@ -947,7 +961,7 @@ a.search_options.availab{
 }
 a.search_options.availab.active{
 	padding:10px;
-	background-color:#718181;
+	background-color:#fff;
 }
 
 #month_name {text-transform:uppercase;margin-top:4px;}
@@ -1058,7 +1072,7 @@ p.month{
 		padding:5px 5px 5px 0;
 	}
 	table.flight_detail_table.expanded_table td{
-		background-color: #718181;
+		background-color: #38393d;
 		padding:5px;
 	}
 	table td.airplane{
@@ -1144,6 +1158,13 @@ p.month{
 	
 	.horizontal_line span {
 		font-size:12px;
+	}
+	
+	.custom-dropdown.triple_date select{
+		width: 160%;
+	}
+	.custom_date_border span:after {
+		right:0;
 	}
 }
 

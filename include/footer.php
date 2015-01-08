@@ -52,12 +52,10 @@
 <script type="text/javascript" src="js/markerwithlabel.js"></script>
 <script type="text/javascript" src="js/gmap3.min.js"></script>
 
-<?php if (!$isWindows) { ?>
-	<script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
-	<script type="text/javascript" src="js/jquery.mCustomScrollbar.min.js"></script>
-<?php } else {?>
-	<script type="text/javascript" src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-<?php } ?>
+
+<script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
+<script type="text/javascript" src="js/jquery.mCustomScrollbar.min.js"></script>
+
 
 <!-- /// Vegas ////////  -->
 <script type="text/javascript" src="js/jquery.vegas.js"></script>

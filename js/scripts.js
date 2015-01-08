@@ -1,3 +1,14 @@
+	// plugtrade.com - jQuery detect vertical scrollbar function //
+	(function($) {
+	    $.fn.has_scrollbar = function() {
+	        var divnode = this.get(0);
+	        if(divnode.scrollHeight > divnode.clientHeight)
+	            return true;
+	    }
+	})(jQuery);
+
+
+
 /* ==========================================================================
    ieViewportFix - fixes viewport problem in IE 10 SnapMode and IE Mobile 10
    ========================================================================== */

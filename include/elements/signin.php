@@ -47,9 +47,9 @@
 						<div class="col-sm-4 col-xs-4 no_padding_left_right custom_date_border">
 							<span class="custom-dropdown triple_date">
 							    <select>
-							        <option>day</option>
-							        <option>1</option>  
-							        <option>2</option>
+							        <option>year</option>
+							        <option>2014</option>  
+							        <option>2015</option>
 							    </select>
 							</span>
 						</div>
@@ -65,9 +65,9 @@
 						<div class="col-sm-4 col-xs-4 no_padding_left_right">
 							<span class="custom-dropdown triple_date">
 							    <select>
-							        <option>year</option>
-							        <option>2014</option>  
-							        <option>2015</option>
+							        <option>day</option>
+							        <option>1</option>  
+							        <option>2</option>
 							    </select>
 							</span>
 						</div>
@@ -106,9 +106,9 @@
 						<div class="col-sm-4 col-xs-4 no_padding_left_right custom_date_border">
 							<span class="custom-dropdown triple_date">
 							    <select>
-							        <option>day</option>
-							        <option>1</option>  
-							        <option>2</option>
+							        <option>year</option>
+							        <option>2014</option>  
+							        <option>2015</option>
 							    </select>
 							</span>
 						</div>
@@ -124,9 +124,9 @@
 						<div class="col-sm-4 col-xs-4 no_padding_left_right">
 							<span class="custom-dropdown triple_date">
 							    <select>
-							        <option>year</option>
-							        <option>2014</option>  
-							        <option>2015</option>
+							        <option>day</option>
+							        <option>1</option>  
+							        <option>2</option>
 							    </select>
 							</span>
 						</div>
@@ -172,9 +172,9 @@
 						<div class="col-sm-4 col-xs-4 no_padding_left_right custom_date_border">
 							<span class="custom-dropdown triple_date">
 							    <select>
-							        <option>day</option>
-							        <option>1</option>  
-							        <option>2</option>
+							        <option>year</option>
+							        <option>2014</option>  
+							        <option>2015</option>
 							    </select>
 							</span>
 						</div>
@@ -190,12 +190,12 @@
 						<div class="col-sm-4 col-xs-4 no_padding_left_right">
 							<span class="custom-dropdown triple_date">
 							    <select>
-							        <option>year</option>
-							        <option>2014</option>  
-							        <option>2015</option>
+							        <option>day</option>
+							        <option>1</option>  
+							        <option>2</option>
 							    </select>
 							</span>
-						</div> 
+						</div>
 					</div>
 				</div>
 			</div>
@@ -231,9 +231,9 @@
 						<div class="col-sm-4 col-xs-4 no_padding_left_right custom_date_border">
 							<span class="custom-dropdown triple_date">
 							    <select>
-							        <option>day</option>
-							        <option>1</option>  
-							        <option>2</option>
+							        <option>year</option>
+							        <option>2014</option>  
+							        <option>2015</option>
 							    </select>
 							</span>
 						</div>
@@ -249,9 +249,9 @@
 						<div class="col-sm-4 col-xs-4 no_padding_left_right">
 							<span class="custom-dropdown triple_date">
 							    <select>
-							        <option>year</option>
-							        <option>2014</option>  
-							        <option>2015</option>
+							        <option>day</option>
+							        <option>1</option>  
+							        <option>2</option>
 							    </select>
 							</span>
 						</div>

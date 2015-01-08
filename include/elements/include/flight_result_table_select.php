@@ -46,13 +46,13 @@
 						<!-- END route main -->
 						<!-- START route details -->
 						<tr class="expand depart0-365c38f1f56f2c0d6a578ea8d20a5391">
-							<td style="width:20px; padding-top: 22px; border-bottom: 5px solid #B8A57B;"><label
+							<td style="width:20px; padding-top: 22px;"><label
 								class="radio-inline"><input type="radio"
 									id="365c38f1f56f2c0d6a578ea8d20a5391::00" name="Departure"
 									onclick="processRoutes(this.id)"
 									value="365c38f1f56f2c0d6a578ea8d20a5391::00" checked><span
 									class="check checked"></span></label></td>
-							<td style="padding: 0; border-bottom: 5px solid #B8A57B;"
+							<td style="padding: 0;"
 								colspan="4">
 								<table class="flight_detail_table expanded_table">
 									<tbody>
@@ -84,7 +84,7 @@
 									</tbody>
 								</table>
 							</td>
-							<td style="width:90px; padding-top: 22px; border-bottom: 5px solid #B8A57B;"><a
+							<td style="width:90px; padding-top: 22px;"><a
 								href="javascript:showDetail22('depart0-365c38f1f56f2c0d6a578ea8d20a5391');"
 								class="pull-left"><i class="fa fa-minus-circle"></i>details</a></td>
 						</tr>
@@ -123,13 +123,13 @@
 						<!-- END route main -->
 						<!-- START route details -->
 						<tr class="expand depart0-365c38f1f56f2c0d6a578ea8d20a5391">
-							<td style="width:20px; padding-top: 22px; border-bottom: 5px solid #B8A57B;"><label
+							<td style="width:20px; padding-top: 22px;"><label
 								class="radio-inline"><input type="radio"
 									id="365c38f1f56f2c0d6a578ea8d20a5391::00" name="Departure"
 									onclick="processRoutes(this.id)"
 									value="365c38f1f56f2c0d6a578ea8d20a5391::00" checked><span
 									class="check checked"></span></label></td>
-							<td style="padding: 0; border-bottom: 5px solid #B8A57B;"
+							<td style="padding: 0;"
 								colspan="4">
 								<table class="flight_detail_table expanded_table">
 									<tbody>
@@ -161,7 +161,7 @@
 									</tbody>
 								</table>
 							</td>
-							<td style="width:90px; padding-top: 22px; border-bottom: 5px solid #B8A57B;"><a
+							<td style="width:90px; padding-top: 22px;"><a
 								href="javascript:showDetail22('depart0-365c38f1f56f2c0d6a578ea8d20a5391');"
 								class="pull-left"><i class="fa fa-minus-circle"></i>details</a></td>
 						</tr>
@@ -233,13 +233,13 @@
 						<!-- END route main -->
 						<!-- START route details -->
 						<tr class="expand depart0-365c38f1f56f2c0d6a578ea8d20a5391">
-							<td style="width:20px; padding-top: 22px; border-bottom: 5px solid #B8A57B;"><label
+							<td style="width:20px; padding-top: 22px;"><label
 								class="radio-inline"><input type="radio"
 									id="365c38f1f56f2c0d6a578ea8d20a5391::00" name="Departure"
 									onclick="processRoutes(this.id)"
 									value="365c38f1f56f2c0d6a578ea8d20a5391::00" checked><span
 									class="check checked"></span></label></td>
-							<td style="padding: 0; border-bottom: 5px solid #B8A57B;"
+							<td style="padding: 0;"
 								colspan="4">
 								<table class="flight_detail_table expanded_table">
 									<tbody>
@@ -271,7 +271,7 @@
 									</tbody>
 								</table>
 							</td>
-							<td style="width:90px; padding-top: 22px; border-bottom: 5px solid #B8A57B;"><a
+							<td style="width:90px; padding-top: 22px;"><a
 								href="javascript:showDetail22('depart0-365c38f1f56f2c0d6a578ea8d20a5391');"
 								class="pull-left"><i class="fa fa-minus-circle"></i>details</a></td>
 						</tr>

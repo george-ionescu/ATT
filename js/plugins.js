@@ -62,6 +62,10 @@ function loadBackgroundSlideshow(slideArray){
 			window.location = 'book_assisted.php';
 		});
 		
+		//resize column height for scroll
+		var h = $(window).height() - $('.header').height() - $('.footer').height() - 60;
+		$('.column_content').height(h);		
+		
 		
 		//speech bubble text
 		$('.marquee').marquee({
@@ -199,7 +203,7 @@ function loadBackgroundSlideshow(slideArray){
 		};
         
 		if ($(window).width() >= 1024){
-			$(".column_content").mCustomScrollbar(scrollOptions);
+			//$(".column_content").mCustomScrollbar(scrollOptions);
 		}
         
         
@@ -247,6 +251,10 @@ function loadBackgroundSlideshow(slideArray){
 	    } else if ($(".vegas-background").length == 0 && newWindowWidth > 1024) {
 	        loadBackgroundSlideshow(slideArray);
 	    }
+	    
+	    //resize column height for scroll
+		var h = $(window).height() - $('.header').height() - $('.footer').height() - 60;
+		$('.column_content').height(h);
 	});
 
 })(window.jQuery);

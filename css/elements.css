@@ -99,7 +99,7 @@ input[placeholder], [placeholder], *[placeholder] {
 	background-color: rgba(36, 37, 41, 0.95) !important;
 }
 .maro_background{
-	background-color:#B8A57B !important;
+	background-color:#868686 !important;
 }
 
 
@@ -212,7 +212,7 @@ input[placeholder], [placeholder], *[placeholder] {
     margin-bottom:0 !important;
 }
 .horizontal_line span {
-    background: none repeat scroll 0 0 #B8A57B;
+    background: none repeat scroll 0 0 #868686;
     padding: 0 10px;
 	font-family: 'Ubuntu', sans-serif;
 	font-weight: 300;
@@ -220,18 +220,21 @@ input[placeholder], [placeholder], *[placeholder] {
 	line-height:16px;
 }
 .horizontal_line_black{
-	background: url("../images/horizontal-line-black.png") repeat-x scroll 0 5px rgba(0, 0, 0, 0);
+	background: url("../images/horizontal-line.png") repeat-x scroll 0 5px rgba(0, 0, 0, 0);
     text-align: center !important;
     width: 100%;
 	margin-bottom:0px !important;
 }
 .horizontal_line_black span {
-    background: none repeat scroll 0 0 #718181;
+    background: none repeat scroll 0 0 #868686;
     padding: 0 10px;
 	font-family: 'Ubuntu', sans-serif;
 	font-weight: 300;
 	font-size: 14px;
 	line-height:16px;
+}
+.expand .horizontal_line_black span{
+	background: none repeat scroll 0 0 #fff;
 }
 
 .btn-big{
