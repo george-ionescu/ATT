@@ -1160,6 +1160,10 @@ p.month{
 		font-size:12px;
 	}
 	
+	
+}
+
+@media (max-width: 1750px) {
 	.custom-dropdown.triple_date select{
 		width: 160%;
 	}
