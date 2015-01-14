@@ -18,7 +18,7 @@
 							column-close="column2" column-open="column2"
 							href="include/pages/book_directly/flights.php"> <span
 							class="sidebar">Flights</span> <img
-							class="img-responsive col-xs-12" src="images/tab.jpg" alt="" />
+							class="img-responsive col-xs-12" src="images/avion.jpg" alt="" />
 						</a>
 					</div>
 				</div>
@@ -28,7 +28,7 @@
 							column-close="column2" column-open="column2"
 							href="include/pages/book_directly/hotels.php"> <span
 							class="sidebar">Hotels</span> <img
-							class="img-responsive col-xs-12" src="images/tab.jpg" alt="" />
+							class="img-responsive col-xs-12" src="images/hotel.jpg" alt="" />
 						</a>
 					</div>
 				</div>
@@ -38,7 +38,7 @@
 							column-close="column2" column-open="column2"
 							href="include/pages/book_directly/flights_hotels.php"> <span
 							class="sidebar">Flights & Hotels</span> <img
-							class="img-responsive col-xs-12" src="images/tab.jpg" alt="" />
+							class="img-responsive col-xs-12" src="images/fh.jpg" alt="" />
 						</a>
 					</div>
 				</div>
@@ -48,7 +48,7 @@
 							column-close="column2" column-open="column2"
 							href="include/pages/book_directly/trip_add_ons.php"> <span
 							class="sidebar">Trip add-ons</span> <img
-							class="img-responsive col-xs-12" src="images/tab.jpg" alt="" />
+							class="img-responsive col-xs-12" src="images/add-on.jpg" alt="" />
 						</a>
 					</div>
 				</div>

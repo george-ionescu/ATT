@@ -12,7 +12,7 @@
 						<tr>
 							<td style="vertical-align: top;">
 								<div style="position: relative; display: block; margin-right: 10px;">
-									<span class="room_detail">details</span> 
+									<span class="room_detail"><i class="fa fa-info-circle"></i></span> 
 									<img class="img-responsive col-xs-12 nopadding service_image" src="images/service_icon.jpeg" alt="" />
 								</div>
 							</td>

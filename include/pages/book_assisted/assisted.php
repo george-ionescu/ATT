@@ -1,7 +1,7 @@
 <h1 class="pull-right">Trip Information</h1>
 <div class="clearfix"></div>
 
-<div class="column_content padding_column_content full_height">
+<div class="column_content padding_column_content full_height form_tab">
 	<form id="flights_form" class="form-horizontal custom_form" role="form" method="post" action="/">
 		
 		<div id="hotel_trip" style="margin-top: 15px;">
@@ -25,7 +25,7 @@
 			var oldSlide = $('#column3');
 			var newSlide = $('#column3');
 			var url = 'include/elements/load.php?page=sort_flight_hotel';
-			var class_bootstrap = 'col-md-3';
+			var class_bootstrap = 'col-md-6';
 			
 			if (oldSlide && newSlide && url != '#'){
 				changeSlide(oldSlide, newSlide, url, class_bootstrap);
@@ -45,7 +45,7 @@
 				var oldSlide = $('#column2');
 				var newSlide = $('#column2');
 				var url = 'include/pages/book_assisted/assisted_info.php';
-				var class_bootstrap = 'col-md-3';
+				var class_bootstrap = 'col-md-6';
 				
 				if (oldSlide && newSlide && url != '#'){
 					changeSlide(oldSlide, newSlide, url, class_bootstrap);

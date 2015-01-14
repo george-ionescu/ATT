@@ -40,10 +40,13 @@
 
 <!-- /// jQuery Plugins ////////  -->
 <script type="text/javascript" src="js/jquery-ui-1.10.4.min.js"></script>
+<!-- <script type="text/javascript" src="https://raw.githubusercontent.com/furf/jquery-ui-touch-punch/master/jquery.ui.touch-punch.min.js"></script> -->
 <script type="text/javascript" src="js/jquery.easing.min.js"></script>
 <script type="text/javascript" src="js/jquery.form.min.js"></script>
 <script type="text/javascript" src="js/jquery.validate.min.js"></script>
 <script type="text/javascript" src="js/jquery.viewport.js"></script>
+
+<script type="text/javascript" src="js/jquery.nouislider.all.min.js"></script>
 
 <!-- <script type="text/javascript" src="js/jQAllRangeSliders-min.js"></script> -->
 
@@ -52,10 +55,10 @@
 <script type="text/javascript" src="js/markerwithlabel.js"></script>
 <script type="text/javascript" src="js/gmap3.min.js"></script>
 
-
+<!--
 <script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
 <script type="text/javascript" src="js/jquery.mCustomScrollbar.min.js"></script>
-
+-->
 
 <!-- /// Vegas ////////  -->
 <script type="text/javascript" src="js/jquery.vegas.js"></script>

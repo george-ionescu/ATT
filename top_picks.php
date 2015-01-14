@@ -85,15 +85,23 @@
 							<div class="form-group">
 								
 								
-								<div class="row_form">
+								<div class="row_form margin_top_block">
 									<div class="custom_input_slide small">
 										<p class="box_title pull-left">rooms</p>
 										
 										<div class="custom_input_slide_content rooms small pull-right room">
 											<a href="#" class="counterDown arrow_left pull-left"><i class="fa fa-caret-left"></i></a>
 											<div class="pull-left">
-												<span class="counterValue number_big pull-left">01</span>
-												<div class="clearfix"></div>
+												<span class="custom-dropdown small">
+												    <select id="counterRoom">
+												        <option value="1">01</option>
+												        <option value="2">02</option>
+												        <option value="3">03</option>
+												        <option value="4">04</option>
+												        <option value="5">05</option>
+												        <option value="6">06</option>
+												    </select>
+												</span>
 											</div>
 											<a href="#" class="counterUp arrow_right pull-left"><i class="fa fa-caret-right"></i></a>
 											<div class="clearfix"></div>
@@ -101,8 +109,11 @@
 									</div>
 								</div>
 								<div class="clearfix"></div>
-									
-								<?php include $_SERVER['DOCUMENT_ROOT'] . '/include/elements/rooms_flight.php'; ?>
+								
+								
+								<?php include $_SERVER['DOCUMENT_ROOT'] . '/include/elements/rooms.php'; ?>
+								
+								<div class="clearfix"></div>
 							</div>
 						</div>
 				

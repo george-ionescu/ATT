@@ -17,13 +17,13 @@
 		</div>
 		<div class="clearfix"></div>
 		
-		<div id="round_trip">
+		<div id="round_trip" class="form_tab">
 			<?php include $_SERVER['DOCUMENT_ROOT'] . '/include/pages/book_directly/include/round_trip.php'; ?>
 		</div>
-		<div id="one_way" style="display:none;">
+		<div id="one_way" class="form_tab" style="display:none;">
 			<?php include $_SERVER['DOCUMENT_ROOT'] . '/include/pages/book_directly/include/one_way.php'; ?>
 		</div>
-		<div id="multi_city" style="display:none;">
+		<div id="multi_city" class="form_tab" style="display:none;">
 			<?php include $_SERVER['DOCUMENT_ROOT'] . '/include/pages/book_directly/include/multi_city.php'; ?>
 		</div>
 		
@@ -44,7 +44,7 @@
 			var oldSlide = $('#column3');
 			var newSlide = $('#column3');
 			var url = 'include/elements/load.php?page=sort_flight';
-			var class_bootstrap = 'col-md-3';
+			var class_bootstrap = 'col-md-6';
 			
 			if (oldSlide && newSlide && url != '#'){
 				changeSlide(oldSlide, newSlide, url, class_bootstrap);

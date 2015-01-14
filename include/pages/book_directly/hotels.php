@@ -4,7 +4,7 @@
 <div class="column_content padding_column_content full_height">
 	<form id="flights_form" class="form-horizontal custom_form" role="form" method="post" action="/">
 		
-		<div id="hotel_trip" style="margin-top: 15px;">
+		<div id="hotel_trip" class="form_tab" style="margin-top: 15px;">
 			<?php include $_SERVER['DOCUMENT_ROOT'] . '/include/pages/book_directly/include/hotel.php'; ?>
 		</div>
 		
@@ -26,7 +26,7 @@
 			var oldSlide = $('#column3');
 			var newSlide = $('#column3');
 			var url = 'include/elements/load.php?page=sort_hotel';
-			var class_bootstrap = 'col-md-3';
+			var class_bootstrap = 'col-md-6';
 			
 			if (oldSlide && newSlide && url != '#'){
 				changeSlide(oldSlide, newSlide, url, class_bootstrap);

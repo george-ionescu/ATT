@@ -30,7 +30,8 @@ if ($_GET['type'] == 5){
 						<tr>
 							<td style="vertical-align: top; width:55%;">
 								<div style="position: relative; display: block; margin-right: 15px;">
-									<span class="room_detail">room details</span> 
+									<span class="room_detail"><i class="fa fa-info-circle"></i></span> 
+									
 									<div class="clearfix"></div>
 									<div style="display: block; max-height:110px; overflow:hidden;">
 										<img class="img-responsive col-xs-12 nopadding" src="images/backendtbs.cloudapp.net.jpg" alt="" />
@@ -50,12 +51,12 @@ if ($_GET['type'] == 5){
 						</tr>
 						<tr>
 							<td class="special_link" colspan="2" style="padding-top:5px;">
-								<a href="#" class="map">map view</a>
+								<a href="#" class="map"><i class="fa fa-map-marker"></i> map view</a>
 								<?php if ($_GET['type'] == 3 || $_GET['type'] == 4) { ?>
-								| <a class="compare" href="#">compare price</a>
+								| <a class="compare" href="#"><i class="fa fa-files-o"></i> compare price</a>
 								<?php } ?>
 								<?php if ($_GET['type'] == 2 || $_GET['type'] == 4) { ?>
-								| <a class="flight" href="#">flight included</a>
+								| <a class="flight" href="#"><i class="fa fa-plane"></i> flight included</a>
 								<?php } ?>
 							</td>
 						</tr>

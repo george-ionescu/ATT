@@ -1,15 +1,7 @@
 <div class="form-group has-feedback">
-	<label class="control-label input_label col-sm-2 col-xs-3 no_padding_left_right" for="inputSuccess3">&nbsp;&nbsp;&nbsp;from:</label>
-	<div class="col-sm-10 col-xs-9 no_padding_left_right">
-		<input type="text" class="autocomplete_input form-control" id="inputSuccess3" placeholder="city/airport name"> 
-		<span class="glyphicon glyphicon-map-marker form-control-feedback"></span>
-	</div>
-</div>
-<div class="form-group  has-feedback">
-	<label class="control-label input_label col-sm-2 col-xs-3 no_padding_left_right" for="inputSuccess3">&nbsp;&nbsp;&nbsp;to:</label>
-	<div class="col-sm-10 col-xs-9 no_padding_left_right">
-		<input type="text" class="autocomplete_input form-control" id="inputSuccess3" placeholder="city/airport name"> 
-		<span class="glyphicon glyphicon-map-marker form-control-feedback"></span>
+	<label class="control-label input_label col-sm-3 col-xs-3 no_padding_left_right" for="inputSuccess3">&nbsp;&nbsp;&nbsp;city:</label>
+	<div class="col-sm-9 col-xs-9 no_padding_left_right">
+		<input type="text" class="autocomplete_input form-control" id="inputSuccess3" placeholder="city name"> 
 	</div>
 </div>
 <div class="clearfix"></div>
@@ -63,7 +55,7 @@
 </div>
 <div class="clearfix"></div>
 
-<div class="row_form row_form_adult margin_top_block">
+<div class="row_form row_form_adult hotel_form margin_top_block">
 	<div class="col-md-6 col-xs-6 short_padding pull-left">
 		<div class="custom_input_slide">
 			<p class="box_title">adults</p>
@@ -109,6 +101,7 @@
 					        <option value="6">06</option>
 					        <option value="7">07</option>
 					        <option value="8">08</option>
+					        <option value="9">09</option>
 					    </select>
 					</span>
 					<div class="clearfix"></div>

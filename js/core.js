@@ -165,6 +165,10 @@ function openSlide(newSlide, url, class_bootstrap){
 						var h = $(window).height() - $('.header').height() - $('.footer').height() - 60;
 						$('.column_content').height(h);
 						
+						$(".column_content").bind('scroll', function() {
+						   columnScrollAction();
+						}); 
+						
 						
 						//hide previous columns on mobile
 						if (newWindowWidth < 1024){
@@ -220,6 +224,9 @@ function openSlide(newSlide, url, class_bootstrap){
 				var h = $(window).height() - $('.header').height() - $('.footer').height() - 60;
 				$('.column_content').height(h);
 				
+				$(".column_content").bind('scroll', function() {
+				   columnScrollAction();
+				}); 
 				
 				for (i=1; i<slideId; i++){
 					$('#column' + i).removeClass('column_disabled');
@@ -301,7 +308,7 @@ function closeAllSlidesAndOpen2(oldSlide, newSlide, url, class_bootstrap){
 
 
 function updateAllScrolls(){
-	if ($(window).width() < 1024){
+	/*if ($(window).width() < 1024){
 		console.log('disable all scrolls');
 		$("#column1 .column_content").mCustomScrollbar('disable');
 		$("#column2 .column_content").mCustomScrollbar('disable');
@@ -312,7 +319,7 @@ function updateAllScrolls(){
 		$("#column2 .column_content").mCustomScrollbar("update");
 		$("#column3 .column_content").mCustomScrollbar("update");
 		$("#column4 .column_content").mCustomScrollbar("update");
-	}
+	}*/
 }
 
 function resetSlides(){
@@ -342,18 +349,22 @@ function changeSlide(oldSlide, newSlide, url, class_bootstrap){
 function toggleSearchOptions(){
 	$('#search_options').toggle();
 	if (!$('#search_options').is(':visible')){
-		$('.search_options .fa').removeClass('fa-minus-circle').addClass('fa-plus-circle');
+		$('.search_options').html('<i class="fa fa-plus-circle"></i>more options');
+		//$('.search_options .fa').removeClass('fa-minus-circle').addClass('fa-plus-circle');
 	} else {
-		$('.search_options .fa').removeClass('fa-plus-circle').addClass('fa-minus-circle');
+		$('.search_options').html('<i class="fa fa-minus-circle"></i>less options');
+		//$('.search_options .fa').removeClass('fa-plus-circle').addClass('fa-minus-circle');
 	}
 	updateAllScrolls();
 }
 function closeSearchOptions(){
 	$('#search_options').hide();
 	if (!$('#search_options').is(':visible')){
-		$('.search_options .fa').removeClass('fa-minus-circle').addClass('fa-plus-circle');
+		$('.search_options').html('<i class="fa fa-plus-circle"></i>more options');
+		//$('.search_options .fa').removeClass('fa-minus-circle').addClass('fa-plus-circle');
 	} else {
-		$('.search_options .fa').removeClass('fa-plus-circle').addClass('fa-minus-circle');
+		$('.search_options').html('<i class="fa fa-minus-circle"></i>less options');
+		//$('.search_options .fa').removeClass('fa-plus-circle').addClass('fa-minus-circle');
 	}
 	updateAllScrolls();
 }
@@ -410,8 +421,7 @@ function resetChildDetails(){
 function resetChildAges(){
 	resetChildDetails();
 	
-	$('.age1').show();
-	for (i=2; i<=5; i++){
+	for (i=1; i<=5; i++){
 		$('.age' + i).hide();
 	}
 }
@@ -457,69 +467,244 @@ function callFormEvents(){
 	});
 	$('.open_calendar').parent().parent().click(function(event){
 		event.preventDefault();
-		$(".datepicker").hide();
+		event.stopPropagation();
+		
+		$(this).closest('.form_tab').find(".datepicker").hide();
 		
 		activeCalendarContainer = $(this);
-		$(this).find(".datepicker").show();
+		
+		var targetDiv = $(this).attr('targetdiv');
+		$(this).closest('.form_tab').find("#datepicker_" + targetDiv).show();
+		$(this).closest('.form_tab').find('.open_calendar').each(function(){
+			if (targetDiv != 'single'){
+				$(this).parent().parent().addClass('disabled_div');
+			}
+			$(this).parent().parent().addClass('nomargin_bottom');
+		});
+		$(this).removeClass('disabled_div');
 	});
 	
     //datepicker
-	$( "#datepicker_single" ).datepicker({
-    	dateFormat: 'dd M yy',
-		changeMonth: true,
-	    changeYear: true,
-	    onSelect: function(dateText){
-	        $(this).hide();
-	        //write value in box
-	        var tmpData = dateText.split(" ");
-	        $(this).parent().find('.day').html(tmpData[0]);
-	        $(this).parent().find('.month').html(tmpData[1]);
-	        $(this).parent().find('.year').html(tmpData[2]);
-	        //
-	        $( "#datepicker_to" ).datepicker( "option", "minDate", dateText );
-	    }
-    });
-    $( "#datepicker_from" ).datepicker('setDate', new Date());
-	$( "#datepicker_from" ).datepicker({
-    	dateFormat: 'dd M yy',
-		changeMonth: true,
-	    changeYear: true,
-	    onSelect: function(dateText){
-	        $(this).hide();
-	        //write value in box
-	        var tmpData = dateText.split(" ");
-	        $(this).parent().find('.day').html(tmpData[0]);
-	        $(this).parent().find('.month').html(tmpData[1]);
-	        $(this).parent().find('.year').html(tmpData[2]);
-	        //
-	        $( "#datepicker_to" ).datepicker( "option", "minDate", dateText );
-	    }
-    });
-    $( "#datepicker_from" ).datepicker('setDate', new Date());
-    $( "#datepicker_to" ).datepicker({
-    	dateFormat: 'dd M yy',
-		changeMonth: true,
-	    changeYear: true,
-	    onSelect: function(dateText){
-	        $(this).hide();
-	        //write value in box
-	        var tmpData = dateText.split(" ");
-	        $(this).parent().find('.day').html(tmpData[0]);
-	        $(this).parent().find('.month').html(tmpData[1]);
-	        $(this).parent().find('.year').html(tmpData[2]);
-	        //
-	        //$( "#datepicker_from" ).datepicker( "option", "maxDate", dateText );
-	    }
-    });
-    $( "#datepicker_to" ).datepicker('setDate', new Date());
-    $("#datepicker_single").hide();
-    $("#datepicker_to").hide();
-    $("#datepicker_from").hide();
-    
-    
+	$(".datepicker").each(function(){
+		if ($(this).attr('id') == 'datepicker_single'){
+			$(this).datepicker({
+		    	dateFormat: 'dd M yy',
+				changeMonth: true,
+			    changeYear: true,
+			    onSelect: function(dateText){
+					$('.datepicker').each(function(){
+			    		if ($(this).is(':visible')){
+			    			//write value in box
+					        var tmpData = dateText.split(" ");
+					        
+					        $(this).closest('.form_tab').find('.open_calendar').each(function(){
+								if ($(this).parent().parent().attr('targetdiv') == 'single'){
+									$(this).parent().parent().find('.day').html(tmpData[0]);
+									$(this).parent().parent().find('.month').html(tmpData[1]);
+									$(this).parent().parent().find('.year').html(tmpData[2]);
+								}
+							});
+			    		}
+			    	});
+			    	$(".datepicker").hide();
+			    	//
+			    	$('.custom_input_slide').removeClass('disabled_div');
+					$('.custom_input_slide').removeClass('nomargin_bottom');
+			        //
+					$(this).closest('.row_form_calendar').find( "#datepicker_to" ).datepicker( "option", "minDate", dateText );
+			    }
+		    });
+			$(this).hide();
+		}
+		if ($(this).attr('id') == 'datepicker_from'){
+			$(this).datepicker({
+		    	dateFormat: 'dd M yy',
+				changeMonth: true,
+			    changeYear: true,
+			    minDate: 0,
+			    onSelect: function(dateText){
+			    	$('.datepicker').each(function(){
+			    		if ($(this).is(':visible')){
+			    			//write value in box
+					        var tmpData = dateText.split(" ");
+					        //next day
+					        var today = new Date();
+					        today.setDate(tmpData[0]);
+					        var tomorrow = new Date();
+					        tomorrow.setDate(today.getDate()+1);
+					        var tmpData2 = String(tomorrow).split(" ");
+					        
+					        $(this).closest('.form_tab').find('.open_calendar').each(function(){
+								if ($(this).parent().parent().attr('targetdiv') == 'from'){
+									$(this).parent().parent().find('.day').html(tmpData[0]);
+									$(this).parent().parent().find('.month').html(tmpData[1]);
+									$(this).parent().parent().find('.year').html(tmpData[2]);
+								}
+								if ($(this).parent().parent().attr('targetdiv') == 'to'){
+									$(this).parent().parent().find('.day').html(tmpData2[2]);
+									$(this).parent().parent().find('.month').html(tmpData2[1]);
+									$(this).parent().parent().find('.year').html(tmpData2[3]);
+								}
+							});
+			    		}
+			    	});
+			    	$(".datepicker").hide();
+			    	//
+			    	$('.custom_input_slide').removeClass('disabled_div');
+					$('.custom_input_slide').removeClass('nomargin_bottom');
+			        //
+			        $(this).closest('.row_form_calendar').find( "#datepicker_to" ).datepicker( "option", "minDate", dateText );
+
+			    }
+		    });
+			$(this).hide();
+		}
+		if ($(this).attr('id') == 'datepicker_to'){
+			$(this).datepicker({
+		    	dateFormat: 'dd M yy',
+				changeMonth: true,
+			    changeYear: true,
+			    minDate: 0,
+			    onSelect: function(dateText){
+			    	$('.datepicker').each(function(){
+			    		if ($(this).is(':visible')){
+			    			//write value in box
+					        var tmpData = dateText.split(" ");
+					        $(this).closest('.form_tab').find('.open_calendar').each(function(){
+								if ($(this).parent().parent().attr('targetdiv') == 'to'){
+									$(this).parent().parent().find('.day').html(tmpData[0]);
+									$(this).parent().parent().find('.month').html(tmpData[1]);
+									$(this).parent().parent().find('.year').html(tmpData[2]);
+								}
+							});
+			    		}
+			    	});
+			    	$(".datepicker").hide();
+			    	//
+			        $('.custom_input_slide').removeClass('disabled_div');
+					$('.custom_input_slide').removeClass('nomargin_bottom');
+			        //
+					$(this).closest('.row_form_calendar').find( "#datepicker_from" ).datepicker( "option", "maxDate", dateText );
+			    }
+		    });
+			$(this).hide();
+		}
+	});
 	
-	//counter up/down
-    $('.counterUp').unbind();
+
+    
+    //adult & children select
+    $('.custom-dropdown select').change(function(event){
+    	event.preventDefault();
+		event.stopPropagation();
+		
+    	if ($(this).attr('id') == 'counterAdult'){
+    		nrAdult = parseInt($(this).val());
+    		nrChildren = parseInt($(this).closest('.row_form_adult').find('#counterChildren').val());
+    		
+    		console.log(nrAdult);
+    		console.log(nrChildren);
+    		
+    		//restrict
+    		if (!$(this).closest('.row_form_adult').hasClass('hotel_form')){
+    			maxPerson = 9;
+    			
+    			$(this).closest('.row_form_adult').find('#counterChildren').html('');
+        		for (i=0; i<=(maxPerson-nrAdult); i++){
+        			if (i==nrChildren){
+        				$(this).closest('.row_form_adult').find('#counterChildren').append("<option value='"+i+"' selected>0"+i+"</option>");
+        			} else {
+        				$(this).closest('.row_form_adult').find('#counterChildren').append("<option value='"+i+"'>0"+i+"</option>");
+        			}
+        		}
+    		}
+    		
+    		
+    		
+    		//special case for children
+    		if ($(this).closest('.custom_input_slide_content').hasClass('children')){
+    			for (i=1; i<=nrChildren; i++){
+    				$(this).closest('.row_form').parent().find('.age' + i).show();
+    			}
+    			for (i=nrChildren+1; i<=9; i++){
+    				$(this).closest('.row_form').parent().find('.age' + i).hide();
+    			}
+    			
+    			if (nrChildren == 0){
+    				$(this).parent().parent().find('.detail_button').hide();
+    			} else {
+    				$(this).parent().parent().find('.detail_button').show();
+    			}
+    		}
+    	}
+    	if ($(this).attr('id') == 'counterChildren'){
+    		nrAdult = parseInt($(this).closest('.row_form_adult').find('#counterAdult').val());
+    		nrChildren = parseInt($(this).val());
+    		
+    		console.log(nrAdult);
+    		console.log(nrChildren);
+    		
+    		//restrict
+    		if (!$(this).closest('.row_form_adult').hasClass('hotel_form')){
+    			maxPerson = 9;
+    			
+    			$(this).closest('.row_form_adult').find('#counterAdult').html('');
+        		for (i=1; i<=(maxPerson-nrChildren); i++){
+        			if (i==nrAdult){
+        				$(this).closest('.row_form_adult').find('#counterAdult').append("<option value='"+i+"' selected>0"+i+"</option>");
+        			} else {
+        				$(this).closest('.row_form_adult').find('#counterAdult').append("<option value='"+i+"'>0"+i+"</option>");
+        			}
+        		}
+    		}
+    		
+    		//special case for children
+    		if ($(this).closest('.custom_input_slide_content').hasClass('children')){
+    			for (i=1; i<=nrChildren; i++){
+    				$(this).closest('.row_form').parent().find('.age' + i).show();
+    			}
+    			for (i=nrChildren+1; i<=9; i++){
+    				$(this).closest('.row_form').parent().find('.age' + i).hide();
+    			}
+    			
+    			if (nrChildren == 0){
+    				$(this).parent().parent().find('.detail_button').hide();
+    			} else {
+    				$(this).parent().parent().find('.detail_button').show();
+    			}
+    		}
+    	}
+    	if ($(this).attr('id') == 'counterRoom'){
+    		nrRoom = parseInt($(this).val());
+        	
+        	//special case for room
+    		if ($(this).closest('.custom_input_slide_content').hasClass('room')){
+    			for (i=1; i<=nrRoom; i++){
+    				$('#room' + i).show();
+    			}
+    			for (i=nrRoom+1; i<=5; i++){
+    				$('#room' + i).hide();
+    			}
+    			
+    			if (nrRoom > 1){
+    				$('#room1 .flight_title').show();
+    			} else {
+    				$('#room1 .flight_title').hide();
+    			}
+    		}
+    	}
+    });
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    //counter up/down
+    /*$('.counterUp').unbind();
     $('.counterUp').click(function(event){
 		event.preventDefault();
 		event.stopPropagation();
@@ -656,7 +841,7 @@ function callFormEvents(){
 			}
 		}
 		updateAllScrolls();
-	});
+	});*/
 	
 	//autocomplete
 	$(".autocomplete_input").autocomplete({
@@ -676,7 +861,7 @@ function animationDone(){
     	}
     });*/
 	
-	$( "#slider-range" ).slider({
+	/*$( "#slider-range" ).slider({
 		 range: true,
 		 min: 0,
 		 max: 500,
@@ -687,7 +872,19 @@ function animationDone(){
 		 }
 	});
 	$( "#amountUp" ).html( $( "#slider-range" ).slider( "values", 0 ) + " $" );
-	$( "#amountDown" ).html( $( "#slider-range" ).slider( "values", 1 ) + " $" );   
+	$( "#amountDown" ).html( $( "#slider-range" ).slider( "values", 1 ) + " $" ); */
+	
+	$("#slider-range").noUiSlider({
+		start: [73, 200],
+		connect: true,
+		step: 1,
+		range: {
+			'min': 0,
+			'max': 500
+		}
+	}, true);
+	$('#slider-range').Link('lower').to($('#amountUp'));
+	$('#slider-range').Link('upper').to($('#amountDown'));
 	
 	//open/close column
 	$('a.slide').unbind();
@@ -735,6 +932,7 @@ function animationDone(){
 		}
 		
 		if (!$(this).hasClass('active') || foo){
+			$('.special_link a').removeClass('active');
 			$('.hotel_detail').removeClass('active');
 			$(this).addClass('active');
 			
@@ -806,9 +1004,12 @@ function animationDone(){
 		
 		
 		if (!$(this).hasClass('active') || foo){
+			$('.special_link a').removeClass('active');
 			$('.hotel_detail').removeClass('active');
 			$(this).addClass('active');
 			$(this).closest('.hotel_detail').addClass('active');
+			
+			
 			
 			$('#column3').hide();
 			$('#column4').hide();
@@ -885,6 +1086,7 @@ function columnScrollAction(){
 		marginTop = hotelObject.offset().top - $('.header').height(); 
 		//stick to bottom
 		var diff = 0;
+		console.log(marginTop + hotelContainer.height());
 		if ((marginTop + hotelContainer.height()) > ($('#column2').height() - $('.footer').height() + 10)){
 			diff = marginTop + hotelContainer.height() - $('#column2').height() + $('.footer').height() - 10;
 			marginTop = marginTop - diff;
@@ -905,7 +1107,9 @@ function columnScrollAction(){
 
 
 
-
+$(".column_content").bind('scroll', function() {
+   columnScrollAction();
+}); 
 
 $(document).ready(function(){
 	animationDone();

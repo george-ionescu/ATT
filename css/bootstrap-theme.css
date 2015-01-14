@@ -24,21 +24,23 @@
 .btn-info.active,
 .btn-warning.active,
 .btn-danger.active {
-  background-color: #5cd3fe;
+  background-color: #feba02;
 }
 .btn:active,
 .btn.active {
-  background-color: #5cd3fe;
+	color:#fff;
+  background-color: #feba02;
 }
 .btn-default {
   font-family: 'Ubuntu', sans-serif;
 	font-weight: 300;
 	font-size: 14px;
-	padding: 4px 12px;
+	padding: 9px 20px;
 	text-transform: uppercase;
-	color: #000;
-	background-color: #ffffff;
-	border-color: #ffffff;
+	font-weight:400;
+	background-color: #feba02;
+	border-color: #feba02;
+	color:#fff;
 	border-radius: 0;
 	-webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.5);
 	-moz-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.5);
@@ -46,15 +48,22 @@
 }
 .btn-default:hover,
 .btn-default:focus {
-  background-color: #e0e0e0;
+  background-color: #fff;
+	color:#feba02;
   background-position: 0 -15px;
-	padding: 5px 13px !important;
+	padding: 10px 21px !important;
 	font-size: 14px;
 	border:none;
+	outline: none;
+ -moz-outline: none;
 }
 .btn-default:active,
 .btn-default.active {
-  background-color: #5cd3fe;
+	color:#fff;
+  background-color: #feba02;
+  border:none;
+	outline: none;
+ -moz-outline: none;
 }
 .btn-primary {
   background-image: -webkit-linear-gradient(top, #428bca 0%, #2d6ca2 100%);

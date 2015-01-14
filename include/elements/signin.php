@@ -333,7 +333,7 @@
 			    		var oldSlide = $('#column2');
 		    			var newSlide = $('#column2');
 		    			var url = 'include/elements/billing.php';
-		    			var class_bootstrap = 'col-md-6';
+		    			var class_bootstrap = 'col-md-9';
 		    		<?php } ?>
 	    			
 	    			if (oldSlide && newSlide && url != '#'){

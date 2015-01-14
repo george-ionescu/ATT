@@ -1,7 +1,7 @@
 <h1 class="pull-right">Main Services</h1>
 <div class="clearfix"></div>
 
-<div class="column_content padding_column_content full_height">
+<div class="column_content padding_column_content full_height form_tab">
 	<form class="form-horizontal custom_form" role="form" method="post" action="">
 		<label class="radio-inline"> <input type="checkbox" id="inlineCheckbox1" name="gr1" value="option1" checked><span class="check"></span> Transport</label> 
 		<div class="clearfix"></div>
@@ -23,15 +23,14 @@
 		<div class="row_form">
 			<p class="flight_title first">Service dates</p>
 			<div class="col-md-6 col-xs-6 short_padding pull-left">
-				<div class="custom_input_slide">
+				<div class="custom_input_slide" targetdiv="single">
 					<div class="custom_input_slide_content">
-						<div id="datepicker_from" class="datepicker"></div>
 						<div class="pull-left">
-							<span class="day number_big pull-left">01</span>
+							<span class="day number_big pull-left"><?php echo date("d"); ?></span>
 							<div class="number_small pull-left">
 								<input type="hidden" class="calendar_value" name="" />
-								<p class="month">Dec</p>
-								<p class="year">2014</p>
+								<p class="month"><?php echo date("M"); ?></p>
+								<p class="year"><?php echo date("Y"); ?></p>
 							</div>
 							<div class="clearfix"></div>
 						</div>
@@ -41,6 +40,15 @@
 				</div>
 			</div>
 		</div>
+		<div class="clearfix"></div>
+		
+		<div class="row_form_calendar">
+			<div class="col-md-12 nopadding">
+				<div id="datepicker_single" class="datepicker"></div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<div class="clearfix"></div>
 
 		<div class="row_form">
 			<p class="flight_title first">1st room</p>
@@ -93,16 +101,15 @@
 		<div class="row_form">
 			<p class="flight_title first">Service dates</p>
 			<div class="col-md-6 col-xs-6 short_padding pull-left">
-				<div class="custom_input_slide">
+				<div class="custom_input_slide" targetdiv="from">
 					<p class="box_title">depart</p>
 					<div class="custom_input_slide_content">
-						<div id="datepicker_single" class="datepicker"></div>
 						<div class="pull-left">
-							<span class="day number_big pull-left">01</span>
+							<span class="day number_big pull-left"><?php echo date("d"); ?></span>
 							<div class="number_small pull-left">
 								<input type="hidden" class="calendar_value" name="" />
-								<p class="month">Dec</p>
-								<p class="year">2014</p>
+								<p class="month"><?php echo date("M"); ?></p>
+								<p class="year"><?php echo date("Y"); ?></p>
 							</div>
 							<div class="clearfix"></div>
 						</div>
@@ -112,16 +119,15 @@
 				</div>
 			</div>
 			<div class="col-md-6 col-xs-6 short_padding pull-left">
-				<div class="custom_input_slide">
+				<div class="custom_input_slide" targetdiv="to">
 					<p class="box_title">return</p>
 					<div class="custom_input_slide_content">
-						<div id="datepicker_to" class="datepicker"></div>
 						<div class="pull-left">
-							<span class="day number_big pull-left">01</span>
+							<span class="day number_big pull-left"><?php echo date('d', strtotime('+1 day')); ?></span>
 							<div class="number_small pull-left">
 								<input type="hidden" class="calendar_value" name="" />
-								<p class="month">Dec</p>
-								<p class="year">2014</p>
+								<p class="month"><?php echo date("M", strtotime('+1 day')); ?></p>
+								<p class="year"><?php echo date("Y", strtotime('+1 day')); ?></p>
 							</div>
 							<div class="clearfix"></div>
 						</div>
@@ -131,6 +137,16 @@
 				</div>
 			</div>
 		</div>
+		<div class="clearfix"></div>
+		
+		<div class="row_form_calendar">
+			<div class="col-md-12 nopadding">
+				<div id="datepicker_from" class="datepicker"></div>
+				<div id="datepicker_to" class="datepicker"></div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<div class="clearfix"></div>
 
 		<div class="row_form">
 			<p class="flight_title first">1st room</p>

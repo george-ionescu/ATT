@@ -33,6 +33,7 @@ if (preg_match('/(?i)Windows/', $_SERVER['HTTP_USER_AGENT']) && preg_match('/(?i
 		
 		<!-- /// jQuery UI ////////  -->
 		<link rel="stylesheet" type="text/css" media="screen" href="css/ui-custom/jquery-ui-1.10.4.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="css/jquery.nouislider.css" />
 		
 		<link rel="stylesheet" type="text/css" media="screen" href="css/jquery.mCustomScrollbar.css" />
 		

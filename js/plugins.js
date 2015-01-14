@@ -35,7 +35,7 @@ function loadBackgroundSlideshow(slideArray){
 			$('.slide-link').removeClass('current-slide');
 			$('#slide-link-' + step).addClass('current-slide');
 		}
-	})('overlay');
+	})('');
 	
 	$('.slide-link').click(function(){
 		id = $(this).attr('id');

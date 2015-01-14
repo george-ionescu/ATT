@@ -86,13 +86,17 @@
 		updateAllScrolls();
 	}
 
+	$('.new_design').click(function(){
+		showDetail22($(this).attr('id'));
+	});
+
 	$('#book_button').click(function(event){
 		event.preventDefault();
 	
 		var oldSlide = $('#column2');
 		var newSlide = $('#column2');
 		var url = 'include/elements/signin.php';
-		var class_bootstrap = 'col-md-6';
+		var class_bootstrap = 'col-md-9';
 		
 		if (oldSlide && newSlide && url != '#'){
 			changeSlide(oldSlide, newSlide, url, class_bootstrap);

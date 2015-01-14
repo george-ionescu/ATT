@@ -99,7 +99,7 @@
 			var oldSlide = $('#column3');
 			var newSlide = $('#column3');
 			var url = 'include/elements/load.php?page=sort_flight_hotel_week';
-			var class_bootstrap = 'col-md-3';
+			var class_bootstrap = 'col-md-6';
 			
 			if (oldSlide && newSlide && url != '#'){
 				changeSlide(oldSlide, newSlide, url, class_bootstrap);

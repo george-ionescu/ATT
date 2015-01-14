@@ -2,10 +2,10 @@
 <div class="clearfix"></div>
 	<div class="column_content nopadding full_height">
 	<ul class="menu_column hotel">
-						<li class="active"><a href="#"><span class="big">28</span> Nov <span class="big_line"> - </span> <span class="big">1</span> Dec</a> <a href="#" class="view_but pull-right"><i class="fa fa-minus-circle"></i>view</a></li>		
-						<li><a href="#"><span class="big">28</span> Nov <span class="big_line"> - </span> <span class="big">1</span> Dec</a> <a href="#" class="view_but pull-right"><i class="fa fa-plus-circle"></i>view</a></li>	
-						<li><a href="#"><span class="big">28</span> Nov <span class="big_line"> - </span> <span class="big">1</span> Dec</a> <a href="#" class="view_but pull-right"><i class="fa fa-plus-circle"></i>view</a></li>	
-						<li><a href="#"><span class="big">28</span> Nov <span class="big_line"> - </span> <span class="big">1</span> Dec</a> <a href="#" class="view_but pull-right"><i class="fa fa-plus-circle"></i>view</a></li>		        
+						<li class="active"><a href="#"><span class="big">28</span> Nov <span class="big_line"> - </span> <span class="big">1</span> Dec</a> <a href="#" class="view_but pull-right"></a></li>		
+						<li><a href="#"><span class="big">28</span> Nov <span class="big_line"> - </span> <span class="big">1</span> Dec</a> <a href="#" class="view_but pull-right"></a></li>	
+						<li><a href="#"><span class="big">28</span> Nov <span class="big_line"> - </span> <span class="big">1</span> Dec</a> <a href="#" class="view_but pull-right"></a></li>	
+						<li><a href="#"><span class="big">28</span> Nov <span class="big_line"> - </span> <span class="big">1</span> Dec</a> <a href="#" class="view_but pull-right"></a></li>		        
 					</ul>
 				
 					<h1 class="pull-right" style="margin-top: 10px;">Sort Hotels</h1>
@@ -42,8 +42,11 @@
 			<h1 class="pull-right second-title">Filter Hotels</h1>
 			
 			<div class="row_form">
-				<div class="col-md-12 col-xs-12 short_padding">
+				<div class="col-md-9 col-xs-9 short_padding">
 					<input type="text" class="form-control italic" placeholder="search by hotel name"> 
+				</div>
+				<div class="col-md-3 col-xs-3 short_padding">
+					<button style="width:100%;" class="pull-right btn btn-default book search_hotel" type="submit">ok</button>
 				</div>
 			</div>
 			<div class="row_form">
@@ -108,6 +111,9 @@
 				</div>
 				<div class="clearfix"></div>
 			</div>
+			<div class="clearfix"></div>
+			<br /><br />
+			<a href="#">clear all</a> selections
 		 </form>
 		 </div>
 		</div>       

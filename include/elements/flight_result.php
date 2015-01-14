@@ -2,7 +2,7 @@
     	<div class="clearfix"></div>
     	
     	<div class="column_content padding_column_content full_height">        
-	    	<form class="form-horizontal custom_form maro_background" role="form" method="post" action="/">
+	    	<form class="form-horizontal custom_form" role="form" method="post" action="/">
 		    	<?php include 'include/flight_result_table.php'; ?>
 			    <div class="clearfix"></div>
 	    	</form>
@@ -18,6 +18,10 @@
 
 		updateAllScrolls();
 	}
+
+	$('.new_design').click(function(){
+		showDetail22($(this).attr('id'));
+	});
 
 	$('.book').click(function(event){
 		event.preventDefault();

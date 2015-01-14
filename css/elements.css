@@ -87,7 +87,7 @@ input[placeholder], [placeholder], *[placeholder] {
 /*-----------------------------------------------------------------------------------*/
 
 .blue {
-	color: #5dd4ff;
+	color: #feba02;
 }
 .black {
 	color: #000;
@@ -112,8 +112,8 @@ input[placeholder], [placeholder], *[placeholder] {
 
 #slider-range {
 	margin-top:50px;
-	margin-left:0.6em;
-	margin-right:0.6em;
+	margin-left:1.1em;
+	margin-right:1.1em;
 }
 
 .tooltips{
@@ -129,7 +129,7 @@ input[placeholder], [placeholder], *[placeholder] {
   border-radius: 3px;
   padding-left:10px;
   padding-right:10px;
-	top:-40px;
+	top:-45px;
 }
 /*
 .tooltips span:after {
@@ -255,9 +255,14 @@ input[placeholder], [placeholder], *[placeholder] {
   background-color: #e0e0e0;
  padding: 15px 12px !important;
 	border:none;
+	outline: none;
+ -moz-outline: none;
 }
 .btn:active, .btn.active {
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5);
+	border:none;
+	outline: none;
+ -moz-outline: none;
 }
 
 .form-group.short_margin_bottom{
@@ -335,7 +340,7 @@ input[placeholder], [placeholder], *[placeholder] {
 	background-color:#fff;
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus{
-	background-color:#5dd4ff;
+	background-color:#feba02;
 }
 .navbar-toggle .icon-bar{
 	width:50px;
@@ -383,7 +388,7 @@ input[placeholder], [placeholder], *[placeholder] {
 }
 .main_nav > li > a:hover, .main_nav > li > a:focus{
 	background:none;
-	color: #5dd4ff;
+	color: #feba02;
 	text-decoration:none;
 }
 .main_nav > li > a:hover span.blue, .main_nav > li > a:focus span.blue{
@@ -398,8 +403,9 @@ input[placeholder], [placeholder], *[placeholder] {
 /*-----------------------------------------------------------------------------------*/
 
 .datepicker{
-	position:fixed;
-	z-index:999;
+	1position:absolute;
+	1left: 0;
+	1z-index:999;
 }
 
 
@@ -414,8 +420,8 @@ input[placeholder], [placeholder], *[placeholder] {
 	margin-bottom:10px;
 }
 .custom_form .has-feedback .form-control-feedback{
-	height:30px;
-	line-height:30px;
+	height:40px;
+	line-height:40px;
 }
 .custom_form .short_padding{
 	padding-left:2px;
@@ -428,8 +434,8 @@ input[placeholder], [placeholder], *[placeholder] {
 	padding-right:0px;
 }
 .custom_form .row_form{
-	height:30px;
-	margin-bottom:4px;
+	height:40px;
+	margin-bottom:10px;
 	clear:both;
 }
 .custom_form .form-control{
@@ -438,8 +444,8 @@ input[placeholder], [placeholder], *[placeholder] {
 .custom_form label.input_label{
 	background-color:#fff;
 	color:#000;
-	height: 30px;
-	line-height: 14px;
+	height: 40px;
+	line-height: 25px;
 }
 .custom_form textarea{
 	height:100px;
@@ -456,7 +462,7 @@ input[placeholder], [placeholder], *[placeholder] {
 }
 .custom_form .control-label{
 	text-align:left; 
-	padding-left: 5px;
+	padding-left: 0;
 	font-family: 'Ubuntu', sans-serif;
 	font-weight: 300;
 	font-size: 14px;
@@ -469,7 +475,7 @@ input[placeholder], [placeholder], *[placeholder] {
 	font-size: 14px;
 }
 .custom_form label.active{
-	color:#5dd4ff !important;
+	color:#feba02 !important;
 }
 .custom_form .radio-inline, .custom_form .checkbox-inline{
 	padding-left:0px;
@@ -483,7 +489,7 @@ input[placeholder], [placeholder], *[placeholder] {
 	float:left;
 }
 .custom_form input[type="text"]{
-	height:30px;
+	height:40px;
 	color:#000 !important;
 	font-style:normal;
 	
@@ -494,34 +500,39 @@ input[placeholder], [placeholder], *[placeholder] {
     position: absolute;
     width: 1px;
 }
-.custom_form input[type="radio"]:checked ~ .check:after{	
-	background-color: #5dd4ff;
-    content: "" !important;
+.custom_form input[type="radio"]:checked ~ .check:after{
+	font-family:'FontAwesome';
+	background-color: #feba02;
+    content: "\f00c" !important;
     display: block;
-    height: 11px;
+    height: 15px;
     margin: 0px;
-    width: 11px;
+    width: 15px;
 	margin-top:-1px;
 	margin-left:-1px;
+	color:#fff;
 }
 .custom_form input[type="checkbox"]:checked ~ .check:after{	
-	background-color: #5dd4ff;
-    content: "" !important;
+	font-family:'FontAwesome';
+	background-color: #feba02;
+   	content: "\f00c" !important;
     display: block;
-    height: 11px;
+    height: 15px;
     margin: 0px;
-    width: 11px;
+    width: 15px;
 	margin-top:-1px;
 	margin-left:-1px;
+	color:#fff;
+	line-height:17px;
 }
 .custom_form .check {
     background-color: #FFFFFF;
     display: inline-block;
-    height: 10px;
+    height: 14px;
     padding: 0;
     position: relative;
     vertical-align: middle;
-    width: 10px;
+    width: 14px;
 	margin-top:-3px;
 }
 .custom_from .options_list{
@@ -561,11 +572,11 @@ input[placeholder], [placeholder], *[placeholder] {
 	background-color:#fff;
 	padding:10px;
 	float:left;
-	margin-bottom:5px;
+	margin-bottom:9px;
 	text-align:left;
 }
 .custom_input_slide.small{
-	height:35px;
+	height:40px;
 }
 .custom_input_slide.last{
 	margin-right:0px;
@@ -595,21 +606,20 @@ input[placeholder], [placeholder], *[placeholder] {
 }
 
 .custom_input_slide_content{
-	width:125px;
+	width:95px;
 	display:block;
 	margin:0 auto;
 	margin-top:7px;
 }
 
 .custom_input_slide_content.center{
-	width:105px;
+	width:110px;
 	margin:0 auto;
-	margin-top:7px;
 }
 .custom_input_slide_content.small{
 	width:100px;
 	margin:0 auto;
-	margin-top:-6px !important;
+	margin-top:-10px !important;
 }
 .custom_input_slide_content .fa{
 	font-size:30px;
@@ -669,7 +679,7 @@ input[placeholder], [placeholder], *[placeholder] {
 	overflow: hidden;
     padding: 0;
     margin: 0;
-	height:30px;
+	height:40px;
 }
 
 .custom-dropdown select {
@@ -686,9 +696,16 @@ input[placeholder], [placeholder], *[placeholder] {
   -webkit-appearance: button; /* hide default arrow in chrome OSX */
 	border-radius:0;
 	width: 125%;
-	height:30px;
+	height:40px;
+	-webkit-appearance:none;
+	outline:none;
+	box-shadow:none;
+	cursor:pointer;
 }
-
+.custom_input_slide .custom-dropdown select{
+	background-color: transparent;
+}
+select::-moz-focus-inner { border: 0; }
 
 
 
@@ -776,7 +793,7 @@ font-family: FontAwesome;
 .search_options{
 	font-family: 'Ubuntu', sans-serif;
 	font-weight: 300;
-	font-size: 20px;
+	font-size: 20px ;
 	color: #fff;
 	text-shadow: none;
 	text-align: right;
@@ -793,7 +810,7 @@ font-family: FontAwesome;
 }
 
 .custom_form .radio-inline, .custom_form .checkbox-inline.long_white{
-	margin-bottom:6px;
+	margin-bottom:10px;
 }
 .custom_form .passanger{
 	margin-bottom:0px;
@@ -805,10 +822,10 @@ font-family: FontAwesome;
 .long_white .check{
 	border: 1px solid #000;
 	float:right;
-	width:11px;
-	height:11px;
+	width:15px;
+	height:15px;
 	margin-right:15px;
-	margin-top:3px;
+	margin-top:5px;
 }
 .radio-inline.long_white{
 	width:100%;
@@ -816,6 +833,8 @@ font-family: FontAwesome;
 	color:#000;
 	padding-bottom:7px;
 	padding-left:10px;
+	height:40px;
+	line-height:25px;
 }
 
 .flight_title.first{
@@ -827,7 +846,7 @@ font-family: FontAwesome;
 	font-size: 14px;
 	color: #fff !important;
 	text-align:left;
-	margin-top:15px;
+	margin-top:5px;
 	margin-bottom:5px;
 	text-align:left !important;
 }

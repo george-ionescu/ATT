@@ -31,11 +31,11 @@
 			<h1 class="pull-right second-title">Filter Hotels</h1>
 			
 			<div class="row_form">
-				<div class="col-md-10 col-xs-10 short_padding">
+				<div class="col-md-9 col-xs-9 short_padding">
 					<input type="text" class="form-control italic" placeholder="search by hotel name"> 
 				</div>
-				<div class="col-md-2 col-xs-2 short_padding">
-					<button style="width:100%;" class="pull-right btn btn-default book" type="submit">ok</button>
+				<div class="col-md-3 col-xs-3 short_padding">
+					<button style="width:100%;" class="pull-right btn btn-default book search_hotel" type="submit">ok</button>
 				</div>
 			</div>
 			<div class="row_form">
@@ -100,6 +100,9 @@
 				</div>
 				<div class="clearfix"></div>
 			</div>
+			<div class="clearfix"></div>
+			<br /><br />
+			<a href="#">clear all</a> selections
 		 </form>
 		</div>       
 		        

@@ -9,7 +9,6 @@
 
 	
 	<a href="javascript:toggleAvailability();" class="search_options availab pull-right"><i class="fa fa-plus-circle"></i>check availability</a>
-	
 	<table id="availability_table" class="flight_detail_table recap availab" style="display:none;">
     				<tr>
     					<td colspan="4" class="title">July 2014</td>
@@ -49,6 +48,7 @@
     			</table>
 	
 	<div class="clearfix"></div>
+	<br />
 	<p>Lorem Ipsum is simply dummy text of the printing and typesetting
 		industry. Lorem Ipsum has been the industry's standard dummy text ever
 		since the 1500s, when an unknown printer took a galley of type and

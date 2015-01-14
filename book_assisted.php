@@ -10,12 +10,25 @@
 		        <div class="column_content padding_content full_height container-fluid" style="padding-top:40px;">
 			        <form class="form-horizontal custom_form" role="form" method="post" action="page2_1.php">
 				        <br />
-				        <p>Please choose a month</p>
-				        <div class="custom_input_slide_content" style="margin-top: 0;">
-							<a href="javascript:prevMonth();" class="arrow_left pull-left"><i class="fa fa-caret-left"></i></a>
-							<span id="month_name" class="pull-left" style="width:130px;"></span>
-							<a href="javascript:nextMonth();" class="arrow_right pull-left"><i class="fa fa-caret-right"></i></a>
-							<div class="clearfix"></div>
+				        
+				        
+				        <div class="row_form">
+							<div class="col-lg-6 col-md-7 col-xs-12 nopadding">
+								<p style="line-height:50px;">Please choose a month</p>
+							</div>
+							<div class="col-lg-6 col-md-5 col-xs-12 nopadding">
+								<div class="custom_input_slide_content" style="margin-top: 0;">
+									<span class="custom-dropdown assisted_select">
+									    <select>
+									    	<?php for ($m=1; $m<=12; $m++) { ?>
+									        	<option value="<?php echo $m; ?>"><?php echo strtoupper(date('F', mktime(0,0,0,$m))); ?></option>
+									        <?php } ?>
+									    </select>
+									</span>
+									<div class="clearfix"></div>
+								</div>
+								<div class="clearfix"></div>
+							</div>
 						</div>
 						<div class="clearfix"></div>
 						<p>and travel experience</p>
