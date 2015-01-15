@@ -111,7 +111,7 @@ select{
 	padding-top:10px;
 }
 #submit_button, #submit_button2, #foo{
-	margin-bottom:50px;
+	1margin-bottom:50px;
 }
 .margin_top_block{
 	margin-top:8px;
@@ -440,7 +440,7 @@ a.flight.active, a.map.active, a.compare.active{
 .padding_content {
 	padding-top: 70px;
 	padding-bottom: 30px;
-	overflow:hidden;
+	1overflow:hidden;
 }
 
 #sort_wrapper {

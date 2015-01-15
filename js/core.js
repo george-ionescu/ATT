@@ -162,7 +162,7 @@ function openSlide(newSlide, url, class_bootstrap){
 						}
 						
 						//resize column height for scroll
-						var h = $(window).height() - $('.header').height() - $('.footer').height() - 60;
+						var h = $(window).height() - $('.header').height() - $('.footer').height() - 100;
 						$('.column_content').height(h);
 						
 						$(".column_content").bind('scroll', function() {
@@ -221,7 +221,7 @@ function openSlide(newSlide, url, class_bootstrap){
 				}
 				
 				//resize column height for scroll
-				var h = $(window).height() - $('.header').height() - $('.footer').height() - 60;
+				var h = $(window).height() - $('.header').height() - $('.footer').height() - 100;
 				$('.column_content').height(h);
 				
 				$(".column_content").bind('scroll', function() {
@@ -320,6 +320,9 @@ function updateAllScrolls(){
 		$("#column3 .column_content").mCustomScrollbar("update");
 		$("#column4 .column_content").mCustomScrollbar("update");
 	}*/
+	//resize column height for scroll
+	var h = $(window).height() - $('.header').height() - $('.footer').height() - 100;
+	$('.column_content').height(h);
 }
 
 function resetSlides(){
