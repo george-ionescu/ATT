@@ -56,6 +56,21 @@ function activateMoreLess(){
 		$(this).parent().find('.less').show();
 		$(this).parent().find('.text-complete').show();
 		updateAllScrolls(); 
+		
+		//
+		if ($('#photo_container').length){
+			var $container = $('#photo_container');
+			
+			$container.imagesLoaded( function(){
+			  $container.masonry({
+			    itemSelector : '.box'
+			  });
+			});
+	
+			$(".box a").fancybox({
+				'titleShow'     : false
+			});
+		}
 	});
 	$('.less').click(function(event){
 		event.preventDefault();

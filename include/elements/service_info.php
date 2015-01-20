@@ -3,16 +3,28 @@
 
 <div class="column_content padding_column_content full_height">
 		
-	<p style="margin-top: 3px;">
+	<div style="margin-top: 3px; text-align:left; color:#000;">
 		Fusce posuere sollicitudin justo. Curabitur pulvinar neque quis ligula convallis, vitae vulputate erat lacinia 
-		<span class="text-complete">
-			Fusce posuere sollicitudin justo. Curabitur pulvinar neque quis ligula convallis, vitae vulputate erat lacinia
-			<img class="img-responsive" src="images/hotel_photos.png" alt="" />
-		</span> 
-		<a class="more" href="#"><i class="fa fa-plus-circle"></i>more</a>
-		<a class="less" style="display: none;" href="#"><i class="fa fa-minus-circle"></i>less</a>
-	</p>
-	
+		<div class="text-complete">
+			Fusce posuere sollicitudin justo. Curabitur pulvinar neque quis ligula convallis, vitae vulputate erat lacinia. Curabitur pulvinar neque quis ligula convallis, vitae vulputate erat lacinia. Curabitur pulvinar neque quis ligula convallis, vitae vulputate erat lacinia
+			<div class="clearfix"></div>
+			
+			<div id="photo_container" style="text-align: center;">
+				<?php for ($i=1; $i<=6; $i++) { ?>
+					<div class="box">
+						<a href="images/hotels/<?php echo $i; ?>.jpg" rel="group">
+							<img src="images/hotels/thumbs/<?php echo $i; ?>.jpg" alt="" />
+						</a>
+					</div> 
+				<?php } ?>
+			</div>
+			
+		</div> 
+		<a class="more pull-left" href="#"><i class="fa fa-plus-circle"></i>more</a>
+		<a class="less pull-left" style="display: none;" href="#"><i class="fa fa-minus-circle"></i>less</a>
+		<div class="clearfix"></div>
+	</div>
+	<div class="clearfix"></div>
 	
 	
 		
@@ -49,7 +61,7 @@
 	$(function(){
 		activateMoreLess();
 	});
-	
+
 	$('#book_button').click(function(event){
 		event.preventDefault();
 	
