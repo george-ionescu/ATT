@@ -25,6 +25,32 @@ select:focus::-ms-value {background: transparent !important; color:#000;}
 	margin-bottom:20px;
 }
 
+.dropdown-menu li a{
+	font-family: "Ubuntu",sans-serif;
+	text-align:left;
+	font-size:16px;
+	padding-left:10px;
+	padding-right:10px;
+}
+.dropdown-menu li.subitem a{
+	font-family: "Ubuntu",sans-serif;
+	text-align:left;
+	color:#666;
+	font-size:14px;
+	font-weight:normal;
+	font-style:italic;
+}
+.dropdown-menu li.subitem a:before{
+	font-family: "FontAwesome";
+	content:"\f072";
+	width:10px;
+	height:10px;
+	display:inline-block;
+	color:#666;
+	font-size:14px;
+	margin-right:5px;
+}
+
 body {
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
@@ -100,9 +126,17 @@ select{
 }
 .disabled_div{
 	opacity:0.5 !important;
+	transition:none;
+	cursor:auto;
 }
 .nomargin_bottom{
 	margin-bottom:0 !important;
+}
+.disabled_div_permanent{
+	opacity:0.2 !important;
+	margin-bottom:0 !important;
+	transition:none;
+	cursor:auto;
 }
 .row_form_calendar .ui-datepicker{
 	position:relative;
@@ -111,7 +145,7 @@ select{
 	padding-top:10px;
 }
 #submit_button, #submit_button2, #foo{
-	1margin-bottom:50px;
+	margin-bottom:50px;
 }
 .margin_top_block{
 	margin-top:8px;

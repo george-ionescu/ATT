@@ -69,6 +69,8 @@
 
 <script type="text/javascript" src="js/jquery.marquee.min.js"></script>
 
+<script type="text/javascript" src="js/bootstrap3-typeahead.js"></script>
+
 
 
 <!-- /// Custom scripts ////////  -->

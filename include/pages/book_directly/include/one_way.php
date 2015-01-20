@@ -34,7 +34,21 @@
 		</div>
 	</div>
 	<div class="col-md-6 col-xs-6 short_padding pull-left">
-		
+		<div class="custom_input_slide disabled_div_permanent" targetdiv="to">
+			<p class="box_title">return</p>
+			<div class="custom_input_slide_content">
+				<div class="pull-left">
+					<span class="day number_big pull-left"><?php echo date('d', strtotime('+1 day')); ?></span>
+					<div class="number_small pull-left">
+						<input type="hidden" class="calendar_value" name="" />
+						<p class="month"><?php echo date("M", strtotime('+1 day')); ?></p>
+						<p class="year"><?php echo date("Y", strtotime('+1 day')); ?></p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
 	</div>
 </div>
 <div class="clearfix"></div>

@@ -1,14 +1,19 @@
 <div class="form-group has-feedback">
 	<label class="control-label input_label col-sm-2 col-xs-3 no_padding_left_right" for="inputSuccess3">&nbsp;&nbsp;&nbsp;from:</label>
 	<div class="col-sm-10 col-xs-9 no_padding_left_right">
-		<input type="text" class="autocomplete_input form-control" id="inputSuccess3" placeholder="city/airport name"> 
+		<input type="text" class="autocomplete_input form-control" id="inputSuccess3" data-provide="typeahead" placeholder="city/airport name"> 
 		<span class="glyphicon glyphicon-map-marker form-control-feedback"></span>
+		
+		<ul role="listbox" class="typeahead dropdown-menu" style="top: 40px; left: 0px; display:block;">
+			<li class=""><a role="option" href="#"><strong>A</strong>l<strong>a</strong>b<strong>a</strong>m<strong>a</strong></a></li>
+			<li class="subitem"><a role="option" href="#"><strong>A</strong>l<strong>a</strong>sk<strong>a</strong></a></li>
+			<li class=""><a role="option" href="#"><strong>A</strong>rizon<strong>a</strong></a></li><li class=""><a role="option" href="#"><strong>A</strong>rk<strong>a</strong>ns<strong>a</strong>s</a></li><li class=""><a role="option" href="#">C<strong>a</strong>liforni<strong>a</strong></a></li><li><a role="option" href="#">Color<strong>a</strong>do</a></li><li class=""><a role="option" href="#">Del<strong>a</strong>w<strong>a</strong>re</a></li><li class="active"><a role="option" href="#">Florid<strong>a</strong></a></li></ul>
 	</div>
 </div>
 <div class="form-group  has-feedback">
 	<label class="control-label input_label col-sm-2 col-xs-3 no_padding_left_right" for="inputSuccess3">&nbsp;&nbsp;&nbsp;to:</label>
 	<div class="col-sm-10 col-xs-9 no_padding_left_right">
-		<input type="text" class="autocomplete_input form-control" id="inputSuccess3" placeholder="city/airport name"> 
+		<input type="text" class="autocomplete_input form-control" id="inputSuccess3" data-provide="typeahead" placeholder="city/airport name"> 
 		<span class="glyphicon glyphicon-map-marker form-control-feedback"></span>
 	</div>
 </div>
