@@ -56,7 +56,7 @@
 					
 					<br />
 					<p class="pull-left price_p" style="margin-top: 5px !important;"><span class="price">254</span> euro per package</p>
-					<button id="submit_button" type="button" class="pull-right btn btn-default">select</button>
+					<button id="submit_button" type="button" class="pull-right btn btn-default" style="margin-bottom: 15px;">select</button>
 					<div class="clearfix"></div>
 					
 					<hr />

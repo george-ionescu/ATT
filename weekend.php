@@ -14,7 +14,7 @@
 						<div class="col-md-12 nopadding">
 							<a id="but1" class="slide button_big pull-right" column-close="column2" column-open="column2" href="include/pages/weekend/flights_week.php">
 								<span class="sidebar">Flights</span>
-								<img class="img-responsive col-xs-12" src="images/tab.jpg" alt="" />
+								<img class="img-responsive col-xs-12" src="images/avion.jpg" alt="" />
 							</a>
 						</div>
 					</div>
@@ -22,7 +22,7 @@
 						<div class="col-md-12 nopadding">
 							<a id="but2" class="slide button_big pull-right" column-close="column2" column-open="column2" href="include/pages/weekend/hotels_week.php">
 								<span class="sidebar">Hotels</span>
-								<img class="img-responsive col-xs-12" src="images/tab.jpg" alt="" />
+								<img class="img-responsive col-xs-12" src="images/hotel.jpg" alt="" />
 							</a>
 						</div>
 					</div>

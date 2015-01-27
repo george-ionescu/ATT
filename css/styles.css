@@ -159,16 +159,20 @@ select{
     font-size: 44px;
     font-weight: 400;
     line-height: 47px;
-	height: 50px;
-	margin-left:20px;
-	width:90px;
+	height: 90px;
+	width:100%;
+	position:absolute;
+	left:0;
+	top:0;
 }
 .custom-dropdown.big:after{
 	display:none;
 }
 .custom-dropdown.big select{
-	height: 50px;
+	height: 90px;
 	padding:0;
+	width:100%;
+	padding-left:35%;
 }
 
 a.flight.active, a.map.active, a.compare.active{
@@ -1010,6 +1014,7 @@ table.flight_detail_table.availab tr.border:hover{
 
 table.flight_detail_table tr.expand{
 	display:none;
+	border-bottom:5px solid #868686;
 }
 table.flight_detail_table tr.expand td:last-child{
 	background-color: #fff;
@@ -1425,7 +1430,13 @@ p.month{
 	.custom-dropdown.big{
 	    font-size: 40px;
 	    line-height: 40px;
-		width:70px;
+		width:100%;
+	}
+	.custom-dropdown.big select{
+		height: 90px;
+		padding:0;
+		width:100%;
+		padding-left:30% !important;
 	}
 	.custom-dropdown.small{
 	    font-size: 30px;
@@ -1449,7 +1460,7 @@ p.month{
 	.custom-dropdown select{
 		padding: 0.37em !important;
 	}
-	.custom-dropdown.big select, .custom-dropdown.small select, .custom-dropdown.assisted_select select{
+	.custom-dropdown.small select, .custom-dropdown.assisted_select select{
 		padding:0 !important;
 	}
 	.custom-dropdown.assisted_select{

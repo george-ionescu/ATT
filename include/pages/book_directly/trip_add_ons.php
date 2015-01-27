@@ -1,4 +1,4 @@
-<h1 class="pull-right">Trip Add-ons</h1>
+<h1 class="pull-right">Trip Information</h1>
 <div class="clearfix"></div>
 
 <div class="column_content padding_column_content full_height">

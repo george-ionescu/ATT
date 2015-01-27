@@ -45,7 +45,7 @@ if ($_GET['type'] == 5){
 								<img src="images/star_white.png" alt="" style="margin-top: -10px;" /> 
 								<img src="images/star_white.png" alt="" style="margin-top: -10px;" />
 								<p class="price_p">
-									starting from<br /><span class="price">254 euro</span><br />total price
+									starting from<br /><span class="price">254 </span>euro<br />total price
 								</p>
 							</td>
 						</tr>

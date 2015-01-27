@@ -454,6 +454,7 @@ function callFormEvents(){
 		$("#calendar"+i).datepicker('setDate', new Date());
 	}
 	
+	
 	//trigger resize event gmap
 	if ($('#google-map').length){
 		map = $("#google-map").gmap3('get');
