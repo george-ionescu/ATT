@@ -1,7 +1,7 @@
 <h1 class="pull-right">Main Services</h1>
 <div class="clearfix"></div>
 
-<div class="column_content padding_column_content full_height form_tab">
+<div class="column_content padding_column_content full_height form_tab extra_services">
 	<form class="form-horizontal custom_form" role="form" method="post" action="">
 		<label class="radio-inline"> <input type="checkbox" id="inlineCheckbox1" name="gr1" value="option1" checked><span class="check"></span> Transport</label> 
 		<div class="clearfix"></div>
@@ -64,6 +64,7 @@
 				</span>
 			</div>
 		</div>
+		<div class="clearfix"></div>
 		
 		<div class="row_form">
 			<p class="flight_title">2nd room</p>
@@ -91,10 +92,9 @@
 			</div>
 		</div>
 		
+		<div class="clearfix"></div>
+		<hr />
 		
-		
-		
-		<br /><br />
 		<label class="radio-inline"> <input type="checkbox" id="inlineCheckbox1" name="gr1" value="option1" checked><span class="check"></span> Nume serviciu</label> 
 		<div class="clearfix"></div>
 		
@@ -162,6 +162,7 @@
 				</span>
 			</div>
 		</div>
+		<div class="clearfix"></div>
 		
 		<div class="row_form">
 			<p class="flight_title">2nd room</p>
@@ -189,9 +190,11 @@
 			</div>
 		</div>
 		
+
+		<div class="clearfix"></div>
+		<hr />
 		
 		
-		<br /><br />
 		<label class="radio-inline"> <input type="checkbox" id="inlineCheckbox1" name="gr1" value="option1" checked><span class="check"></span> Nume serviciu</label> 
 		<div class="clearfix"></div>
 		
@@ -224,6 +227,7 @@
 				</span>
 			</div>
 		</div>
+		<div class="clearfix"></div>
 		
 		<div class="row_form">
 			<p class="flight_title">2nd room</p>
@@ -253,13 +257,15 @@
 		
 		
 	</form>
-	
-	<br /><br /><br />
-	<div class="clearfix"></div>
-	<button id="submit_button" type="submit" class="btn btn-default proceed_button">check availability</button>
+
 	<br /><br />
 	<p style="font-weight:bold; text-align:center; font-size:22px; margin-bottom:0;">2600 euro</p>
 	<p style="text-align:center;">with extra services included</p>
+	
+	<br />
+	<div class="clearfix"></div>
+	<button id="submit_button" type="submit" class="btn btn-default proceed_button">check availability</button>
+	
 </div>
 
 

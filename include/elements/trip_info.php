@@ -157,7 +157,7 @@
 
 	    		var class_bootstrap = 'col-md-3 nopadding';
 	    		if (url == 'include/elements/signin.php' || url == 'include/elements/signin.php?from=extra_service'){
-	    			class_bootstrap = 'col-md-9 flight flight_detail nopadding';
+	    			class_bootstrap = 'col-md-6 flight flight_detail nopadding';
 	    		}
 	    		if (url == 'include/elements/flight_tabs.php'){
 	    			class_bootstrap = 'col-md-9 flight flight_detail black_background_transparency nopadding';

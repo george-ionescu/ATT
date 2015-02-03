@@ -87,10 +87,10 @@ input[placeholder], [placeholder], *[placeholder] {
 /*-----------------------------------------------------------------------------------*/
 
 .blue {
-	color: #feba02;
+	color: #feba02 !important;
 }
 .black {
-	color: #000;
+	color: #000  !important;
 }
 .black_background{
 	background-color:#242528 !important;
@@ -488,6 +488,15 @@ input[placeholder], [placeholder], *[placeholder] {
 	color:#fff;
 	float:left;
 }
+
+.extra_services .custom_form .radio-inline, .custom_form .checkbox-inline{
+	font-size: 16px;
+}
+.extra_services hr{
+	margin-top:20px !important;
+	border-color:#fff !important;
+}
+
 .custom_form input[type="text"]{
 	height:40px;
 	color:#000 !important;
@@ -814,7 +823,7 @@ font-family: FontAwesome;
 }
 .custom_form .passanger{
 	margin-bottom:0px;
-	padding-top:4px;
+	padding-top:8px;
 }
 .check.border{
 	border: 1px solid #000;
@@ -846,7 +855,7 @@ font-family: FontAwesome;
 	font-size: 16px;
 	color: #fff !important;
 	text-align:left;
-	margin-top:5px;
+	margin-top:10px;
 	margin-bottom:5px;
 	text-align:left !important;
 }

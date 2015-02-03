@@ -1007,7 +1007,7 @@ table.flight_detail_table.availab td.title{
 	padding-bottom:0px !important;
 }
 table.flight_detail_table.availab tr.border:hover{
-	background-color:#C3C3C3;
+	background-color:#feba02;
 	cursor:pointer;
 }
 

@@ -46,7 +46,7 @@
 			var oldSlide = $('#column2');
 			var newSlide = $('#column2');
 			var url = 'include/elements/billing.php';
-			var class_bootstrap = 'col-md-6';
+			var class_bootstrap = 'col-md-9';
 			
 			if (oldSlide && newSlide && url != '#'){
 				changeSlide(oldSlide, newSlide, url, class_bootstrap);
