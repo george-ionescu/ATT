@@ -90,20 +90,22 @@
 		        
         <script>
         
-            
-	        function openNext(){
-	    		var oldSlide = $('#column2');
-	    		var newSlide = $('#column2');
-	    		var url = 'include/pages/top_picks/trip.php?nosubmit=true';
-	    		var class_bootstrap = 'col-md-9 nopadding noborder';
-	    		
-	    		if (oldSlide && newSlide && url != '#'){
-	    			changeSlide(oldSlide, newSlide, url, class_bootstrap);
-	    		}
-	    	}
-	
-	        t = setTimeout(openNext, 400);
-
+            <?php if ($_GET['gonext'] == 1) { ?>
+		        function openNext(){
+		    		var oldSlide = $('#column2');
+		    		var newSlide = $('#column2');
+		    		var url = 'include/elements/top_result.php';
+		    		var class_bootstrap = 'col-md-9 nopadding noborder';
+		    		
+		    		if (oldSlide && newSlide && url != '#'){
+		    			changeSlide(oldSlide, newSlide, url, class_bootstrap);
+		    		}
+		    	}
+		    	
+		        $('#submit_block').hide();
+		        t = setTimeout(openNext, 400);
+	        <?php } ?>
+	        
 	        $(function(){
 	        	$('.less').hide();
 	        	$('.more').click(function(event){
@@ -128,15 +130,13 @@
 	        	$('#submit_button').click(function(event){
 	        		event.preventDefault();
 
-	        		$('#submit_block').hide();
-
-	        		var oldSlide = $('#column2');
-	        		var newSlide = $('#column2');
-	        		var url = 'include/elements/top_result.php';
-	        		var class_bootstrap = 'col-md-9 nopadding';
+	        		var oldSlide = $('#column1');
+	        		var newSlide = $('#column1');
+	        		var url = 'include/elements/sort_top.php?gonext=1';
+	        		var class_bootstrap = 'col-md-3 nopadding';
 	        		
 	        		if (oldSlide && newSlide && url != '#'){
-	        			changeSlide(oldSlide, newSlide, url, class_bootstrap);
+	        			closeAllSlidesAndOpen2(oldSlide, newSlide, url, class_bootstrap);
 	        		}
 	        	});
 		    });
