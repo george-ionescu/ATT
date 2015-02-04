@@ -540,6 +540,11 @@ a.flight.active, a.map.active, a.compare.active{
 	text-align: justify;
 	color:#000;
 }
+#column2 hr{
+	color:#000;
+	margin-top:5px;
+	border-color:#555555;
+}
 
 #column3 {
 	color: #fff;

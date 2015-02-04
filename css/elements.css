@@ -494,7 +494,6 @@ input[placeholder], [placeholder], *[placeholder] {
 }
 .extra_services hr{
 	margin-top:20px !important;
-	border-color:#fff !important;
 }
 
 .custom_form input[type="text"]{
