@@ -81,8 +81,6 @@
 				<div id="submit_block">
 		        	<br /><br />
 		        	<button id="submit_button" type="submit" class="btn btn-default">proceed</button>
-		        	<br /><br />
-		        	<a href="#">clear all</a> selections
 	        	</div>
 	        </form>
         </div>    
