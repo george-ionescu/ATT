@@ -102,7 +102,7 @@
 		    		}
 		    	}
 		    	
-		        $('#submit_block').hide();
+		        
 		        t = setTimeout(openNext, 400);
 	        <?php } ?>
 	        
