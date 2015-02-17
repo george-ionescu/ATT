@@ -26,16 +26,16 @@
 			        </div>
 				</div>
 				
-				<p class="pull-left price_p"><span class="price">255</span> euro per package</p>
+				<p class="pull-left price_p"><span class="price">255</span> EUR<br />total price</p>
 				<button type="submit" class="pull-right btn btn-default book" style="margin-top: 9px;">select</button>
 				<div class="clearfix"></div>
 				
 				<div style="margin-top: 5px;">
-					<a class="slide" column-close="column4" column-open="column4" href="include/elements/hotel_policy.php"><i class="fa fa-plus-circle"></i>room policy</a>
+					<a class="slide" column-close="column4" column-open="column4" href="include/elements/hotel_policy.php"><i class="ionicons ion-ios-plus-outline"></i>room policy</a>
 				&nbsp;&nbsp;&nbsp;&nbsp;
 				<?php if (1==2){?>
 					|&nbsp;&nbsp;&nbsp;&nbsp;
-					<a class="slide" column-close="column4" column-open="column4" href="include/elements/hotel_info.php"><i class="fa fa-plus-circle"></i>hotel info</a>
+					<a class="slide" column-close="column4" column-open="column4" href="include/elements/hotel_info.php"><i class="ionicons ion-ios-plus-outline"></i>hotel info</a>
 				<?php } ?>
 				</div>
 				<hr />

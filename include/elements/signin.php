@@ -24,7 +24,7 @@
         <p class="flight_title first">Room one - 1st adult</p>
         <form class="form-horizontal custom_form" role="form" method="post" action="/">
 			<div class="row_form">
-				<div class="col-md-2 col-xs-2 short_padding">
+				<div class="col-md-1 col-xs-2 short_padding">
 					<span class="custom-dropdown">
 					    <select>
 					        <option>Title</option>
@@ -41,7 +41,7 @@
 				<div class="col-md-3 col-xs-3 short_padding">
 					<input type="text" class="form-control italic" id="inputSuccess3" placeholder="Last name"> 
 				</div>
-				<div class="col-md-4 col-xs-4 short_padding">
+				<div class="col-md-5 col-xs-4 short_padding">
 					<label class="control-label input_label col-sm-6 col-xs-6" for="inputSuccess3">&nbsp;&nbsp;&nbsp;Birth Date</label>
 					<div class="col-sm-6 col-xs-6 no_padding_left_right">
 						<div class="col-sm-4 col-xs-4 no_padding_left_right custom_date_border">
@@ -75,7 +75,7 @@
 				</div>
 			</div>
 			<div class="row_form">
-				<div class="col-md-2 col-xs-2 short_padding">
+				<div class="col-md-1 col-xs-2 short_padding">
 					<span class="custom-dropdown">
 					    <select>
 					        <option>ID type</option>
@@ -100,7 +100,7 @@
 					    </select>
 					</span>					
 				</div>
-				<div class="col-md-4 col-xs-4 short_padding">
+				<div class="col-md-5 col-xs-4 short_padding">
 					<label class="control-label input_label col-sm-6 col-xs-6" for="inputSuccess3">&nbsp;&nbsp;&nbsp;Expire date</label>
 					<div class="col-sm-6 col-xs-6 no_padding_left_right">
 						<div class="col-sm-4 col-xs-4 no_padding_left_right custom_date_border">
@@ -134,10 +134,10 @@
 				</div>
 			</div>
 			<div class="row_form">
-				<div class="col-md-5 col-xs-5 short_padding">
+				<div class="col-md-4 col-xs-5 short_padding">
 					<input type="text" class="form-control italic" id="inputSuccess3" placeholder="E-mail"> 
 				</div>
-				<div class="col-md-3 col-xs-3 short_padding">
+				<div class="col-md-4 col-xs-3 short_padding">
 					<input type="text" class="form-control italic" id="inputSuccess3" placeholder="Phone *"> 
 				</div>
 				<div class="col-md-4 col-xs-4 short_padding">
@@ -149,7 +149,7 @@
         <p class="flight_title">Room one - 2nd adult</p>
         <form class="form-horizontal custom_form" role="form" method="post" action="/">
 			<div class="row_form">
-				<div class="col-md-2 col-xs-2 short_padding">
+				<div class="col-md-1 col-xs-2 short_padding">
 					<span class="custom-dropdown">
 					    <select>
 					        <option>Title</option>
@@ -166,7 +166,7 @@
 				<div class="col-md-3 col-xs-3 short_padding">
 					<input type="text" class="form-control italic" id="inputSuccess3" placeholder="Last name"> 
 				</div>
-				<div class="col-md-4 col-xs-4 short_padding">
+				<div class="col-md-5 col-xs-4 short_padding">
 					<label class="control-label input_label col-sm-6 col-xs-6" for="inputSuccess3">&nbsp;&nbsp;&nbsp;Birth Date</label>
 					<div class="col-sm-6 col-xs-6 no_padding_left_right">
 						<div class="col-sm-4 col-xs-4 no_padding_left_right custom_date_border">
@@ -200,7 +200,7 @@
 				</div>
 			</div>
 			<div class="row_form">
-				<div class="col-md-2 col-xs-2 short_padding">
+				<div class="col-md-1 col-xs-2 short_padding">
 					<span class="custom-dropdown">
 					    <select>
 					        <option>ID type</option>
@@ -225,7 +225,7 @@
 					    </select>
 					</span>					
 				</div>
-				<div class="col-md-4 col-xs-4 short_padding">
+				<div class="col-md-5 col-xs-4 short_padding">
 					<label class="control-label input_label col-sm-6 col-xs-6" for="inputSuccess3">&nbsp;&nbsp;&nbsp;Expire date</label>
 					<div class="col-sm-6 col-xs-6 no_padding_left_right">
 						<div class="col-sm-4 col-xs-4 no_padding_left_right custom_date_border">
@@ -259,10 +259,10 @@
 				</div>
 			</div>
 			<div class="row_form">
-				<div class="col-md-5 col-xs-5 short_padding">
+				<div class="col-md-4 col-xs-5 short_padding">
 					<input type="text" class="form-control italic" id="inputSuccess3" placeholder="E-mail"> 
 				</div>
-				<div class="col-md-3 col-xs-3 short_padding">
+				<div class="col-md-4 col-xs-3 short_padding">
 					<input type="text" class="form-control italic" id="inputSuccess3" placeholder="Phone *"> 
 				</div>
 				<div class="col-md-4 col-xs-4 short_padding">

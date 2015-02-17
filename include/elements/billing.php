@@ -53,8 +53,8 @@
 					<span class="text-complete">
 						Fusce posuere sollicitudin justo. Curabitur pulvinar neque quis ligula convallis, vitae vulputate erat lacinia
 					</span> 
-					<a class="more" href="#"><i class="fa fa-plus-circle"></i>more</a>
-					<a class="less" style="display: none;" href="#"><i class="fa fa-minus-circle"></i>less</a>
+					<a class="more" href="#"><i class="ionicons ion-ios-plus-outline"></i>more</a>
+					<a class="less" style="display: none;" href="#"><i class="ionicons ion-ios-minus-outline"></i>less</a>
 				</p>      
         
         

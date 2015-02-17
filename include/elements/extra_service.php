@@ -3,7 +3,7 @@
 
 <div class="column_content padding_column_content full_height form_tab extra_services">
 	<form class="form-horizontal custom_form" role="form" method="post" action="">
-		<label class="radio-inline"> <input type="checkbox" id="inlineCheckbox1" name="gr1" value="option1" checked><span class="check"></span> Transport</label> 
+		<label class="radio-inline disabled"> <input type="checkbox" class="disabled" id="inlineCheckbox1" name="gr1" value="option1" disabled><span class="check"></span> Transport</label> 
 		<div class="clearfix"></div>
 		<p style="text-align:left;">30 dec 2014 10:00 Bucuresti Otopeni / Antalya Antalya International 30 dec 2014 11:00</p>
 		

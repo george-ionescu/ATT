@@ -211,6 +211,9 @@ input[placeholder], [placeholder], *[placeholder] {
     width: 100%;
     margin-bottom:0 !important;
 }
+.horizontal_line.white{
+	background: url("../images/horizontal-line-white.png") repeat-x scroll 0 5px rgba(0, 0, 0, 0);
+}
 .horizontal_line span {
     background: none repeat scroll 0 0 #868686;
     padding: 0 10px;
@@ -279,21 +282,33 @@ input[placeholder], [placeholder], *[placeholder] {
 .gmap_marker{
 	
 }
-.infobox {
+/*.infobox {
     background-color:#242529;
 	color:#fff;
 	font-family: 'Ubuntu', sans-serif;
 	font-weight: 300;
 	font-size: 12px;
-	width:270px;
-	height:135px;
-	border:2px solid #fff;
+	width:295px;
+	height:151px;
+	border:10px solid #242529;
+	border-radius:10px;
+}*/
+.infobox {
+    background:url('../images/bubble_map.png') no-repeat;
+	width:291px;
+	height:163px;
+	color:#fff;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 300;
+	font-size: 12px;
+	padding:10px;
 }
 .infobox td{
 	vertical-align:top;
 }
 .infobox .text{
 	padding:10px;
+	padding-right:0;
 }
 .infobox .btn-default{
 	padding:0 5px 0 5px;
@@ -570,6 +585,27 @@ input[placeholder], [placeholder], *[placeholder] {
 }
 .custom_form .proceed_button{
 	margin-top:20px;
+}
+
+.custom_form .radio-inline.disabled {
+    1opacity: 0.6;
+    color:#feba02;
+    cursor:default;
+}
+.custom_form .radio-inline.disabled .check:after{	
+	font-family:'FontAwesome';
+	background-color: #868686;
+   	content: "\f00c" !important;
+    display: block;
+    height: 15px;
+    margin: 0px;
+    width: 15px;
+	margin-top:-1px;
+	margin-left:-1px;
+	color:#feba02;
+	line-height:17px;
+	1opacity: 0.6;
+	cursor:default;
 }
 
 .custom_input_slide{

@@ -49,7 +49,7 @@
 			
 			<?php include 'include/slider.php'; ?>
 			
-			<a href="javascript:toggleSearchOptions();" class="search_options pull-right"><i class="fa fa-plus-circle"></i>advanced filters</a>
+			<a href="javascript:toggleSearchOptions();" class="search_options pull-right"><i class="ionicons ion-ios-plus-outline"></i>advanced filters</a>
 			<div class="clearfix"></div>
 			
 			<div id="search_options" style="display:none;">
@@ -70,8 +70,8 @@
 								<label class="radio-inline"> <input type="checkbox" id="inlineCheckbox3" name="gr2" value="option3"><span class="check"></span> First class</label>
 							</div>
 							
-							<a class="more" href="#"><i class="fa fa-plus-circle"></i>more</a>
-							<a class="less" style="display: none;" href="#"><i class="fa fa-minus-circle"></i>less</a> 	 
+							<a class="more" href="#"><i class="ionicons ion-ios-plus-outline"></i>more</a>
+							<a class="less" style="display: none;" href="#"><i class="ionicons ion-ios-minus-outline"></i>less</a> 	 
 						</div>
 					</div>
 					<div class="clearfix"></div>
@@ -93,8 +93,8 @@
 	                            <label title="Zoo Praha" class="radio-inline ellipsis"> <input type="checkbox" value="524784" name="filter[PointOfInterestsId][]" data-target="#HotelItemsList578818ff8ed0e389738db6ebc06f3bdf"  id="Poi524784"><span class="check"></span> Zoo Praha</label>
                             </div>
                             
-                            <a class="more" href="#"><i class="fa fa-plus-circle"></i>more</a>
-							<a class="less" style="display: none;" href="#"><i class="fa fa-minus-circle"></i>less</a>
+                            <a class="more" href="#"><i class="ionicons ion-ios-plus-outline"></i>more</a>
+							<a class="less" style="display: none;" href="#"><i class="ionicons ion-ios-minus-outline"></i>less</a> 	 
 						</div>
 					</div>
 				</div>

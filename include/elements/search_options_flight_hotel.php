@@ -1,5 +1,5 @@
 <br />
-<a href="javascript:toggleSearchOptions();" class="search_options pull-right"><i class="fa fa-plus-circle"></i>more options</a>
+<a href="javascript:toggleSearchOptions();" class="search_options pull-right"><i class="ionicons ion-ios-plus-outline"></i>more options</a>
 <div class="clearfix"></div>
 
 <div id="search_options" style="display:none;">

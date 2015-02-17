@@ -22,11 +22,13 @@
 							</td>
 							<td style="vertical-align: top;">
 								<p class="price_p">
-									starting from <br /><span class="price">34.50 </span>euro<br />with 6 activity options
+									starting from<br /><span class="price">254 </span>EUR<br />total price
 								</p>
 							</td>
 						</tr>
 					</table>
+					
+					<hr />
 				</div>
 			</div>
 		<?php } ?>

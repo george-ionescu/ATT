@@ -1,5 +1,5 @@
 <div style="position:relative;">
-	<a class="hide_on_desktop close_button_mobile" href="javascript:closePage();" class="pull-left"><i class="fa fa-angle-left"></i> close</a> 
+	<a class="hide_on_desktop close_button_mobile" href="javascript:closePage();" class="pull-left"><i class="ionicons ion-ios-close-outline"></i> close</a> 
 	<h1 class="pull-right">Room Policy</h1>
 </div>
 <div class="clearfix"></div>

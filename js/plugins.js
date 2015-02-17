@@ -62,9 +62,11 @@ function loadBackgroundSlideshow(slideArray){
 			window.location = 'book_assisted.php';
 		});
 		
-		//resize column height for scroll
-		var h = $(window).height() - $('.header').height() - $('.footer').height() - 60;
-		$('.column_content').height(h);		
+		if (newWindowWidth >= 1024){
+			//resize column height for scroll
+			var h = $(window).height() - $('.header').height() - $('.footer').height() - 60;
+			$('.column_content').height(h);	
+		}
 		
 		
 		//speech bubble text
@@ -95,7 +97,7 @@ function loadBackgroundSlideshow(slideArray){
 		var data = JSON.parse('[{"address":"New Street, Salisbury, UK","content":"hello world from salisbury"},{"address":"86000 Poitiers, France","content":"hello world from poitiers"},{"address":"66000 Perpignam, France","content":"hello world from perpignam"}]');
 		var $map = $('#google-map');
 		var selectBut = '<button type="button" class="btn btn-default center-block">select</button>';
-		var closeBut = '<a class="pull-right" href="javascript:closeMarkers();"><i class="fa fa-times-circle-o"></i></a>';
+		var closeBut = '<a class="pull-right" href="javascript:closeMarkers();"><i class="ionicons ion-ios-close-outline"></i></a>';
 
 		// Gmap Defaults
 		$map.gmap3({
@@ -120,7 +122,6 @@ function loadBackgroundSlideshow(slideArray){
 		                address:val.address,
 		                options:{
 		            		icon: "images/gmap_pin.png",
-		                    labelContent: "",
 		                    labelAnchor: new google.maps.Point(13, 73),
 		                    labelClass: "labels",
 		                    labelStyle: {opacity: 1},
@@ -148,8 +149,8 @@ function loadBackgroundSlideshow(slideArray){
 		                                options:{
 		                                    content:  '<div class="infobox"><table><tr><td><img src="images/gmap_img.png" style="height:131px;" /></td> <td class="text"><h1>adasd</h1><p>'+val.content+'</p>'+selectBut+closeBut+'</td></tr></table></div>',
 		                                    offset:{
-		                                        y:-160,
-		                                        x:-135
+		                                        y:-185,
+		                                        x:0
 		                                    }
 		                                }
 		                            }
@@ -252,9 +253,11 @@ function loadBackgroundSlideshow(slideArray){
 	        loadBackgroundSlideshow(slideArray);
 	    }
 	    
-	    //resize column height for scroll
-		var h = $(window).height() - $('.header').height() - $('.footer').height() - 60;
-		$('.column_content').height(h);
+	    if (newWindowWidth >= 1024){
+		    //resize column height for scroll
+			var h = $(window).height() - $('.header').height() - $('.footer').height() - 60;
+			$('.column_content').height(h);
+	    }
 	});
 
 })(window.jQuery);

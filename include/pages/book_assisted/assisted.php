@@ -36,11 +36,20 @@
 			event.preventDefault();
 			event.stopPropagation();
 
+			var old = $(this);
+			$('.slide.active').each(function(){
+				if ($(this) != old){
+					$(this).removeClass('active');
+					$(this).find('.button_after_big_info').removeClass('active');
+					$(this).find('.button_after_big_info').find('.ionicons').removeClass('ion-ios-minus-outline').addClass('ion-ios-plus-outline');
+				}
+			});
+			
+			
 			if (!$(this).hasClass('active')){
-
 				$(this).addClass('active');
 				$(this).parent().addClass('active');
-				$(this).find('.fa').removeClass('fa-plus-circle').addClass('fa-minus-circle');
+				$(this).find('.ionicons').removeClass('ion-ios-plus-outline').addClass('ion-ios-minus-outline');
 				
 				var oldSlide = $('#column2');
 				var newSlide = $('#column2');
@@ -53,7 +62,7 @@
 			} else {
 				$(this).removeClass('active');
 				$(this).parent().removeClass('active');
-				$(this).find('.fa').removeClass('fa-minus-circle').addClass('fa-plus-circle');
+				$(this).find('.ionicons').removeClass('ion-ios-minus-outline').addClass('ion-ios-plus-outline');
 
 				closeSlideById('column2');
 			}

@@ -109,8 +109,8 @@
 							<label class="radio-inline"> <input type="checkbox" id="inlineCheckbox3" name="gr2" value="option3"><span class="check"></span> First class</label>
 						</div>
 						
-						<a class="more" href="#"><i class="fa fa-plus-circle"></i>more</a>
-						<a class="less" style="display: none;" href="#"><i class="fa fa-minus-circle"></i>less</a> 	 
+						<a class="more" href="#"><i class="ionicons ion-ios-plus-outline"></i>more</a>
+						<a class="less" style="display: none;" href="#"><i class="ionicons ion-ios-minus-outline"></i>less</a> 	 
 						</div>
 					</div>
 					<div class="clearfix"></div>
@@ -132,8 +132,8 @@
 	                            <label title="Zoo Praha" class="radio-inline ellipsis"> <input type="checkbox" value="524784" name="filter[PointOfInterestsId][]" data-target="#HotelItemsList578818ff8ed0e389738db6ebc06f3bdf"  id="Poi524784"><span class="check"></span> Zoo Praha</label>
                             </div>
                             
-                            <a class="more" href="#"><i class="fa fa-plus-circle"></i>more</a>
-							<a class="less" style="display: none;" href="#"><i class="fa fa-minus-circle"></i>less</a>
+                            <a class="more" href="#"><i class="ionicons ion-ios-plus-outline"></i>more</a>
+							<a class="less" style="display: none;" href="#"><i class="ionicons ion-ios-minus-outline"></i>less</a>
 					</div>
 				</div>
 				<div class="clearfix"></div>
@@ -156,11 +156,18 @@
 	    		<?php } ?>
 
 	    		var class_bootstrap = 'col-md-3 nopadding';
-	    		if (url == 'include/elements/signin.php' || url == 'include/elements/signin.php?from=extra_service'){
+	    		if (url == 'include/elements/signin.php'){
+	    			class_bootstrap = 'col-md-9 flight flight_detail nopadding';
+	    		}
+	    		if (url == 'include/elements/signin.php?from=extra_service'){
 	    			class_bootstrap = 'col-md-6 flight flight_detail nopadding';
 	    		}
 	    		if (url == 'include/elements/flight_tabs.php'){
 	    			class_bootstrap = 'col-md-9 flight flight_detail black_background_transparency nopadding';
+	    		}
+
+	    		if (url == 'include/elements/signin.php?from=extra_service'){
+	    			url = 'include/elements/signin_small.php?from=extra_service';
 	    		}
 	    		
 	    		if (oldSlide && newSlide && url != '#'){

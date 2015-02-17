@@ -2,6 +2,7 @@
 	<div class="clearfix"></div>
 	<br />
 	<p style="text-align:left;">
+		Name: Radisson Blu Edwardian Berkshire<br />
 		Adress: 22 Park Lane, London, W1K 1BE<br />
 		Phone: +44 20 7493 8000<br />
 		E-mail: office@hilton.co.uk

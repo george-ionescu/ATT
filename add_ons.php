@@ -23,7 +23,7 @@
 							<div class="row_form margin_top_block">
 								<div class="col-md-6 col-xs-6 short_padding pull-left">
 									<div class="custom_input_slide" targetdiv="from">
-										<p class="box_title">depart</p>
+										<p class="box_title">from</p>
 										<div class="custom_input_slide_content">
 											<div class="pull-left">
 												<span class="day number_big pull-left"><?php echo date("d"); ?></span>
@@ -41,7 +41,7 @@
 								</div>
 								<div class="col-md-6 col-xs-6 short_padding pull-left">
 									<div class="custom_input_slide" targetdiv="to">
-										<p class="box_title">return</p>
+										<p class="box_title">to</p>
 										<div class="custom_input_slide_content">
 											<div class="pull-left">
 												<span class="day number_big pull-left"><?php echo date('d', strtotime('+1 day')); ?></span>

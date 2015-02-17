@@ -100,7 +100,7 @@
 		    		
 		    		<div class="pull-right">
 					<a href="javascript:closeSlideById('column3x');"><i
-						class="fa fa-times-circle-o"></i>close</a>
+						class="ionicons ion-ios-close-outline"></i>close</a>
 				</div>
 				<div class="clearfix"></div>
 			</div>

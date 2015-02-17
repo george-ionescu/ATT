@@ -13,11 +13,11 @@
 				        
 				        
 				        <div class="row_form">
-							<div class="col-lg-6 col-md-7 col-xs-12 nopadding">
-								<p style="line-height:50px;">Please choose a month</p>
+							<div class="col-lg-12 col-md-12 col-xs-12 nopadding">
+								<p style="line-height:50px; text-align:center;">Please choose a month and travel experience</p>
 							</div>
-							<div class="col-lg-6 col-md-5 col-xs-12 nopadding">
-								<div class="custom_input_slide_content" style="margin-top: 0;">
+							<div class="col-lg-12 col-md-12 col-xs-12 nopadding">
+								<div class="custom_input_slide_content" style="margin:0 auto;">
 									<span class="custom-dropdown assisted_select">
 									    <select>
 									    	<?php for ($m=1; $m<=12; $m++) { ?>
@@ -31,7 +31,6 @@
 							</div>
 						</div>
 						<div class="clearfix"></div>
-						<p>and travel experience</p>
 						
 						<br />
 						<div class="row_form">

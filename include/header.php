@@ -26,6 +26,8 @@ if (preg_match('/(?i)Windows/', $_SERVER['HTTP_USER_AGENT']) && preg_match('/(?i
 		
 		<!-- /// FontAwesome 4.3 Icons ////////  -->
 		<link rel="stylesheet" type="text/css" media="screen" href="css/fontawesome/font-awesome.min.css" />
+		<!-- /// Ionicons ////////  -->
+		<link rel="stylesheet" type="text/css" media="screen" href="css/ionicons/ionicons.css" />
 		
 		<!-- /// Bootstrap ////////  -->
 		<link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css?v=<?php echo time(); ?>" />

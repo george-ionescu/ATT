@@ -99,7 +99,8 @@
 		    			changeSlide(oldSlide, newSlide, url, class_bootstrap);
 		    		}
 		    	}
-		    	
+
+		        $('#submit_button').html('search again');
 		        
 		        t = setTimeout(openNext, 400);
 	        <?php } ?>

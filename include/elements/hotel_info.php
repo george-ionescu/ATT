@@ -1,11 +1,12 @@
 <div style="position:relative;">
-	<a class="hide_on_desktop close_button_mobile" href="javascript:closePage();" class="pull-left"><i class="fa fa-angle-left"></i> close</a> 
+	<a class="hide_on_desktop close_button_mobile" href="javascript:closePage();" class="pull-left"><i class="ionicons ion-ios-close-outline"></i> close</a> 
 	<h1 class="pull-right">Hotel Info</h1>
 </div>
 <div class="clearfix"></div>
 
 <div class="column_content padding_column_content full_height">
 	<p>
+		Name: Radisson Blu Edwardian Berkshire<br />
 		Adress: 22 Park Lane, London, W1K 1BE<br />
 		Phone: +44 20 7493 8000<br />
 		E-mail: office@hilton.co.uk
@@ -35,7 +36,7 @@
 	</div>
 	
 	<div class="hide_on_mobile pull-right">
-		<a href="javascript:closeCustom();"><i class="fa fa-times-circle-o"></i>close</a>
+		<a href="javascript:closeCustom();"><i class="ionicons ion-ios-close-outline"></i>close</a>
 	</div>
 	<div class="clearfix"></div>
 </div>
@@ -56,9 +57,11 @@
 		});
 	});
 
+	
+
 	function closeCustom(){
 		$('a.slide').removeClass('active');
-		$('a.slide .fa').removeClass('fa-minus-circle').addClass('fa-plus-circle');
+		$('a.slide .fa').removeClass('ion-ios-minus-outline').addClass('ion-ios-plus-outline');
 		closeSlideById('column4');
 	}
 

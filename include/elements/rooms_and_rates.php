@@ -29,14 +29,14 @@
 			        </div>
 				</div>
 				
-				<p class="pull-left price_p"><span class="price">255</span> euro per package</p>
+				<p class="pull-left price_p"><span class="price">255</span> EUR<br />total price</p>
 				<button type="submit" class="pull-right btn btn-default book" style="margin-top: 9px;">book</button>
 				<div class="clearfix"></div>
 				
 				<div style="margin-top: 5px;">
-					<a class="slide hotel_policy" column-close="column4" column-open="column4" href="include/elements/hotel_policy.php?type=<?php echo $_GET['type']; ?>"><i class="fa fa-plus-circle"></i>room policy</a>
+					<a class="slide hotel_policy" column-close="column4" column-open="column4" href="include/elements/hotel_policy.php?type=<?php echo $_GET['type']; ?>"><i class="ionicons ion-ios-plus-outline"></i>room policy</a>
 				&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
-					<a class="slide hotel_info" column-close="column4" column-open="column4" href="include/elements/hotel_info.php?type=<?php echo $_GET['type']; ?>"><i class="fa fa-plus-circle"></i>hotel info</a>
+					<a class="slide hotel_info" column-close="column4" column-open="column4" href="include/elements/hotel_info.php?type=<?php echo $_GET['type']; ?>"><i class="ionicons ion-ios-plus-outline"></i>hotel info</a>
 				</div>
 				<hr />
 			</div>

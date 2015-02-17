@@ -22,10 +22,11 @@
 		<div class="clearfix"></div>
 		
 		<div class="row_form margin_top_block">
-	        <div class="col-md-12 col-xs-12 short_padding">
+	        <label class="control-label input_label col-sm-3 col-xs-3 no_padding_left_right" for="inputSuccess3">&nbsp;&nbsp;&nbsp;period:</label>
+	        <div class="col-sm-9 col-xs-9 no_padding_left_right">
 				<span class="custom-dropdown">
 				    <select>
-				        <option>zero month</option>
+				        <option>period</option>
 				        <option>Option 2</option>  
 				        <option>Option 3</option>
 				        <option>Option 4</option>

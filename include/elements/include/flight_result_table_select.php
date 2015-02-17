@@ -15,7 +15,7 @@
 					<p>
 						<span class="price">9999</span> EUR
 					</p>
-					<button type="button" class="btn btn-default book flight-book"
+					<button type="button" class="btn btn-default select flight-select"
 						data-loading-text="Please wait...">select</button>
 				</div>
 			</div>
@@ -41,7 +41,7 @@
 								src="assets/images/airplane_icon.png"
 								alt="Flight duration"><br />16h 50m</td>
 							<td style="width:130px;"><span class="departure_time">10:05</span><br>San Francisco Bla bla SFO</td>
-							<td style="padding-top: 10px;">LOT Polish Airlines | arrives next day | 1 stop | <span class="flight_detail_more_button"><i class="fa fa-plus-circle"></i> details</span></td>
+							<td style="padding-top: 10px;">LOT Polish Airlines | arrives next day | 1 stop | <span class="flight_detail_more_button"><i class="ionicons ion-ios-plus-outline"></i>details</span></td>
 						</tr>
 						<!-- END route disabled -->
 						<!-- START route main -->
@@ -59,12 +59,12 @@
 								<table class="flight_detail_table expanded_table">
 									<tbody>
 										<tr>
-											<td style="width:130px;"><span class="departure_time">18:15</span><br>Bucharest
+											<td style="width:160px;"><span class="departure_time">18:15</span> - 12/12/2015<br>Bucharest
 												OTP</td>
 											<td style="width:80px;" class="airplane"><img
 												src="assets/images/airplane_icon.png"
 												alt="Flight duration"><br />10h 00m</td>
-											<td style="width:130px;"><span class="departure_time">19:00</span><br>Warsaw WAW</td>
+											<td style="width:160px;"><span class="departure_time">19:00</span> - 12/12/2015<br>Warsaw WAW</td>
 											<td style="padding-top: 10px;">LOT Polish Airlines - Flight 646 | E75 | 2 seats
 												available |</td>
 										</tr>
@@ -74,12 +74,12 @@
 												</p></td>
 										</tr>
 										<tr>
-											<td style="width:130px;"><span class="departure_time">18:15</span><br>Bucharest
+											<td style="width:160px;"><span class="departure_time">18:15</span> - 12/12/2015<br>Bucharest
 												OTP</td>
 											<td style="width:80px;" class="airplane"><img
 												src="assets/images/airplane_icon.png"
 												alt="Flight duration"><br />6h 50m</td>
-											<td style="width:130px;"><span class="departure_time">19:00</span><br>Warsaw WAW</td>
+											<td style="width:160px;"><span class="departure_time">19:00</span> - 12/12/2015<br>Warsaw WAW</td>
 											<td style="padding-top: 10px;">LOT Polish Airlines - Flight 646 | E75 | 2 seats
 												available |</td>
 										</tr>
@@ -98,12 +98,12 @@
 									id="deny365c38f1f56f2c0d6a578ea8d20a5391::10"><i
 										class="icon-warning-sign"></i></span>
 							</label></td>
-							<td style="width:130px;"><span class="departure_time">18:15</span><br>Bucharest OTP</td>
+							<td style="width:160px;"><span class="departure_time">18:15</span><br>Bucharest OTP</td>
 							<td style="width:80px;" class="airplane"><img
 								src="assets/images/airplane_icon.png"
 								alt="Flight duration"><br />16h 50m</td>
-							<td style="width:130px;"><span class="departure_time">10:05</span><br>San Francisco Bla bla SFO</td>
-							<td style="padding-top: 10px;">LOT Polish Airlines | arrives next day | 1 stop | <span class="flight_detail_more_button"><i class="fa fa-plus-circle"></i> details</span></td>
+							<td style="width:160px;"><span class="departure_time">10:05</span><br>San Francisco Bla bla SFO</td>
+							<td style="padding-top: 10px;">LOT Polish Airlines | arrives next day | 1 stop | <span class="flight_detail_more_button"><i class="ionicons ion-ios-plus-outline"></i>details</span></td>
 						</tr>
 						<!-- END route disabled -->
 						<!-- START route main -->
@@ -121,12 +121,12 @@
 								<table class="flight_detail_table expanded_table">
 									<tbody>
 										<tr>
-											<td style="width:130px;"><span class="departure_time">18:15</span><br>Bucharest
+											<td style="width:160px;"><span class="departure_time">18:15</span> - 12/12/2015<br>Bucharest
 												OTP</td>
 											<td style="width:80px;" class="airplane"><img
 												src="assets/images/airplane_icon.png"
 												alt="Flight duration"><br />10h 00m</td>
-											<td style="width:130px;"><span class="departure_time">19:00</span><br>Warsaw WAW</td>
+											<td style="width:160px;"><span class="departure_time">19:00</span> - 12/12/2015<br>Warsaw WAW</td>
 											<td style="padding-top: 10px;">LOT Polish Airlines - Flight 646 | E75 | 2 seats
 												available |</td>
 										</tr>
@@ -136,12 +136,12 @@
 												</p></td>
 										</tr>
 										<tr>
-											<td style="width:130px;"><span class="departure_time">18:15</span><br>Bucharest
+											<td style="width:160px;"><span class="departure_time">18:15</span> - 12/12/2015<br>Bucharest
 												OTP</td>
 											<td style="width:80px;" class="airplane"><img
 												src="assets/images/airplane_icon.png"
 												alt="Flight duration"><br />6h 50m</td>
-											<td style="width:130px;"><span class="departure_time">19:00</span><br>Warsaw WAW</td>
+											<td style="width:160px;"><span class="departure_time">19:00</span> - 12/12/2015<br>Warsaw WAW</td>
 											<td style="padding-top: 10px;">LOT Polish Airlines - Flight 646 | E75 | 2 seats
 												available |</td>
 										</tr>
@@ -160,12 +160,12 @@
 									id="deny365c38f1f56f2c0d6a578ea8d20a5391::10"><i
 										class="icon-warning-sign"></i></span>
 							</label></td>
-							<td style="width:130px;"><span class="departure_time">18:15</span><br>Bucharest OTP</td>
+							<td style="width:160px;"><span class="departure_time">18:15</span><br>Bucharest OTP</td>
 							<td style="width:80px;" class="airplane"><img
 								src="assets/images/airplane_icon.png"
 								alt="Flight duration"><br />16h 50m</td>
-							<td style="width:130px;"><span class="departure_time">10:05</span><br>San Francisco Bla bla SFO</td>
-							<td style="padding-top: 10px;">LOT Polish Airlines | arrives next day | 1 stop | <span class="flight_detail_more_button"><i class="fa fa-plus-circle"></i> details</span></td>
+							<td style="width:160px;"><span class="departure_time">10:05</span><br>San Francisco Bla bla SFO</td>
+							<td style="padding-top: 10px;">LOT Polish Airlines | arrives next day | 1 stop | <span class="flight_detail_more_button"><i class="ionicons ion-ios-plus-outline"></i>details</span></td>
 						</tr>
 						<!-- END route disabled -->
 						<!-- START route main -->
@@ -183,12 +183,12 @@
 								<table class="flight_detail_table expanded_table">
 									<tbody>
 										<tr>
-											<td style="width:130px;"><span class="departure_time">18:15</span><br>Bucharest
+											<td style="width:160px;"><span class="departure_time">18:15</span> - 12/12/2015<br>Bucharest
 												OTP</td>
 											<td style="width:80px;" class="airplane"><img
 												src="assets/images/airplane_icon.png"
 												alt="Flight duration"><br />10h 00m</td>
-											<td style="width:130px;"><span class="departure_time">19:00</span><br>Warsaw WAW</td>
+											<td style="width:160px;"><span class="departure_time">19:00</span> - 12/12/2015<br>Warsaw WAW</td>
 											<td style="padding-top: 10px;">LOT Polish Airlines - Flight 646 | E75 | 2 seats
 												available |</td>
 										</tr>
@@ -198,12 +198,12 @@
 												</p></td>
 										</tr>
 										<tr>
-											<td style="width:130px;"><span class="departure_time">18:15</span><br>Bucharest
+											<td style="width:160px;"><span class="departure_time">18:15</span> - 12/12/2015<br>Bucharest
 												OTP</td>
 											<td style="width:80px;" class="airplane"><img
 												src="assets/images/airplane_icon.png"
 												alt="Flight duration"><br />6h 50m</td>
-											<td style="width:130px;"><span class="departure_time">19:00</span><br>Warsaw WAW</td>
+											<td style="width:160px;"><span class="departure_time">19:00</span> - 12/12/2015<br>Warsaw WAW</td>
 											<td style="padding-top: 10px;">LOT Polish Airlines - Flight 646 | E75 | 2 seats
 												available |</td>
 										</tr>
@@ -231,12 +231,12 @@
 									id="deny365c38f1f56f2c0d6a578ea8d20a5391::10"><i
 										class="icon-warning-sign"></i></span>
 							</label></td>
-							<td style="width:130px;"><span class="departure_time">18:15</span><br>San Francisco Bla bla SFO</td>
+							<td style="width:160px;"><span class="departure_time">18:15</span><br>San Francisco Bla bla SFO</td>
 							<td style="width:80px;" class="airplane"><img
 								src="assets/images/airplane_icon.png"
 								alt="Flight duration"><br />16h 50m</td>
-							<td style="width:130px;"><span class="departure_time">10:05</span><br>San Francisco Bla bla SFO</td>
-							<td style="padding-top: 10px;">LOT Polish Airlines | arrives next day | 1 stop | <span class="flight_detail_more_button"><i class="fa fa-plus-circle"></i> details</span></td>
+							<td style="width:160px;"><span class="departure_time">10:05</span><br>San Francisco Bla bla SFO</td>
+							<td style="padding-top: 10px;">LOT Polish Airlines | arrives next day | 1 stop | <span class="flight_detail_more_button"><i class="ionicons ion-ios-plus-outline"></i>details</span></td>
 						</tr>
 						<!-- END route disabled -->
 						<!-- START route main -->
@@ -254,12 +254,12 @@
 								<table class="flight_detail_table expanded_table">
 									<tbody>
 										<tr>
-											<td style="width:130px;"><span class="departure_time">18:15</span><br>Bucharest
+											<td style="width:160px;"><span class="departure_time">18:15</span> - 12/12/2015<br>Bucharest
 												OTP</td>
 											<td style="width:80px;" class="airplane"><img
 												src="assets/images/airplane_icon.png"
 												alt="Flight duration"><br />10h 00m</td>
-											<td style="width:130px;"><span class="departure_time">19:00</span><br>Warsaw WAW</td>
+											<td style="width:160px;"><span class="departure_time">19:00</span> - 12/12/2015<br>Warsaw WAW</td>
 											<td style="padding-top: 10px;">LOT Polish Airlines - Flight 646 | E75 | 2 seats
 												available |</td>
 										</tr>
@@ -269,12 +269,12 @@
 												</p></td>
 										</tr>
 										<tr>
-											<td style="width:130px;"><span class="departure_time">18:15</span><br>Bucharest
+											<td style="width:160px;"><span class="departure_time">18:15</span> - 12/12/2015<br>Bucharest
 												OTP</td>
 											<td style="width:80px;" class="airplane"><img
 												src="assets/images/airplane_icon.png"
 												alt="Flight duration"><br />6h 50m</td>
-											<td style="width:130px;"><span class="departure_time">19:00</span><br>Warsaw WAW</td>
+											<td style="width:160px;"><span class="departure_time">19:00</span> - 12/12/2015<br>Warsaw WAW</td>
 											<td style="padding-top: 10px;">LOT Polish Airlines - Flight 646 | E75 | 2 seats
 												available |</td>
 										</tr>
@@ -293,12 +293,12 @@
 									id="deny365c38f1f56f2c0d6a578ea8d20a5391::10"><i
 										class="icon-warning-sign"></i></span>
 							</label></td>
-							<td style="width:130px;"><span class="departure_time">18:15</span><br>San Francisco Bla bla SFO</td>
+							<td style="width:160px;"><span class="departure_time">18:15</span><br>San Francisco Bla bla SFO</td>
 							<td style="width:80px;" class="airplane"><img
 								src="assets/images/airplane_icon.png"
 								alt="Flight duration"><br />16h 50m</td>
-							<td style="width:130px;"><span class="departure_time">10:05</span><br>San Francisco Bla bla SFO</td>
-							<td style="padding-top: 10px;">LOT Polish Airlines | arrives next day | 1 stop | <span class="flight_detail_more_button"><i class="fa fa-plus-circle"></i> details</span></td>
+							<td style="width:160px;"><span class="departure_time">10:05</span><br>San Francisco Bla bla SFO</td>
+							<td style="padding-top: 10px;">LOT Polish Airlines | arrives next day | 1 stop | <span class="flight_detail_more_button"><i class="ionicons ion-ios-plus-outline"></i>details</span></td>
 						</tr>
 						<!-- END route disabled -->
 						<!-- START route main -->
@@ -316,12 +316,12 @@
 								<table class="flight_detail_table expanded_table">
 									<tbody>
 										<tr>
-											<td style="width:130px;"><span class="departure_time">18:15</span><br>Bucharest
+											<td style="width:160px;"><span class="departure_time">18:15</span> - 12/12/2015<br>Bucharest
 												OTP</td>
 											<td style="width:80px;" class="airplane"><img
 												src="assets/images/airplane_icon.png"
 												alt="Flight duration"><br />10h 00m</td>
-											<td style="width:130px;"><span class="departure_time">19:00</span><br>Warsaw WAW</td>
+											<td style="width:160px;"><span class="departure_time">19:00</span> - 12/12/2015<br>Warsaw WAW</td>
 											<td style="padding-top: 10px;">LOT Polish Airlines - Flight 646 | E75 | 2 seats
 												available |</td>
 										</tr>
@@ -331,12 +331,12 @@
 												</p></td>
 										</tr>
 										<tr>
-											<td style="width:130px;"><span class="departure_time">18:15</span><br>Bucharest
+											<td style="width:160px;"><span class="departure_time">18:15</span> - 12/12/2015<br>Bucharest
 												OTP</td>
 											<td style="width:80px;" class="airplane"><img
 												src="assets/images/airplane_icon.png"
 												alt="Flight duration"><br />6h 50m</td>
-											<td style="width:130px;"><span class="departure_time">19:00</span><br>Warsaw WAW</td>
+											<td style="width:160px;"><span class="departure_time">19:00</span> - 12/12/2015<br>Warsaw WAW</td>
 											<td style="padding-top: 10px;">LOT Polish Airlines - Flight 646 | E75 | 2 seats
 												available |</td>
 										</tr>
@@ -354,7 +354,7 @@
 		</div>
 
 		<div class="row">
-    		<div class="col-md-12">
+    		<div class="col-md-12 white_hr">
     			<hr />
     		</div>
     	</div>
@@ -399,12 +399,12 @@
 									id="deny365c38f1f56f2c0d6a578ea8d20a5391::10"><i
 										class="icon-warning-sign"></i></span>
 							</label></td>
-							<td style="width:130px;"><span class="departure_time">18:15</span><br>Bucharest OTP</td>
+							<td style="width:160px;"><span class="departure_time">18:15</span><br>Bucharest OTP</td>
 							<td style="width:80px;" class="airplane"><img
 								src="assets/images/airplane_icon.png"
 								alt="Flight duration"><br />16h 50m</td>
-							<td style="width:130px;"><span class="departure_time">10:05</span><br>Paris CDG</td>
-							<td style="padding-top: 10px;">LOT Polish Airlines | arrives next day | 1 stop | <span class="flight_detail_more_button"><i class="fa fa-plus-circle"></i> details</span></td>
+							<td style="width:160px;"><span class="departure_time">10:05</span><br>Paris CDG</td>
+							<td style="padding-top: 10px;">LOT Polish Airlines | arrives next day | 1 stop | <span class="flight_detail_more_button"><i class="ionicons ion-ios-plus-outline"></i>details</span></td>
 						</tr>
 						<!-- END route disabled -->
 						<!-- START route main -->
@@ -422,12 +422,12 @@
 								<table class="flight_detail_table expanded_table">
 									<tbody>
 										<tr>
-											<td style="width:130px;"><span class="departure_time">18:15</span><br>Bucharest
+											<td style="width:160px;"><span class="departure_time">18:15</span> - 12/12/2015<br>Bucharest
 												OTP</td>
 											<td style="width:80px;" class="airplane"><img
 												src="assets/images/airplane_icon.png"
 												alt="Flight duration"><br />10h 00m</td>
-											<td style="width:130px;"><span class="departure_time">19:00</span><br>Warsaw WAW</td>
+											<td style="width:160px;"><span class="departure_time">19:00</span> - 12/12/2015<br>Warsaw WAW</td>
 											<td>LOT Polish Airlines - Flight 646 | E75 | 2 seats
 												available |</td>
 										</tr>
@@ -437,12 +437,12 @@
 												</p></td>
 										</tr>
 										<tr>
-											<td style="width:130px;"><span class="departure_time">18:15</span><br>Bucharest
+											<td style="width:160px;"><span class="departure_time">18:15</span> - 12/12/2015<br>Bucharest
 												OTP</td>
 											<td style="width:80px;" class="airplane"><img
 												src="assets/images/airplane_icon.png"
 												alt="Flight duration"><br />6h 50m</td>
-											<td style="width:130px;"><span class="departure_time">19:00</span><br>Warsaw WAW</td>
+											<td style="width:160px;"><span class="departure_time">19:00</span> - 12/12/2015<br>Warsaw WAW</td>
 											<td>LOT Polish Airlines - Flight 646 | E75 | 2 seats
 												available |</td>
 										</tr>
@@ -471,12 +471,12 @@
 									id="deny365c38f1f56f2c0d6a578ea8d20a5391::10"><i
 										class="icon-warning-sign"></i></span>
 							</label></td>
-							<td style="width:130px;"><span class="departure_time">18:15</span><br>San Francisco Bla bla SFO</td>
+							<td style="width:160px;"><span class="departure_time">18:15</span><br>San Francisco Bla bla SFO</td>
 							<td style="width:80px;" class="airplane"><img
 								src="assets/images/airplane_icon.png"
 								alt="Flight duration"><br />16h 50m</td>
-							<td style="width:130px;"><span class="departure_time">10:05</span><br>San Francisco Bla bla SFO</td>
-							<td style="padding-top: 10px;">LOT Polish Airlines | arrives next day | 1 stop | <span class="flight_detail_more_button"><i class="fa fa-plus-circle"></i> details</span></td>
+							<td style="width:160px;"><span class="departure_time">10:05</span><br>San Francisco Bla bla SFO</td>
+							<td style="padding-top: 10px;">LOT Polish Airlines | arrives next day | 1 stop | <span class="flight_detail_more_button"><i class="ionicons ion-ios-plus-outline"></i>details</span></td>
 						</tr>
 						<!-- END route disabled -->
 						<!-- START route main -->
@@ -494,12 +494,12 @@
 								<table class="flight_detail_table expanded_table">
 									<tbody>
 										<tr>
-											<td style="width:130px;"><span class="departure_time">18:15</span><br>Bucharest
+											<td style="width:160px;"><span class="departure_time">18:15</span> - 12/12/2015<br>Bucharest
 												OTP</td>
 											<td style="width:80px;" class="airplane"><img
 												src="assets/images/airplane_icon.png"
 												alt="Flight duration"><br />10h 00m</td>
-											<td style="width:130px;"><span class="departure_time">19:00</span><br>Warsaw WAW</td>
+											<td style="width:160px;"><span class="departure_time">19:00</span> - 12/12/2015<br>Warsaw WAW</td>
 											<td style="padding-top: 10px;">LOT Polish Airlines - Flight 646 | E75 | 2 seats
 												available |</td>
 										</tr>
@@ -509,12 +509,12 @@
 												</p></td>
 										</tr>
 										<tr>
-											<td style="width:130px;"><span class="departure_time">18:15</span><br>Bucharest
+											<td style="width:160px;"><span class="departure_time">18:15</span> - 12/12/2015<br>Bucharest
 												OTP</td>
 											<td style="width:80px;" class="airplane"><img
 												src="assets/images/airplane_icon.png"
 												alt="Flight duration"><br />6h 50m</td>
-											<td style="width:130px;"><span class="departure_time">19:00</span><br>Warsaw WAW</td>
+											<td style="width:160px;"><span class="departure_time">19:00</span> - 12/12/2015<br>Warsaw WAW</td>
 											<td style="padding-top: 10px;">LOT Polish Airlines - Flight 646 | E75 | 2 seats
 												available |</td>
 										</tr>
@@ -533,12 +533,12 @@
 									id="deny365c38f1f56f2c0d6a578ea8d20a5391::10"><i
 										class="icon-warning-sign"></i></span>
 							</label></td>
-							<td style="width:130px;"><span class="departure_time">18:15</span><br>San Francisco Bla bla SFO</td>
+							<td style="width:160px;"><span class="departure_time">18:15</span><br>San Francisco Bla bla SFO</td>
 							<td style="width:80px;" class="airplane"><img
 								src="assets/images/airplane_icon.png"
 								alt="Flight duration"><br />16h 50m</td>
-							<td style="width:130px;"><span class="departure_time">10:05</span><br>San Francisco Bla bla SFO</td>
-							<td style="padding-top: 10px;">LOT Polish Airlines | arrives next day | 1 stop | <span class="flight_detail_more_button"><i class="fa fa-plus-circle"></i> details</span></td>
+							<td style="width:160px;"><span class="departure_time">10:05</span><br>San Francisco Bla bla SFO</td>
+							<td style="padding-top: 10px;">LOT Polish Airlines | arrives next day | 1 stop | <span class="flight_detail_more_button"><i class="ionicons ion-ios-plus-outline"></i>details</span></td>
 						</tr>
 						<!-- END route disabled -->
 						<!-- START route main -->
@@ -556,12 +556,12 @@
 								<table class="flight_detail_table expanded_table">
 									<tbody>
 										<tr>
-											<td style="width:130px;"><span class="departure_time">18:15</span><br>Bucharest
+											<td style="width:160px;"><span class="departure_time">18:15</span> - 12/12/2015<br>Bucharest
 												OTP</td>
 											<td style="width:80px;" class="airplane"><img
 												src="assets/images/airplane_icon.png"
 												alt="Flight duration"><br />10h 00m</td>
-											<td style="width:130px;"><span class="departure_time">19:00</span><br>Warsaw WAW</td>
+											<td style="width:160px;"><span class="departure_time">19:00</span> - 12/12/2015<br>Warsaw WAW</td>
 											<td style="padding-top: 10px;">LOT Polish Airlines - Flight 646 | E75 | 2 seats
 												available |</td>
 										</tr>
@@ -571,12 +571,12 @@
 												</p></td>
 										</tr>
 										<tr>
-											<td style="width:130px;"><span class="departure_time">18:15</span><br>Bucharest
+											<td style="width:160px;"><span class="departure_time">18:15</span> - 12/12/2015<br>Bucharest
 												OTP</td>
 											<td style="width:80px;" class="airplane"><img
 												src="assets/images/airplane_icon.png"
 												alt="Flight duration"><br />6h 50m</td>
-											<td style="width:130px;"><span class="departure_time">19:00</span><br>Warsaw WAW</td>
+											<td style="width:160px;"><span class="departure_time">19:00</span> - 12/12/2015<br>Warsaw WAW</td>
 											<td style="padding-top: 10px;">LOT Polish Airlines - Flight 646 | E75 | 2 seats
 												available |</td>
 										</tr>

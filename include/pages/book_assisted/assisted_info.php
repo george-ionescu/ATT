@@ -17,7 +17,7 @@
 	
 	<br />
 	<div class="pull-right">
-		<a href="javascript:closeCustom();"><i class="fa fa-times-circle-o"></i>close</a>
+		<a href="javascript:closeCustom();"><i class="ionicons ion-ios-close-outline"></i>close</a>
 	</div>
 	<div class="clearfix"></div>
 </div>
@@ -26,7 +26,7 @@
 	function closeCustom(){
 		$('a.slide').removeClass('active');
 		$('.button_after_big_info').removeClass('active');
-		$('.button_after_big_info .fa').removeClass('fa-minus-circle').addClass('fa-plus-circle');
+		$('.button_after_big_info .ionicons').removeClass('ion-ios-minus-outline').addClass('ion-ios-plus-outline');
 		closeSlideById('column2');
 	}
 </script>

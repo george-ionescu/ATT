@@ -48,25 +48,26 @@
 		    <div class="col-md-6 nopadding" id="column3x">
 		    	<div id="compare_content">
 		    		<div class="box pull-left">
-			    		<p>05 dec - 08 dec</p>
+			    		<p class="title">05 dec - 08 dec</p>
 			    		<p class="price_p">
-							<span class="price">254</span> euro/package <br /> with flight included
+							<span class="price">254</span> EUR<br />total price
 						</p>
-						<a href="#">room details</a>
+						<a class="btn btn-default" href="#">select</a>
 					</div>
 					<div class="box pull-left">
-			    		<p>05 dec - 08 dec</p>
+			    		<p class="title">05 dec - 08 dec</p>
 			    		<p class="price_p">
-							<span class="price">254</span> euro/package <br /> with flight included
+							<span class="price">254</span> EUR<br />total price
 						</p>
-						<a href="#">room details</a>
+						<a class="btn btn-default" href="#">select</a>
 					</div>
 					<div class="box pull-left">
-			    		<p>05 dec - 08 dec</p>
+			    		<p class="title">05 dec - 08 dec</p>
 			    		<p class="price_p">
-							<span class="price">254</span> euro/package <br /> with flight included
+							<span class="price">254</span> EUR<br />total price
 						</p>
-						<a href="#">room details</a>
+						<a class="btn btn-default small" href="#">select</a>
+						<a href="javascript:closeCompare();" class="pull-right"><i class="ionicons ion-ios-close-outline"></i> close</a> 
 					</div>
 					<div class="clearfix"></div>
 		    	</div>

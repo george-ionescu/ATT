@@ -4,12 +4,12 @@
     		<td colspan="4" class="title">depart 18 feb 2014</td>
     	</tr>
 		<tr>
-			<td style="width:130px;"><span class="departure_time">18:15</span><br>Bucharest
+			<td style="width:160px;"><span class="departure_time">18:15</span> - 12/12/2015<br>Bucharest
 			OTP</td>
 		<td style="width:80px;" class="airplane"><img
 			src="assets/images/airplane_icon.png"
 			alt="Flight duration"><br />10h 00m</td>
-		<td style="width:130px;"><span class="departure_time">19:00</span><br>Warsaw WAW</td>
+		<td style="width:160px;"><span class="departure_time">19:00</span> - 12/12/2015<br>Warsaw WAW</td>
 		<td style="padding-top: 10px;">LOT Polish Airlines - Flight 646 | E75 | 2 seats
 			available |</td>
 	</tr>
@@ -19,17 +19,17 @@
 			</p></td>
 	</tr>
 	<tr>
-		<td style="width:130px;"><span class="departure_time">18:15</span><br>Bucharest
+		<td style="width:160px;"><span class="departure_time">18:15</span> - 12/12/2015<br>Bucharest
 			OTP</td>
 		<td style="width:80px;" class="airplane"><img
 			src="assets/images/airplane_icon.png"
 			alt="Flight duration"><br />6h 50m</td>
-		<td style="width:130px;"><span class="departure_time">19:00</span><br>Warsaw WAW</td>
+		<td style="width:160px;"><span class="departure_time">19:00</span> - 12/12/2015<br>Warsaw WAW</td>
 		<td style="padding-top: 10px;">LOT Polish Airlines - Flight 646 | E75 | 2 seats
 				available |</td>
 		</tr>
 		<tr>
-    					<td colspan="4"><p class="horizontal_line">&nbsp;</p></td>
+    					<td colspan="4"><p>&nbsp;</p></td>
     				</tr>
 	</tbody>
 </table>
@@ -40,12 +40,12 @@
     		<td colspan="4" class="title">return 20 feb 2014</td>
     	</tr>
 		<tr>
-			<td style="width:130px;"><span class="departure_time">18:15</span><br>Bucharest
+			<td style="width:160px;"><span class="departure_time">18:15</span> - 12/12/2015<br>Bucharest
 			OTP</td>
 		<td style="width:80px;" class="airplane"><img
 			src="assets/images/airplane_icon.png"
 			alt="Flight duration"><br />10h 00m</td>
-		<td style="width:130px;"><span class="departure_time">19:00</span><br>Warsaw WAW</td>
+		<td style="width:160px;"><span class="departure_time">19:00</span> - 12/12/2015<br>Warsaw WAW</td>
 		<td style="padding-top: 10px;">LOT Polish Airlines - Flight 646 | E75 | 2 seats
 			available |</td>
 	</tr>
@@ -55,18 +55,16 @@
 			</p></td>
 	</tr>
 	<tr>
-		<td style="width:130px;"><span class="departure_time">18:15</span><br>Bucharest
+		<td style="width:160px;"><span class="departure_time">18:15</span> - 12/12/2015<br>Bucharest
 			OTP</td>
 		<td style="width:80px;" class="airplane"><img
 			src="assets/images/airplane_icon.png"
 			alt="Flight duration"><br />6h 50m</td>
-		<td style="width:130px;"><span class="departure_time">19:00</span><br>Warsaw WAW</td>
+		<td style="width:160px;"><span class="departure_time">19:00</span> - 12/12/2015<br>Warsaw WAW</td>
 		<td style="padding-top: 10px;">LOT Polish Airlines - Flight 646 | E75 | 2 seats
 				available |</td>
 		</tr>
-		<tr>
-    					<td colspan="4"><p class="horizontal_line">&nbsp;</p></td>
-    				</tr>
+		
 	</tbody>
 </table>
 			       
@@ -95,8 +93,8 @@
 		<span class="text-complete">
 			Fusce posuere sollicitudin justo. Curabitur pulvinar neque quis ligula convallis, vitae vulputate erat lacinia
 		</span> 
-		<a class="more" href="#"><i class="fa fa-plus-circle"></i>more</a>
-		<a class="less" style="display: none;" href="#"><i class="fa fa-minus-circle"></i>less</a>
+		<a class="more" href="#"><i class="ionicons ion-ios-plus-outline"></i>more</a>
+		<a class="less" style="display: none;" href="#"><i class="ionicons ion-ios-minus-outline"></i>less</a>
 	</p>
 	
 	<p id="option2" style="display: none;">
@@ -104,8 +102,8 @@
 		<span class="text-complete">
 			Fusce posuere sollicitudin justo. Curabitur pulvinar neque quis ligula convallis, vitae vulputate erat lacinia
 		</span> 
-		<a class="more" href="#"><i class="fa fa-plus-circle"></i>more</a>
-		<a class="less" style="display: none;" href="#"><i class="fa fa-minus-circle"></i>less</a>
+		<a class="more" href="#"><i class="ionicons ion-ios-plus-outline"></i>more</a>
+		<a class="less" style="display: none;" href="#"><i class="ionicons ion-ios-minus-outline"></i>less</a>
 	</p>
 	
 	<p id="option3" style="display: none;">
@@ -113,8 +111,8 @@
 		<span class="text-complete">
 			Fusce posuere sollicitudin justo. Curabitur pulvinar neque quis ligula convallis, vitae vulputate erat lacinia
 		</span> 
-		<a class="more" href="#"><i class="fa fa-plus-circle"></i>more</a>
-		<a class="less" style="display: none;" href="#"><i class="fa fa-minus-circle"></i>less</a>
+		<a class="more" href="#"><i class="ionicons ion-ios-plus-outline"></i>more</a>
+		<a class="less" style="display: none;" href="#"><i class="ionicons ion-ios-minus-outline"></i>less</a>
 	</p>
 	    		
 		    			
