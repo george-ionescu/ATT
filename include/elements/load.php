@@ -28,7 +28,7 @@
 	
 	
 	
-	<h1 class="pull-right nomargin_right">Paris hotel info</h1>
+	<h1 class="pull-right nomargin_right" style="background-color: transparent;">Paris hotel info</h1>
 	<div class="clearfix"></div>
 	
 	<p>Lorem Ipsum is simply dummy text of the printing and typesetting

@@ -1,4 +1,5 @@
 <h1 class="pull-right">Your selected flight from Bucharest to Antigua</h1>
+
 		        <div class="clearfix"></div>
 		        
 		        <div class="column_content padding_column_content full_height">

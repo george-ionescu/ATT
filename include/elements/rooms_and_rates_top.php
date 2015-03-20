@@ -1,4 +1,6 @@
-<h1 class="pull-right">Rooms & Rates</h1>
+<div style="position:relative;">
+	<h1 class="pull-right"><a class="hide_on_desktop close_button_mobile" href="javascript:closePage();"></a> Rooms & Rates</h1>
+</div>
 <div class="clearfix"></div>
 
 <div class="column_content padding_column_content full_height text_align_left" style="margin-top: 5px;">
@@ -26,11 +28,11 @@
 			        </div>
 				</div>
 				
-				<p class="pull-left price_p"><span class="price">255</span> EUR<br />total price</p>
-				<button type="submit" class="pull-right btn btn-default book" style="margin-top: 9px;">select</button>
+				<button type="submit" class="pull-right btn btn-default book" style="margin-top: 9px; margin-left:10px;">book</button>
+				<p class="pull-right price_p" style="text-align: right;"><span class="price">255</span> EUR<br />total price</p>
 				<div class="clearfix"></div>
 				
-				<div style="margin-top: 5px;">
+				<div style="margin-top: 10px;">
 					<a class="slide" column-close="column4" column-open="column4" href="include/elements/hotel_policy.php"><i class="ionicons ion-ios-plus-outline"></i>room policy</a>
 				&nbsp;&nbsp;&nbsp;&nbsp;
 				<?php if (1==2){?>
@@ -45,6 +47,24 @@
 </div>
 
 <script>
+function closePage(){
+	/*url = 'include/elements/hotel_result.php?type=<?php echo $_GET['type']; ?>';
+	$.get(url, function( data ) {
+		hidePreloader();
+		$('#column2').show();
+		$('#column2').html(data);
+		
+		closeSlideById('column3');
+	});*/
+
+	var oldSlide = $('#column2');
+	var newSlide = $('#column2');
+	var url = 'include/elements/sort_hotel.php';
+	var class_bootstrap = 'col-md-3';
+	
+	changeSlide(oldSlide, newSlide, url, class_bootstrap);
+}
+
 $(document).ready(function(){
 	$('a.slide').click(function(event){
 		event.preventDefault();

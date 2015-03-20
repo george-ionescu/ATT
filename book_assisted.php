@@ -14,7 +14,7 @@
 				        
 				        <div class="row_form">
 							<div class="col-lg-12 col-md-12 col-xs-12 nopadding">
-								<p style="line-height:50px; text-align:center;">Please choose a month and travel experience</p>
+								<p style="text-align:center;">Please choose a month and travel experience</p>
 							</div>
 							<div class="col-lg-12 col-md-12 col-xs-12 nopadding">
 								<div class="custom_input_slide_content" style="margin:0 auto;">
@@ -41,20 +41,17 @@
 									<label class="radio-inline"> <input type="checkbox" id="inlineCheckbox3" name="gr1" value="option3"><span class="check"></span> Winter Sports</label> 
 									<label class="radio-inline"> <input type="checkbox" id="inlineCheckbox1" name="gr1" value="option1" checked><span class="check"></span> Wind Sports</label> 
 									<label class="radio-inline"> <input type="checkbox" id="inlineCheckbox3" name="gr2" value="option3"><span class="check"></span> Casino Games</label>
-													<label class="radio-inline"> <input type="checkbox" id="inlineCheckbox2" name="gr2" value="option2"><span class="check"></span> Scuba & Snorkeling</label> 
-									
+									<label class="radio-inline"> <input type="checkbox" id="inlineCheckbox2" name="gr2" value="option2"><span class="check"></span> Scuba & Snorkeling</label> 
 								</div> 	
 							</div>
 							<div class="col-md-4 short_padding pull-left">	
 								<div class="options_list">
 									<label class="radio-inline"> <input type="checkbox" id="inlineCheckbox3" name="gr2" value="option3"><span class="check"></span> Golf</label>
-								
 									<label class="radio-inline"> <input type="checkbox" id="inlineCheckbox1" name="gr2" value="option1" checked><span class="check"></span> Fishing</label> 
 									<label class="radio-inline"> <input type="checkbox" id="inlineCheckbox1" name="gr2" value="option1" checked><span class="check"></span> Theme Parks</label> 
 									<label class="radio-inline"> <input type="checkbox" id="inlineCheckbox3" name="gr2" value="option3"><span class="check"></span> Wildlife & Zoo</label> 
 									<label class="radio-inline"> <input type="checkbox" id="inlineCheckbox3" name="gr2" value="option3"><span class="check"></span> SPA & Health</label>
 									<label class="radio-inline"> <input type="checkbox" id="inlineCheckbox2" name="gr2" value="option2"><span class="check"></span> Big Iconic Cities</label>
-									
 								</div> 
 							</div>
 							<div class="col-md-4 short_padding pull-left">	

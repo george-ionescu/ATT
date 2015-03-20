@@ -1,4 +1,5 @@
-<h1 class="pull-right">Trip Information</h1>
+<h1 class="pull-right hide_on_mobile">Trip Information</h1>
+<h1 class="pull-right hide_on_desktop">Flights</h1>
 <div class="clearfix"></div>
 
 <div class="column_content padding_column_content full_height">
@@ -7,8 +8,8 @@
 		<div style="height:40px; margin-top:3px;">
 			<table class="full_width">
 				<tr>
-					<td style="text-align:left; width: 120px;"><label class="radio-inline" style="float:none;"> round trip &nbsp;&nbsp;<input type="radio" id="tripType1" name="gr" value="option1" checked><span class="check"></span> </label></td>
-					<td style="text-align:left;"><label class="radio-inline" style="float:none;"> one way &nbsp;&nbsp;<input type="radio" id="tripType2" name="gr" value="option2"><span class="check"></span> </label></td>
+					<td style="text-align:left; width: 120px;"><label class="radio-inline" style="float:none;"><input type="radio" id="tripType1" name="gr" value="option1" checked><span class="check"></span>&nbsp;&nbsp;round trip </label></td>
+					<td style="text-align:left;"><label class="radio-inline" style="float:none;"><input type="radio" id="tripType2" name="gr" value="option2"><span class="check"></span>&nbsp;&nbsp;one way</label></td>
 					<?php if (1 == 2) { ?>
 						<td style="text-align:right;"><label class="radio-inline" style="float:none;"> multi city &nbsp;&nbsp;<input type="radio" id="tripType3" name="gr" value="option3"><span class="check"></span> </label></td>
 					<?php } ?>

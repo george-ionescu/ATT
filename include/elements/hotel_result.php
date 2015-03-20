@@ -13,7 +13,9 @@ if ($_GET['type'] == 5){
 ?>
 
 <?php if ($_GET['type'] != 5) { ?>
-	<h1 class="pull-right">999 hotel results</h1>
+	<div style="position:relative;">
+		<h1 class="pull-right"><a class="hide_on_desktop close_button_mobile" href="javascript:closePage();"></a> 999 hotel results</h1>
+	</div>
 <?php } ?>
 <div class="clearfix"></div>
 
@@ -22,7 +24,7 @@ if ($_GET['type'] == 5){
 		<?php if ($_GET['type'] != 5) { ?>
 			<?php for ($i=1; $i<=$hotelCount; $i++) { ?>
 				<div class="row">
-					<div id="hotel<?php echo $i; ?>" class="hotel_detail type<?php echo $_GET['type']; ?> <?php if ($_GET['type'] == 5) { ?>active<? } ?>" <?php if ($_GET['type'] == 5) { ?>style="border-bottom:none;"<?php } ?>>
+					<div id="hotel<?php echo $i; ?>" class="hotel_detail type<?php echo $_GET['type']; ?> <?php echo $_GET['from']; ?> <?php if ($_GET['type'] == 5) { ?>active<? } ?>" <?php if ($_GET['type'] == 5) { ?>style="border-bottom:none;"<?php } ?>>
 						<p class="title">Radisson Blu Edwardian Berkshire (type <?php echo $_GET['type']; ?>)</p>
 				
 						<table>
@@ -75,7 +77,6 @@ if ($_GET['type'] == 5){
 
 <?php if ($_GET['type'] == 5) { ?>
 	<script>
-	
 		function openNext(){
 			var oldSlide = $('#column2');
 			var newSlide = $('#column2');
@@ -93,4 +94,21 @@ if ($_GET['type'] == 5){
 	
 	</script>
 
+<?php } else { ?>
+	<script>
+		function closePage(){
+			url = 'include/pages/book_directly/hotels.php';
+			$.get(url, function( data ) {
+				hidePreloader();
+				$('#column1').show();
+				$('#column1').html(data);
+				
+				closeSlideById('column2');
+
+				$('#info_button').hide();
+				$('#sort_button').hide();
+				$('#sort_wrapper').html("");
+			});
+		}
+	</script>
 <?php } ?>
