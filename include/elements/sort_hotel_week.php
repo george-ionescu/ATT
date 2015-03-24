@@ -124,7 +124,7 @@
 	        function openNext(){
 	    		var oldSlide = $('#column2');
 	    		var newSlide = $('#column2');
-	    		var url = 'include/elements/hotel_result.php?type=3';
+	    		var url = 'include/elements/hotel_result.php?type=3&from=weekend_hotel';
 	    		var class_bootstrap = 'col-md-3 hotel nopadding';
 	    		
 	    		if (oldSlide && newSlide && url != '#'){
