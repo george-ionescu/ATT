@@ -1,3 +1,8 @@
+<div class="clearfix"></div>
+<div class="hide_on_desktop" style="display:block; height:20px; margin-top:290px; color:#fff; display:none;">
+	<p style="text-align: center; font-size:12px;">Copyright © 2015 Alice Tips&Tricks. All rights reserved.</p>
+</div>
+
 <footer>
 	<div class="footer navbar-fixed-bottom">
 		<div class="container-fluid">
@@ -7,8 +12,7 @@
 					&nbsp;&nbsp;&nbsp;&nbsp;
 					<a href="javascript:showCreateAccountPopUp();"><i class="fa fa-user"></i>Register</a> | 
 					<a href="javascript:showRegisterPopUp();">Sign in</a> | 
-					<a href="my_account.php">My account</a> | 
-					<a href="javascript:test();">Reload Vegas</a>
+					<a href="my_account.php">My account</a>
 				</div>
 				<div class="col-md-6 col-sm-6 col-xs-12">
 					<div class="footer-right">
@@ -71,7 +75,7 @@
 
 <script type="text/javascript" src="js/bootstrap3-typeahead.js"></script>
 
-
+<script type="text/javascript" src="js/mobile-detect.js"></script>
 
 <!-- /// Custom scripts ////////  -->
 <script type="text/javascript" src="js/plugins.js?v=<?php echo time(); ?>"></script>

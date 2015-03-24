@@ -1,11 +1,10 @@
-	<h1 class="pull-right">Hotel Info</h1>
-	<div class="clearfix"></div>
-	<br />
+<div class="hotel_detail top_pics">
 	<p style="text-align:left;">
 		Name: Radisson Blu Edwardian Berkshire<br />
 		Adress: 22 Park Lane, London, W1K 1BE<br />
 		Phone: +44 20 7493 8000<br />
-		E-mail: office@hilton.co.uk
+		E-mail: office@hilton.co.uk<br /><br />
+		<a href="#" class="map"><i class="fa fa-map-marker"></i> map view</a>
 	</p>
 	<br />
 	<p style="text-align: justify;">Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -17,21 +16,22 @@
 		the release of Letraset sheets containing Lorem Ipsum passages, and
 		more recently with desktop publishing software like Aldus PageMaker
 		including versions of Lorem Ipsum.</p>
-		
-	<h1 class="pull-right second-title">Hotel Photos</h1>
 	<div class="clearfix"></div>
+</div>
+
+<h1 class="pull-right second-title">Hotel Photos</h1>
+<div class="clearfix"></div>
+
+<div id="photo_container" style="text-align: center;">
+	<?php for ($i=1; $i<=6; $i++) { ?>
+		<div class="box">
+			<a href="images/hotels/<?php echo $i; ?>.jpg" rel="group">
+				<img src="images/hotels/thumbs/<?php echo $i; ?>.jpg" alt="" />
+			</a>
+		</div> 
+	<?php } ?>
+</div>
 	
-	<div id="photo_container" style="text-align: center;">
-		<?php for ($i=1; $i<=6; $i++) { ?>
-			<div class="box">
-				<a href="images/hotels/<?php echo $i; ?>.jpg" rel="group">
-					<img src="images/hotels/thumbs/<?php echo $i; ?>.jpg" alt="" />
-				</a>
-			</div> 
-		<?php } ?>
-	</div>
-	
-	<div class="clearfix"></div>
 
 
 <script>

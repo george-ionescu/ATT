@@ -1,5 +1,8 @@
-<h1 class="pull-right">Choose Service</h1>
+<div style="position:relative;">
+	<h1 class="pull-right"><a class="hide_on_desktop close_button_mobile" href="javascript:closePage();"></a> 99 add-ons results</h1>
+</div>
 <div class="clearfix"></div>
+
 
 <div class="column_content nopadding full_height">
 	<div class="container-fluid">
@@ -20,7 +23,7 @@
 									</div>
 								</div>
 							</td>
-							<td style="vertical-align: top;">
+							<td style="vertical-align: top; width:45%;">
 								<p class="price_p">
 									starting from<br /><span class="price">254 </span>EUR<br />total price
 								</p>
@@ -34,3 +37,20 @@
 		<?php } ?>
 	</div>
 </div>
+
+<script>
+function closePage(){
+	url = 'include/pages/book_directly/trip_add_ons.php';
+	$.get(url, function( data ) {
+		hidePreloader();
+		$('#column1').show();
+		$('#column1').html(data);
+		
+		closeSlideById('column2');
+
+		$('#info_button').hide();
+		$('#sort_button').hide();
+		$('#sort_wrapper').html("");
+	});
+}
+</script>

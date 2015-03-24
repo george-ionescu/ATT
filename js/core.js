@@ -20,6 +20,8 @@ function test(){
 var activeCalendarContainer;
 var hotelObject;
 var hotelContainer;
+var newWindowWidth = $(window).width();
+
 
 function createBreadcrump(bread){
 	var brd = '<li><a href="/">Home</a></li>';
@@ -108,11 +110,13 @@ function closeMarkers(){
 
 function openSlide(newSlide, url, class_bootstrap){
 	showPreloader();
-	var newWindowWidth = $(window).width();
+	
 	var slideId = newSlide.attr('id');
 	slideId = parseInt(slideId.replace('column', ''));
 	
 	if (newWindowWidth < 1024){
+		$("html, body").animate({ scrollTop: 0 });
+		$(newSlide).animate({ scrollTop: 0 });
 		class_bootstrap = "col-md-3";
 	}
 	
@@ -132,14 +136,43 @@ function openSlide(newSlide, url, class_bootstrap){
 			//for mobile version, if it's a sort column, move it to header
 			var routeData = url.split("?")[0];
 			console.log(routeData);
+			
 			if ((routeData.indexOf("sort") > -1 || routeData.indexOf("trip_info") > -1) && newWindowWidth < 1024){
-				$('#sort_button').show();
-				$('#sort_wrapper').html(data);
+				console.log('1');
+				if (routeData.indexOf("trip_info") > -1){
+					console.log('2');
+					$('#info_button').show();
+					$('#sort_button').hide();
+					$('#sort_wrapper').html(data);
+					$('#sort_wrapper').height(0);
+					$("#sort_wrapper").removeClass().addClass('navbar-collapse2').addClass('collapse');
+				} else {
+					console.log('3');
+					$('#info_button').hide();
+					$('#sort_button').show();
+					$('#sort_wrapper').html(data);
+					$('#sort_wrapper').height(0);
+					$("#sort_wrapper").removeClass().addClass('navbar-collapse2').addClass('collapse');
+				}
 				clearInterval(t);
 				openNext();
 			} else {
 				newSlide.html(data);
 				callFormEvents();
+				console.log('4');
+				if ((routeData.indexOf("thank_you") > -1 || routeData.indexOf("rooms_and_rates") > -1) && newWindowWidth < 1024){
+					console.log('5');
+					$('#info_button').hide();
+					$('#sort_button').hide();
+					$('#sort_wrapper').html("");
+					$('#sort_wrapper').height(0);
+					$("#sort_wrapper").removeClass().addClass('navbar-collapse2').addClass('collapse');
+				}
+				
+				if (newWindowWidth < 1024 && $('#sort_wrapper').hasClass('in')){
+					$('#sort_wrapper').height(0);
+					$("#sort_wrapper").removeClass().addClass('navbar-collapse2').addClass('collapse');
+				}
 				
 				newSlide.show('slide', {
 					direction : 'left',
@@ -169,8 +202,14 @@ function openSlide(newSlide, url, class_bootstrap){
 						
 						if (newWindowWidth >= 1024){
 							//resize column height for scroll
-							var h = $(window).height() - $('.header').height() - $('.footer').height() - 60;
-							$('.column_content').height(h);
+							$('.column_content').each(function(){
+								if ($(this).hasClass('no_margin_scroll')){
+						    		h = $(window).height() - $('.header').height() - $('.footer').height();
+						    	} else {
+						    		h = $(window).height() - $('.header').height() - $('.footer').height() - 60;
+						    	}
+								$(this).height(h);	
+							});
 						}
 						
 						$(".column_content").bind('scroll', function() {
@@ -230,7 +269,14 @@ function openSlide(newSlide, url, class_bootstrap){
 				
 				if (newWindowWidth >= 1024){
 					//resize column height for scroll
-					var h = $(window).height() - $('.header').height() - $('.footer').height() - 60;
+					$('.column_content').each(function(){
+						if ($(this).hasClass('no_margin_scroll')){
+				    		h = $(window).height() - $('.header').height() - $('.footer').height();
+				    	} else {
+				    		h = $(window).height() - $('.header').height() - $('.footer').height() - 60;
+				    	}
+						$(this).height(h);	
+					});
 					$('.column_content').height(h);
 				}
 				
@@ -268,6 +314,10 @@ function closeSlideById(id){
 
 function closeCompare(){
 	closeSlideById('column3x');
+}
+
+function closeGoogleMaps(){
+	closeSlideById('column3gmap');
 }
 
 function closeAllSlidesAndOpen(oldSlide, newSlide, url, class_bootstrap){
@@ -404,21 +454,21 @@ function showRegisterPopUp(){
 	showPreloader();
 	$.get( "include/pages/my_account/register.php", function( data ) {
 		hidePreloader();
-		createWindow('dialog_ajax', '', data, 320, 280);
+		createWindow('dialog_ajax', '', data, 320, 290);
 	});
 }
 function showCreateAccountPopUp(){
 	showPreloader();
 	$.get( "include/pages/my_account/create-account.php", function( data ) {
 		hidePreloader();
-		createWindow('dialog_ajax', '', data, 320, 280);
+		createWindow('dialog_ajax', '', data, 320, 290);
 	});
 }
 function showLostPassword(){
 	showPreloader();
 	$.get( "include/pages/my_account/lost-password.php", function( data ) {
 		hidePreloader();
-		createWindow('dialog_ajax', '', data, 320, 280);
+		createWindow('dialog_ajax', '', data, 320, 290);
 	});
 }
 
@@ -947,10 +997,15 @@ function animationDone(){
 		
 		if (!$(this).hasClass('active') || $(this).hasClass('assisted')){
 			if ($(window).width() >= 1024){	
-				$('a.slide').removeClass('active').find('.ionicons').removeClass('ionicons ion-ios-minus-outline').addClass('ionicons ion-ios-plus-outline');
-				$(this).addClass('active').find('.ionicons').removeClass('ionicons ion-ios-plus-outline').addClass('ionicons ion-ios-minus-outline');
-			
-				$('a.slide').parent().parent().removeClass('active');
+				if ($(this).hasClass('account_overview')){
+					$('a.account_overview').removeClass('active');
+					$(this).addClass('active');
+				} else {
+					$('a.slide').removeClass('active').find('.ionicons').removeClass('ionicons ion-ios-minus-outline').addClass('ionicons ion-ios-plus-outline');
+					$(this).addClass('active').find('.ionicons').removeClass('ionicons ion-ios-plus-outline').addClass('ionicons ion-ios-minus-outline');
+				}
+				
+				$('a.slide').closest().parent().parent().removeClass('active');
 				$(this).parent().parent().addClass('active');
 			}
 			
@@ -979,67 +1034,79 @@ function animationDone(){
 		event.preventDefault();
 		event.stopPropagation();
 		
-		var foo = false;
-		if ($('#flight_content').is(':visible') || $('#compare_content').is(':visible') || $('#column3gmap').is(':visible')){
-			foo = true;
-		}
-		
-		if (!$(this).hasClass('active') || foo){
-			$('.special_link a').removeClass('active');
-			$('.hotel_detail').removeClass('active');
-			$(this).addClass('active');
-			
-			$('#column3').hide();
-			$('#column4').hide();
-			$('#column3x').hide();
-			$('#column3gmap').hide();
-			
-			var url = '';
-			if ($(this).hasClass('type1')){
-				url = 'include/elements/rooms_and_rates.php?page=signin&type=1'; 
-			}
-			if ($(this).hasClass('type2')){
-				url = 'include/elements/rooms_and_rates.php?page=flight_tabs&type=2'; 
-			}
-			if ($(this).hasClass('type3')){
-				url = 'include/elements/rooms_and_rates.php?page=signin&type=3'; 
-			}
-			if ($(this).hasClass('type4')){
-				url = 'include/elements/rooms_and_rates.php?page=flight_tabs&type=4'; 
-			}
-			if ($(this).hasClass('service')){
-				url = 'include/elements/service_detail.php?type=service'; 
-			}
-			if ($(this).hasClass('recent')){
-				url = 'include/elements/load.php?page=sort_hotel?type=recent';
+		if (!$(this).hasClass('favorite') && !$(this).hasClass('top_pics')){
+			var foo = false;
+			if ($('#flight_content').is(':visible') || $('#compare_content').is(':visible') || $('#column3gmap').is(':visible')){
+				foo = true;
 			}
 			
-			var oldSlide = $('#column3');
-			var newSlide = $('#column3');
-			var class_bootstrap = 'col-md-3 noborder';
-			
-			if ($(this).hasClass('type5')){
-				oldSlide = $('#column2');
-				newSlide = $('#column2');
-				class_bootstrap = 'col-md-3';
+			if (!$(this).hasClass('active') || foo){
+				$('.special_link a').removeClass('active');
+				$('.hotel_detail').removeClass('active');
+				$('.hotel_detail').removeClass('special');
+				$(this).addClass('active');
 				
-				url = 'include/elements/rooms_and_rates_top.php'; 
+				$('#column3').hide();
+				$('#column4').hide();
+				$('#column3x').hide();
+				$('#column3gmap').hide();
+				
+				var url = '';
+				if ($(this).hasClass('type1')){
+					url = 'include/elements/rooms_and_rates.php?page=signin&type=1'; 
+				}
+				if ($(this).hasClass('type2')){
+					url = 'include/elements/rooms_and_rates.php?page=flight_tabs&type=2'; 
+				}
+				if ($(this).hasClass('type3')){
+					if ($(this).hasClass('weekend_hotel')){
+						url = 'include/elements/rooms_and_rates.php?page=signin&type=3&from=weekend_hotel'; 
+					} else {
+						url = 'include/elements/rooms_and_rates.php?page=signin&type=3'; 
+					}
+				}
+				if ($(this).hasClass('type4')){
+					url = 'include/elements/rooms_and_rates.php?page=flight_tabs&type=4'; 
+				}
+				if ($(this).hasClass('service')){
+					url = 'include/elements/service_detail.php?type=service'; 
+				}
+				if ($(this).hasClass('recent')){
+					url = 'include/elements/load.php?page=sort_hotel.php?type=recent';
+				}
+				
+				var oldSlide = $('#column3');
+				var newSlide = $('#column3');
+				var class_bootstrap = 'col-md-3 noborder';
+				
+				if ($(this).hasClass('type5')){
+					oldSlide = $('#column2');
+					newSlide = $('#column2');
+					class_bootstrap = 'col-md-3';
+					
+					url = 'include/elements/rooms_and_rates_top.php'; 
+				}
+				
+				if (oldSlide && newSlide && url != '#'){
+					changeSlide(oldSlide, newSlide, url, class_bootstrap);
+				}
+			} else {
+				$(this).removeClass('active');
+				closeSlideById('column3');
+				$('#column4').hide();
 			}
-			
-			if (oldSlide && newSlide && url != '#'){
-				changeSlide(oldSlide, newSlide, url, class_bootstrap);
-			}
-		} else {
-			$(this).removeClass('active');
-			closeSlideById('column3');
-			$('#column4').hide();
 		}
 	});
+	
 	//open hotel special functions
 	$('.hotel_detail a').unbind();
 	$('.hotel_detail a').click(function(event){
 		event.preventDefault();
 		event.stopPropagation();
+		
+		if (newWindowWidth < 1024){
+			$("html, body").animate({ scrollTop: 0 });
+		}
 		
 		var foo = false;
 		if ($('#column3').is(':visible') || $('#flight_content').is(':visible') || $('#compare_content').is(':visible') || $('#column3gmap').is(':visible')){
@@ -1059,9 +1126,14 @@ function animationDone(){
 		if (!$(this).hasClass('active') || foo){
 			$('.special_link a').removeClass('active');
 			$('.hotel_detail').removeClass('active');
-			$(this).addClass('active');
-			$(this).closest('.hotel_detail').addClass('active');
+			$('.hotel_detail').removeClass('special');
 			
+			if (newWindowWidth >= 1024){	
+				$(this).addClass('active');
+				if (!$(this).closest('.hotel_detail').hasClass('top_pics')){
+					$(this).closest('.hotel_detail').addClass('active').addClass('special');
+				}
+			}
 			
 			
 			$('#column3').hide();
@@ -1070,7 +1142,12 @@ function animationDone(){
 			$('#column3gmap').hide();
 			
 			if ($(this).hasClass('map')){
-				openSlide($('#column3gmap'), null, 'col-md-6');
+				if ($(this).closest('.hotel_detail').hasClass('top_pics')){
+					$('#column2').hide();
+					openSlide($('#column3gmap'), null, 'col-md-9');
+				} else {
+					openSlide($('#column3gmap'), null, 'col-md-6');
+				}
 			}
 			if ($(this).hasClass('compare')){
 				openSlide($('#column3x'), null, 'col-md-6');
@@ -1090,8 +1167,11 @@ function animationDone(){
 				
 				$('#flight_content').hide();
 				$('#compare_content').show();
-				$('#compare_content').css('margin-top', marginTop);
-				$('#compare_content').height(hotelObject.height() + 10);
+				
+				if (newWindowWidth >= 1024){
+					$('#compare_content').css('margin-top', marginTop);
+					$('#compare_content').height(hotelObject.height() + 10);
+				}
 			}
 			if ($(this).hasClass('flight')){
 				openSlide($('#column3x'), null, 'col-md-6');
@@ -1111,7 +1191,10 @@ function animationDone(){
 				
 				$('#compare_content').hide();
 				$('#flight_content').show();
-				$('#flight_content').css('margin-top', marginTop);
+				
+				if (newWindowWidth >= 1024){
+					$('#flight_content').css('margin-top', marginTop);
+				}
 			}
 		} else {
 			$('.hotel_detail').removeClass('active');
@@ -1126,6 +1209,10 @@ function animationDone(){
 			closeSlideById('column3');
 			closeSlideById('column3x');
 			closeSlideById('column3gmap');
+			
+			if ($(this).closest('.hotel_detail').hasClass('top_pics')){
+				$('#column2').show();
+			}
 		}
 	});
 	
@@ -1135,25 +1222,27 @@ function animationDone(){
 }
 
 function columnScrollAction(){
-	if (hotelObject && hotelContainer){
-		marginTop = hotelObject.offset().top - $('.header').height(); 
-		//stick to bottom
-		var diff = 0;
-		console.log(marginTop + hotelContainer.height());
-		if ((marginTop + hotelContainer.height()) > ($('#column2').height() - $('.footer').height() + 10)){
-			diff = marginTop + hotelContainer.height() - $('#column2').height() + $('.footer').height() - 10;
-			marginTop = marginTop - diff;
-		}
-		
-		if (marginTop<0 || diff > hotelContainer.height()){
-			marginTop = 0;
-			hotelContainer.hide();
-		} else {
-			hotelContainer.show();
-		}
-		hotelContainer.css('margin-top', marginTop);
-		if (hotelContainer.attr('id') == 'compare_content'){
-			hotelContainer.height(hotelObject.height() + 20);
+	if (newWindowWidth >= 1024){
+		if (hotelObject && hotelContainer){
+			marginTop = hotelObject.offset().top - $('.header').height(); 
+			//stick to bottom
+			var diff = 0;
+			console.log(marginTop + hotelContainer.height());
+			if ((marginTop + hotelContainer.height()) > ($('#column2').height() - $('.footer').height() + 10)){
+				diff = marginTop + hotelContainer.height() - $('#column2').height() + $('.footer').height() - 30;
+				marginTop = marginTop - diff;
+			}
+			
+			if (marginTop<0 || diff > hotelContainer.height()){
+				marginTop = 0;
+				hotelContainer.hide();
+			} else {
+				hotelContainer.show();
+			}
+			hotelContainer.css('margin-top', marginTop);
+			if (hotelContainer.attr('id') == 'compare_content'){
+				hotelContainer.height(hotelObject.height() + 10);
+			}
 		}
 	}
 }
@@ -1169,11 +1258,13 @@ $(document).ready(function(){
 });
 
 $(window).resize(function() {
-	if (hotelObject && hotelContainer){
-		if (hotelContainer.attr('id') == 'compare_content'){
-			hotelContainer.height(hotelObject.height() + 10);
+	if (newWindowWidth >= 1024){
+		if (hotelObject && hotelContainer){
+			if (hotelContainer.attr('id') == 'compare_content'){
+				hotelContainer.height(hotelObject.height() + 10);
+			}
+			columnScrollAction();
 		}
-		columnScrollAction();
 	}
 });
 

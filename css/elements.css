@@ -25,7 +25,18 @@ a:focus {
 	text-decoration: none;
 }
 
-
+.flight-book{
+	width:100px;
+}
+.hotel_detail.active .price_p{
+	display:none;
+}
+.hotel_detail.active.special .price_p{
+	display:block;
+}
+.service p{
+	text-aling:left;
+}
 
 a {
 	font-family: 'Ubuntu', sans-serif;
@@ -354,9 +365,23 @@ input[placeholder], [placeholder], *[placeholder] {
 .navbar-default .navbar-toggle .icon-bar{
 	background-color:#fff;
 }
-.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus{
+.navbar-default .navbar-toggle:hover{
 	background-color:#feba02;
 }
+.navbar-default .navbar-toggle{
+	background-color:#feba02;
+}
+
+.navbar-default .navbar-toggle.collapsed{
+	background-color:transparent;
+}
+.navbar-default .navbar-toggle.collapsed:hover{
+	background-color:transparent;
+}
+
+
+
+
 .navbar-toggle .icon-bar{
 	width:50px;
 	height:4px;
@@ -438,6 +463,18 @@ input[placeholder], [placeholder], *[placeholder] {
 	height:40px;
 	line-height:40px;
 }
+
+.custom_form .short_padding2{
+	padding:2px;
+	padding-bottom:4px;
+}
+.custom_form .last_element{
+	padding-right:2px !important;
+}
+.custom_form .first_element{
+	padding-left:2px !important;
+}
+
 .custom_form .short_padding{
 	padding-left:2px;
 	padding-right:2px;
@@ -645,8 +682,8 @@ input[placeholder], [placeholder], *[placeholder] {
 	color:#666 !important;
 }
 .custom_form .room_description{
-	background-color:#fff;
-	padding:5px;
+	background-color:#c6c6c6 ;
+	padding:10px;
 }
 
 .custom_input_slide_content{
