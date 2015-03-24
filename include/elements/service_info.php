@@ -1,11 +1,9 @@
-<div style="position:relative;">
-	<h1 class="pull-right"><a class="hide_on_desktop close_button_mobile" href="javascript:closePage();"></a> Information</h1>
-</div>
+<h1 class="pull-right">Information</h1>
 <div class="clearfix"></div>
 
 <div class="column_content padding_column_content full_height">
 		
-	<div class="service_info_top">
+	<div style="margin-top: 3px; text-align:left; color:#000;">
 		Fusce posuere sollicitudin justo. Curabitur pulvinar neque quis ligula convallis, vitae vulputate erat lacinia 
 		<div class="text-complete">
 			Fusce posuere sollicitudin justo. Curabitur pulvinar neque quis ligula convallis, vitae vulputate erat lacinia. Curabitur pulvinar neque quis ligula convallis, vitae vulputate erat lacinia. Curabitur pulvinar neque quis ligula convallis, vitae vulputate erat lacinia
@@ -20,8 +18,8 @@
 					</div> 
 				<?php } ?>
 			</div>
+			
 		</div> 
-		<div class="clearfix"></div>
 		<a class="more pull-left" href="#"><i class="ionicons ion-ios-plus-outline"></i>more</a>
 		<a class="less pull-left" style="display: none;" href="#"><i class="ionicons ion-ios-minus-outline"></i>less</a>
 		<div class="clearfix"></div>
@@ -63,17 +61,6 @@
 	$(function(){
 		activateMoreLess();
 	});
-
-	function closePage(){
-		url = 'include/elements/service_detail.php?type=service';
-		$.get(url, function( data ) {
-			hidePreloader();
-			$('#column3').show();
-			$('#column3').html(data);
-			
-			closeSlideById('column4');
-		});
-	}
 
 	$('#book_button').click(function(event){
 		event.preventDefault();

@@ -1,6 +1,4 @@
-<div style="position:relative;">
-	<h1 class="pull-right"><a class="hide_on_desktop close_button_mobile" href="my_account.php"></a> Trip Information</h1>
-</div>
+<h1 class="pull-right">Trip Information</h1>
 <div class="clearfix"></div>
 
 <div class="column_content padding_column_content full_height">
@@ -19,21 +17,6 @@
 </div>
 
 <script>
-	function closePage(){
-		url = 'include/pages/book_directly/flights.php';
-		$.get(url, function( data ) {
-			hidePreloader();
-			$('#column1').show();
-			$('#column1').html(data);
-			
-			closeSlideById('column2');
-	
-			$('#info_button').hide();
-			$('#sort_button').hide();
-			$('#sort_wrapper').html("");
-		});
-	}
-	
 	$(function(){
 		$('#submit_button').click(function(event){
 			event.preventDefault();

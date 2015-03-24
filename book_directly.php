@@ -47,7 +47,7 @@
 						<a id="but4" class="slide button_big pull-right"
 							column-close="column2" column-open="column2"
 							href="include/pages/book_directly/trip_add_ons.php"> <span
-							class="sidebar">Trip Add-ons</span> <img
+							class="sidebar">Trip add-ons</span> <img
 							class="img-responsive col-xs-12" src="images/add-on.jpg" alt="" />
 						</a>
 					</div>
@@ -91,33 +91,22 @@
 				<div class="clearfix"></div>
 			</div>
 			<div id="flight_content">
-				<div style="position:relative;">
-					<div style="position:relative;">
-						<h1 class="pull-right"><a class="hide_on_desktop close_button_mobile" href="javascript:closeCompare();"></a> Preselected flight Bucharest to Antigua</h1>
-					</div>
-					<div class="clearfix"></div>
-					
-					<p class="pull-right">You can change your flight later</p>
-		        	<div class="clearfix"></div>
-				</div>
+				<h1 class="pull-right">Preselected flight Bucharest to Antigua</h1>
+				<div class="clearfix"></div>
+				<p class="pull-right">You can change your flight later</p>
 				<div class="clearfix"></div>
 		        	
-		    		<div class="hide_on_mobile"><?php include 'include/elements/flight_recap_short.php'; ?></div>
-		    		<div class="hide_on_desktop"><?php include 'include/elements/flight_recap_short_mobile.php'; ?></div>
+		    		<?php include 'include/elements/flight_recap_short.php'; ?>
 		    		
-		    		<div class="pull-right hide_on_mobile">
-						<a href="javascript:closeCompare();"><i class="ionicons ion-ios-close-outline"></i>close</a>
-					</div>
+		    		<div class="pull-right">
+					<a href="javascript:closeSlideById('column3x');"><i
+						class="ionicons ion-ios-close-outline"></i>close</a>
+				</div>
 				<div class="clearfix"></div>
 			</div>
 		</div>
 
 		<div class="col-md-6 nopadding full_height" id="column3gmap">
-			<div class="hide_on_desktop" style="position:relative;">
-				<h1 class="pull-right"><a class="close_button_mobile" href="javascript:closeGoogleMaps();"></a>&nbsp;</h1>
-			</div>
-			<div class="clearfix"></div>
-			
 			<div id="google-map" class="map"></div>
 		</div>
 	</div>

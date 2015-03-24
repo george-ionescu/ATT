@@ -259,8 +259,8 @@
 	</form>
 
 	<br /><br />
-	<p style="font-weight:bold; text-align:center; font-size:22px; margin-bottom:0; color: #feba00;">2600 EUR</p>
-	<p style="text-align:center; color: #feba00;">with extra services included</p>
+	<p style="font-weight:bold; text-align:center; font-size:22px; margin-bottom:0;">2600 euro</p>
+	<p style="text-align:center;">with extra services included</p>
 	
 	<br />
 	<div class="clearfix"></div>

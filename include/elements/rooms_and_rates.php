@@ -1,5 +1,6 @@
 <div style="position:relative;">
-	<h1 class="pull-right"><a class="hide_on_desktop close_button_mobile" href="javascript:closePage();"></a> Rooms & Rates <?php if ($_GET['from'] == 'weekend_hotel') echo 'for 02 Apr - 05 Apr'; ?></h1>
+	<a class="hide_on_desktop close_button_mobile" href="javascript:closePage();" class="pull-left"><i class="fa fa-angle-left"></i> close</a> 
+	<h1 class="pull-right">Rooms & Rates</h1>
 </div>
 <div class="clearfix"></div>
 
@@ -28,11 +29,11 @@
 			        </div>
 				</div>
 				
-				<button type="submit" class="pull-right btn btn-default book" style="margin-top: 9px; margin-left:10px;">book</button>
-				<p class="pull-right price_p" style="text-align: right;"><span class="price">255</span> EUR<br />total price</p>
+				<p class="pull-left price_p"><span class="price">255</span> EUR<br />total price</p>
+				<button type="submit" class="pull-right btn btn-default book" style="margin-top: 9px;">book</button>
 				<div class="clearfix"></div>
 				
-				<div style="margin-top: 10px;">
+				<div style="margin-top: 5px;">
 					<a class="slide hotel_policy" column-close="column4" column-open="column4" href="include/elements/hotel_policy.php?type=<?php echo $_GET['type']; ?>"><i class="ionicons ion-ios-plus-outline"></i>room policy</a>
 				&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
 					<a class="slide hotel_info" column-close="column4" column-open="column4" href="include/elements/hotel_info.php?type=<?php echo $_GET['type']; ?>"><i class="ionicons ion-ios-plus-outline"></i>hotel info</a>
@@ -45,21 +46,14 @@
 
 <script>
 function closePage(){
-	/*url = 'include/elements/hotel_result.php?type=<?php echo $_GET['type']; ?>';
+	url = 'include/elements/hotel_result.php?type=<?php echo $_GET['type']; ?>';
 	$.get(url, function( data ) {
 		hidePreloader();
 		$('#column2').show();
 		$('#column2').html(data);
 		
 		closeSlideById('column3');
-	});*/
-
-	var oldSlide = $('#column2');
-	var newSlide = $('#column2');
-	var url = 'include/elements/sort_hotel.php';
-	var class_bootstrap = 'col-md-3';
-	
-	changeSlide(oldSlide, newSlide, url, class_bootstrap);
+	});
 }
 
 $(document).ready(function(){
@@ -115,7 +109,7 @@ $(document).ready(function(){
 			changeSlide(oldSlide, newSlide, url, class_bootstrap);
 			updateAllScrolls();
 
-			$('#room_info1').find('.hotel_info').addClass('active').find('.ionicons').removeClass('ion-ios-plus-outline').addClass('ion-ios-minus-outline');
+			$('#room_info1').find('.hotel_info').addClass('active').find('.fa').removeClass('fa-plus-circle').addClass('fa-minus-circle');
 		}
 	}
 

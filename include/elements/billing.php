@@ -6,8 +6,8 @@
  
  <form class="form-horizontal custom_form" role="form" method="post" action="/">
 			<div style="height:40px;">
-				<label class="radio-inline"><input type="radio" id="invType1" name="inv" value="option1" checked><span class="check"></span>  Personal Invoice</label> 
-				<label class="radio-inline"><input type="radio" id="invType2" name="inv" value="option2"><span class="check"></span> Company Invoice </label> 
+				<label class="radio-inline"> Personal Invoice &nbsp;&nbsp;<input type="radio" id="invType1" name="inv" value="option1" checked><span class="check"></span> </label> 
+				<label class="radio-inline"> Company Invoice &nbsp;&nbsp;<input type="radio" id="invType2" name="inv" value="option2"><span class="check"></span> </label> 
 			</div>
 			
 			<div id="personal_invoice">
@@ -25,17 +25,17 @@
 		        <form class="form-horizontal custom_form" role="form" method="post" action="/">
 		        	<div class="row_form">
 						<div class="col-md-4 col-xs-12">
-							<label class="radio-inline"><input type="radio" id="payType1" name="pay" value="option1" checked><span class="check"></span> Online Payment </label> 
+							<label class="radio-inline"> Online Payment &nbsp;&nbsp;<input type="radio" id="payType1" name="pay" value="option1" checked><span class="check"></span> </label> 
 							<div class="clearfix"></div>
 							<p class="nopadding white_on_mobile">Reprimique scripserit sea no. Et mea alii fastidii, usu et error debitis repudiare. Ut his vide appellantur, dicat nonumes eligendi an nec. Nulla nemore </p>
 						</div>
 						<div class="col-md-4 col-xs-12">
-							<label class="radio-inline"><input type="radio" id="payType2" name="pay" value="option2" checked><span class="check"></span> Bank Transfer </label> 
+							<label class="radio-inline"> Bank Transfer &nbsp;&nbsp;<input type="radio" id="payType2" name="pay" value="option2"><span class="check"></span> </label> 
 							<div class="clearfix"></div>
 							<p class="nopadding white_on_mobile">Reprimique scripserit sea no. Et mea alii fastidii, usu et error debitis repudiare. Ut his vide appellantur, dicat nonumes eligendi an nec. Nulla nemore </p>
 						</div>
 						<div class="col-md-4 col-xs-12">
-							<label class="radio-inline"><input type="radio" id="payType3" name="pay" value="option3" checked><span class="check"></span> Cash Payment </label> 
+							<label class="radio-inline"> Cash Payment &nbsp;&nbsp;<input type="radio" id="payType2" name="pay" value="option2"><span class="check"></span> </label> 
 							<div class="clearfix"></div>
 							<p class="nopadding white_on_mobile">Reprimique scripserit sea no. Et mea alii fastidii, usu et error debitis repudiare. Ut his vide appellantur, dicat nonumes eligendi an nec. Nulla nemore </p>
 						</div>

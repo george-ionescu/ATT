@@ -1,5 +1,6 @@
 <div style="position:relative;">
-	<h1 class="pull-right"><a class="hide_on_desktop close_button_mobile" href="javascript:closePage();"></a> Room Policy</h1>
+	<a class="hide_on_desktop close_button_mobile" href="javascript:closePage();" class="pull-left"><i class="ionicons ion-ios-close-outline"></i> close</a> 
+	<h1 class="pull-right">Room Policy</h1>
 </div>
 <div class="clearfix"></div>
 
@@ -23,20 +24,9 @@
 	<br />
 	Online cancellation<br />
 	will be blocked after 21-Nov-2013 00:00.</p>
-	
-	<div class="hide_on_mobile pull-right">
-		<a href="javascript:closeCustom();"><i class="ionicons ion-ios-close-outline"></i>close</a>
-	</div>
-	<div class="clearfix"></div>
 </div>
 
 <script>
-	function closeCustom(){
-		$('a.slide').removeClass('active');
-		$('a.slide .ionicons').removeClass('ion-ios-minus-outline').addClass('ion-ios-plus-outline');
-		closeSlideById('column4');
-	}
-
 	function closePage(){
 		url = 'include/elements/rooms_and_rates.php?page=signin&type=<?php echo $_GET['type']; ?>';
 		$.get(url, function( data ) {

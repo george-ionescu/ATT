@@ -1,8 +1,8 @@
 <div style="position:relative;">
-	<h1 class="pull-right"><a class="hide_on_desktop close_button_mobile" href="javascript:closePage();"></a> Activity Details</h1>
+	<a class="hide_on_desktop close_button_mobile" href="javascript:closePage();" class="pull-left"><i class="fa fa-angle-left"></i> close</a> 
+	<h1 class="pull-right">Activity Details</h1>
 </div>
 <div class="clearfix"></div>
-
 
 <div class="column_content nopadding full_height">
 	<div class="padding_column_content">
@@ -22,7 +22,7 @@
 			
 			<?php for ($i=1; $i<=2; $i++) { ?>
 				<div id="activity<?php echo $i; ?>">
-					<p class="flight_title"><span class="black white_on_mobile">1st Combo Ticket includes: Upper Belvedere, Lower Belvedere, Orangery, Privy Garden, </span></p>
+					<p class="flight_title">1st <span class="black white_on_mobile">Combo Ticket includes: Upper Belvedere, Lower Belvedere, Orangery, Privy Garden, </span></p>
 					
 					<div class="row_form">
 						<div class="col-md-12 col-xs-12 short_padding text_align_left">
@@ -54,10 +54,11 @@
 					</div>
 					<div class="clearfix"></div>
 					
-					<button type="submit" class="pull-right btn btn-default book" style="margin-top: 9px; margin-left:10px;">book</button>
-					<p class="pull-right price_p" style="text-align: right;"><span class="price">255</span> EUR<br />total price</p>
-					<div class="clearfix"></div>
 					<br />
+					<p class="pull-left price_p" style="margin-top: 5px !important;"><span class="price">254</span> EUR<br />total price</p>
+					<button id="submit_button" type="button" class="pull-right btn btn-default" style="margin-bottom: 15px;">select</button>
+					<div class="clearfix"></div>
+					
 					<hr />
 				</div>
 			<?php } ?>
@@ -66,7 +67,7 @@
 </div>
 
 <script>
-	$('.book').click(function(event){
+	$('#submit_button').click(function(event){
 		event.preventDefault();
 	
 		var oldSlide = $('#column4');

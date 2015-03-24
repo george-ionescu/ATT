@@ -1,82 +1,32 @@
-<div class="column_content padding_column_content full_height no_margin_scroll"> 
-    	
-		<div style="position:relative;">
-			<h1 class="pull-right"><a class="hide_on_desktop close_button_mobile" href="my_account.php"></a> Account Settings</h1>
-		</div>
-		<div class="clearfix"></div>
-    	 
-    	<div style="display:block; position:relative;">
-    		<a id="editForm" href="#" class="btn btn-default"><i class="fa fa-pencil-square-o"></i>edit</a>
-    		<div id="saveFormWrapper" style="display:none;">
-    			<a id="saveForm" href="#" class="btn btn-default"><i class="fa fa-pencil-square-o"></i>save</a>
-    			<a id="closeForm" href="#" class="btn btn-default"><i class="ionicons ion-ios-close-outline"></i>cancel</a>
-    		</div>
-    	</div>
-    	<br />
-       
-       <script>
-
-			$(function(){
-				$("#accountForm :input").attr("disabled", true);
-				$("#accountForm label.input_label").addClass("label_disabled");
-			});
-
-			$('#editForm').click(function(e){
-				e.preventDefault();
-
-				$('#editForm').hide();
-				$('#saveFormWrapper').show();
-
-				$("#accountForm :input").attr("disabled", false);
-				$("#accountForm label.input_label").removeClass("label_disabled");
-				
-			});
-			$('#saveForm').click(function(e){
-				e.preventDefault();
-
-				$('#editForm').show();
-				$('#saveFormWrapper').hide();
-
-				$("#accountForm :input").attr("disabled", true);
-				$("#accountForm label.input_label").addClass("label_disabled");
-			});
-			$('#closeForm').click(function(e){
-				e.preventDefault();
-
-				$('#editForm').show();
-				$('#saveFormWrapper').hide();
-
-				$("#accountForm :input").attr("disabled", true);
-				$("#accountForm label.input_label").addClass("label_disabled");
-			});
-
-       </script>
+<div class="column_content padding_column_content full_height"> 
+    	<h1 class="pull-right">Account Settings</h1>
+        <div class="clearfix"></div>
         
-        <form id="accountForm" class="form-horizontal custom_form" role="form" method="post" action="/">
+        <form class="form-horizontal custom_form" role="form" method="post" action="/">
         	<div class="row_form">
-        		<div class="col-md-3 col-xs-6 short_padding2">
+        		<div class="col-md-3 col-xs-3 short_padding">
         			<div class="form-group">
-        				<label style="font-size: 18px;">Display name</label>
+        				<label>Display name</label> | &nbsp;<a href=""><i class="fa fa-pencil-square-o"></i>edit</a>
         				<input type="text" class="form-control italic" id="inputSuccess3" placeholder="" value="Gabriel">
         			</div> 
         		</div>
         	</div>
         	<div class="row_form">
-        		<div class="col-md-3 col-xs-4 short_padding2">
+        		<div class="col-md-3 col-xs-3 short_padding">
         			<div class="form-group">
-        				<label style="font-size: 18px;">Current password</label>
+        				<label>Current password</label>
         				<input type="text" class="form-control italic" id="inputSuccess3" placeholder="" value="Gabriel">
         			</div> 
         		</div>
-        		<div class="col-md-3 col-xs-4 short_padding2">
+        		<div class="col-md-3 col-xs-3 short_padding">
         			<div class="form-group">
-        				<label style="font-size: 18px;">New password</label>
+        				<label>New password</label>
         				<input type="text" class="form-control italic" id="inputSuccess3" placeholder="" value="Gabriel">
         			</div> 
         		</div>
-        		<div class="col-md-3 col-xs-4 short_padding2">
+        		<div class="col-md-6 col-xs-6 short_padding">
         			<div class="form-group">
-        				<label style="font-size: 18px;">Reenter Password</label>
+        				<label>Reenter Password</label> | &nbsp;<a href=""><i class="fa fa-pencil-square-o"></i>save</a>
         				<input type="text" class="form-control italic" id="inputSuccess3" placeholder="" value="Gabriel">
         			</div> 
         		</div>
@@ -84,9 +34,9 @@
         
         
         <div class="clearfix"></div>
-        <p class="account_title" style="margin-bottom:0;">Personal info</p>
+        <p class="account_title" style="margin-bottom:0;">Personal info | &nbsp;<a href=""><i class="fa fa-pencil-square-o"></i>edit</a></p>
 			<div class="row_form">
-				<div class="col-md-2 col-xs-4 short_padding2">
+				<div class="col-md-2 col-xs-2 short_padding">
 					<span class="custom-dropdown">
 					    <select>
 					        <option>Option 1</option>
@@ -97,46 +47,21 @@
 					    </select>
 					</span>
 				</div>
-				<div class="col-md-3 col-xs-8 short_padding2">
+				<div class="col-md-3 col-xs-3 short_padding">
 					<input type="text" class="form-control italic" id="inputSuccess3" placeholder="First name"> 
 				</div>
-				<div class="col-md-3 col-xs-4 short_padding2">
+				<div class="col-md-3 col-xs-3 short_padding">
 					<input type="text" class="form-control italic" id="inputSuccess3" placeholder="Last name"> 
 				</div>
-				<div class="col-md-4 col-xs-8 short_padding2">
+				<div class="col-md-4 col-xs-4 short_padding">
 					<label class="control-label input_label col-sm-6 col-xs-6" for="inputSuccess3">&nbsp;&nbsp;&nbsp;Birth Date</label>
 					<div class="col-sm-6 col-xs-6 no_padding_left_right">
-						<div class="col-sm-4 col-xs-4 no_padding_left_right custom_date_border">
-							<span class="custom-dropdown triple_date">
-							    <select>
-							        <option>year</option>
-							        <option>2014</option>  
-							        <option>2015</option>
-							    </select>
-							</span>
-						</div>
-						<div class="col-sm-4 col-xs-4 no_padding_left_right custom_date_border">
-							<span class="custom-dropdown triple_date">
-							    <select>
-							        <option>mm</option>
-							        <option>yan</option>  
-							        <option>fab</option>
-							    </select>
-							</span>
-						</div>
-						<div class="col-sm-4 col-xs-4 no_padding_left_right">
-							<span class="custom-dropdown triple_date">
-							    <select>
-							        <option>day</option>
-							        <option>1</option>  
-							        <option>2</option>
-							    </select>
-							</span>
-						</div>
+						<input type="text" class="form-control italic no_padding_left_right" id="calendar1" placeholder="day | mm | year"> 
 					</div>
 				</div>
-				
-				<div class="col-md-2 col-xs-4 short_padding2">
+			</div>
+			<div class="row_form">
+				<div class="col-md-2 col-xs-2 short_padding">
 					<span class="custom-dropdown">
 					    <select>
 					        <option>Option 1</option>
@@ -147,10 +72,10 @@
 					    </select>
 					</span>
 				</div>
-				<div class="col-md-3 col-xs-8 short_padding2">
+				<div class="col-md-3 col-xs-3 short_padding">
 					<input type="text" class="form-control italic" id="inputSuccess3" placeholder="First name"> 
 				</div>
-				<div class="col-md-3 col-xs-4 short_padding2">
+				<div class="col-md-3 col-xs-3 short_padding">
 					<span class="custom-dropdown">
 					    <select>
 					        <option>Option 1</option>
@@ -161,40 +86,15 @@
 					    </select>
 					</span>						
 				</div>
-				<div class="col-md-4 col-xs-8 short_padding2">
+				<div class="col-md-4 col-xs-4 short_padding">
 					<label class="control-label input_label col-sm-6 col-xs-6" for="inputSuccess3">&nbsp;&nbsp;&nbsp;Birth Date</label>
 					<div class="col-sm-6 col-xs-6 no_padding_left_right">
-						<div class="col-sm-4 col-xs-4 no_padding_left_right custom_date_border">
-							<span class="custom-dropdown triple_date">
-							    <select>
-							        <option>year</option>
-							        <option>2014</option>  
-							        <option>2015</option>
-							    </select>
-							</span>
-						</div>
-						<div class="col-sm-4 col-xs-4 no_padding_left_right custom_date_border">
-							<span class="custom-dropdown triple_date">
-							    <select>
-							        <option>mm</option>
-							        <option>yan</option>  
-							        <option>fab</option>
-							    </select>
-							</span>
-						</div>
-						<div class="col-sm-4 col-xs-4 no_padding_left_right">
-							<span class="custom-dropdown triple_date">
-							    <select>
-							        <option>day</option>
-							        <option>1</option>  
-							        <option>2</option>
-							    </select>
-							</span>
-						</div>
+						<input type="text" class="form-control italic no_padding_left_right" id="calendar2" placeholder="day | mm | year"> 
 					</div>
 				</div>
-				
-				<div class="col-md-5 col-xs-6 short_padding2">
+			</div>
+			<div class="row_form">
+				<div class="col-md-5 col-xs-5 short_padding">
 					<span class="custom-dropdown">
 					    <select>
 					        <option>Option 1</option>
@@ -205,7 +105,7 @@
 					    </select>
 					</span>
 				</div>
-				<div class="col-md-5 col-xs-6 short_padding2">
+				<div class="col-md-5 col-xs-5 short_padding">
 					<span class="custom-dropdown">
 					    <select>
 					        <option>Option 1</option>
@@ -216,14 +116,15 @@
 					    </select>
 					</span>					
 				</div>
-				<div class="col-md-2 col-xs-6 short_padding2">
+				<div class="col-md-2 col-xs-2 short_padding">
 					<input type="text" class="form-control italic" id="inputSuccess3" placeholder="Flyer Card Number"> 
 				</div>
-				
-				<div class="col-md-5 col-xs-6 short_padding2">
+			</div>
+			<div class="row_form">
+				<div class="col-md-5 col-xs-5 short_padding">
 					<input type="text" class="form-control italic" id="inputSuccess3" placeholder="Phone *"> 
 				</div>
-				<div class="col-md-4 col-xs-12 short_padding2">
+				<div class="col-md-4 col-xs-4 short_padding">
 					<p class="italic" style="color:#fff;padding-top:7px;">* Only for emergencies</p>
 				</div>
 			</div>
@@ -232,11 +133,61 @@
 		      
 		      
 		      
+		      <div class="clearfix"></div>
+        <p class="account_title">Preferences</p>
+		      <div class="row_form">
+        		<div class="col-md-3 col-xs-3 short_padding">
+        			<div class="form-group">
+        				<label>Language</label>
+        				<span class="custom-dropdown">
+						    <select>
+						        <option>English</option>
+						        <option>Option 2</option>  
+						        <option>Option 3</option>
+						        <option>Option 4</option>
+						        <option>Option 5</option>
+						    </select>
+						</span>
+        			</div> 
+        		</div>
+        		<div class="col-md-3 col-xs-3 short_padding">
+        			<div class="form-group">
+        				<label>Currency</label>
+        				<span class="custom-dropdown">
+						    <select>
+						        <option>Euro1</option>
+						        <option>Option 2</option>  
+						        <option>Option 3</option>
+						        <option>Option 4</option>
+						        <option>Option 5</option>
+						    </select>
+						</span>
+        			</div> 
+        		</div>
+        		<div class="col-md-3 col-xs-3 short_padding">
+        			<div class="form-group">
+        				<label>Newsletter</label>
+        				<span class="custom-dropdown">
+						    <select>
+						        <option>No</option>
+						        <option>Option 2</option>  
+						        <option>Option 3</option>
+						        <option>Option 4</option>
+						        <option>Option 5</option>
+						    </select>
+						</span>
+        			</div> 
+        		</div>
+        		<div class="col-md-3 col-xs-3 short_padding">
+        			<br />
+        			<a href="#"><i class="fa fa-times-circle-o"></i>unsubscribe</a>
+        		</div>
+        	</div>
 		      
 		      
 		      
 		       <div class="clearfix"></div>
-        	<p class="account_title" style="margin-bottom:0; margin-top:20px;">Billing info</p>
+        	<p class="account_title">Billing info | &nbsp;<a href=""><i class="fa fa-pencil-square-o"></i>edit</a></p>
 		      <div style="height:40px;">
 						<label class="radio-inline"> Personal Invoice &nbsp;&nbsp;<input type="radio" id="invType1" name="inv" value="option1" checked><span class="check"></span> </label> 
 						<label class="radio-inline"> Company Invoice &nbsp;&nbsp;<input type="radio" id="invType2" name="inv" value="option2"><span class="check"></span> </label> 
@@ -248,7 +199,7 @@
 					<div id="company_invoice" style="display:none;">
 						<?php include 'include/company_invoice.php'; ?>
 					</div>
-		      	<div class="clearfix"></div>
+		      
 		        
 		        
 		        <br /><br />
@@ -258,9 +209,9 @@
 		        
 		        
 		        <div class="clearfix"></div>
-        <p class="flight_title">1st traveller | &nbsp;<a href="#"><i class="ionicons ion-ios-close-outline"></i>remove</a> </p>
+        <p class="flight_title">1st traveller | &nbsp;<a href=""><i class="fa fa-pencil-square-o"></i>edit</a></p>
 			<div class="row_form">
-				<div class="col-md-2 col-xs-4 short_padding2">
+				<div class="col-md-2 col-xs-2 short_padding">
 					<span class="custom-dropdown">
 					    <select>
 					        <option>Option 1</option>
@@ -271,46 +222,21 @@
 					    </select>
 					</span>
 				</div>
-				<div class="col-md-3 col-xs-8 short_padding2">
+				<div class="col-md-3 col-xs-3 short_padding">
 					<input type="text" class="form-control italic" id="inputSuccess3" placeholder="First name"> 
 				</div>
-				<div class="col-md-3 col-xs-4 short_padding2">
+				<div class="col-md-3 col-xs-3 short_padding">
 					<input type="text" class="form-control italic" id="inputSuccess3" placeholder="Last name"> 
 				</div>
-				<div class="col-md-4 col-xs-8 short_padding2">
+				<div class="col-md-4 col-xs-4 short_padding">
 					<label class="control-label input_label col-sm-6 col-xs-6" for="inputSuccess3">&nbsp;&nbsp;&nbsp;Birth Date</label>
 					<div class="col-sm-6 col-xs-6 no_padding_left_right">
-						<div class="col-sm-4 col-xs-4 no_padding_left_right custom_date_border">
-							<span class="custom-dropdown triple_date">
-							    <select>
-							        <option>year</option>
-							        <option>2014</option>  
-							        <option>2015</option>
-							    </select>
-							</span>
-						</div>
-						<div class="col-sm-4 col-xs-4 no_padding_left_right custom_date_border">
-							<span class="custom-dropdown triple_date">
-							    <select>
-							        <option>mm</option>
-							        <option>yan</option>  
-							        <option>fab</option>
-							    </select>
-							</span>
-						</div>
-						<div class="col-sm-4 col-xs-4 no_padding_left_right">
-							<span class="custom-dropdown triple_date">
-							    <select>
-							        <option>day</option>
-							        <option>1</option>  
-							        <option>2</option>
-							    </select>
-							</span>
-						</div>
+						<input type="text" class="form-control italic no_padding_left_right" id="calendar3" placeholder="day | mm | year"> 
 					</div>
 				</div>
-				
-				<div class="col-md-2 col-xs-4 short_padding2">
+			</div>
+			<div class="row_form">
+				<div class="col-md-2 col-xs-2 short_padding">
 					<span class="custom-dropdown">
 					    <select>
 					        <option>Option 1</option>
@@ -321,10 +247,10 @@
 					    </select>
 					</span>
 				</div>
-				<div class="col-md-3 col-xs-8 short_padding2">
+				<div class="col-md-3 col-xs-3 short_padding">
 					<input type="text" class="form-control italic" id="inputSuccess3" placeholder="First name"> 
 				</div>
-				<div class="col-md-3 col-xs-4 short_padding2">
+				<div class="col-md-3 col-xs-3 short_padding">
 					<span class="custom-dropdown">
 					    <select>
 					        <option>Option 1</option>
@@ -335,40 +261,15 @@
 					    </select>
 					</span>						
 				</div>
-				<div class="col-md-4 col-xs-8 short_padding2">
+				<div class="col-md-4 col-xs-4 short_padding">
 					<label class="control-label input_label col-sm-6 col-xs-6" for="inputSuccess3">&nbsp;&nbsp;&nbsp;Birth Date</label>
 					<div class="col-sm-6 col-xs-6 no_padding_left_right">
-						<div class="col-sm-4 col-xs-4 no_padding_left_right custom_date_border">
-							<span class="custom-dropdown triple_date">
-							    <select>
-							        <option>year</option>
-							        <option>2014</option>  
-							        <option>2015</option>
-							    </select>
-							</span>
-						</div>
-						<div class="col-sm-4 col-xs-4 no_padding_left_right custom_date_border">
-							<span class="custom-dropdown triple_date">
-							    <select>
-							        <option>mm</option>
-							        <option>yan</option>  
-							        <option>fab</option>
-							    </select>
-							</span>
-						</div>
-						<div class="col-sm-4 col-xs-4 no_padding_left_right">
-							<span class="custom-dropdown triple_date">
-							    <select>
-							        <option>day</option>
-							        <option>1</option>  
-							        <option>2</option>
-							    </select>
-							</span>
-						</div>
+						<input type="text" class="form-control italic no_padding_left_right" id="calendar4" placeholder="day | mm | year"> 
 					</div>
 				</div>
-				
-				<div class="col-md-5 col-xs-6 short_padding2">
+			</div>
+			<div class="row_form">
+				<div class="col-md-5 col-xs-5 short_padding">
 					<span class="custom-dropdown">
 					    <select>
 					        <option>Option 1</option>
@@ -379,7 +280,7 @@
 					    </select>
 					</span>
 				</div>
-				<div class="col-md-5 col-xs-6 short_padding2">
+				<div class="col-md-5 col-xs-5 short_padding">
 					<span class="custom-dropdown">
 					    <select>
 					        <option>Option 1</option>
@@ -390,16 +291,18 @@
 					    </select>
 					</span>					
 				</div>
-				<div class="col-md-2 col-xs-6 short_padding2">
+				<div class="col-md-2 col-xs-2 short_padding">
 					<input type="text" class="form-control italic" id="inputSuccess3" placeholder="Flyer Card Number"> 
 				</div>
-				<div class="col-md-5 col-xs-6 short_padding2">
+			</div>
+			<div class="row_form">
+				<div class="col-md-5 col-xs-5 short_padding">
 					<input type="text" class="form-control italic" id="inputSuccess3" placeholder="E-mail"> 
 				</div>
-				<div class="col-md-3 col-xs-6 short_padding2">
+				<div class="col-md-3 col-xs-3 short_padding">
 					<input type="text" class="form-control italic" id="inputSuccess3" placeholder="Phone *"> 
 				</div>
-				<div class="col-md-4 col-xs-6 short_padding2"></div>
+				<div class="col-md-4 col-xs-4 short_padding"></div>
 			</div>
 		        
 		        
@@ -415,21 +318,6 @@
 		
 		
 <script>
-	function closePage(){
-		url = 'include/pages/book_directly/flights.php';
-		$.get(url, function( data ) {
-			hidePreloader();
-			$('#column1').show();
-			$('#column1').html(data);
-			
-			closeSlideById('column2');
-	
-			$('#info_button').hide();
-			$('#sort_button').hide();
-			$('#sort_wrapper').html("");
-		});
-	}
-
 	$(function(){
 		$('#invType1').click(function(){
 			$('#personal_invoice').show();

@@ -1,8 +1,8 @@
 <div style="position:relative;">
-	<h1 class="pull-right"><a class="hide_on_desktop close_button_mobile" href="javascript:closePage();"></a> Hotel Info</h1>
+	<a class="hide_on_desktop close_button_mobile" href="javascript:closePage();" class="pull-left"><i class="ionicons ion-ios-close-outline"></i> close</a> 
+	<h1 class="pull-right">Hotel Info</h1>
 </div>
 <div class="clearfix"></div>
-
 
 <div class="column_content padding_column_content full_height">
 	<p>
@@ -61,7 +61,7 @@
 
 	function closeCustom(){
 		$('a.slide').removeClass('active');
-		$('a.slide .ionicons').removeClass('ion-ios-minus-outline').addClass('ion-ios-plus-outline');
+		$('a.slide .fa').removeClass('ion-ios-minus-outline').addClass('ion-ios-plus-outline');
 		closeSlideById('column4');
 	}
 

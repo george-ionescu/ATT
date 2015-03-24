@@ -12,7 +12,7 @@
 		        <div class="column_content nopadding full_height">
 					<div class="row">
 						<div class="col-md-12 nopadding">
-							<a id="but1" class="slide button_big account_sidebar pull-right" column-close="column2" column-open="column2" column-class="col-md-3 account" href="include/pages/my_account/overview.php">
+							<a id="but1" class="slide button_big account_sidebar pull-right" column-close="column2" column-open="column2" column-class="col-md-6 account" href="include/pages/my_account/overview.php">
 								<span class="sidebar">Account overview</span>
 								<img class="img-responsive col-xs-12" src="images/tab.jpg" alt="" />
 							</a>
@@ -20,7 +20,7 @@
 					</div>
 					<div class="row">
 						<div class="col-md-12 nopadding">
-							<a id="but2" class="slide button_big account_sidebar pull-right" column-close="column2" column-open="column2" column-class="col-md-9 account" href="include/pages/my_account/account.php">
+							<a id="but2" class="slide button_big account_sidebar pull-right" column-close="column2" column-open="column2" column-class="col-md-6 account" href="include/pages/my_account/account.php">
 								<span class="sidebar">Account settings</span>
 								<img class="img-responsive col-xs-12" src="images/tab.jpg" alt="" />
 							</a>
@@ -46,6 +46,14 @@
 						<div class="col-md-12 nopadding">
 							<a id="but5" class="slide button_big account_sidebar pull-right" column-close="column2" column-open="column2" column-class="col-md-3 account" href="include/pages/my_account/recent_searches.php">
 								<span class="sidebar">Recent searches</span>
+								<img class="img-responsive col-xs-12" src="images/tab.jpg" alt="" />
+							</a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 nopadding">
+							<a id="but6" class="slide button_big account_sidebar pull-right" column-close="column2" column-open="column2" column-class="col-md-3 account" href="include/pages/my_account/favorite_hotels.php">
+								<span class="sidebar">Favorite hotels</span>
 								<img class="img-responsive col-xs-12" src="images/tab.jpg" alt="" />
 							</a>
 						</div>

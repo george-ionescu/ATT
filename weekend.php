@@ -48,21 +48,21 @@
 		    <div class="col-md-6 nopadding" id="column3x">
 		    	<div id="compare_content">
 		    		<div class="box pull-left">
-			    		<p class="title">05 Dec - 08 Dec</p>
+			    		<p class="title">05 dec - 08 dec</p>
 			    		<p class="price_p">
 							<span class="price">254</span> EUR<br />total price
 						</p>
 						<a class="btn btn-default" href="#">select</a>
 					</div>
 					<div class="box pull-left">
-			    		<p class="title">05 Dec - 08 Dec</p>
+			    		<p class="title">05 dec - 08 dec</p>
 			    		<p class="price_p">
 							<span class="price">254</span> EUR<br />total price
 						</p>
 						<a class="btn btn-default" href="#">select</a>
 					</div>
 					<div class="box pull-left">
-			    		<p class="title">05 Dec - 08 Dec</p>
+			    		<p class="title">05 dec - 08 dec</p>
 			    		<p class="price_p">
 							<span class="price">254</span> EUR<br />total price
 						</p>

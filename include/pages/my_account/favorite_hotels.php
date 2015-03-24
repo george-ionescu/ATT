@@ -1,6 +1,4 @@
-<div style="position:relative;">
-	<h1 class="pull-right"><a class="hide_on_desktop close_button_mobile" href="my_account.php"></a> Favorite Hotels</h1>
-</div>
+<h1 class="pull-right">Favorite Hotels</h1>
 <div class="clearfix"></div>
 
 <div class="column_content nopadding full_height">
@@ -46,21 +44,6 @@
 $(document).ready(function(){
 	callFormEvents();
 
-	function closePage(){
-		url = 'include/pages/book_directly/flights.php';
-		$.get(url, function( data ) {
-			hidePreloader();
-			$('#column1').show();
-			$('#column1').html(data);
-			
-			closeSlideById('column2');
-	
-			$('#info_button').hide();
-			$('#sort_button').hide();
-			$('#sort_wrapper').html("");
-		});
-	}
-	
 	$('.search').click(function(event){
 		event.preventDefault();
 		event.stopPropagation();

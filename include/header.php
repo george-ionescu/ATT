@@ -87,15 +87,7 @@ if (preg_match('/(?i)Windows/', $_SERVER['HTTP_USER_AGENT']) && preg_match('/(?i
     <div role="navigation" class="navbar navbar-default">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<div id="sort_button" style="width:55px;margin:0 auto;margin-top:30px;margin-left:25px;float:left;cursor:pointer;display:none;color:#fff;text-align:center;">
-					<img data-target=".navbar-collapse2" data-toggle="collapse" src="images/filters.png" alt="filters alice" />
-					<span>filters</span>
-				</div>
-				<div id="info_button" style="width:55px;margin:0 auto;margin-top:30px;margin-left:25px;float:left;cursor:pointer;display:none;color:#fff;text-align:center;">
-					<img data-target=".navbar-collapse2" data-toggle="collapse" src="images/info.png" alt="filters alice" />
-					<span>your trip</span>
-				</div>
-				
+				<img id="sort_button" data-target=".navbar-collapse2" data-toggle="collapse" style="width:40px;display:block;margin:0 auto;margin-top:25px;margin-left:30px;float:left;cursor:pointer;display:none;" src="images/filters.png" alt="filters alice" />
 				<?php if ($_SERVER['PHP_SELF'] != '/index.php') { ?>
 					<button data-target=".navbar-collapse" data-toggle="collapse"
 						class="navbar-toggle collapsed" type="button">
@@ -110,7 +102,11 @@ if (preg_match('/(?i)Windows/', $_SERVER['HTTP_USER_AGENT']) && preg_match('/(?i
 				<div class="navbar-collapse collapse" style="height: 1px;">
 					<ul class="nav navbar-nav">
 						<li><a href="book_directly.php">Book Directly</a></li>
-						<li><a href="my_account.php">My Account</a></li>
+						<li><a href="book_assisted.php">Book Assisted</a></li>
+						<li><a href="weekend.php">Escape for a Weekend</a></li>
+						<li><a href="add_ons.php">Trip add-ons</a></li>
+						<li><a href="top_picks.php">Alice's top Picks</a></li>
+						<li><a href="#">Trips in Romania</a></li>
 						<li><a href="alice-stories.php">Alice's Stories</a></li>
 						<li><a href="alice-friends.php">Alice's Friends</a></li>
 						<li><a href="who-is-alice.php">Who is Alice</a></li>

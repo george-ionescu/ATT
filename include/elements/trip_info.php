@@ -41,51 +41,6 @@
 					</p>
 					<p style="text-align: center;"><strong>Total price: 2332 euro</strong></p>
 					<div class="clearfix"></div>
-					
-					<div class="trip_info_policies">
-					<br /><br />
-    			<a id="but1" class="active" href="javascript:showOption2(1);">Terms and conditions</a> | 
-    			<a id="but2" href="javascript:showOption2(2);">Airline price policies</a> | 
-    			<a id="but3" href="javascript:showOption2(3);">Baggage policies</a> | 
-    			<a id="but4" href="javascript:showOption2(4);">Room policies</a>
-    			
-    			<br /><br />
-	    		
-	    			<p id="option1">
-		Terms and conditions. Fusce posuere sollicitudin justo. Curabitur pulvinar neque quis ligula convallis, vitae vulputate erat lacinia 
-		<span class="text-complete">
-			Fusce posuere sollicitudin justo. Curabitur pulvinar neque quis ligula convallis, vitae vulputate erat lacinia
-		</span> 
-		<a class="more" href="#"><i class="ionicons ion-ios-plus-outline"></i>more</a>
-		<a class="less" style="display: none;" href="#"><i class="ionicons ion-ios-minus-outline"></i>less</a>
-	</p>
-	
-	<p id="option2" style="display: none;">
-		Ticket price policies. Fusce posuere sollicitudin justo. Curabitur pulvinar neque quis ligula convallis, vitae vulputate erat lacinia 
-		<span class="text-complete">
-			Fusce posuere sollicitudin justo. Curabitur pulvinar neque quis ligula convallis, vitae vulputate erat lacinia
-		</span> 
-		<a class="more" href="#"><i class="ionicons ion-ios-plus-outline"></i>more</a>
-		<a class="less" style="display: none;" href="#"><i class="ionicons ion-ios-minus-outline"></i>less</a>
-	</p>
-		
-		<div id="option3" style="display: none; text-align:left;">
-			<p><strong>Flight / Baggage</strong></p>
-			
-			<p>27 Mar.2015 | OTP to IST |Turkish Airlines - Flight 1046 / <span style="color:#feba02">2 pieces / adult | 1 piece / infant</span></p>
-			<p>27 Mar.2015 | OTP to IST |Turkish Airlines - Flight 1046 / <span style="color:#feba02">2 pieces / adult | 1 piece / infant</span></p>
-		</div>
-		
-		<p id="option4">
-		Room policies. Fusce posuere sollicitudin justo. Curabitur pulvinar neque quis ligula convallis, vitae vulputate erat lacinia 
-		<span class="text-complete">
-			Fusce posuere sollicitudin justo. Curabitur pulvinar neque quis ligula convallis, vitae vulputate erat lacinia
-		</span> 
-		<a class="more" href="#"><i class="ionicons ion-ios-plus-outline"></i>more</a>
-		<a class="less" style="display: none;" href="#"><i class="ionicons ion-ios-minus-outline"></i>less</a>
-	</p>	
-		
-			</div>		
 </div>	
         
 <div id="sort_type_2" style="display: none;">
@@ -94,7 +49,7 @@
 		        
 			        <form id="flights_form" class="form-horizontal custom_form" role="form" method="post" action="/">
 			        	<div class="row_form">
-        		<div class="col-md-6 col-xs-6 short_padding pull-left">
+        		<div class="col-md-6 short_padding pull-left">
 					<span class="custom-dropdown">
 					    <select>
 					        <option>Option 1</option>
@@ -105,7 +60,7 @@
 					    </select>
 					</span>
 				</div>
-				<div class="col-md-6 col-xs-6 short_padding pull-left">
+				<div class="col-md-6 short_padding pull-left">
 					<span class="custom-dropdown">
 					    <select>
 					        <option>Option 1</option>
@@ -208,11 +163,11 @@
 	    			class_bootstrap = 'col-md-6 flight flight_detail nopadding';
 	    		}
 	    		if (url == 'include/elements/flight_tabs.php'){
-	    			class_bootstrap = 'col-md-9 flight flight_detail nopadding flight_tabs';
+	    			class_bootstrap = 'col-md-9 flight flight_detail black_background_transparency nopadding';
 	    		}
 
 	    		if (url == 'include/elements/signin.php?from=extra_service'){
-	    			url = 'include/elements/signin.php?from=extra_service';
+	    			url = 'include/elements/signin_small.php?from=extra_service';
 	    		}
 	    		
 	    		if (oldSlide && newSlide && url != '#'){
@@ -223,23 +178,3 @@
 	
 	    	t = setTimeout(openNext, 400);
         </script>
-        
-        
-         <script>
-		function showOption2(nr){
-			for (i=1; i<=4; i++){
-				$('#option' + i).hide();
-				$('#but' + i).removeClass('active');
-			}
-			$('#option' + nr).show();
-			$('#but' + nr).addClass('active');
-
-			if ($('#option' + nr).find('.text-complete').is(":visible")){
-				$('#option' + nr).find('.more').show();
-				$('#option' + nr).find('.less').hide();
-				$('#option' + nr).find('.text-complete').hide();
-				updateAllScrolls();
-			} 
-		}
-	 </script>    				
-        

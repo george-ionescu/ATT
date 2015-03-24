@@ -1,4 +1,3 @@
-<div class="hotel_detail top_pics">
 	<h1 class="pull-right">Hotel Info</h1>
 	<div class="clearfix"></div>
 	<br />
@@ -6,8 +5,7 @@
 		Name: Radisson Blu Edwardian Berkshire<br />
 		Adress: 22 Park Lane, London, W1K 1BE<br />
 		Phone: +44 20 7493 8000<br />
-		E-mail: office@hilton.co.uk<br /><br />
-		<a href="#" class="map"><i class="fa fa-map-marker"></i> map view</a>
+		E-mail: office@hilton.co.uk
 	</p>
 	<br />
 	<p style="text-align: justify;">Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -34,7 +32,7 @@
 	</div>
 	
 	<div class="clearfix"></div>
-</div>
+
 
 <script>
 	$(function(){
