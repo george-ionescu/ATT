@@ -942,10 +942,11 @@ font-family: FontAwesome;
 
 .number_of_flights_container{
 	width:100%;
-	height:30px;
+	height:40px;
 	background-color:#fff;
 	color:#000;
 	padding-left:10px;
+	padding-top:6px;
 	text-align:left;
 }
 .number_of_flights_container .title{

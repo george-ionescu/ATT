@@ -436,6 +436,13 @@ a.flight.active, a.map.active, a.compare.active{
   line-height:21px;
   width: 100%;
 }
+.options_list2 label span:nth-of-type(2) {
+  display: block;
+  margin-left: 16px;
+  margin-top: -16px;
+  line-height:15px;
+  width: 100%;
+}
 
 /*-----------------------------------------------------------------------------------*/
 
@@ -1457,6 +1464,14 @@ p.month{
 
 @media (max-width: 1150px) {
 	body {font-size:14px !important;}	
+	
+.options_list2 label span:nth-of-type(2) {
+  display: inline-block;
+  margin-left: 16px;
+  margin-top: -16px;
+  line-height:15px;
+  width: 70%;
+}
 	
 	p, a{font-size:14px !important; line-height:20px;}
 	.service_image{max-width: 80px; max-height: 80px;}

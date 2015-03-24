@@ -28,7 +28,7 @@
 		
 		<div class="row_form">
 			<div class="col-md-6 col-xs-6 short_padding pull-left">
-				<div class="custom_input_slide" targetdiv="from" style="height:110px;">
+				<div class="custom_input_slide" targetdiv="from" style="margin-top:25px; height:85px;">
 					<p class="box_title">depart</p>
 					<div class="custom_input_slide_content">
 						<div class="pull-left">
@@ -51,7 +51,7 @@
 					<div style="margin-bottom: 5px;">
 						<span class="custom-dropdown">
 						    <select>
-						        <option>Option 1</option>
+						        <option>departure</option>
 						        <option>Option 2</option>  
 						        <option>Option 3</option>
 						        <option>Option 4</option>
@@ -61,7 +61,7 @@
 					</div>
 					<span class="custom-dropdown">
 					    <select>
-					        <option>Option 1</option>
+					        <option>anytime</option>
 					        <option>Option 2</option>  
 					        <option>Option 3</option>
 					        <option>Option 4</option>
