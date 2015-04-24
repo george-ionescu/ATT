@@ -1,0 +1,63 @@
+/*
+    Document   : rpk-list.css
+    Created on : Aug 16, 2013, 6:55:30 PM
+    Author     : CA1
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root {
+    display: block;
+}
+
+.modal-body > form * .nav-actions {
+    background:#007FB7;
+    color:#fff;
+}
+.modal-body > form * .nav-actions > .title-nav {
+    color:#fff;
+    text-shadow: none;
+    font-family: 'Lato',sans-serif !important;
+    font-size: 16px;
+    font-weight:300 !important;
+    margin-top:4px !important;
+}
+.modal-body > form * .nav-actions > .buttons-nav > button {
+    color:#fff;
+    margin-top:3px !important;
+    font-family: 'Lato',sans-serif !important;
+    font-size:14px;
+    padding: 0.1em 0.4em !important;
+    font-weight:300 !important;
+    box-shadow:none !important;
+    -moz-box-shadow:none !important;
+    text-shadow: none !important;
+    -webkit-border-radius: 3px !important;
+    -moz-border-radius: 3px !important;
+    border-radius: 3px !important;
+}
+.modal-body > form * .nav-actions > .buttons-nav > .btn {
+    border-color: transparent !important;
+}
+.modal-body > form * .nav-actions > .buttons-nav > button[value="close"] {
+    background:#e44b44;
+}
+.modal-body > form * .nav-actions > .buttons-nav > button[value="saveclose"] {
+    background:#7fb700;
+}
+
+.modal-body * .formBlock > .row-fluid {
+    padding: 0px;
+}
+.modal-body * .formBlock > .row-fluid > .span9 > select {
+    margin-bottom:0 !important;
+    padding:0 0 0 5px;
+}
+
+.rpklist-filter-icon.active{
+    color: #3F7D3F;
+}
+.modal-body .rpklist-save{
+    visibility: hidden;
+    display: none;
+}

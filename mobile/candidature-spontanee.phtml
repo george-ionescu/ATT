@@ -1,0 +1,31 @@
+<div class="filAriane">
+    <a href="/">Mille et une fenêtres ></a>
+    <?php echo $this->navigation()->breadcrumbs()->setMinDepth(0)->setLinkLast(false)->setSeparator(" > ")->setRenderInvisible(true); ?>
+</div>
+<div class="contentLeftBox">
+    <div class="categorie">
+        <p class="title">Rejoignez-nous</p>
+        <ul>
+            <li><a href="<?php echo $this->url(array(), 'offres-emploi', true)?>">Nos offres d'emploi</a></li>
+            <li class="active"><a href="<?php echo $this->url(array(), 'candidature', true)?>">Candidature spontanée</a></li>
+        </ul>
+    </div>
+    <?php include APPLICATION_PATH . '/includes/newsletter.phtml'; ?>
+    <?php include APPLICATION_PATH . '/includes/notre-entreprise.phtml'; ?>
+</div>
+<div class="contentRightBox">
+    <h1 class="title"><?php echo $this->titre_de_la_page?></h1>
+    <?php echo $this->placeHolderReturn;?>
+    <form id="<?php echo $this->form->getName()?>" action="" method="<?php echo $this->form->getMethod()?>" enctype="<?php echo $this->form->getAttrib('enctype')?>">
+		<?php echo $this->form->nom, PHP_EOL?>
+		<?php echo $this->form->email, PHP_EOL?>
+		<?php echo $this->form->tel, PHP_EOL?>
+		<?php echo $this->form->cv, PHP_EOL?><br />
+		<?php echo $this->form->lettreMotivation, PHP_EOL?><br />
+		<?php echo $this->form->message, PHP_EOL?><br />
+		<p><span class="_11">* Champ obligatoire</span></p>
+		<p class="clear"><input type="submit" class="btnSubmit" value="Envoyer" /></p>
+		<p class="clear"><a href="" target="_blank">Protections de vos données personnelles</a></p>
+	</form>
+</div>
+<div class="clear"></div>
