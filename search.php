@@ -5,7 +5,7 @@
 <content>
 	<div class="container-fluid full_height padding_content">
 		<div class="row full_height">
-			<div class="col-md-3 full_height assisted nopadding" id="column1">
+			<div class="col-md-3 full_height assisted search nopadding" id="column1">
 		        
 		        <div class="column_content padding_content full_height container-fluid" style="padding-top:0px;">
 			        <form class="form-horizontal custom_form" role="form" method="post" action="">
@@ -13,7 +13,7 @@
 						<h1 class="pull-right second-title">Filter Items</h1>
 						<br />
 						<div class="row_form">
-							<div class="col-md-6 col-xs-6 short_padding pull-left">
+							<div class="col-md-12 col-xs-12 short_padding pull-left">
 								<div class="options_list">
 									<span class="title">2015</span>
 									<?php for ($i=6; $i<=12; $i++) { ?>
@@ -21,7 +21,7 @@
 									<?php } ?> 
 								</div> 	
 							</div>
-							<div class="col-md-6 col-xs-6 short_padding pull-left">
+							<div class="col-md-12 col-xs-12 short_padding pull-left">
 								<div class="options_list">
 									<span class="title">2016</span>
 									<?php for ($i=1; $i<=5; $i++) { ?>
@@ -60,12 +60,12 @@
 						<div class="clearfix"></div>
 			
 						<br />
-			        	<a href="#">clear all</a> | <a href="#">select all</a> selections
+			        	<a href="#">clear all</a> | <a href="#">select all</a>
 			        </form>
 			     </div>
 		    </div>
 		    
-		    <div class="col-md-3 nopadding account" id="column2">
+		    <div class="col-md-3 nopadding" id="column2">
 		    
 		    	<?php include 'include/pages/search/events.php'; ?>
 		    
@@ -97,7 +97,7 @@
 	}
 
 	$(function(){
-		openSlide($('#column2'), null, 'col-md-9');
+		openSlide($('#column2'), null, 'col-md-9 hotel nopadding');
 	})
 
 </script>

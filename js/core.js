@@ -454,21 +454,21 @@ function showRegisterPopUp(){
 	showPreloader();
 	$.get( "include/pages/my_account/register.php", function( data ) {
 		hidePreloader();
-		createWindow('dialog_ajax', '', data, 320, 290);
+		createWindow('dialog_ajax', '', data, 320, 292);
 	});
 }
 function showCreateAccountPopUp(){
 	showPreloader();
 	$.get( "include/pages/my_account/create-account.php", function( data ) {
 		hidePreloader();
-		createWindow('dialog_ajax', '', data, 320, 290);
+		createWindow('dialog_ajax', '', data, 320, 292);
 	});
 }
 function showLostPassword(){
 	showPreloader();
 	$.get( "include/pages/my_account/lost-password.php", function( data ) {
 		hidePreloader();
-		createWindow('dialog_ajax', '', data, 320, 290);
+		createWindow('dialog_ajax', '', data, 320, 292);
 	});
 }
 

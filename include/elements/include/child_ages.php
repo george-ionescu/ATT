@@ -8,7 +8,7 @@
 			<span class="custom-dropdown">
 			    <select>
 			       	<option value="">age</option>
-			        <option value="infant">infant</option>
+			        <option value="infant">infant infant infant infant infant infant</option>
 			        <option value="child">child</option>  
 			    </select>
 			</span>

@@ -3,7 +3,7 @@
 </div>
 <div class="clearfix"></div>
 
-<div class="column_content padding_column_content full_height text_align_left" style="margin-top: 5px;">
+<div class="column_content padding_column_content full_height text_align_left top_picks" style="margin-top: 5px;">
 	<form class="form-horizontal custom_form" role="form" method="post" action="page1_2_2.php">
 		<?php for ($i=1; $i<=3; $i++) { ?>
 			<div id="option<?php echo $i; ?>">

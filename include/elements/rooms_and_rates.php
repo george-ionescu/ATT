@@ -11,7 +11,7 @@
 				<div class="row_form">
 					<div class="col-md-12 short_padding">
 						<span class="custom-dropdown">
-						    <select style="width:105%;">
+						    <select style="width:100%;">
 						        <option>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</option>
 						        <option>Option 2</option>  
 						        <option>Option 3</option>
@@ -24,7 +24,7 @@
 				<p class="flight_title first">2nd room</p>
 				<div class="row_form">
 					<div class="col-md-12 short_padding">
-			        	<p class="room_description">Lorem Ipsum is simply dummy</p>
+			        	<p class="room_description">Lorem Ipsum is simply dummy Lorem Ipsum is simply dummy Lorem Ipsum is simply dummy Lorem Ipsum is simply dummy Lorem Ipsum is simply dummy Lorem Ipsum is simply dummy</p>
 			        </div>
 				</div>
 				

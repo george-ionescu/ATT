@@ -23,6 +23,11 @@
 	}
 }
 
+.search .options_list .radio-inline {
+	width:auto;
+	margin-right:20px;
+}
+
 input:disabled{
 	background-color:#c6c6c6 !important;
 }
@@ -1667,6 +1672,7 @@ p.month{
 	}
 	.custom-dropdown select{
 		padding: 0.37em !important;
+		width:100%;
 	}
 	.custom-dropdown.small select, .custom-dropdown.assisted_select select{
 		padding:0 !important;

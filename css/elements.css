@@ -26,7 +26,7 @@ a:focus {
 }
 
 .flight-book{
-	width:100px;
+	min-width:100px;
 }
 .hotel_detail.active .price_p{
 	display:none;
@@ -60,6 +60,10 @@ a.disabled {
    cursor: default;
 }
 
+.top_picks a.active{
+	color:#868686;
+}
+
 .nav-tabs > .active > a, .nav-tabs > .active > a:hover {
 	outline:none;
 	text-decoration: none;
@@ -89,6 +93,10 @@ input[placeholder], [placeholder], *[placeholder] {
 	font-style:italic;
 }
 
+#dialog_ajax .btn-default{
+	font-size:15px;
+	line-height:22px;
+}
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -321,11 +329,15 @@ input[placeholder], [placeholder], *[placeholder] {
 	padding:10px;
 	padding-right:0;
 }
-.infobox .btn-default{
-	padding:0 5px 0 5px;
-	margin-top:25px;
+.infobox .text p{
+	font-size: 12px !important;
+	line-height:17px !important;
 }
-.infobox .btn-default:hover{
+.infobox .btn-default{
+	padding:0 5px 0 5px !important;
+	margin-top:12px !important;
+}
+.infobox .btn-default:hover, .infobox .btn-default:focus, .infobox .btn-default:active{
 	padding:1px 6px 1px 6px !important;
 }
 .infobox h1{
@@ -776,7 +788,7 @@ input[placeholder], [placeholder], *[placeholder] {
 	-moz-appearance: none;
   -webkit-appearance: button; /* hide default arrow in chrome OSX */
 	border-radius:0;
-	width: 125%;
+	width: 115%;
 	height:40px;
 	-webkit-appearance:none;
 	outline:none;

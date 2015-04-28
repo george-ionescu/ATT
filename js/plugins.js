@@ -134,7 +134,7 @@ function getIsTablet() {
 		
 		//  gMap
 		// JSON
-		var data = JSON.parse('[{"address":"New Street, Salisbury, UK","content":"hello world from salisbury"},{"address":"86000 Poitiers, France","content":"hello world from poitiers"},{"address":"66000 Perpignam, France","content":"hello world from perpignam"}]');
+		var data = JSON.parse('[{"address":"New Street, Salisbury, UK","content":"hello world from salisbury"},{"address":"86000 Poitiers, France","content":"honeymoon, wind sports, casino games..."},{"address":"66000 Perpignam, France","content":"hello world from perpignam"}]');
 		var $map = $('#google-map');
 		var selectBut = '<button type="button" class="btn btn-default center-block">select</button>';
 		var closeBut = '<a class="pull-right" href="javascript:closeMarkers();"><i class="ionicons ion-ios-close-outline"></i></a>';
@@ -187,7 +187,7 @@ function getIsTablet() {
 		                            overlay:{
 		                                address:val.address,
 		                                options:{
-		                                    content:  '<div class="infobox"><table><tr><td><img src="images/gmap_img.png" style="height:131px;" /></td> <td class="text"><h1>adasd</h1><p>'+val.content+'</p>'+selectBut+closeBut+'</td></tr></table></div>',
+		                                    content:  '<div class="infobox"><table><tr><td><img src="images/gmap_img.png" style="height:131px;" /></td> <td class="text"><h1>San Francisco San Francisco</h1><p>'+val.content+'</p>'+selectBut+closeBut+'</td></tr></table></div>',
 		                                    offset:{
 		                                        y:-185,
 		                                        x:0
