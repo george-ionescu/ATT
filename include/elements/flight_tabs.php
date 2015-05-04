@@ -7,18 +7,15 @@
 	        <div class="clearfix"></div>
 	    	
 	    	<div id="tab1">
-	    		<div class="hide_on_desktop"><br /></div>
 	    		<div class="flight_detail_wrapper">
-			        <div class="hide_on_mobile"><?php include 'include/flight_recap_table.php'; ?></div>
-		    		<div class="hide_on_desktop"><?php include 'include/flight_recap_table_mobile.php'; ?></div>
+			        <?php include 'include/flight_recap_table.php'; ?>
     				<div class="clearfix"></div>
     				<br />
     			</div>
     		</div>
-    		<div id="tab2" style="display: none;">	
+    		<div id="tab2" style="display: none; margin-left:0; margin-right:0;">	
     			<form class="form-horizontal custom_form maro_background" role="form" method="post" action="/">
-			    	<div class="hide_on_mobile"><br /><?php include 'include/flight_result_table_select.php'; ?></div>
-		    		<div class="hide_on_desktop"><?php include 'include/flight_result_table_select_mobile.php'; ?></div>
+			    	<br /><?php include 'include/flight_result_table_select.php'; ?>
 				    <div class="clearfix"></div>
 		    	</form>
 			</div>
@@ -92,42 +89,18 @@
 		});
 	});
 	
-	function showDetail22(id){
-		$('tr.normal.' + id).toggle();
-		$('tr.expand.' + id).toggle();
-
-		updateAllScrolls();
-	}
-
-	var newWindowWidth = $(window).width();
-	if (newWindowWidth < 1024){
-		$('.new_design tr.normal').click(function(){
-			ids = $(this).attr("class").split(' ');
-			showDetail22(ids[1]);
-		});
-		$('.new_design tr.expand').click(function(){
-			ids = $(this).attr("class").split(' ');
-			showDetail22(ids[1]);
-		});
-	} else {
-		$('.new_design').click(function(){
-			showDetail22($(this).attr('id'));
-		});
-	}
-
-	$('#book_button').click(function(event){
-		event.preventDefault();
-	
-		var oldSlide = $('#column2');
-		var newSlide = $('#column2');
-		var url = 'include/elements/signin.php';
-		var class_bootstrap = 'col-md-9';
-		
-		if (oldSlide && newSlide && url != '#'){
-			changeSlide(oldSlide, newSlide, url, class_bootstrap);
+	$('.row_content_click').click(function(){
+		if (!$(this).hasClass('expand')){
+			$(this).addClass('expand');
+		} else {
+			$(this).removeClass('expand');
 		}
+
+		$(this).find('.normal').toggle();
+		$(this).find('.expand').toggle();
 	});
-	$('#book_button_mobile').click(function(event){
+	
+	$('#book_button').click(function(event){
 		event.preventDefault();
 	
 		var oldSlide = $('#column2');

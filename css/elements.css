@@ -211,6 +211,9 @@ input[placeholder], [placeholder], *[placeholder] {
 	padding: 0 !important;
 	margin: 0 !important;
 }
+.nopadding_simple{
+	padding: 0 !important;
+}
 .no_padding_left_right{
 	padding-left: 0px !important;
 	padding-right: 0px !important;
@@ -245,7 +248,9 @@ input[placeholder], [placeholder], *[placeholder] {
 	background: url("../images/horizontal-line.png") repeat-x scroll 0 5px rgba(0, 0, 0, 0);
     text-align: center !important;
     width: 100%;
-	margin-bottom:0px !important;
+	margin-top:10px !important;
+    margin-bottom:10px !important;
+	display:block;
 }
 .horizontal_line_black span {
     background: none repeat scroll 0 0 #868686;
@@ -254,9 +259,11 @@ input[placeholder], [placeholder], *[placeholder] {
 	font-weight: 300;
 	font-size: 14px;
 	line-height:16px;
+	color:#000;
 }
 .expand .horizontal_line_black span{
 	background: none repeat scroll 0 0 #fff;
+	color:#000;
 }
 
 .btn-big{
@@ -696,6 +703,7 @@ input[placeholder], [placeholder], *[placeholder] {
 .custom_form .room_description{
 	background-color:#c6c6c6 ;
 	padding:10px;
+	color:#000 !important;
 }
 
 .custom_input_slide_content{

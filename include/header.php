@@ -1,10 +1,3 @@
-<?php
-$isWindows = false;
-if (preg_match('/(?i)Windows/', $_SERVER['HTTP_USER_AGENT']) && preg_match('/(?i)Touch/', $_SERVER['HTTP_USER_AGENT'])){
-	$isWindows = true;
-}
-?>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="no-js">
@@ -96,27 +89,23 @@ if (preg_match('/(?i)Windows/', $_SERVER['HTTP_USER_AGENT']) && preg_match('/(?i
 					<span>your trip</span>
 				</div>
 				
-				<?php if ($_SERVER['PHP_SELF'] != '/index.php') { ?>
-					<button data-target=".navbar-collapse" data-toggle="collapse"
-						class="navbar-toggle collapsed" type="button">
-						<span class="sr-only">Toggle navigation</span> <span
-							class="icon-bar"></span> <span class="icon-bar"></span> <span
-							class="icon-bar"></span>
-					</button>
-				<?php } ?>
+				<button data-target=".navbar-collapse" data-toggle="collapse"
+					class="navbar-toggle collapsed" type="button">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
 				<a href="/" style="width:68px;display:block;margin:0 auto;margin-top:5px;margin-bottom:5px;"><img src="images/logo_small.png" alt="logo alice" /></a>
 			</div>
-			<?php if ($_SERVER['PHP_SELF'] != '/index.php') { ?>
-				<div class="navbar-collapse collapse" style="height: 1px;">
-					<ul class="nav navbar-nav">
-						<li><a href="book_directly.php">Book Directly</a></li>
-						<li><a href="my_account.php">My Account</a></li>
-						<li><a href="alice-stories.php">Alice's Stories</a></li>
-						<li><a href="alice-friends.php">Alice's Friends</a></li>
-						<li><a href="who-is-alice.php">Who is Alice</a></li>
-					</ul>
-				</div>
-			<?php } ?>
+			<div class="navbar-collapse collapse" style="height: 1px;">
+				<ul class="nav navbar-nav">
+					<li><a href="book_directly.php">Book Directly</a></li>
+					<li><a href="my_account.php">My Account</a></li>
+					<li><a href="alice-stories.php">Alice's Stories</a></li>
+					<li><a href="alice-friends.php">Alice's Friends</a></li>
+					<li><a href="who-is-alice.php">Who is Alice</a></li>
+				</ul>
+			</div>
 			<div id="sort_wrapper" class="navbar-collapse2 collapse" style="height: 1px;"></div>
 		</div>
 	</div>

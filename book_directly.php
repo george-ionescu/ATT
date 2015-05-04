@@ -102,12 +102,11 @@
 				</div>
 				<div class="clearfix"></div>
 		        	
-		    		<div class="hide_on_mobile"><?php include 'include/elements/flight_recap_short.php'; ?></div>
-		    		<div class="hide_on_desktop"><?php include 'include/elements/flight_recap_short_mobile.php'; ?></div>
-		    		
-		    		<div class="pull-right hide_on_mobile">
-						<a href="javascript:closeCompare();"><i class="ionicons ion-ios-close-outline"></i>close</a>
-					</div>
+	    		<?php include 'include/elements/flight_recap_short.php'; ?>
+	    		
+	    		<div class="pull-right hide_on_mobile">
+					<a href="javascript:closeCompare();"><i class="ionicons ion-ios-close-outline"></i>close</a>
+				</div>
 				<div class="clearfix"></div>
 			</div>
 		</div>

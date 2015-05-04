@@ -22,7 +22,7 @@
 					</div>
 				</div>
 				<p class="flight_title first">2nd room</p>
-				<div class="row_form">
+				<div class="row_form" style="height: auto;">
 					<div class="col-md-12 short_padding">
 			        	<p class="room_description">Lorem Ipsum is simply dummy Lorem Ipsum is simply dummy Lorem Ipsum is simply dummy Lorem Ipsum is simply dummy Lorem Ipsum is simply dummy Lorem Ipsum is simply dummy</p>
 			        </div>

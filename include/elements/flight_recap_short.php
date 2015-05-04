@@ -1,38 +1,50 @@
-<table class="flight_detail_table recap">
-	<tbody>
-		<tr>
-    		<td colspan="4" class="title">depart 18 feb 2014</td>
-    	</tr>
-		<tr>
-			<td style="width:130px;"><span class="departure_time">18:15</span><br>Bucharest
-			OTP</td>
-		<td style="width:80px;" class="airplane"><img
-			src="assets/images/airplane_icon.png"
-			alt="Flight duration"><br />10h 00m</td>
-		<td style="width:130px;"><span class="departure_time">19:00</span><br>Warsaw WAW</td>
-		<td style="padding-top: 10px;">LOT Polish Airlines - Flight 646 | E75 | 2 seats
-			available |</td>
-	</tr>
-	<tr>
-    					<td colspan="4"><p class="horizontal_line">&nbsp;</p></td>
-    				</tr>
-	</tbody>
-</table>
-
-<table class="flight_detail_table recap">
-	<tbody>
-		<tr>
-    		<td colspan="4" class="title">return 20 feb 2014</td>
-    	</tr>
-		<tr>
-			<td style="width:130px;"><span class="departure_time">18:15</span><br>Bucharest
-			OTP</td>
-		<td style="width:80px;" class="airplane"><img
-			src="assets/images/airplane_icon.png"
-			alt="Flight duration"><br />10h 00m</td>
-		<td style="width:130px;"><span class="departure_time">19:00</span><br>Warsaw WAW</td>
-		<td style="padding-top: 10px;">LOT Polish Airlines - Flight 646 | E75 | 2 seats
-			available |</td>
-	</tr>
-	</tbody>
-</table>
+<div class="col-md-12 col-xs-12 flight_detail_bootstrap recap">
+	<div class="row">
+		<div class="col-md-12 col-xs-12">
+			<span class="title">depart 13 sept. 2014</span>
+		</div>
+	</div>
+	<div class="row content">
+		<div class="col-md-12 col-xs-12">
+			<div class="row normal">
+				<div class="col-md-2 col-xs-4">
+					<span class="departure_time">18:15</span><br>Bucharest
+				</div>
+				<div class="col-md-2 col-xs-4 airplane">
+					<img src="assets/images/airplane_icon.png" alt="Flight duration"><br />16h 50m
+				</div>
+				<div class="col-md-2 col-xs-4">
+					<span class="departure_time">10:05</span><br>San Francisco
+				</div>
+				<div class="col-md-6 col-xs-12">
+					LOT Polish Airlines | arrives next day | 1 stop
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<div class="row">
+		<div class="col-md-12 col-xs-12">
+			<span class="title">return 22 sept. 2014</span>
+		</div>
+	</div>
+	<div class="row content">
+		<div class="col-md-12 col-xs-12">
+			<div class="row normal">
+				<div class="col-md-2 col-xs-4">
+					<span class="departure_time">18:15</span><br>Bucharest
+				</div>
+				<div class="col-md-2 col-xs-4 airplane">
+					<img src="assets/images/airplane_icon.png" alt="Flight duration"><br />16h 50m
+				</div>
+				<div class="col-md-2 col-xs-4">
+					<span class="departure_time">10:05</span><br>San Francisco
+				</div>
+				<div class="col-md-6 col-xs-12">
+					LOT Polish Airlines | arrives next day | 1 stop
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
